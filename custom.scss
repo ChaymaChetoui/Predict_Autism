@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+$primary: #3498db;
+$secondary: #2ecc71;
+$danger: #e74c3c;
+$warning: #f39c12;
+
+/*-- scss:rules --*/
+.callout {
+  border-left-width: 5px;
+  border-left-color: $primary;
+}
+
+.panel-tabset {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  color: $primary;
+}
+
+code {
+  background-color: #f8f9fa;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}

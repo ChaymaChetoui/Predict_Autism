@@ -1,0 +1,72 @@
+---
+title: "Prédiction du Trouble du Spectre Autistique (TSA)"
+subtitle: "Analyse prédictive basée sur le questionnaire AQ-10"
+author: "Chayma Chetoui"
+date: today
+format:
+  html:
+    page-layout: full
+---
+
+## 🎯 Objectif du Projet
+
+Ce projet utilise des techniques de **machine learning** pour prédire le Trouble du Spectre Autistique (TSA) chez l'enfant à partir du questionnaire **AQ-10** (Autism Spectrum Quotient).
+
+## 📊 Dataset
+
+-   **Source** : Questionnaire AQ-10 pour enfants
+-   **Variables** : 10 questions comportementales + informations démographiques
+-   **Taille** : \~700 observations
+-   **Classes** : YES (TSA) / NO (Pas de TSA)
+
+## 🤖 Modèles Utilisés
+
+Nous avons développé et comparé plusieurs modèles :
+
+::: panel-tabset
+### Random Forest
+
+-   **Accuracy** : \~97%
+-   **AUC** : \~0.98
+-   Excellent pour l'interprétation des variables
+
+### Régression Logistique
+
+-   **Accuracy** : \~95%
+-   **AUC** : \~0.96
+-   Modèle simple et interprétable
+
+### XGBoost
+
+-   **Accuracy** : \~96%
+-   **AUC** : \~0.97
+-   Performance optimale avec gradient boosting
+:::
+
+## 🔬 Variables Clés
+
+Les questions les plus discriminantes :
+
+1.  **A1_Score** : Compétences sociales
+2.  **A2_Score** : Communication
+3.  **A3_Score** : Interaction sociale
+4.  **Age** : Âge de l'enfant
+5.  **Family History** : Antécédents familiaux
+
+## 📈 Navigation
+
+-   [**Analyse Interactive**](analyse.qmd) : Explorez les données avec WebR
+-   [**Rapport Complet**](rapport.qmd) : Résultats détaillés et visualisations
+-   [**À propos**](about.qmd) : Méthodologie et références
+
+## ⚠️ Note Importante
+
+Ce modèle est à **but éducatif uniquement**. Il ne remplace en aucun cas un diagnostic médical professionnel par un spécialiste du TSA.
+
+------------------------------------------------------------------------
+
+::: callout-tip
+## Commencer l'exploration
+
+Rendez-vous sur la page [Analyse Interactive](analyse.qmd) pour tester le modèle avec vos propres données !
+:::
