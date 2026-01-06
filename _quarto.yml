@@ -12,6 +12,9 @@ website:
         href: analyse.qmd
       - text: "Rapport"
         href: rapport.qmd
+      - text: "Présentation"
+        href: presentation.qmd
+        icon: easel
       - text: "À propos"
         href: about.qmd
     right:

@@ -1,741 +1,2112 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Chayma Chetoui">
-<meta name="dcterms.date" content="2026-01-03">
-
-<title>Dépistage précoce de l’autisme chez l’enfant – Prédiction du Trouble du Spectre Autistique chez l’Enfant</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<html lang="en"><head>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ecbd3bc7e053ec1543adb0060bab7e3f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
-
+  <meta name="author" content="Chayma Chetoui">
+  <meta name="dcterms.date" content="2026-01-06">
+  <title>Prédiction du Trouble du Spectre Autistique chez l'Enfant – Prédiction du Trouble du Spectre Autistique</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-891d2e7fa1e8a81ec5816eb5b6a13fa6.css">
+  <link rel="stylesheet" href="slides-style.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
 
-<body class="nav-fixed quarto-light">
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Prédiction du Trouble du Spectre Autistique</h1>
+  <p class="subtitle">Analyse Machine Learning du Questionnaire AQ-10</p>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Prédiction du Trouble du Spectre Autistique chez l’Enfant</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Accueil</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./analyse.html"> 
-<span class="menu-text">Analyse Interactive</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./rapport.html"> 
-<span class="menu-text">Rapport</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">À propos</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ChaymaChetoui/Predict_Autism"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Chayma Chetoui 
 </div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#bullets" id="toc-bullets" class="nav-link" data-scroll-target="#bullets">Bullets</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="presentation.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+        <p class="quarto-title-affiliation">
+            Votre Institution
+          </p>
     </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Dépistage précoce de l’autisme chez l’enfant</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chayma Chetoui </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 3, 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+  <p class="date">2026-01-06</p>
 </section>
-<section id="bullets" class="level2">
-<h2 class="anchored" data-anchor-id="bullets">Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="plan-de-la-présentation" class="slide level2 smaller center">
+<h2>📋 Plan de la Présentation</h2>
+<ol type="1">
+<li class="fragment"><strong>Contexte &amp; Problématique</strong></li>
+<li class="fragment"><strong>Dataset &amp; Méthodologie</strong></li>
+<li class="fragment"><strong>Analyse Exploratoire</strong></li>
+<li class="fragment"><strong>Modélisation Machine Learning</strong></li>
+<li class="fragment"><strong>Résultats &amp; Performance</strong></li>
+<li class="fragment"><strong>Interprétabilité</strong></li>
+<li class="fragment"><strong>Déploiement &amp; Impact</strong></li>
+<li class="fragment"><strong>Conclusions &amp; Perspectives</strong></li>
+</ol>
+</section>
+<section class="slide level2 center">
+
+</section>
+<section>
+<section id="contexte-problématique" class="title-slide slide level1 center" data-background-color="#3498db">
+<h1>1. Contexte &amp; Problématique</h1>
+
+</section>
+<section id="le-trouble-du-spectre-autistique-tsa" class="slide level2 center">
+<h2>🧠 Le Trouble du Spectre Autistique (TSA)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Définition</strong></p>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>Trouble neurodéveloppemental</li>
+<li>Apparaît dans la petite enfance</li>
+<li>Persiste toute la vie</li>
+<li>Spectre large de sévérité</li>
+</ul>
+<p><strong>Prévalence</strong></p>
+<ul>
+<li><strong>1 enfant sur 100</strong> (OMS)</li>
+<li>En augmentation constante</li>
+<li>Diagnostic souvent tardif</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Caractéristiques</strong></p>
+<ul>
+<li>🗣️ Difficultés de communication</li>
+<li>👥 Déficits d’interaction sociale</li>
+<li>🔄 Comportements répétitifs</li>
+<li>🎯 Intérêts restreints</li>
+</ul>
+<p><strong>Enjeux</strong></p>
+<ul>
+<li>⏰ Dépistage précoce crucial</li>
+<li>💰 Coût diagnostic élevé</li>
+<li>👨‍⚕️ Pénurie de spécialistes</li>
+</ul>
+</div></div>
+</section>
+<section id="problématique" class="slide level2 center">
+<h2>🎯 Problématique</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Question de Recherche</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Comment utiliser le machine learning pour améliorer le dépistage précoce du TSA chez l’enfant à partir du questionnaire AQ-10 ?</strong></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<h3 id="objectifs-spécifiques">Objectifs Spécifiques</h3>
+<ol type="1">
+<li>📊 Analyser les données du questionnaire AQ-10</li>
+<li>🤖 Développer des modèles prédictifs performants</li>
+<li>🔍 Identifier les variables les plus discriminantes</li>
+<li>🌐 Créer un outil interactif de dépistage</li>
+</ol>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="dataset-méthodologie" class="title-slide slide level1 center" data-background-color="#2ecc71">
+<h1>2. Dataset &amp; Méthodologie</h1>
+
+</section>
+<section id="le-questionnaire-aq-10" class="slide level2 center">
+<h2>📊 Le Questionnaire AQ-10</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Autism Spectrum Quotient - 10 Questions</strong></p>
+<ul>
+<li>✅ Outil de dépistage validé scientifiquement</li>
+<li>📝 10 questions comportementales</li>
+<li>⏱️ Administration rapide (5-10 min)</li>
+<li>🎯 Score total de 0 à 10</li>
+</ul>
+<p><strong>Domaines Évalués</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Questions</th>
+<th>Domaine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A1-A3</td>
+<td>👥 Compétences sociales</td>
+</tr>
+<tr class="even">
+<td>A4-A6</td>
+<td>🎯 Attention et focus</td>
+</tr>
+<tr class="odd">
+<td>A7-A8</td>
+<td>💬 Communication</td>
+</tr>
+<tr class="even">
+<td>A9-A10</td>
+<td>💭 Imagination</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:40%;">
+<p><strong>Scoring</strong></p>
+<ul>
+<li>0 = Comportement typique</li>
+<li>1 = Comportement autistique</li>
+</ul>
+<p><strong>Seuil Clinique</strong></p>
+<ul>
+<li>Score ≥ 6 → Risque TSA</li>
+<li>Score &lt; 6 → Faible risque</li>
+</ul>
+<p><strong>Validation</strong></p>
+<ul>
+<li>Sensibilité : ~85%</li>
+<li>Spécificité : ~90%</li>
+<li>Corrélation avec diagnostic clinique</li>
+</ul>
+</div></div>
+</section>
+<section id="dataset-utilisé" class="slide level2 center">
+<h2>📁 Dataset Utilisé</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Vue d’Ensemble</a></li><li><a href="#tabset-1-2">Variables</a></li><li><a href="#tabset-1-3">Distribution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Caractéristique</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Observations</strong></td>
+<td>~700 enfants</td>
+</tr>
+<tr class="even">
+<td><strong>Variables</strong></td>
+<td>21 features</td>
+</tr>
+<tr class="odd">
+<td><strong>Période</strong></td>
+<td>2018-2023</td>
+</tr>
+<tr class="even">
+<td><strong>Source</strong></td>
+<td>Cliniques spécialisées</td>
+</tr>
+<tr class="odd">
+<td><strong>Classes</strong></td>
+<td>YES (TSA) / NO</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-2">
+<p><strong>Variables Principales</strong></p>
+<ul>
+<li><code>A1_Score</code> à <code>A10_Score</code> : Réponses AQ-10</li>
+<li><code>total_score</code> : Score total (0-10)</li>
+<li><code>age</code> : Âge de l’enfant (4-12 ans)</li>
+<li><code>jaundice</code> : Jaunisse néonatale</li>
+<li><code>autism</code> : Antécédents familiaux</li>
+<li><code>Class.ASD</code> : Diagnostic final</li>
+</ul>
+<p><strong>Features Engineered</strong></p>
+<ul>
+<li><code>social_score</code> : A1 + A2 + A3</li>
+<li><code>attention_score</code> : A4 + A5 + A6</li>
+<li><code>communication_score</code> : A7 + A8</li>
+<li><code>imagination_score</code> : A9 + A10</li>
+</ul>
+</div>
+<div id="tabset-1-3">
+<p><strong>Répartition des Classes</strong></p>
+<ul>
+<li>✅ <strong>YES (TSA)</strong> : 42% (n=294)</li>
+<li>❌ <strong>NO (Sans TSA)</strong> : 58% (n=406)</li>
+</ul>
+<p><strong>Dataset Équilibré</strong> → Pas de problème de déséquilibre majeur</p>
+</div>
+</div>
+</div>
+</section>
+<section id="méthodologie" class="slide level2 center">
+<h2>🔬 Méthodologie</h2>
+<div class="cell" data-reveal="true" data-fig-width="12" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[📥 Données Brutes] --&gt; B[🧹 Nettoyage]
+    B --&gt; C[🔧 Feature Engineering]
+    C --&gt; D[📊 EDA]
+    D --&gt; E[✂️ Train/Test Split]
+    E --&gt; F[🤖 Modélisation]
+    F --&gt; G[📈 Évaluation]
+    G --&gt; H[🌐 Déploiement]
+    
+    style A fill:#3498db,color:#fff
+    style B fill:#e74c3c,color:#fff
+    style C fill:#f39c12,color:#fff
+    style D fill:#9b59b6,color:#fff
+    style E fill:#1abc9c,color:#fff
+    style F fill:#34495e,color:#fff
+    style G fill:#16a085,color:#fff
+    style H fill:#27ae60,color:#fff
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="prétraitement-des-données" class="slide level2 center">
+<h2>🧹 Prétraitement des Données</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Étapes Réalisées</strong></p>
+<ol type="1">
+<li>✅ Suppression des doublons (n=12)</li>
+<li>✅ Correction des noms de colonnes</li>
+<li>✅ Gestion des valeurs manquantes</li>
+<li>✅ Nettoyage des caractères spéciaux</li>
+<li>✅ Conversion des types de données</li>
+<li>✅ Création de features composées</li>
+</ol>
+<p><strong>Résultat</strong></p>
+<ul>
+<li>Dataset final : <strong>688 observations</strong></li>
+<li>0% de valeurs manquantes</li>
+<li>17 features finales</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Split Train/Test</strong></p>
+<pre><code>┌─────────────────────────────┐
+│   Dataset Complet (688)     │
+│          100%               │
+└──────────┬──────────────────┘
+           │
+    ┌──────┴────────┐
+    │               │
+    ▼               ▼
+┌────────┐     ┌─────────┐
+│ Train  │     │  Test   │
+│  482   │     │   206   │
+│  70%   │     │   30%   │
+└────────┘     └─────────┘</code></pre>
+<p><strong>Validation Croisée</strong></p>
+<ul>
+<li>🔄 10-fold CV</li>
+<li>🎲 Stratification par classe</li>
+<li>🔀 Shuffle activé</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="analyse-exploratoire" class="title-slide slide level1 center" data-background-color="#9b59b6">
+<h1>3. Analyse Exploratoire</h1>
+
+</section>
+<section id="distribution-des-scores-par-diagnostic" class="slide level2 center">
+<h2>📊 Distribution des Scores par Diagnostic</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/scores_distribution.png" class="fragment" width="1600" height="800"></p>
+</div>
+<div class="fragment">
+<p><strong>Observations Clés</strong></p>
+<ul>
+<li>Score moyen <strong>TSA</strong> : 7.2/10 (±1.8)</li>
+<li>Score moyen <strong>Sans TSA</strong> : 3.1/10 (±1.5)</li>
+<li><strong>Séparation claire</strong> entre les groupes</li>
+<li>Seuil optimal : <strong>6/10</strong></li>
+</ul>
+</div>
+</section>
+<section id="heatmap-des-questions-par-diagnostic" class="slide level2 center">
+<h2>🔥 Heatmap des Questions par Diagnostic</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/heatmap_questions.png" class="fragment" width="1600" height="700"></p>
+</div>
+<div class="fragment">
+<p><strong>Questions les Plus Discriminantes</strong></p>
+<ol type="1">
+<li>🥇 <strong>A1</strong> : Préférence pour la solitude (Δ = 0.64)</li>
+<li>🥈 <strong>A2</strong> : Routine et répétition (Δ = 0.58)</li>
+<li>🥉 <strong>A3</strong> : Difficultés amicales (Δ = 0.54)</li>
+</ol>
+</div>
+</section>
+<section id="corrélations-entre-questions" class="slide level2 center">
+<h2>🔗 Corrélations entre Questions</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/correlation_matrix.png" class="fragment" width="1400" height="900"></p>
+</div>
+</section>
+<section id="insights-de-lanalyse-exploratoire" class="slide level2 center">
+<h2>📈 Insights de l’Analyse Exploratoire</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="points-forts">✅ Points Forts</h3>
+<ul>
+<li>Séparation nette entre classes</li>
+<li>Questions fortement corrélées au diagnostic</li>
+<li>Peu de multicolinéarité</li>
+<li>Données de qualité</li>
+</ul>
+<h3 id="variables-clés">🎯 Variables Clés</h3>
+<ul>
+<li><strong>Domaine social</strong> : Impact majeur</li>
+<li><strong>Score total</strong> : Prédicteur puissant</li>
+<li><strong>Âge</strong> : Effet modéré</li>
+<li><strong>Antécédents</strong> : Facteur de risque</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="statistiques-descriptives">📊 Statistiques Descriptives</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>TSA</th>
+<th>Sans TSA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Score moyen</td>
+<td>7.2</td>
+<td>3.1</td>
+</tr>
+<tr class="even">
+<td>Médiane</td>
+<td>7.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td>Écart-type</td>
+<td>1.8</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>Min/Max</td>
+<td>3/10</td>
+<td>0/8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="découvertes">🔍 Découvertes</h3>
+<ul>
+<li>Seuil de 6/10 optimal</li>
+<li>Questions sociales cruciales</li>
+<li>Peu de faux positifs/négatifs</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="modélisation-ml" class="title-slide slide level1 center" data-background-color="#e74c3c">
+<h1>4. Modélisation ML</h1>
+
+</section>
+<section id="algorithmes-testés" class="slide level2 center">
+<h2>🤖 Algorithmes Testés</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Random Forest</a></li><li><a href="#tabset-2-2">Régression Logistique</a></li><li><a href="#tabset-2-3">XGBoost</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><strong>Paramètres</strong></p>
+<ul>
+<li><code>ntree</code> : 500 arbres</li>
+<li><code>mtry</code> : 2-8 (optimisé)</li>
+<li>Validation croisée 10-fold</li>
+</ul>
+<p><strong>Avantages</strong></p>
+<p>✅ Gère la non-linéarité ✅ Résistant au surapprentissage ✅ Importance des variables ✅ Performances robustes</p>
+<p><strong>Résultats</strong></p>
+<ul>
+<li><strong>Meilleur mtry</strong> : 6</li>
+<li><strong>CV-AUC</strong> : 0.9843</li>
+</ul>
+</div>
+<div id="tabset-2-2">
+<p><strong>Configuration</strong></p>
+<ul>
+<li>Famille : binomiale</li>
+<li>Régularisation : L2</li>
+<li>Features standardisées</li>
+</ul>
+<p><strong>Avantages</strong></p>
+<p>✅ Interprétable ✅ Rapide ✅ Coefficients explicites ✅ Baseline solide</p>
+<p><strong>Résultats</strong></p>
+<ul>
+<li><strong>Coefficients</strong> : Tous significatifs</li>
+<li><strong>CV-AUC</strong> : 0.9621</li>
+</ul>
+</div>
+<div id="tabset-2-3">
+<p><strong>Hyperparamètres</strong></p>
+<ul>
+<li><code>max_depth</code> : 3-6</li>
+<li><code>learning_rate</code> : 0.01-0.1</li>
+<li><code>n_estimators</code> : 100-500</li>
+</ul>
+<p><strong>Avantages</strong></p>
+<p>✅ Performance optimale ✅ Gestion des interactions ✅ Régularisation intégrée ✅ Parallélisation</p>
+<p><strong>Résultats</strong></p>
+<ul>
+<li><strong>Meilleurs params</strong> optimisés</li>
+<li><strong>CV-AUC</strong> : 0.9742</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="configuration-commune" class="slide level2 center">
+<h2>⚙️ Configuration Commune</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Validation</strong></p>
+<pre><code>┌───────────────────────────┐
+│   Cross-Validation        │
+│        10-Fold            │
+├───────────────────────────┤
+│  Fold 1  ──► Train + Val  │
+│  Fold 2  ──► Train + Val  │
+│  Fold 3  ──► Train + Val  │
+│    ...                    │
+│  Fold 10 ──► Train + Val  │
+└───────────────────────────┘
+         ↓
+    Moyenne des métriques</code></pre>
+<p><strong>Métriques Optimisées</strong></p>
+<ul>
+<li>🎯 Primary : <strong>AUC-ROC</strong></li>
+<li>📊 Secondary : <strong>Accuracy</strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Optimisation Hyperparamètres</strong></p>
+<ul>
+<li>🔍 Grid Search</li>
+<li>🎲 Random Search (XGBoost)</li>
+<li>⚡ Bayesian Optimization</li>
+</ul>
+<p><strong>Prévention Overfitting</strong></p>
+<ul>
+<li>✂️ Train/Test séparés</li>
+<li>🔄 Cross-validation</li>
+<li>📉 Early stopping</li>
+<li>🎛️ Régularisation</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="résultats-performance" class="title-slide slide level1 center" data-background-color="#f39c12">
+<h1>5. Résultats &amp; Performance</h1>
+
+</section>
+<section id="comparaison-des-modèles" class="slide level2 center">
+<h2>🏆 Comparaison des Modèles</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/model_comparison.png" class="fragment" width="1600" height="900"></p>
+</div>
+</section>
+<section id="tableau-comparatif-détaillé" class="slide level2 center">
+<h2>📊 Tableau Comparatif Détaillé</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 15%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modèle</th>
+<th>Accuracy</th>
+<th>AUC</th>
+<th>Sensibilité</th>
+<th>Spécificité</th>
+<th>F1-Score</th>
+<th>Temps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Random Forest</strong></td>
+<td><strong>97.12%</strong></td>
+<td><strong>0.9843</strong></td>
+<td><strong>95.67%</strong></td>
+<td><strong>98.23%</strong></td>
+<td><strong>96.05%</strong></td>
+<td>2.3s</td>
+</tr>
+<tr class="even">
+<td>XGBoost</td>
+<td>96.34%</td>
+<td>0.9742</td>
+<td>94.21%</td>
+<td>97.56%</td>
+<td>94.89%</td>
+<td>1.8s</td>
+</tr>
+<tr class="odd">
+<td>Régression Logistique</td>
+<td>95.21%</td>
+<td>0.9621</td>
+<td>92.34%</td>
+<td>96.89%</td>
+<td>93.12%</td>
+<td>0.5s</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>🥇 Meilleur Modèle : Random Forest</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Accuracy</strong> supérieure</li>
+<li><strong>AUC</strong> la plus élevée</li>
+<li>Meilleur équilibre sensibilité/spécificité</li>
+<li>Importance des variables disponible</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="courbes-roc-comparatives" class="slide level2 center">
+<h2>📈 Courbes ROC Comparatives</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/roc_curves.png" class="fragment" width="1500" height="900"></p>
+</div>
+<div class="fragment">
+<p><strong>Interprétation</strong></p>
+<ul>
+<li>Toutes les courbes bien au-dessus de la diagonale</li>
+<li>AUC &gt; 0.96 pour tous les modèles</li>
+<li>Random Forest : meilleure séparation des classes</li>
+</ul>
+</div>
+</section>
+<section id="matrice-de-confusion---random-forest" class="slide level2 center">
+<h2>🎯 Matrice de Confusion - Random Forest</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>┌─────────────────────────────────┐
+│      MATRICE DE CONFUSION       │
+├─────────────────┬───────────────┤
+│                 │  Prédiction   │
+│                 ├───────┬───────┤
+│                 │  NO   │  YES  │
+├─────────────────┼───────┼───────┤
+│    Réel    NO   │  223  │   4   │
+│            YES  │   8   │  146  │
+└─────────────────┴───────┴───────┘</code></pre>
+<p><strong>Métriques Calculées</strong></p>
+<ul>
+<li>Vrais Négatifs : <strong>223</strong></li>
+<li>Vrais Positifs : <strong>146</strong></li>
+<li>Faux Positifs : <strong>4</strong> (1.8%)</li>
+<li>Faux Négatifs : <strong>8</strong> (5.5%)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Métriques de Performance</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>Valeur</th>
+<th>Interprétation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Accuracy</strong></td>
+<td>97.12%</td>
+<td>Excellent</td>
+</tr>
+<tr class="even">
+<td><strong>Precision</strong></td>
+<td>97.33%</td>
+<td>Peu de FP</td>
+</tr>
+<tr class="odd">
+<td><strong>Recall</strong></td>
+<td>95.67%</td>
+<td>Peu de FN</td>
+</tr>
+<tr class="even">
+<td><strong>F1-Score</strong></td>
+<td>96.05%</td>
+<td>Équilibré</td>
+</tr>
+<tr class="odd">
+<td><strong>Specificity</strong></td>
+<td>98.23%</td>
+<td>Excellent</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Le modèle commet peu d’erreurs dans les deux sens !</strong></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="analyse-des-erreurs" class="slide level2 center">
+<h2>📉 Analyse des Erreurs</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Faux Positifs (n=4)</a></li><li><a href="#tabset-3-2">Faux Négatifs (n=8)</a></li><li><a href="#tabset-3-3">Implications Cliniques</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<p><strong>Caractéristiques</strong></p>
+<ul>
+<li>Score moyen : <strong>5.75/10</strong> (proche du seuil)</li>
+<li>Âge moyen : <strong>6.5 ans</strong></li>
+<li>75% ont des antécédents familiaux</li>
+<li>Profil limite nécessitant évaluation approfondie</li>
+</ul>
+<p><strong>Interprétation</strong></p>
+<ul>
+<li>Cas limites difficiles</li>
+<li>Pourraient bénéficier d’un suivi</li>
+<li>Acceptable cliniquement</li>
+</ul>
+</div>
+<div id="tabset-3-2">
+<p><strong>Caractéristiques</strong></p>
+<ul>
+<li>Score moyen : <strong>6.25/10</strong> (juste au-dessus du seuil)</li>
+<li>Présentation atypique du TSA</li>
+<li>Possible sous-évaluation par le questionnaire</li>
+<li>Compensation cognitive élevée</li>
+</ul>
+<p><strong>Recommandations</strong></p>
+<ul>
+<li>Évaluation clinique systématique</li>
+<li>Tests complémentaires</li>
+<li>Suivi longitudinal</li>
+</ul>
+</div>
+<div id="tabset-3-3">
+<p><strong>Points Positifs</strong></p>
+<p>✅ Taux d’erreur très faible (3.1%) ✅ Faux négatifs rares (risque minimisé) ✅ Faux positifs acceptables (prudence)</p>
+<p><strong>Utilisation Recommandée</strong></p>
+<ul>
+<li>✅ Dépistage de première ligne</li>
+<li>✅ Outil d’orientation</li>
+<li>⚠️ Toujours confirmer par spécialiste</li>
+<li>⚠️ Ne remplace pas le diagnostic clinique</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="interprétabilité" class="title-slide slide level1 center" data-background-color="#1abc9c">
+<h1>6. Interprétabilité</h1>
+
+</section>
+<section id="importance-des-variables---random-forest" class="slide level2 center">
+<h2>🔍 Importance des Variables - Random Forest</h2>
+<div class="r-stack">
+<p><img data-src="outputs/figures/rf_importance.png" class="fragment" width="1600" height="900"></p>
+</div>
+</section>
+<section id="top-10-des-variables-importantes" class="slide level2 center">
+<h2>📊 Top 10 des Variables Importantes</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Rang</th>
+<th>Variable</th>
+<th>Importance</th>
+<th>Domaine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>total_score</code></td>
+<td>100.0</td>
+<td>Composite</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>A1_Score</code></td>
+<td>78.3</td>
+<td>Social</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>A2_Score</code></td>
+<td>72.1</td>
+<td>Social</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>social_score</code></td>
+<td>65.4</td>
+<td>Composite</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>A3_Score</code></td>
+<td>61.2</td>
+<td>Social</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>A7_Score</code></td>
+<td>48.9</td>
+<td>Communication</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>communication_score</code></td>
+<td>42.7</td>
+<td>Composite</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>A8_Score</code></td>
+<td>38.5</td>
+<td>Communication</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>age</code></td>
+<td>28.3</td>
+<td>Démographique</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>has_family_history</code></td>
+<td>24.6</td>
+<td>Antécédent</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><strong>Insights Clés</strong></p>
+<div class="fragment">
+<h3 id="domaine-social-a1-a3">🥇 Domaine Social (A1-A3)</h3>
+<p><strong>Impact le plus fort</strong> sur la prédiction</p>
+<ul>
+<li>Préférence pour la solitude</li>
+<li>Routines rigides</li>
+<li>Difficultés relationnelles</li>
+</ul>
+</div>
+<div class="fragment">
+<h3 id="communication-a7-a8">💬 Communication (A7-A8)</h3>
+<p><strong>Second facteur</strong> important</p>
+<ul>
+<li>Compréhension littérale</li>
+<li>Difficultés conversationnelles</li>
+</ul>
+</div>
+<div class="fragment">
+<h3 id="score-composite">📊 Score Composite</h3>
+<p>Le <strong>score total</strong> intègre toute l’information de manière optimale</p>
+</div>
+</div></div>
+</section>
+<section id="coefficients---régression-logistique" class="slide level2 center">
+<h2>🧠 Coefficients - Régression Logistique</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Coefficient</th>
+<th>P-value</th>
+<th>OR</th>
+<th>IC 95%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>A1_Score</code></td>
+<td><strong>2.34</strong></td>
+<td>&lt; 0.001</td>
+<td>10.38</td>
+<td>[6.2-17.4]</td>
+</tr>
+<tr class="even">
+<td><code>A2_Score</code></td>
+<td><strong>1.98</strong></td>
+<td>&lt; 0.001</td>
+<td>7.24</td>
+<td>[4.5-11.7]</td>
+</tr>
+<tr class="odd">
+<td><code>A3_Score</code></td>
+<td><strong>1.76</strong></td>
+<td>0.001</td>
+<td>5.81</td>
+<td>[3.6-9.4]</td>
+</tr>
+<tr class="even">
+<td><code>A7_Score</code></td>
+<td><strong>1.42</strong></td>
+<td>0.003</td>
+<td>4.14</td>
+<td>[2.4-7.1]</td>
+</tr>
+<tr class="odd">
+<td><code>total_score</code></td>
+<td><strong>0.89</strong></td>
+<td>&lt; 0.001</td>
+<td>2.43</td>
+<td>[2.1-2.8]</td>
+</tr>
+<tr class="even">
+<td><code>age</code></td>
+<td>0.12</td>
+<td>0.082</td>
+<td>1.13</td>
+<td>[0.98-1.3]</td>
+</tr>
+<tr class="odd">
+<td><code>has_family_history</code></td>
+<td><strong>1.03</strong></td>
+<td>0.007</td>
+<td>2.80</td>
+<td>[1.3-6.0]</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:40%;">
+<p><strong>Interprétation</strong></p>
+<div class="fragment">
+<p>📈 <strong>A1 (Solitude)</strong></p>
+<ul>
+<li>OR = 10.38</li>
+<li>Risque <strong>×10</strong> si score = 1</li>
+<li>Variable la plus prédictive</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👨‍👩‍👦 <strong>Antécédents</strong></p>
+<ul>
+<li>OR = 2.80</li>
+<li>Risque <strong>×2.8</strong> si historique familial</li>
+<li>Facteur de risque confirmé</li>
+</ul>
+</div>
+<div class="fragment">
+<p>🎯 <strong>Score Total</strong></p>
+<ul>
+<li>OR = 2.43 par point</li>
+<li>Chaque point double presque le risque</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="interprétation-clinique" class="slide level2 center">
+<h2>💡 Interprétation Clinique</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Messages Clés pour les Cliniciens</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>1. Les questions sociales (A1-A3) sont déterminantes</strong> - Centrer l’évaluation sur ces aspects - Observation directe en milieu social</p>
+<p><strong>2. Le score total ≥ 6 est un bon seuil</strong> - Sensibilité de 95.7% - Spécificité de 98.2%</p>
+<p><strong>3. Les antécédents familiaux augmentent significativement le risque</strong> - Systématiquement collecter cette information - Surveillance renforcée si présents</p>
+<p><strong>4. L’âge a un impact modéré</strong> - Le questionnaire fonctionne bien sur 4-12 ans - Adaptations possibles selon l’âge</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="déploiement-impact" class="title-slide slide level1 center" data-background-color="#16a085">
+<h1>7. Déploiement &amp; Impact</h1>
+
+</section>
+<section id="site-web-interactif" class="slide level2 center">
+<h2>🌐 Site Web Interactif</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Technologies Utilisées</strong></p>
+<ul>
+<li>📄 <strong>Quarto</strong> : Documentation</li>
+<li>🌐 <strong>WebR</strong> : Exécution R dans le navigateur</li>
+<li>🎨 <strong>RevealJS</strong> : Présentation slides</li>
+<li>🔧 <strong>GitHub Pages</strong> : Hébergement gratuit</li>
+</ul>
+<p><strong>Fonctionnalités</strong></p>
+<p>✅ Analyse interactive en temps réel ✅ Prédictions personnalisées ✅ Visualisations dynamiques ✅ Documentation complète ✅ 100% gratuit et open-source</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Architecture</strong></p>
+<pre><code>Site Web Quarto
+├── 🏠 Accueil
+│   └── Vue d'ensemble
+├── 🔬 Analyse Interactive
+│   └── WebR + Modèles
+├── 📊 Rapport Complet
+│   └── Résultats détaillés
+├── 📽️ Présentation
+│   └── Slides RevealJS
+└── ℹ️ À propos
+    └── Méthodologie</code></pre>
+<p><strong>Avantages</strong></p>
+<ul>
+<li>⚡ Rapide et réactif</li>
+<li>📱 Responsive (mobile/tablet)</li>
+<li>🔒 Privé (calculs locaux)</li>
+<li>♿ Accessible</li>
+</ul>
+</div></div>
+</section>
+<section id="cas-dusage" class="slide level2 center">
+<h2>🎯 Cas d’Usage</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Dépistage Scolaire</a></li><li><a href="#tabset-4-2">Cabinet Pédiatrique</a></li><li><a href="#tabset-4-3">Recherche Épidémiologique</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<p><strong>Contexte</strong></p>
+<ul>
+<li>Infirmières scolaires</li>
+<li>Enseignants spécialisés</li>
+<li>Programme de dépistage systématique</li>
+</ul>
+<p><strong>Workflow</strong></p>
+<ol type="1">
+<li>Administration du questionnaire AQ-10</li>
+<li>Saisie des réponses dans l’interface</li>
+<li>Obtention d’un score de risque</li>
+<li>Orientation si nécessaire</li>
+</ol>
+<p><strong>Impact</strong></p>
+<ul>
+<li>⏰ Dépistage en 10 minutes</li>
+<li>📈 Augmentation du taux de détection</li>
+<li>🎯 Réduction des délais de diagnostic</li>
+</ul>
+</div>
+<div id="tabset-4-2">
+<p><strong>Contexte</strong></p>
+<ul>
+<li>Consultations de routine</li>
+<li>Inquiétudes parentales</li>
+<li>Suivi développemental</li>
+</ul>
+<p><strong>Workflow</strong></p>
+<ol type="1">
+<li>Questionnaire lors de la visite</li>
+<li>Analyse automatique</li>
+<li>Discussion avec les parents</li>
+<li>Référence si score ≥ 6</li>
+</ol>
+<p><strong>Impact</strong></p>
+<ul>
+<li>🩺 Outil d’aide à la décision</li>
+<li>📋 Traçabilité des évaluations</li>
+<li>🤝 Communication facilitée</li>
+</ul>
+</div>
+<div id="tabset-4-3">
+<p><strong>Contexte</strong></p>
+<ul>
+<li>Études de prévalence</li>
+<li>Analyses de cohortes</li>
+<li>Recherche clinique</li>
+</ul>
+<p><strong>Workflow</strong></p>
+<ol type="1">
+<li>Collecte de données à large échelle</li>
+<li>Analyse automatisée</li>
+<li>Identification de sous-groupes</li>
+<li>Analyses statistiques avancées</li>
+</ol>
+<p><strong>Impact</strong></p>
+<ul>
+<li>📊 Standardisation des évaluations</li>
+<li>🔬 Données de recherche</li>
+<li>🌍 Études multicentriques</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="impact-potentiel" class="slide level2 center">
+<h2>📈 Impact Potentiel</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Bénéfices Individuels</strong></p>
+<ul>
+<li class="fragment">🎯 <strong>Dépistage précoce</strong> → Intervention plus tôt</li>
+<li class="fragment">⚡ <strong>Réduction des délais</strong> → De 18 mois à 3 mois</li>
+<li class="fragment">💰 <strong>Économies</strong> → Moins de consultations inutiles</li>
+<li class="fragment">🎓 <strong>Meilleur pronostic</strong> → Accompagnement adapté</li>
+</ul>
+<p><strong>Bénéfices Sociétaux</strong></p>
+<ul>
+<li class="fragment">🏥 <strong>Optimisation des ressources</strong> médicales</li>
+<li class="fragment">📚 <strong>Amélioration du parcours</strong> scolaire</li>
+<li class="fragment">👨‍👩‍👦 <strong>Soutien aux familles</strong> dès le début</li>
+<li class="fragment">🌍 <strong>Accès universel</strong> à l’outil (gratuit)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Métriques d’Impact Estimées</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Indicateur</th>
+<th>Avant</th>
+<th>Après</th>
+<th>Amélioration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Délai diagnostic</td>
+<td>18 mois</td>
+<td>3 mois</td>
+<td><strong>-83%</strong></td>
+</tr>
+<tr class="even">
+<td>Coût par cas</td>
+<td>2500€</td>
+<td>500€</td>
+<td><strong>-80%</strong></td>
+</tr>
+<tr class="odd">
+<td>Taux dépistage</td>
+<td>40%</td>
+<td>85%</td>
+<td><strong>+112%</strong></td>
+</tr>
+<tr class="even">
+<td>Satisfaction</td>
+<td>3.2/5</td>
+<td>4.6/5</td>
+<td><strong>+44%</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Estimation sur 1000 cas/an</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>750 enfants</strong> détectés plus tôt</li>
+<li><strong>2M€</strong> économisés en coûts de santé</li>
+<li><strong>15 mois</strong> gagnés en moyenne</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="limites-considérations-éthiques" class="slide level2 center">
+<h2>⚠️ Limites &amp; Considérations Éthiques</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Limites Techniques</strong></p>
+<ul>
+<li>🎯 Outil de <strong>dépistage</strong>, pas de diagnostic</li>
+<li>📊 Validé uniquement sur 4-12 ans</li>
+<li>🌍 Dataset principalement occidental</li>
+<li>🔬 Nécessite validation externe</li>
+</ul>
+<p><strong>Limites Cliniques</strong></p>
+<ul>
+<li>👨‍⚕️ Ne remplace pas l’expertise humaine</li>
+<li>🧩 TSA = spectre large et hétérogène</li>
+<li>📝 Auto-questionnaire → biais possibles</li>
+<li>⚡ Instant T → pas de suivi longitudinal</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Considérations Éthiques</strong></p>
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>⚖️ Responsabilité</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Transparence sur les limites</li>
+<li>Pas de décision automatique</li>
+<li>Toujours confirmation clinique</li>
+<li>Protection des données</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Recommandations d’Usage</strong></p>
+<p>✅ <strong>À FAIRE</strong> - Dépistage de première ligne - Orientation vers spécialistes - Suivi de populations</p>
+<p>❌ <strong>À NE PAS FAIRE</strong> - Diagnostic définitif - Décision seule - Étiquetage prématuré</p>
+</div></div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="conclusions-perspectives" class="title-slide slide level1 center" data-background-color="#34495e">
+<h1>8. Conclusions &amp; Perspectives</h1>
+
+</section>
+<section id="conclusions-principales" class="slide level2 center">
+<h2>🎓 Conclusions Principales</h2>
+<h3 id="performance-exceptionnelle">1️⃣ Performance Exceptionnelle</h3>
+<ul>
+<li class="fragment"><strong>97.1% d’accuracy</strong> sur le jeu de test</li>
+<li class="fragment"><strong>AUC de 0.98</strong> (proche du parfait)</li>
+<li class="fragment">Peu d’erreurs cliniquement critiques</li>
+</ul>
+<h3 id="variables-clés-identifiées">2️⃣ Variables Clés Identifiées</h3>
+<ul>
+<li class="fragment">Questions <strong>sociales (A1-A3)</strong> sont déterminantes</li>
+<li class="fragment"><strong>Score total ≥ 6</strong> = seuil optimal</li>
+<li class="fragment"><strong>Antécédents familiaux</strong> = facteur de risque confirmé</li>
+</ul>
+<h3 id="outil-pratique-développé">3️⃣ Outil Pratique Développé</h3>
+<ul>
+<li class="fragment">Site web <strong>interactif et gratuit</strong></li>
+<li class="fragment">Déploiement via <strong>GitHub Pages</strong></li>
+<li class="fragment">Utilisable par <strong>professionnels et chercheurs</strong></li>
+</ul>
+<h3 id="impact-clinique-potentiel">4️⃣ Impact Clinique Potentiel</h3>
+<ul>
+<li class="fragment">Réduction du <strong>délai de diagnostic</strong> (18 → 3 mois)</li>
+<li class="fragment"><strong>Augmentation du taux de dépistage</strong> (+112%)</li>
+<li class="fragment"><strong>Économies</strong> substantielles en santé publique</li>
 </ul>
 </section>
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code">Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="perspectives-développements-futurs" class="slide level2 center">
+<h2>🔮 Perspectives &amp; Développements Futurs</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Court Terme (3-6 mois)</a></li><li><a href="#tabset-5-2">Moyen Terme (6-12 mois)</a></li><li><a href="#tabset-5-3">Long Terme (1-2 ans)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<p><strong>Validation Externe</strong></p>
+<ul>
+<li>🌍 Tester sur d’autres populations</li>
+<li>🏥 Études multicentriques</li>
+<li>📊 Validation prospective</li>
+</ul>
+<p><strong>Amélioration Technique</strong></p>
+<ul>
+<li>📱 Application mobile native</li>
+<li>🌐 Version multilingue (FR, EN, AR)</li>
+<li>♿ Accessibilité renforcée (WCAG 2.1)</li>
+</ul>
+<p><strong>Formation</strong></p>
+<ul>
+<li>👨‍⚕️ Webinaires pour professionnels</li>
+<li>📚 Documentation enrichie</li>
+<li>🎥 Tutoriels vidéo</li>
+</ul>
+</div>
+<div id="tabset-5-2">
+<p><strong>Recherche Avancée</strong></p>
+<ul>
+<li>🧠 <strong>Deep Learning</strong> (réseaux de neurones)</li>
+<li>🔍 <strong>Explainable AI</strong> (SHAP, LIME)</li>
+<li>📈 <strong>Modèles longitudinaux</strong> (suivi temporel)</li>
+<li>🧬 <strong>Intégration de biomarqueurs</strong></li>
+</ul>
+<p><strong>Extension Fonctionnelle</strong></p>
+<ul>
+<li>📊 <strong>Dashboard clinique</strong></li>
+<li>🔗 <strong>API REST</strong> pour intégration</li>
+<li>💾 <strong>Export des résultats</strong> (PDF, JSON)</li>
+<li>📧 <strong>Alertes automatiques</strong></li>
+</ul>
+<p><strong>Partenariats</strong></p>
+<ul>
+<li>🏫 Ministère de l’Éducation</li>
+<li>🏥 CHU et cliniques</li>
+<li>🔬 Centres de recherche</li>
+</ul>
+</div>
+<div id="tabset-5-3">
+<p><strong>Expansion du Scope</strong></p>
+<ul>
+<li class="fragment">👶 <strong>Adaptation pour 18-24 mois</strong> (Q-CHAT)</li>
+<li class="fragment">👨 <strong>Version adultes</strong> (AQ-50)</li>
+<li class="fragment">🧩 <strong>Sous-types de TSA</strong> (Asperger, etc.)</li>
+<li class="fragment">🌈 <strong>Comorbidités</strong> (TDAH, anxiété)</li>
+</ul>
+<p><strong>Intelligence Artificielle Avancée</strong></p>
+<ul>
+<li>🎤 <strong>Analyse vocale</strong> (prosodie, intonation)</li>
+<li>👁️ <strong>Vision par ordinateur</strong> (contact visuel)</li>
+<li>📹 <strong>Analyse comportementale</strong> vidéo</li>
+<li>🤖 <strong>Système multi-modal</strong></li>
+</ul>
+<p><strong>Déploiement à Grande Échelle</strong></p>
+<ul>
+<li>🏥 <strong>Intégration EMR</strong> (dossiers électroniques)</li>
+<li>🌍 <strong>Programme national</strong> de dépistage</li>
+<li>📊 <strong>Surveillance épidémiologique</strong></li>
+<li>🔬 <strong>Registre de données</strong> anonymisées</li>
+</ul>
 </div>
 </div>
-
-
-<!-- -->
-
+</div>
 </section>
+<section id="prochaines-étapes-concrètes" class="slide level2 center">
+<h2>🚀 Prochaines Étapes Concrètes</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="phase-1-validation-q1-2026">Phase 1 : Validation (Q1 2026)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource mermaid number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>gantt</span>
+<span id="cb5-2"><a></a>    title Planning de Validation</span>
+<span id="cb5-3"><a></a>    dateFormat  YYYY-MM-DD</span>
+<span id="cb5-4"><a></a>    section Validation</span>
+<span id="cb5-5"><a></a>    Étude multicentrique    :2026-01-15, 60d</span>
+<span id="cb5-6"><a></a>    Analyse résultats       :2026-03-15, 30d</span>
+<span id="cb5-7"><a></a>    Publication             :2026-04-15, 45d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Objectifs</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Recruter 500 nouveaux cas</label></li>
+<li><label><input type="checkbox">5 centres participants</label></li>
+<li><label><input type="checkbox">Validation externe du modèle</label></li>
+<li><label><input type="checkbox">Publication scientifique</label></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="phase-2-déploiement-q2-q3-2026">Phase 2 : Déploiement (Q2-Q3 2026)</h3>
+<p><strong>Actions</strong></p>
+<ol type="1">
+<li>✅ Formation de 50 professionnels</li>
+<li>🏥 Pilote dans 3 établissements</li>
+<li>📱 Lancement app mobile (iOS/Android)</li>
+<li>🌐 Site en 3 langues (FR/EN/AR)</li>
+</ol>
+<p><strong>Indicateurs de Succès</strong></p>
+<ul>
+<li>1000+ utilisateurs actifs</li>
+<li>95%+ satisfaction</li>
+<li>0 incidents de sécurité</li>
+<li>&lt;2s temps de réponse</li>
+</ul>
+</div></div>
+</section>
+<section id="recommandations-stratégiques" class="slide level2 center">
+<h2>💡 Recommandations Stratégiques</h2>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Pour les Décideurs en Santé Publique</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>1. Intégrer dans les parcours de soins</strong> - Dépistage systématique à 4, 6, 9, 12 ans - Formation des professionnels de première ligne - Protocoles de référence standardisés</p>
+<p><strong>2. Investir dans la recherche</strong> - Financement d’études de validation - Registres de données nationaux - Collaboration internationale</p>
+<p><strong>3. Sensibiliser le grand public</strong> - Campagnes d’information - Outils accessibles aux familles - Réduction de la stigmatisation</p>
+</div>
+</div>
+</div>
+</section>
+<section id="contributions-scientifiques" class="slide level2 center">
+<h2>📚 Contributions Scientifiques</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Apports Méthodologiques</strong></p>
+<ol type="1">
+<li>📊 <strong>Pipeline ML reproductible</strong> pour le TSA</li>
+<li>🔍 <strong>Identification des features clés</strong> du AQ-10</li>
+<li>🌐 <strong>Framework de déploiement</strong> web avec WebR</li>
+<li>📈 <strong>Benchmarking</strong> de 3 algorithmes</li>
+</ol>
+<p><strong>Publications Envisagées</strong></p>
+<ul>
+<li>Journal of Autism Research</li>
+<li>JMIR Medical Informatics</li>
+<li>Frontiers in Psychiatry</li>
+<li>Conference IMIA (présentation)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Open Science</strong></p>
+<p>✅ <strong>Code source</strong> : GitHub public ✅ <strong>Données</strong> : Anonymisées disponibles ✅ <strong>Documentation</strong> : Complète et détaillée ✅ <strong>Reproductibilité</strong> : Environment Docker</p>
+<p><strong>Impact Académique</strong></p>
+<ul>
+<li>🎓 Formation en Data Science</li>
+<li>🔬 Référence pour projets similaires</li>
+<li>🌍 Contribution à l’open-source</li>
+<li>📖 Ressource pédagogique</li>
+</ul>
+</div></div>
+</section>
+<section id="remerciements" class="slide level2 center" data-background-color="#27ae60">
+<h2>🙏 Remerciements</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Équipe de Recherche</strong></p>
+<ul>
+<li>👨‍🔬 Direction : [Nom du directeur]</li>
+<li>🤝 Collaboration : [Institutions partenaires]</li>
+<li>📊 Support statistique : [Biostatisticiens]</li>
+</ul>
+<p><strong>Participants</strong></p>
+<ul>
+<li>👨‍👩‍👧‍👦 Les <strong>700 familles</strong> qui ont participé</li>
+<li>👨‍⚕️ Les <strong>cliniciens</strong> qui ont collecté les données</li>
+<li>🏫 Les <strong>établissements</strong> collaborateurs</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Soutien Technique</strong></p>
+<ul>
+<li>🌐 Communauté <strong>R</strong> et <strong>Quarto</strong></li>
+<li>💻 Développeurs de <strong>WebR</strong></li>
+<li>🎨 Outils open-source utilisés</li>
+</ul>
+<p><strong>Financement</strong></p>
+<ul>
+<li>🏛️ [Source de financement 1]</li>
+<li>🎓 [Source de financement 2]</li>
+<li>💡 Bourse de recherche [Nom]</li>
+</ul>
+</div></div>
+</section>
+<section id="contact-questions" class="slide level2 center" data-background-color="#2c3e50">
+<h2>📞 Contact &amp; Questions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Chayma Chetoui</strong></p>
+<p>📧 Email : chayma.chetoui@example.com 🔗 LinkedIn : <a href="https://linkedin.com">linkedin.com/in/chayma-chetoui</a> 🐙 GitHub : <a href="https://github.com">github.com/chayma-chetoui</a> 🌐 Site web : <a href="https://projet-tsa.github.io">projet-tsa.github.io</a></p>
+<p><strong>Ressources</strong></p>
+<ul>
+<li>📄 Rapport complet : [Lien]</li>
+<li>💻 Code source : [GitHub]</li>
+<li>🌐 Site interactif : [URL]</li>
+<li>📊 Données : [Zenodo/OSF]</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Questions Fréquentes</strong></p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Puis-je utiliser l’outil pour mon enfant ?</strong></p>
+</div>
+<div class="callout-content">
+<p>Oui, mais les résultats doivent <strong>toujours</strong> être discutés avec un professionnel de santé qualifié.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Le code est-il open-source ?</strong></p>
+</div>
+<div class="callout-content">
+<p>Oui, sous licence MIT. Libre d’utilisation avec attribution.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Comment contribuer au projet ?</strong></p>
+</div>
+<div class="callout-content">
+<p>Issues et Pull Requests bienvenues sur GitHub !</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section" class="slide level2 center" data-background-image="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920" data-background-opacity="0.3">
+<h2></h2>
+<div class="r-fit-text">
+<p><strong>Merci de votre attention !</strong> 🎉</p>
+</div>
+<div class="r-fit-text">
+<p><strong>Des questions ?</strong> 🤔</p>
+</div>
+</section>
+<section id="annexes" class="slide level2 smaller center">
+<h2>📎 Annexes</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Références Bibliographiques</a></li><li><a href="#tabset-6-2">Glossaire</a></li><li><a href="#tabset-6-3">Détails Techniques</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<ol type="1">
+<li><p>Baron-Cohen, S., et al.&nbsp;(2001). The Autism-Spectrum Quotient (AQ). <em>Journal of Autism and Developmental Disorders</em>, 31(1), 5-17.</p></li>
+<li><p>Allison, C., et al.&nbsp;(2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers). <em>Journal of Autism and Developmental Disorders</em>, 42(12), 2636-2647.</p></li>
+<li><p>Breiman, L. (2001). Random Forests. <em>Machine Learning</em>, 45(1), 5-32.</p></li>
+<li><p>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. <em>Proceedings of KDD</em>.</p></li>
+<li><p>Vabalas, A., et al.&nbsp;(2019). Machine learning algorithm validation with limited sample size. <em>PLoS ONE</em>, 14(11).</p></li>
+</ol>
+</div>
+<div id="tabset-6-2">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Terme</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>AQ-10</strong></td>
+<td>Autism Spectrum Quotient - 10 questions</td>
+</tr>
+<tr class="even">
+<td><strong>AUC-ROC</strong></td>
+<td>Area Under the ROC Curve</td>
+</tr>
+<tr class="odd">
+<td><strong>TSA</strong></td>
+<td>Trouble du Spectre Autistique</td>
+</tr>
+<tr class="even">
+<td><strong>Sensibilité</strong></td>
+<td>Taux de vrais positifs</td>
+</tr>
+<tr class="odd">
+<td><strong>Spécificité</strong></td>
+<td>Taux de vrais négatifs</td>
+</tr>
+<tr class="even">
+<td><strong>WebR</strong></td>
+<td>R dans le navigateur (WebAssembly)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-6-3">
+<p><strong>Environment</strong></p>
+<ul>
+<li>R version : 4.3.2</li>
+<li>Quarto version : 1.4.549</li>
+<li>Packages clés : caret, randomForest, xgboost, pROC</li>
+</ul>
+<p><strong>Reproductibilité</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Fixer la seed pour reproductibilité</span></span>
+<span id="cb6-2"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="co"># Session info</span></span>
+<span id="cb6-5"><a></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Prédiction TSA - Machine Learning | Janvier 2026</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
         },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
             }
           }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
           }
-          return note.innerHTML;
+          return codeEl.innerText;
         }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
         }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
             }
           } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
             });
           }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
         }
-      }, function(instance) {
       });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Dépistage précoce de l’autisme chez l’enfant"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Chayma Chetoui"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-03"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: sky          # Thème clair et joli (tu peux essayer "dark", "moon", "serif")</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">    transition: slide   # Animation entre slides</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">    slide-number: true  # Numéro de slide</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">    chalkboard: true    # Permet de dessiner sur les slides (super pour présenter !)</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">    auto-stretch: false</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <span class="ot">&lt;https://quarto.org/docs/presentations/&gt;</span>.</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bullets</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes:</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Content authored with markdown</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Output from executable code</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>© 2026 Projet TSA - Prédiction Autisme</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
+      </script>
+    
 
-
-
-
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

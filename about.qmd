@@ -1,11 +1,399 @@
 ---
 title: "À propos"
 subtitle: "Méthodologie et contexte du projet"
+author: "Chayma Chetoui"
+date: today
 ---
 
 ## 🎓 À Propos du Projet
 
 Ce projet a été développé dans le cadre d'une étude sur l'utilisation du machine learning pour le dépistage précoce du Trouble du Spectre Autistique (TSA) chez l'enfant.
+
+::: {.callout-note icon="false"}
+## 🎯 Objectif Principal
+
+Développer un **outil de dépistage fiable et accessible** du TSA basé sur le questionnaire AQ-10 et des techniques avancées de machine learning.
+:::
+
+---
+
+## 📋 Questionnaire AQ-10
+
+Le **Autism Spectrum Quotient-10 (AQ-10)** est un questionnaire de dépistage validé scientifiquement comprenant 10 questions ciblant les domaines suivants :
+
+### Questions par Domaine
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+**🤝 Social (Questions 1-3)**
+
+- A1 : Préférence pour faire les choses seul(e)
+- A2 : Aime faire les choses de la même manière
+- A3 : Difficultés à se faire des amis
+
+**🎯 Attention (Questions 4-6)**
+
+- A4 : S'absorbe facilement dans les détails
+- A5 : Remarque de petits sons
+- A6 : Remarque les numéros de plaque, informations
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**💬 Communication (Questions 7-8)**
+
+- A7 : Difficultés à savoir comment maintenir une conversation
+- A8 : Trouve facile de "lire entre les lignes" (inversé)
+
+**💭 Imagination (Questions 9-10)**
+
+- A9 : Difficultés à imaginer des situations
+- A10 : Trouve facile de créer des histoires (inversé)
+:::
+
+:::
+
+### Scoring
+
+- Chaque question reçoit un score de **0** ou **1**
+- **Score total** : 0 à 10
+- **Seuil clinique** : ≥ 6 suggère un risque de TSA
+
+### Validation Scientifique
+
+Le AQ-10 a démontré :
+
+- **Sensibilité** : ~85%
+- **Spécificité** : ~90%
+- **Corrélation** avec diagnostic clinique : r = 0.78
+
+---
+
+## 🔬 Méthodologie Technique
+
+### Pipeline de Traitement
+
+```{mermaid}
+%%| fig-width: 12
+flowchart TD
+    A[📥 Données Brutes<br/>704 observations] --> B[🧹 Nettoyage<br/>-16 doublons]
+    B --> C[🔧 Feature Engineering<br/>Scores par domaine]
+    C --> D[📊 Analyse Exploratoire<br/>Visualisations]
+    D --> E[✂️ Split Train/Test<br/>70% / 30%]
+    E --> F[🤖 Modélisation<br/>3 algorithmes]
+    F --> G[📈 Évaluation<br/>CV 10-fold]
+    G --> H[🏆 Sélection<br/>Random Forest]
+    H --> I[🌐 Déploiement<br/>Site web + WebR]
+    
+    style A fill:#3498db,color:#fff
+    style B fill:#e74c3c,color:#fff
+    style C fill:#f39c12,color:#fff
+    style D fill:#9b59b6,color:#fff
+    style E fill:#1abc9c,color:#fff
+    style F fill:#34495e,color:#fff
+    style G fill:#16a085,color:#fff
+    style H fill:#27ae60,color:#fff
+    style I fill:#2ecc71,color:#fff
+```
+
+### Technologies Utilisées
+
+::: {.panel-tabset}
+
+#### Langages & Frameworks
+
+| Technologie | Version | Utilisation |
+|-------------|---------|-------------|
+| **R** | 4.3+ | Analyse et modélisation |
+| **Quarto** | 1.4+ | Documentation et site web |
+| **WebR** | Latest | Exécution R dans navigateur |
+| **JavaScript** | ES6+ | Interactivité |
+
+#### Packages R Principaux
+
+**Machine Learning**
+```r
+library(caret)         # Framework ML
+library(randomForest)  # Random Forest
+library(xgboost)       # Gradient Boosting
+library(glmnet)        # Régression régularisée
+library(pROC)          # Courbes ROC
+```
+
+**Visualisation**
+```r
+library(ggplot2)       # Graphiques
+library(ggridges)      # Ridge plots
+library(corrplot)      # Matrices de corrélation
+library(patchwork)     # Composition de graphiques
+library(viridis)       # Palettes de couleurs
+```
+
+**Manipulation de Données**
+```r
+library(tidyverse)     # Écosystème tidyverse
+library(dplyr)         # Manipulation
+library(tidyr)         # Restructuration
+```
+
+#### Hébergement & Déploiement
+
+- **GitHub** : Hébergement du code source
+- **GitHub Pages** : Hébergement du site web
+- **GitHub Actions** : CI/CD automatisé
+- **Quarto Publish** : Alternative de déploiement
+
+:::
+
+### Processus de Validation
+
+1. **Nettoyage des données** (n=688 après)
+2. **Split stratifié** 70/30 (train/test)
+3. **Cross-validation** 10-fold sur train
+4. **Optimisation** des hyperparamètres (grid search)
+5. **Évaluation finale** sur test set
+6. **Comparaison** de 3 algorithmes
+
+---
+
+## 📚 Références Scientifiques
+
+### Articles Fondamentaux
+
+1. **Baron-Cohen, S., et al. (2001)**  
+   "The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome"  
+   *Journal of Autism and Developmental Disorders*, 31(1), 5-17  
+   [DOI: 10.1023/A:1005653411471](https://doi.org/10.1023/A:1005653411471)
+
+2. **Allison, C., et al. (2012)**  
+   "The Q-CHAT: A quantitative measure of autistic traits"  
+   *Journal of Autism and Developmental Disorders*, 42(12), 2636-2647  
+   [DOI: 10.1007/s10803-012-1559-8](https://doi.org/10.1007/s10803-012-1559-8)
+
+### Machine Learning
+
+3. **Breiman, L. (2001)**  
+   "Random Forests"  
+   *Machine Learning*, 45(1), 5-32  
+   [DOI: 10.1023/A:1010933404324](https://doi.org/10.1023/A:1010933404324)
+
+4. **Chen, T., & Guestrin, C. (2016)**  
+   "XGBoost: A Scalable Tree Boosting System"  
+   *Proceedings of KDD*  
+   [DOI: 10.1145/2939672.2939785](https://doi.org/10.1145/2939672.2939785)
+
+5. **Vabalas, A., et al. (2019)**  
+   "Machine learning algorithm validation with limited sample size"  
+   *PLoS ONE*, 14(11)  
+   [DOI: 10.1371/journal.pone.0224365](https://doi.org/10.1371/journal.pone.0224365)
+
+### ML pour l'Autisme
+
+6. **Duda, M., et al. (2016)**  
+   "Use of machine learning for behavioral distinction of autism and ADHD"  
+   *Translational Psychiatry*, 6(2), e732  
+   [DOI: 10.1038/tp.2015.221](https://doi.org/10.1038/tp.2015.221)
+
+7. **Thabtah, F. (2019)**  
+   "Machine learning in autistic spectrum disorder behavioral research"  
+   *Informatics for Health and Social Care*, 44(3), 289-309
+
+---
+
+## ⚖️ Considérations Éthiques
+
+### Utilisation Appropriée
+
+::: {.callout-tip icon="false"}
+## ✅ Ce modèle PEUT être utilisé pour
+
+- **Dépistage de première ligne** en milieu scolaire ou pédiatrique
+- **Outil d'orientation** vers des spécialistes
+- **Recherche et éducation** sur le TSA
+- **Sensibilisation** au dépistage précoce
+:::
+
+::: {.callout-warning icon="false"}
+## ❌ Ce modèle NE DOIT PAS être utilisé pour
+
+- **Diagnostic définitif** de TSA
+- **Décisions cliniques isolées** sans évaluation complète
+- **Remplacement** d'une évaluation par spécialiste
+- **Étiquetage prématuré** d'un enfant
+:::
+
+### Protection des Données
+
+#### Conformité RGPD
+
+- ✅ **Aucune donnée personnelle** collectée par le site
+- ✅ **Traitement local** dans le navigateur (WebR)
+- ✅ **Pas de cookies** de tracking
+- ✅ **Open source** : code auditable
+
+#### Anonymisation
+
+Le dataset utilisé :
+
+- ✅ Données **complètement anonymisées**
+- ✅ Aucun identifiant personnel
+- ✅ Agrégation au niveau populationnel
+- ✅ Conformité aux standards de recherche
+
+### Transparence
+
+#### Code Open Source
+
+Ce projet est entièrement open-source :
+
+- 💻 **Code source** disponible sur GitHub
+- 📄 **Méthodologie** documentée
+- 🔍 **Résultats reproductibles**
+- 🎓 **Données** (anonymisées) disponibles sur demande
+
+#### Limites Communiquées
+
+Nous communiquons clairement :
+
+- 📊 Les limites du modèle
+- ⚠️ Le besoin de validation clinique
+- 🎯 Le contexte d'utilisation approprié
+- 📈 Les performances et erreurs
+
+---
+
+## 👥 Équipe & Remerciements
+
+### Développement
+
+**Chayma Chetoui**  
+*Data Scientist & Développeuse Principale*
+
+- 🎓 Formation en Data Science et Statistiques
+- 💼 Spécialisation en Machine Learning pour la santé
+- 📧 Contact : chayma.chetoui@example.com
+
+### Supervision Académique
+
+- 👨‍🏫 **[Nom du superviseur]** - Directeur de recherche
+- 🏛️ **[Institution]** - Établissement d'accueil
+
+### Collaboration Clinique
+
+Nous remercions :
+
+- 👨‍⚕️ Les **cliniciens** pour leur expertise sur le TSA
+- 👨‍👩‍👧‍👦 Les **familles** qui ont participé à la collecte de données
+- 🏥 Les **établissements** partenaires
+
+### Soutien Technique
+
+- 🌐 Communauté **R** et **Quarto**
+- 💻 Développeurs de **WebR** (George Stagg & contributeurs)
+- 🎨 Créateurs des packages open-source utilisés
+
+---
+
+## 📄 Licence & Citation
+
+### Licence
+
+Ce projet est sous licence **MIT**. Vous êtes libre de :
+
+- ✅ Utiliser le code à des fins académiques et commerciales
+- ✅ Modifier et adapter le modèle
+- ✅ Distribuer avec attribution appropriée
+
+**Attribution** : Citez ce projet si vous l'utilisez dans vos travaux.
+
+### Citation Recommandée
+
+```bibtex
+@misc{chetoui2026tsa,
+  author = {Chetoui, Chayma},
+  title = {Prédiction du Trouble du Spectre Autistique chez l'Enfant avec Machine Learning},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/username/projet-tsa}
+}
+```
+
+### Reproductibilité
+
+Pour reproduire cette analyse :
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/username/projet-tsa.git
+cd projet-tsa
+
+# 2. Installer les dépendances
+Rscript -e "install.packages(c('caret', 'randomForest', 'xgboost', 'tidyverse'))"
+
+# 3. Exécuter l'analyse
+Rscript scripts/analyse.R
+
+# 4. Générer le site
+quarto render
+```
+
+---
+
+## 🔗 Liens Utiles
+
+### Documentation
+
+- 📖 [Documentation Quarto](https://quarto.org/docs/)
+- 🌐 [WebR Documentation](https://docs.r-wasm.org/webr/)
+- 📊 [caret Package](https://topepo.github.io/caret/)
+
+### Ressources sur le TSA
+
+- 🏛️ [OMS - Autisme](https://www.who.int/fr/news-room/fact-sheets/detail/autism-spectrum-disorders)
+- 🇫🇷 [Autisme Info Service](https://www.autismeinfoservice.fr/)
+- 🇺🇸 [Autism Speaks](https://www.autismspeaks.org/)
+
+### Communauté
+
+- 💬 [GitHub Discussions](https://github.com/username/projet-tsa/discussions)
+- 🐛 [Issues](https://github.com/username/projet-tsa/issues)
+- 📧 Email : chayma.chetoui@example.com
+
+---
+
+## ⚠️ Avertissement Médical
+
+::: {.callout-important}
+## Disclaimer Important
+
+**Ce site est à but éducatif et de recherche uniquement.** 
+
+Les prédictions générées par les modèles :
+
+- ❌ Ne constituent **pas** un avis médical
+- ❌ Ne remplacent **pas** un diagnostic professionnel
+- ❌ Ne doivent **pas** être utilisées pour des décisions cliniques
+
+**Pour tout diagnostic ou traitement du TSA, consultez toujours un professionnel de santé qualifié** (pédopsychiatre, neurologue, psychologue spécialisé).
+
+En cas d'inquiétude concernant le développement de votre enfant, contactez votre pédiatre ou un centre de référence TSA.
+:::
+
+---
+
+::: {style="text-align: center; padding: 2rem; background-color: #f8f9fa; border-radius: 10px; margin-top: 3rem;"}
+## 📬 Contact
+
+Des questions sur le projet ? N'hésitez pas à nous contacter !
+
+**Email** : chayma.chetoui@example.com  
+**GitHub** : [github.com/chayma-chetoui](https://github.com)  
+**LinkedIn** : [linkedin.com/in/chayma-chetoui](https://linkedin.com)
+
+---
+
+*Dernière mise à jour : `r format(Sys.Date(), "%d %B %Y")`*
+:::
 
 ## 📋 Questionnaire AQ-10
 
@@ -101,37 +489,15 @@ Ce projet est open-source et transparent :
 - Méthodologie documentée
 - Résultats reproductibles
 
-## 👥 Équipe
-
-**Développeur Principal** : Votre Nom  
-**Supervision** : [Nom du superviseur]  
-**Institution** : [Votre institution]
 
 ## 📧 Contact
 
 Pour toute question ou collaboration :
 
-- **Email** : votre.email@example.com
-- **GitHub** : [github.com/votre-username](https://github.com)
-- **LinkedIn** : [Votre profil](https://linkedin.com)
+- **Email** : chaymachetoui2821@gmail.com
+- **GitHub** : [github.com/ChaymaChetoui](https://github.com)
 
-## 📄 Licence
 
-Ce projet est sous licence **MIT**. Vous êtes libre de :
-
-- Utiliser le code à des fins académiques
-- Modifier et adapter le modèle
-- Distribuer avec attribution
-
-## 🙏 Remerciements
-
-Nous remercions :
-
-- Les familles qui ont participé à la collecte de données
-- Les professionnels de santé pour leur expertise
-- La communauté R et Quarto pour les outils open-source
-
----
 
 ::: {.callout-important}
 ## Avertissement Médical

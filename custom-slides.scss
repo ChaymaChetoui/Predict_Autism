@@ -1,0 +1,221 @@
+/*-- scss:defaults --*/
+
+// Couleurs principales
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$warning-color: #f39c12;
+$dark-color: #34495e;
+
+// Polices
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Fira Code', 'Courier New', monospace;
+
+// Tailles
+$font-size-base: 32px;
+$h1-font-size: 2.5em;
+$h2-font-size: 2em;
+$h3-font-size: 1.5em;
+
+/*-- scss:rules --*/
+
+// Titres de sections avec fond coloré
+.reveal h1 {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.reveal h2 {
+  color: $primary-color;
+  font-weight: 600;
+  margin-bottom: 1em;
+  border-bottom: 3px solid $primary-color;
+  padding-bottom: 0.3em;
+}
+
+.reveal h3 {
+  color: $dark-color;
+  font-weight: 500;
+}
+
+// Tableaux stylisés
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.85em;
+}
+
+.reveal table thead {
+  background-color: $primary-color;
+  color: white;
+  font-weight: 600;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.reveal table tbody tr:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.2s;
+}
+
+// Callouts personnalisés
+.callout {
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 8px;
+  border-left: 5px solid;
+}
+
+.callout-note {
+  background-color: #e3f2fd;
+  border-left-color: $primary-color;
+}
+
+.callout-important {
+  background-color: #fff3e0;
+  border-left-color: $warning-color;
+}
+
+.callout-warning {
+  background-color: #ffebee;
+  border-left-color: $accent-color;
+}
+
+.callout-tip {
+  background-color: #e8f5e9;
+  border-left-color: $secondary-color;
+}
+
+// Listes avec icônes
+.reveal ul {
+  list-style: none;
+}
+
+.reveal ul li::before {
+  content: "▶";
+  color: $primary-color;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+// Code blocks
+.reveal pre {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.reveal code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  color: $accent-color;
+}
+
+// Colonnes
+.columns {
+  display: flex;
+  gap: 2em;
+}
+
+.column {
+  flex: 1;
+}
+
+// Fragments animés
+.fragment.highlight-current-blue {
+  opacity: 1;
+}
+
+.fragment.highlight-current-blue.current-fragment {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+// Emphase sur les métriques
+.metric {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: $secondary-color;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.metric-label {
+  font-size: 0.5em;
+  color: $dark-color;
+  font-weight: 400;
+  display: block;
+}
+
+// Badges
+.badge {
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-success {
+  background-color: $secondary-color;
+  color: white;
+}
+
+.badge-danger {
+  background-color: $accent-color;
+  color: white;
+}
+
+.badge-warning {
+  background-color: $warning-color;
+  color: white;
+}
+
+.badge-info {
+  background-color: $primary-color;
+  color: white;
+}
+
+// Footer personnalisé
+.reveal .slide-number {
+  background-color: rgba(52, 73, 94, 0.8);
+  color: white;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+}
+
+// Transitions améliorées
+.reveal .slides section {
+  transition: transform 0.8s ease-in-out;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+  
+  .reveal table {
+    font-size: 0.7em;
+  }
+}

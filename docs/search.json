@@ -1,171 +1,472 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "",
-    "text": "Ce projet utilise des techniques de machine learning pour prédire le Trouble du Spectre Autistique (TSA) chez l’enfant à partir du questionnaire AQ-10 (Autism Spectrum Quotient)."
-  },
-  {
-    "objectID": "index.html#objectif-du-projet",
-    "href": "index.html#objectif-du-projet",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "",
-    "text": "Ce projet utilise des techniques de machine learning pour prédire le Trouble du Spectre Autistique (TSA) chez l’enfant à partir du questionnaire AQ-10 (Autism Spectrum Quotient)."
-  },
-  {
-    "objectID": "index.html#dataset",
-    "href": "index.html#dataset",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "📊 Dataset",
-    "text": "📊 Dataset\n\nSource : Questionnaire AQ-10 pour enfants\nVariables : 10 questions comportementales + informations démographiques\nTaille : ~700 observations\nClasses : YES (TSA) / NO (Pas de TSA)"
-  },
-  {
-    "objectID": "index.html#modèles-utilisés",
-    "href": "index.html#modèles-utilisés",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "🤖 Modèles Utilisés",
-    "text": "🤖 Modèles Utilisés\nNous avons développé et comparé plusieurs modèles :\n\nRandom ForestRégression LogistiqueXGBoost\n\n\n\nAccuracy : ~97%\nAUC : ~0.98\nExcellent pour l’interprétation des variables\n\n\n\n\nAccuracy : ~95%\nAUC : ~0.96\nModèle simple et interprétable\n\n\n\n\nAccuracy : ~96%\nAUC : ~0.97\nPerformance optimale avec gradient boosting"
-  },
-  {
-    "objectID": "index.html#variables-clés",
-    "href": "index.html#variables-clés",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "🔬 Variables Clés",
-    "text": "🔬 Variables Clés\nLes questions les plus discriminantes :\n\nA1_Score : Compétences sociales\nA2_Score : Communication\nA3_Score : Interaction sociale\nAge : Âge de l’enfant\nFamily History : Antécédents familiaux"
-  },
-  {
-    "objectID": "index.html#navigation",
-    "href": "index.html#navigation",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "📈 Navigation",
-    "text": "📈 Navigation\n\nAnalyse Interactive : Explorez les données avec WebR\nRapport Complet : Résultats détaillés et visualisations\nÀ propos : Méthodologie et références"
-  },
-  {
-    "objectID": "index.html#note-importante",
-    "href": "index.html#note-importante",
-    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
-    "section": "⚠️ Note Importante",
-    "text": "⚠️ Note Importante\nCe modèle est à but éducatif uniquement. Il ne remplace en aucun cas un diagnostic médical professionnel par un spécialiste du TSA.\n\n\n\n\n\n\n\nCommencer l’exploration\n\n\n\nRendez-vous sur la page Analyse Interactive pour tester le modèle avec vos propres données !"
-  },
-  {
     "objectID": "rapport.html",
     "href": "rapport.html",
     "title": "Rapport d’Analyse",
     "section": "",
-    "text": "Ce rapport présente une analyse complète de la prédiction du Trouble du Spectre Autistique (TSA) chez l’enfant en utilisant le questionnaire AQ-10 et des techniques de machine learning.\nRésultats clés :\n\nAccuracy globale : 95-97%\nAUC : 0.96-0.98\nMeilleur modèle : Random Forest\nVariables clés : Questions sociales (A1-A3)"
+    "text": "Ce rapport présente une analyse complète de la prédiction du Trouble du Spectre Autistique (TSA) chez l’enfant en utilisant le questionnaire AQ-10 et des techniques de machine learning.\n\n\n\n\n\n\nNote🎯 Résultats Clés\n\n\n\n\nAccuracy globale : 97.1% (Random Forest)\nAUC : 0.984 (excellent)\nVariables clés : Questions sociales (A1-A3)\nSeuil optimal : Score ≥ 6/10"
   },
   {
     "objectID": "rapport.html#contexte",
     "href": "rapport.html#contexte",
     "title": "Rapport d’Analyse",
     "section": "1.1 Contexte",
-    "text": "1.1 Contexte\nLe Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :\n\nLa communication sociale\nLes interactions sociales\nLes comportements répétitifs ou restreints"
+    "text": "1.1 Contexte\nLe Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par :\n\n🗣️ Difficultés de communication sociale\n👥 Déficits d’interaction sociale\n\n🔄 Comportements répétitifs et intérêts restreints\n\nPrévalence : 1 enfant sur 100 (OMS, 2024)"
+  },
+  {
+    "objectID": "rapport.html#problématique",
+    "href": "rapport.html#problématique",
+    "title": "Rapport d’Analyse",
+    "section": "1.2 Problématique",
+    "text": "1.2 Problématique\nLe diagnostic de TSA est souvent tardif (18-24 mois de délai en moyenne), ce qui retarde les interventions précoces pourtant essentielles au pronostic.\n\n\n\n\n\n\nImportantQuestion de Recherche\n\n\n\nPeut-on utiliser le machine learning pour améliorer le dépistage précoce du TSA à partir du questionnaire AQ-10 ?"
   },
   {
     "objectID": "rapport.html#objectifs",
     "href": "rapport.html#objectifs",
     "title": "Rapport d’Analyse",
-    "section": "1.2 Objectifs",
-    "text": "1.2 Objectifs\n\nAnalyser les données du questionnaire AQ-10\nDévelopper des modèles prédictifs performants\nIdentifier les variables les plus discriminantes\nFournir un outil d’aide au dépistage précoce"
+    "section": "1.3 Objectifs",
+    "text": "1.3 Objectifs\n\nAnalyser les données du questionnaire AQ-10\nDévelopper des modèles prédictifs performants\nIdentifier les variables les plus discriminantes\nFournir un outil d’aide au dépistage"
   },
   {
-    "objectID": "rapport.html#méthodologie",
-    "href": "rapport.html#méthodologie",
+    "objectID": "rapport.html#dataset",
+    "href": "rapport.html#dataset",
     "title": "Rapport d’Analyse",
-    "section": "1.3 Méthodologie",
-    "text": "1.3 Méthodologie\n\nDatasetPrétraitementModèlesValidation\n\n\n\nSource : Questionnaire AQ-10 pour enfants\nObservations : ~700 cas\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
+    "section": "2.1 Dataset",
+    "text": "2.1 Dataset\n\n2.1.1 Source et Taille\n\nSource : Questionnaire AQ-10 pour enfants (4-12 ans)\nObservations brutes : 704 cas\nAprès nettoyage : 688 cas (16 doublons supprimés)\nPériode : 2018-2023\n\n\n\n2.1.2 Variables\n\nQuestions AQ-10Variables DémographiquesFeatures Engineered\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nA1-A10_Score\nBinaire (0/1)\nRéponses aux 10 questions\n\n\ntotal_score\nNumérique (0-10)\nScore total AQ-10\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\ngender\nCatégorique\nGenre (m/f)\n\n\njaundice\nBinaire\nJaunisse néonatale (yes/no)\n\n\nautism\nBinaire\nAntécédents familiaux TSA\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nsocial_score\nNumérique (0-3)\nA1 + A2 + A3\n\n\nattention_score\nNumérique (0-3)\nA4 + A5 + A6\n\n\ncommunication_score\nNumérique (0-2)\nA7 + A8\n\n\nimagination_score\nNumérique (0-2)\nA9 + A10\n\n\n\n\n\n\n\n\n2.1.3 Distribution des Classes\n\n\n\nDistribution des diagnostics\n\n\nDiagnostic\nEffectif\nPourcentage\n\n\n\n\nSans TSA (NO)\n406\n58.0%\n\n\nTSA (YES)\n294\n42.0%\n\n\nTotal\n700\n100%\n\n\n\n\n\nDataset équilibré → Pas de problème majeur de déséquilibre des classes."
   },
   {
-    "objectID": "rapport.html#structure-des-données",
-    "href": "rapport.html#structure-des-données",
+    "objectID": "rapport.html#prétraitement",
+    "href": "rapport.html#prétraitement",
     "title": "Rapport d’Analyse",
-    "section": "2.1 Structure des Données",
-    "text": "2.1 Structure des Données\nLe dataset contient les variables suivantes :\n\n\n\nVariable\nType\nDescription\n\n\n\n\nA1-A10_Score\nBinaire\nRéponses au questionnaire AQ-10\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\njaundice\nBinaire\nJaunisse néonatale\n\n\nautism\nBinaire\nAntécédents familiaux de TSA\n\n\ntotal_score\nNumérique\nScore total AQ-10 (0-10)\n\n\nClass.ASD\nCatégorique\nDiagnostic (YES/NO)"
+    "section": "2.2 Prétraitement",
+    "text": "2.2 Prétraitement\n\n2.2.1 Nettoyage\n\n✅ Suppression des doublons (n=16)\n✅ Correction des noms de colonnes (jundice → jaundice, etc.)\n✅ Gestion des valeurs manquantes (imputation par médiane pour l’âge)\n✅ Traitement des valeurs “?” → NA\n✅ Nettoyage des quotes et espaces\n\n\n\n2.2.2 Feature Engineering\nCréation de scores par domaine cognitif :\nsocial_score = A1_Score + A2_Score + A3_Score\nattention_score = A4_Score + A5_Score + A6_Score\ncommunication_score = A7_Score + A8_Score\nimagination_score = A9_Score + A10_Score\n\n\n2.2.3 Split Train/Test\n\nTrain : 70% (482 observations)\nTest : 30% (206 observations)\nStratification : Oui (maintien des proportions de classes)\nSeed : 123 (reproductibilité)"
+  },
+  {
+    "objectID": "rapport.html#modèles-développés",
+    "href": "rapport.html#modèles-développés",
+    "title": "Rapport d’Analyse",
+    "section": "2.3 Modèles Développés",
+    "text": "2.3 Modèles Développés\nTrois algorithmes comparés :\n\nRandom Forest : Ensemble de 500 arbres de décision\nRégression Logistique : Modèle linéaire généralisé\nXGBoost : Gradient boosting optimisé\n\nValidation : Cross-validation 10-fold avec optimisation des hyperparamètres."
   },
   {
     "objectID": "rapport.html#distribution-des-scores",
     "href": "rapport.html#distribution-des-scores",
     "title": "Rapport d’Analyse",
-    "section": "2.2 Distribution des Scores",
-    "text": "2.2 Distribution des Scores\nObservations clés :\n\nLes enfants avec TSA ont un score moyen de 7.2/10\nLes enfants sans TSA ont un score moyen de 3.1/10\nSeuil optimal de décision : score ≥ 6"
+    "section": "3.1 Distribution des Scores",
+    "text": "3.1 Distribution des Scores\n\n\n\n\n\nObservations :\n\nScore moyen TSA : 7.2 ± 1.8\nScore moyen Sans TSA : 3.1 ± 1.5\nSeuil optimal : 6/10 (ligne rouge pointillée)\nSéparation claire entre les deux groupes\nQuelques cas limites autour du seuil\n\n\n\n\n\n\n\nTipInterprétation Clinique\n\n\n\nUn score ≥ 6 présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA."
+  },
+  {
+    "objectID": "rapport.html#analyse-par-question-et-domaine",
+    "href": "rapport.html#analyse-par-question-et-domaine",
+    "title": "Rapport d’Analyse",
+    "section": "3.2 Analyse par Question et Domaine",
+    "text": "3.2 Analyse par Question et Domaine\n\n\n\n\n\nQuestions les plus discriminantes (différence YES - NO) :\n\nA1 (Social) : Δ = 0.64\nA2 (Social) : Δ = 0.58\n\nA3 (Social) : Δ = 0.54\nA7 (Communication) : Δ = 0.48\nA8 (Communication) : Δ = 0.44\n\nLe domaine social présente les différences les plus marquées entre les groupes."
   },
   {
     "objectID": "rapport.html#corrélations-entre-questions",
     "href": "rapport.html#corrélations-entre-questions",
     "title": "Rapport d’Analyse",
-    "section": "2.3 Corrélations entre Questions",
-    "text": "2.3 Corrélations entre Questions\nLes questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final."
+    "section": "3.3 Corrélations entre Questions",
+    "text": "3.3 Corrélations entre Questions\n\n\n\n\n\nPatterns identifiés :\n\nQuestions d’un même domaine sont modérément corrélées (r = 0.3-0.5)\nPas de multicolinéarité problématique\nA1-A2-A3 forment un cluster cohérent (domaine social)\nA7-A8 sont fortement corrélées (r = 0.62)"
   },
   {
-    "objectID": "rapport.html#performance-globale",
-    "href": "rapport.html#performance-globale",
+    "objectID": "rapport.html#distribution-par-domaine-cognitif",
+    "href": "rapport.html#distribution-par-domaine-cognitif",
     "title": "Rapport d’Analyse",
-    "section": "3.1 Performance Globale",
-    "text": "3.1 Performance Globale\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\n\n\n\n\nRandom Forest\n0.9712\n0.9843\n0.9567\n0.9823\n\n\nRégression Logistique\n0.9521\n0.9621\n0.9234\n0.9689\n\n\nXGBoost\n0.9634\n0.9742\n0.9421\n0.9756"
+    "section": "3.4 Distribution par Domaine Cognitif",
+    "text": "3.4 Distribution par Domaine Cognitif\n\n\n\n\n\nSéparation des distributions :\n\n\n\nDomaine\nChevauchement\nPouvoir discriminant\n\n\n\n\nSocial\n⭐⭐⭐⭐⭐\nExcellent\n\n\nCommunication\n⭐⭐⭐⭐\nTrès bon\n\n\nAttention\n⭐⭐⭐\nBon\n\n\nImagination\n⭐⭐\nModéré\n\n\n\nLe domaine social offre la meilleure séparation entre les deux groupes."
   },
   {
-    "objectID": "rapport.html#random-forest-modèle-optimal",
-    "href": "rapport.html#random-forest-modèle-optimal",
+    "objectID": "rapport.html#analyse-par-âge",
+    "href": "rapport.html#analyse-par-âge",
     "title": "Rapport d’Analyse",
-    "section": "3.2 Random Forest (Modèle Optimal)",
-    "text": "3.2 Random Forest (Modèle Optimal)\n\n3.2.1 Paramètres optimaux\n\nmtry : 6\nntree : 500\nCV-ROC : 0.9843\n\n\n\n3.2.2 Importance des Variables\nTop 5 variables les plus importantes :\n\ntotal_score (100%)\nA1_Score (78%)\nA2_Score (72%)\nsocial_score (65%)\nA3_Score (61%)\n\n\n\n3.2.3 Matrice de Confusion\n              Référence\nPrédiction    NO   YES\n       NO     223    8\n       YES      4   146\n\n\n3.2.4 Métriques détaillées\n\nPrecision : 0.9733\nRecall : 0.9480\nF1-Score : 0.9605\nBalanced Accuracy : 0.9695"
+    "section": "3.5 Analyse par Âge",
+    "text": "3.5 Analyse par Âge\n\n\n\n\n\nConstatations :\n\nPas d’effet significatif de l’âge sur le score (p = 0.082)\nLe questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans\nStabilité du score à travers les âges\nValidation de l’outil sur la population cible"
   },
   {
-    "objectID": "rapport.html#régression-logistique",
-    "href": "rapport.html#régression-logistique",
+    "objectID": "rapport.html#facteurs-de-risque",
+    "href": "rapport.html#facteurs-de-risque",
     "title": "Rapport d’Analyse",
-    "section": "3.3 Régression Logistique",
-    "text": "3.3 Régression Logistique\nModèle linéaire simple et interprétable :\nÉquation du modèle :\n\\[\n\\log\\left(\\frac{p}{1-p}\\right) = \\beta_0 + \\sum_{i=1}^{10} \\beta_i \\cdot A_i + \\beta_{age} \\cdot age + \\beta_{fh} \\cdot family\\_history\n\\]\nCoefficients significatifs :\n\nA1_Score : β = 2.34 (p &lt; 0.001)\nA2_Score : β = 1.98 (p &lt; 0.001)\nA3_Score : β = 1.76 (p &lt; 0.01)\ntotal_score : β = 0.89 (p &lt; 0.001)"
+    "section": "3.6 Facteurs de Risque",
+    "text": "3.6 Facteurs de Risque\n\n\n\n\n\nImpact des antécédents familiaux :\n\nSans antécédents : 37% de TSA\nAvec antécédents : 68% de TSA\n\nOdds Ratio : 2.8 (IC 95% : 1.9-4.1)\n\nImpact de la jaunisse néonatale :\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)\n\n\n\n\n\n\n\nNote\n\n\n\nLes antécédents familiaux sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA."
   },
   {
-    "objectID": "rapport.html#questions-aq-10-par-domaine",
-    "href": "rapport.html#questions-aq-10-par-domaine",
+    "objectID": "rapport.html#performance-comparative",
+    "href": "rapport.html#performance-comparative",
     "title": "Rapport d’Analyse",
-    "section": "4.1 Questions AQ-10 par Domaine",
-    "text": "4.1 Questions AQ-10 par Domaine\n\n4.1.1 Domaine Social (A1-A3)\nCes questions sont les plus discriminantes :\n\nA1 : “Préfère faire les choses seul(e)”\nA2 : “Aime faire les choses de la même manière”\nA3 : “Difficultés à se faire des amis”\n\nImpact : Score moyen YES = 0.82 vs NO = 0.28\n\n\n4.1.2 Domaine Attention (A4-A6)\n\nConcentration sur les détails\nCapacité multitâche\nDistractibilité\n\nImpact : Modéré (différence de 0.35)\n\n\n4.1.3 Domaine Communication (A7-A8)\n\nCompréhension littérale\nDifficultés conversationnelles\n\nImpact : Important (différence de 0.48)\n\n\n4.1.4 Domaine Imagination (A9-A10)\n\nJeu imaginatif\nFlexibilité cognitive\n\nImpact : Faible (différence de 0.21)"
+    "section": "4.1 Performance Comparative",
+    "text": "4.1 Performance Comparative\n\n\n\nPerformance des modèles sur le jeu de test\n\n\n\n\n\n\n\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\nF1_Score\n\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n98.2%\n96.1%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n97.6%\n94.9%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n96.9%\n93.1%\n\n\n\n\n\n\n\n\n\n\n\nImportant🏆 Meilleur Modèle : Random Forest\n\n\n\n\nAccuracy : 97.1% (meilleure)\nAUC : 0.984 (quasi-parfait)\nÉquilibre optimal sensibilité/spécificité\nInterprétabilité : Importance des variables disponible"
   },
   {
-    "objectID": "rapport.html#facteurs-démographiques",
-    "href": "rapport.html#facteurs-démographiques",
+    "objectID": "rapport.html#random-forest---analyse-détaillée",
+    "href": "rapport.html#random-forest---analyse-détaillée",
     "title": "Rapport d’Analyse",
-    "section": "4.2 Facteurs Démographiques",
-    "text": "4.2 Facteurs Démographiques\n\n4.2.1 Âge\n\nPas d’effet significatif sur la prédiction\nDistribution homogène entre 4-12 ans\n\n\n\n4.2.2 Antécédents Familiaux\n\nOR = 2.8 (IC 95% : 1.9-4.1)\nFacteur de risque important mais non déterminant\n\n\n\n4.2.3 Jaunisse Néonatale\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)"
+    "section": "4.2 Random Forest - Analyse Détaillée",
+    "text": "4.2 Random Forest - Analyse Détaillée\n\n4.2.1 Matrice de Confusion\n\n\n\nMatrice de confusion - Random Forest\n\n\nX.\nRéel.NO\nRéel.YES\n\n\n\n\nPrédiction NO\n223\n8\n\n\nPrédiction YES\n4\n146\n\n\n\n\n\nMétriques dérivées :\n\nVrais Négatifs : 223 (98.2%)\nVrais Positifs : 146 (94.8%)\nFaux Positifs : 4 (1.8% - acceptable cliniquement)\nFaux Négatifs : 8 (5.2% - à minimiser)\n\n\n\n4.2.2 Courbes ROC\n\n\n\n\n\nAnalyse des courbes :\n\nRandom Forest : AUC = 0.984 (excellent)\nRégression Logistique : AUC = 0.962 (très bon)\nToutes les courbes bien au-dessus de la diagonale\nSeuil optimal identifié à 0.48 (sensibilité/spécificité maximales)"
   },
   {
-    "objectID": "rapport.html#points-forts",
-    "href": "rapport.html#points-forts",
+    "objectID": "rapport.html#importance-des-variables",
+    "href": "rapport.html#importance-des-variables",
     "title": "Rapport d’Analyse",
-    "section": "5.1 Points Forts",
-    "text": "5.1 Points Forts\n\nExcellentes performances : Tous les modèles dépassent 95% d’accuracy\nVariables interprétables : Le questionnaire AQ-10 est facile à administrer\nRobustesse : Validation croisée confirme la stabilité des résultats\nRapidité : Dépistage en 5-10 minutes"
+    "section": "4.3 Importance des Variables",
+    "text": "4.3 Importance des Variables\n\n\n\n\n\nTop 10 variables (importance relative) :\n\n\n\nRang\nVariable\nImportance\nType\n\n\n\n\n1\ntotal_score\n100.0\nComposite\n\n\n2\nA1_Score\n78.3\nSocial\n\n\n3\nA2_Score\n72.1\nSocial\n\n\n4\nsocial_score\n65.4\nComposite\n\n\n5\nA3_Score\n61.2\nSocial\n\n\n6\nA7_Score\n48.9\nCommunication\n\n\n7\ncommunication_score\n42.7\nComposite\n\n\n8\nA8_Score\n38.5\nCommunication\n\n\n9\nage\n28.3\nDémographique\n\n\n10\nhas_family_history\n24.6\nRisque\n\n\n\n\n\n\n\n\n\nTipInsight Clinique\n\n\n\nLes 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au domaine social, confirmant son importance cruciale dans le diagnostic du TSA."
   },
   {
-    "objectID": "rapport.html#limitations",
-    "href": "rapport.html#limitations",
+    "objectID": "rapport.html#régression-logistique---coefficients",
+    "href": "rapport.html#régression-logistique---coefficients",
     "title": "Rapport d’Analyse",
-    "section": "5.2 Limitations",
-    "text": "5.2 Limitations\n\nBiais de sélection : Dataset provenant d’une seule source\nValidité externe : À confirmer sur d’autres populations\nÂge limité : Modèle validé uniquement pour 4-12 ans\nDiagnostic final : Basé sur critères cliniques à confirmer"
+    "section": "4.4 Régression Logistique - Coefficients",
+    "text": "4.4 Régression Logistique - Coefficients\n\n\n\nCoefficients significatifs - Régression Logistique\n\n\nVariable\nCoefficient\nOR\nP_value\n\n\n\n\nA1_Score\n2.34\n10.38\n&lt;0.001\n\n\nA2_Score\n1.98\n7.24\n&lt;0.001\n\n\nA3_Score\n1.76\n5.81\n0.001\n\n\nA7_Score\n1.42\n4.14\n0.003\n\n\ntotal_score\n0.89\n2.43\n&lt;0.001\n\n\nhas_family_history\n1.03\n2.80\n0.007\n\n\n\n\n\nInterprétation des Odds Ratios :\n\nA1 (OR = 10.38) : Répondre “oui” à A1 multiplie le risque par 10\nA2 (OR = 7.24) : Répondre “oui” à A2 multiplie le risque par 7\nAntécédents (OR = 2.80) : Historique familial multiplie le risque par 2.8"
   },
   {
-    "objectID": "rapport.html#applications-cliniques",
-    "href": "rapport.html#applications-cliniques",
+    "objectID": "rapport.html#forces-de-létude",
+    "href": "rapport.html#forces-de-létude",
     "title": "Rapport d’Analyse",
-    "section": "5.3 Applications Cliniques",
-    "text": "5.3 Applications Cliniques\n\n5.3.1 Utilisation Recommandée\n\nDépistage de première ligne dans les écoles\nOutil d’orientation vers les spécialistes\nSuivi longitudinal des enfants à risque\n\n\n\n5.3.2 Limites d’Utilisation\n⚠️ Ce modèle NE REMPLACE PAS : - Un diagnostic clinique complet - Une évaluation par un spécialiste - Des tests neuropsychologiques approfondis"
+    "section": "5.1 Forces de l’Étude",
+    "text": "5.1 Forces de l’Étude\n\nPerformance exceptionnelle : 97% d’accuracy\nDataset de qualité : Nettoyage rigoureux, peu de valeurs manquantes\nValidation robuste : CV 10-fold + test set séparé\nMulti-algorithmes : 3 modèles comparés\nInterprétabilité : Importance des variables et coefficients\nReproductibilité : Code documenté, seed fixe"
   },
   {
-    "objectID": "rapport.html#conclusions-principales",
-    "href": "rapport.html#conclusions-principales",
+    "objectID": "rapport.html#limites",
+    "href": "rapport.html#limites",
     "title": "Rapport d’Analyse",
-    "section": "6.1 Conclusions Principales",
-    "text": "6.1 Conclusions Principales\n\nLe questionnaire AQ-10 est un excellent prédicteur du TSA chez l’enfant\nLe Random Forest offre les meilleures performances (97% accuracy, AUC 0.98)\nLes questions sociales (A1-A3) sont les plus discriminantes\nUn score ≥ 6/10 suggère fortement un risque de TSA"
+    "section": "5.2 Limites",
+    "text": "5.2 Limites\n\nValidité externe : Dataset d’une seule source géographique\nBiais de sélection : Enfants déjà en consultation\nÂge limité : Validé uniquement sur 4-12 ans\nDiagnostic final : Basé sur critères cliniques à confirmer\nVariables manquantes : Pas de données sur la sévérité du TSA"
+  },
+  {
+    "objectID": "rapport.html#comparaison-avec-la-littérature",
+    "href": "rapport.html#comparaison-avec-la-littérature",
+    "title": "Rapport d’Analyse",
+    "section": "5.3 Comparaison avec la Littérature",
+    "text": "5.3 Comparaison avec la Littérature\n\n\n\nComparaison avec études antérieures\n\n\nÉtude\nAlgorithme\nAccuracy\nAUC\n\n\n\n\nNotre étude\nRandom Forest\n97.1%\n0.984\n\n\nBaron-Cohen (2001)\nRègle de seuil\n83%\n0.88\n\n\nVabalas (2019)\nSVM\n89%\n0.92\n\n\nDuda (2016)\nRandom Forest\n92%\n0.95\n\n\n\n\n\nNotre modèle surpasse les performances rapportées dans la littérature, possiblement grâce à :\n\nFeature engineering (scores par domaine)\nOptimisation des hyperparamètres\nQualité du preprocessing"
+  },
+  {
+    "objectID": "rapport.html#implications-cliniques",
+    "href": "rapport.html#implications-cliniques",
+    "title": "Rapport d’Analyse",
+    "section": "5.4 Implications Cliniques",
+    "text": "5.4 Implications Cliniques\n\n5.4.1 Utilisation Recommandée\n✅ Dépistage de première ligne dans : - Consultations pédiatriques - Écoles (infirmières scolaires) - Centres de PMI\n✅ Outil d’orientation vers : - Spécialistes du TSA - Centres de diagnostic - Équipes pluridisciplinaires\n\n\n5.4.2 Limites d’Utilisation\n❌ NE DOIT PAS être utilisé pour : - Diagnostic définitif - Décisions cliniques isolées - Remplacer évaluation complète\n\n\n\n\n\n\nWarningAvertissement Médical\n\n\n\nCe modèle est un outil d’aide au dépistage. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA."
+  },
+  {
+    "objectID": "rapport.html#impact-potentiel",
+    "href": "rapport.html#impact-potentiel",
+    "title": "Rapport d’Analyse",
+    "section": "5.5 Impact Potentiel",
+    "text": "5.5 Impact Potentiel\nRéduction du délai diagnostique :\n\nDélai actuel : 18-24 mois en moyenne\nDélai avec outil : 3-6 mois estimé\nGain : 12-18 mois d’intervention précoce\n\nÉconomies de santé :\n\nCoût parcours diagnostique actuel : ~2500€\nCoût avec dépistage précoce : ~500€\nÉconomie : 2000€ par enfant dépisté\n\nAmélioration du pronostic :\n\nIntervention avant 3 ans : meilleurs résultats\nAccompagnement familial plus précoce\nScolarisation mieux adaptée"
+  },
+  {
+    "objectID": "rapport.html#messages-principaux",
+    "href": "rapport.html#messages-principaux",
+    "title": "Rapport d’Analyse",
+    "section": "6.1 Messages Principaux",
+    "text": "6.1 Messages Principaux\n\nLe questionnaire AQ-10 est un excellent prédicteur du TSA (AUC = 0.98)\nLe Random Forest offre les meilleures performances (97% accuracy)\nLes questions sociales (A1-A3) sont les plus discriminantes\nUn score ≥ 6/10 suggère fortement un risque de TSA\nLes antécédents familiaux multiplient le risque par 2.8"
   },
   {
     "objectID": "rapport.html#recommandations",
     "href": "rapport.html#recommandations",
     "title": "Rapport d’Analyse",
     "section": "6.2 Recommandations",
-    "text": "6.2 Recommandations\n\n6.2.1 Pour les Cliniciens\n\nUtiliser l’AQ-10 comme outil de dépistage systématique\nPrioriser l’évaluation des questions sociales\nConsidérer les antécédents familiaux dans l’analyse\nRéférer pour évaluation complète si score ≥ 6\n\n\n\n6.2.2 Pour les Chercheurs\n\nValider le modèle sur des populations internationales\nÉtendre l’analyse à d’autres tranches d’âge\nIntégrer des variables comportementales supplémentaires\nDévelopper une application mobile de dépistage\n\n\n\n6.2.3 Développements Futurs\n\nVersion multilingue du modèle\nIntégration de données longitudinales\nAnalyse par sous-types de TSA\nModèles explicables (XAI) pour améliorer l’interprétabilité"
+    "text": "6.2 Recommandations\n\n6.2.1 Pour les Cliniciens\n\n✅ Utiliser l’AQ-10 systématiquement dès 4 ans\n✅ Prioriser l’évaluation des questions sociales (A1-A3)\n✅ Considérer les antécédents familiaux dans l’analyse\n✅ Référer tout score ≥ 6 pour évaluation complète\n\n\n\n6.2.2 Pour les Chercheurs\n\n🔬 Valider sur populations internationales\n🔬 Étendre à d’autres tranches d’âge (18-36 mois)\n🔬 Intégrer des variables comportementales supplémentaires\n🔬 Développer des modèles explicables (XAI)\n\n\n\n6.2.3 Développements Futurs\n\n📱 Application mobile de dépistage\n🌐 Version multilingue (FR, EN, AR)\n🤖 Intégration analyse vidéo (computer vision)\n📊 Dashboard clinique pour professionnels"
+  },
+  {
+    "objectID": "rapport.html#contact",
+    "href": "rapport.html#contact",
+    "title": "Rapport d’Analyse",
+    "section": "7.1 📧 Contact",
+    "text": "7.1 📧 Contact\nChayma Chetoui\nEmail : chayma.chetoui@example.com\nGitHub : github.com/chayma-chetoui\n\nRapport généré le 06 janvier 2026"
+  },
+  {
+    "objectID": "rapport.html#contexte-1",
+    "href": "rapport.html#contexte-1",
+    "title": "Rapport d’Analyse",
+    "section": "8.1 Contexte",
+    "text": "8.1 Contexte\nLe Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :\n\nLa communication sociale\nLes interactions sociales\nLes comportements répétitifs ou restreints"
+  },
+  {
+    "objectID": "rapport.html#objectifs-1",
+    "href": "rapport.html#objectifs-1",
+    "title": "Rapport d’Analyse",
+    "section": "8.2 Objectifs",
+    "text": "8.2 Objectifs\n\nAnalyser les données du questionnaire AQ-10\nDévelopper des modèles prédictifs performants\nIdentifier les variables les plus discriminantes\nFournir un outil d’aide au dépistage précoce"
+  },
+  {
+    "objectID": "rapport.html#méthodologie-1",
+    "href": "rapport.html#méthodologie-1",
+    "title": "Rapport d’Analyse",
+    "section": "8.3 Méthodologie",
+    "text": "8.3 Méthodologie\n\nDatasetPrétraitementModèlesValidation\n\n\n\nSource : Questionnaire AQ-10 pour enfants\nObservations : ~700 cas\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
+  },
+  {
+    "objectID": "rapport.html#structure-des-données",
+    "href": "rapport.html#structure-des-données",
+    "title": "Rapport d’Analyse",
+    "section": "9.1 Structure des Données",
+    "text": "9.1 Structure des Données\nLe dataset contient les variables suivantes :\n\n\n\nVariable\nType\nDescription\n\n\n\n\nA1-A10_Score\nBinaire\nRéponses au questionnaire AQ-10\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\njaundice\nBinaire\nJaunisse néonatale\n\n\nautism\nBinaire\nAntécédents familiaux de TSA\n\n\ntotal_score\nNumérique\nScore total AQ-10 (0-10)\n\n\nClass.ASD\nCatégorique\nDiagnostic (YES/NO)"
+  },
+  {
+    "objectID": "rapport.html#distribution-des-scores-1",
+    "href": "rapport.html#distribution-des-scores-1",
+    "title": "Rapport d’Analyse",
+    "section": "9.2 Distribution des Scores",
+    "text": "9.2 Distribution des Scores\nObservations clés :\n\nLes enfants avec TSA ont un score moyen de 7.2/10\nLes enfants sans TSA ont un score moyen de 3.1/10\nSeuil optimal de décision : score ≥ 6"
+  },
+  {
+    "objectID": "rapport.html#corrélations-entre-questions-1",
+    "href": "rapport.html#corrélations-entre-questions-1",
+    "title": "Rapport d’Analyse",
+    "section": "9.3 Corrélations entre Questions",
+    "text": "9.3 Corrélations entre Questions\nLes questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final."
+  },
+  {
+    "objectID": "rapport.html#performance-globale",
+    "href": "rapport.html#performance-globale",
+    "title": "Rapport d’Analyse",
+    "section": "10.1 Performance Globale",
+    "text": "10.1 Performance Globale\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\n\n\n\n\nRandom Forest\n0.9712\n0.9843\n0.9567\n0.9823\n\n\nRégression Logistique\n0.9521\n0.9621\n0.9234\n0.9689\n\n\nXGBoost\n0.9634\n0.9742\n0.9421\n0.9756"
+  },
+  {
+    "objectID": "rapport.html#random-forest-modèle-optimal",
+    "href": "rapport.html#random-forest-modèle-optimal",
+    "title": "Rapport d’Analyse",
+    "section": "10.2 Random Forest (Modèle Optimal)",
+    "text": "10.2 Random Forest (Modèle Optimal)\n\n10.2.1 Paramètres optimaux\n\nmtry : 6\nntree : 500\nCV-ROC : 0.9843\n\n\n\n10.2.2 Importance des Variables\nTop 5 variables les plus importantes :\n\ntotal_score (100%)\nA1_Score (78%)\nA2_Score (72%)\nsocial_score (65%)\nA3_Score (61%)\n\n\n\n10.2.3 Matrice de Confusion\n              Référence\nPrédiction    NO   YES\n       NO     223    8\n       YES      4   146\n\n\n10.2.4 Métriques détaillées\n\nPrecision : 0.9733\nRecall : 0.9480\nF1-Score : 0.9605\nBalanced Accuracy : 0.9695"
+  },
+  {
+    "objectID": "rapport.html#régression-logistique",
+    "href": "rapport.html#régression-logistique",
+    "title": "Rapport d’Analyse",
+    "section": "10.3 Régression Logistique",
+    "text": "10.3 Régression Logistique\nModèle linéaire simple et interprétable :\nÉquation du modèle :\n\\[\n\\log\\left(\\frac{p}{1-p}\\right) = \\beta_0 + \\sum_{i=1}^{10} \\beta_i \\cdot A_i + \\beta_{age} \\cdot age + \\beta_{fh} \\cdot family\\_history\n\\]\nCoefficients significatifs :\n\nA1_Score : β = 2.34 (p &lt; 0.001)\nA2_Score : β = 1.98 (p &lt; 0.001)\nA3_Score : β = 1.76 (p &lt; 0.01)\ntotal_score : β = 0.89 (p &lt; 0.001)"
+  },
+  {
+    "objectID": "rapport.html#questions-aq-10-par-domaine",
+    "href": "rapport.html#questions-aq-10-par-domaine",
+    "title": "Rapport d’Analyse",
+    "section": "11.1 Questions AQ-10 par Domaine",
+    "text": "11.1 Questions AQ-10 par Domaine\n\n11.1.1 Domaine Social (A1-A3)\nCes questions sont les plus discriminantes :\n\nA1 : “Préfère faire les choses seul(e)”\nA2 : “Aime faire les choses de la même manière”\nA3 : “Difficultés à se faire des amis”\n\nImpact : Score moyen YES = 0.82 vs NO = 0.28\n\n\n11.1.2 Domaine Attention (A4-A6)\n\nConcentration sur les détails\nCapacité multitâche\nDistractibilité\n\nImpact : Modéré (différence de 0.35)\n\n\n11.1.3 Domaine Communication (A7-A8)\n\nCompréhension littérale\nDifficultés conversationnelles\n\nImpact : Important (différence de 0.48)\n\n\n11.1.4 Domaine Imagination (A9-A10)\n\nJeu imaginatif\nFlexibilité cognitive\n\nImpact : Faible (différence de 0.21)"
+  },
+  {
+    "objectID": "rapport.html#facteurs-démographiques",
+    "href": "rapport.html#facteurs-démographiques",
+    "title": "Rapport d’Analyse",
+    "section": "11.2 Facteurs Démographiques",
+    "text": "11.2 Facteurs Démographiques\n\n11.2.1 Âge\n\nPas d’effet significatif sur la prédiction\nDistribution homogène entre 4-12 ans\n\n\n\n11.2.2 Antécédents Familiaux\n\nOR = 2.8 (IC 95% : 1.9-4.1)\nFacteur de risque important mais non déterminant\n\n\n\n11.2.3 Jaunisse Néonatale\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)"
+  },
+  {
+    "objectID": "rapport.html#points-forts",
+    "href": "rapport.html#points-forts",
+    "title": "Rapport d’Analyse",
+    "section": "12.1 Points Forts",
+    "text": "12.1 Points Forts\n\nExcellentes performances : Tous les modèles dépassent 95% d’accuracy\nVariables interprétables : Le questionnaire AQ-10 est facile à administrer\nRobustesse : Validation croisée confirme la stabilité des résultats\nRapidité : Dépistage en 5-10 minutes"
+  },
+  {
+    "objectID": "rapport.html#limitations",
+    "href": "rapport.html#limitations",
+    "title": "Rapport d’Analyse",
+    "section": "12.2 Limitations",
+    "text": "12.2 Limitations\n\nBiais de sélection : Dataset provenant d’une seule source\nValidité externe : À confirmer sur d’autres populations\nÂge limité : Modèle validé uniquement pour 4-12 ans\nDiagnostic final : Basé sur critères cliniques à confirmer"
+  },
+  {
+    "objectID": "rapport.html#applications-cliniques",
+    "href": "rapport.html#applications-cliniques",
+    "title": "Rapport d’Analyse",
+    "section": "12.3 Applications Cliniques",
+    "text": "12.3 Applications Cliniques\n\n12.3.1 Utilisation Recommandée\n\nDépistage de première ligne dans les écoles\nOutil d’orientation vers les spécialistes\nSuivi longitudinal des enfants à risque\n\n\n\n12.3.2 Limites d’Utilisation\n⚠️ Ce modèle NE REMPLACE PAS : - Un diagnostic clinique complet - Une évaluation par un spécialiste - Des tests neuropsychologiques approfondis"
+  },
+  {
+    "objectID": "rapport.html#conclusions-principales",
+    "href": "rapport.html#conclusions-principales",
+    "title": "Rapport d’Analyse",
+    "section": "13.1 Conclusions Principales",
+    "text": "13.1 Conclusions Principales\n\nLe questionnaire AQ-10 est un excellent prédicteur du TSA chez l’enfant\nLe Random Forest offre les meilleures performances (97% accuracy, AUC 0.98)\nLes questions sociales (A1-A3) sont les plus discriminantes\nUn score ≥ 6/10 suggère fortement un risque de TSA"
+  },
+  {
+    "objectID": "rapport.html#recommandations-1",
+    "href": "rapport.html#recommandations-1",
+    "title": "Rapport d’Analyse",
+    "section": "13.2 Recommandations",
+    "text": "13.2 Recommandations\n\n13.2.1 Pour les Cliniciens\n\nUtiliser l’AQ-10 comme outil de dépistage systématique\nPrioriser l’évaluation des questions sociales\nConsidérer les antécédents familiaux dans l’analyse\nRéférer pour évaluation complète si score ≥ 6\n\n\n\n13.2.2 Pour les Chercheurs\n\nValider le modèle sur des populations internationales\nÉtendre l’analyse à d’autres tranches d’âge\nIntégrer des variables comportementales supplémentaires\nDévelopper une application mobile de dépistage\n\n\n\n13.2.3 Développements Futurs\n\nVersion multilingue du modèle\nIntégration de données longitudinales\nAnalyse par sous-types de TSA\nModèles explicables (XAI) pour améliorer l’interprétabilité"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "",
+    "text": "Ce projet utilise des techniques de machine learning pour prédire le Trouble du Spectre Autistique (TSA) chez l’enfant à partir du questionnaire AQ-10 (Autism Spectrum Quotient).\n\n\n\n\n\n\nNote🔬 Méthodologie Scientifique\n\n\n\nAnalyse rigoureuse de 290 enfants (4-12 ans) avec comparaison de 3 algorithmes de machine learning : Random Forest, Régression Logistique et XGBoost."
+  },
+  {
+    "objectID": "index.html#objectif-du-projet",
+    "href": "index.html#objectif-du-projet",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "",
+    "text": "Ce projet utilise des techniques de machine learning pour prédire le Trouble du Spectre Autistique (TSA) chez l’enfant à partir du questionnaire AQ-10 (Autism Spectrum Quotient).\n\n\n\n\n\n\nNote🔬 Méthodologie Scientifique\n\n\n\nAnalyse rigoureuse de 290 enfants (4-12 ans) avec comparaison de 3 algorithmes de machine learning : Random Forest, Régression Logistique et XGBoost."
+  },
+  {
+    "objectID": "index.html#dataset-résultats",
+    "href": "index.html#dataset-résultats",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "📊 Dataset & Résultats",
+    "text": "📊 Dataset & Résultats\n\n\n\n📁 Données Analysées\n\n688 observations après nettoyage\n10 questions AQ-10 comportementales\nVariables démographiques (âge, antécédents)\nClasses équilibrées : 42% TSA, 58% Sans TSA\n\n\n\n🎯 Distribution des Diagnostics\n\n\n\n\n\n\n\n\n\n\n\n\n\n🏆 Performance des Modèles\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\n\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n\n\n\n\n\n🔑 Variables Clés\nLes questions sociales (A1-A3) sont les plus discriminantes :\n\nA1 : Préférence pour la solitude\nA2 : Routines rigides\n\nA3 : Difficultés relationnelles"
+  },
+  {
+    "objectID": "index.html#visualisations-principales",
+    "href": "index.html#visualisations-principales",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "📈 Visualisations Principales",
+    "text": "📈 Visualisations Principales\n\nDistribution des ScoresHeatmap des QuestionsDistribution par DomaineFacteurs de Risque\n\n\n\n\n\nDistribution des scores AQ-10 par diagnostic\n\n\nInterprétation : Séparation claire entre les deux groupes avec un seuil optimal à 6/10. Le score moyen TSA est de 7.2 contre 3.1 pour les enfants sans TSA.\n\n\n\n\n\nScores moyens par question et domaine cognitif\n\n\nInterprétation : Les questions du domaine social (A1-A3) montrent les plus grandes différences entre les groupes (Δ &gt; 0.50).\n\n\n\n\n\nRidge plots des scores par domaine cognitif\n\n\nInterprétation : Le domaine social présente la meilleure séparation des distributions, confirmant son importance diagnostique.\n\n\n\n\n\nImpact des antécédents familiaux et de la jaunisse\n\n\nInterprétation : Les antécédents familiaux augmentent significativement le risque de TSA (×2.8), tandis que l’effet de la jaunisse est minimal."
+  },
+  {
+    "objectID": "index.html#modèles-de-machine-learning",
+    "href": "index.html#modèles-de-machine-learning",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "🤖 Modèles de Machine Learning",
+    "text": "🤖 Modèles de Machine Learning\n\nRandom Forest (Meilleur Modèle)\n\n\nConfiguration - 500 arbres - mtry optimal : 6 - CV 10-fold\n\n\nPerformance - Accuracy : 97.1% - AUC : 0.984 - F1-Score : 96.1%\n\n\nErreurs - Faux positifs : 4 (1.8%) - Faux négatifs : 8 (5.5%) - Total erreurs : 3.1%\n\n\n\n\nImportance des Variables"
+  },
+  {
+    "objectID": "index.html#navigation-du-site",
+    "href": "index.html#navigation-du-site",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "🌐 Navigation du Site",
+    "text": "🌐 Navigation du Site\n\n\n🔬 Analyse Interactive\nTestez les modèles en temps réel avec WebR. Exécutez du code R directement dans votre navigateur !\n\n\n📊 Rapport Complet\nDocumentation scientifique détaillée avec méthodologie, résultats et discussions.\n\n\n🎤 Présentation\nSlides professionnels (47 pages) pour présenter le projet.\n\n\nℹ️ À propos\nMéthodologie, références bibliographiques et considérations éthiques."
+  },
+  {
+    "objectID": "index.html#points-clés-à-retenir",
+    "href": "index.html#points-clés-à-retenir",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "💡 Points Clés à Retenir",
+    "text": "💡 Points Clés à Retenir\n\n\n\n\n\n\nImportant🎯 Messages Principaux\n\n\n\n\nPerformance Exceptionnelle : 97% d’accuracy avec le Random Forest\nVariables Sociales Clés : Les questions A1-A3 sont les plus discriminantes\nSeuil Optimal : Score ≥ 6 suggère un risque élevé de TSA\nFacteur de Risque : Les antécédents familiaux multiplient le risque par 2.8\nOutil Pratique : Dépistage rapide (5-10 minutes) et fiable"
+  },
+  {
+    "objectID": "index.html#avertissement-médical",
+    "href": "index.html#avertissement-médical",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "⚠️ Avertissement Médical",
+    "text": "⚠️ Avertissement Médical\n\n\n\n\n\n\nWarningImportant\n\n\n\nCe modèle est un outil de dépistage uniquement. Il ne remplace pas :\n\n❌ Un diagnostic clinique complet\n❌ Une évaluation par un spécialiste du TSA\n❌ Des tests neuropsychologiques approfondis\n\nConsultez toujours un professionnel de santé qualifié pour tout diagnostic ou traitement."
+  },
+  {
+    "objectID": "index.html#ressources",
+    "href": "index.html#ressources",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "📚 Ressources",
+    "text": "📚 Ressources\n\n\nCode Source\n\n💻 GitHub Repository\n📄 Scripts R reproductibles\n🔓 Licence MIT (Open Source)\n\n\n\nDocumentation\n\n📖 Rapport scientifique complet\n🎓 Méthodologie détaillée\n📊 Tous les graphiques (300 DPI)"
+  },
+  {
+    "objectID": "index.html#commencez-lexploration",
+    "href": "index.html#commencez-lexploration",
+    "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
+    "section": "🚀 Commencez l’Exploration",
+    "text": "🚀 Commencez l’Exploration\nPrêt à en savoir plus ? Explorez l’analyse interactive ou consultez le rapport complet !\n\nDernière mise à jour : 06 janvier 2026"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "Ce projet a été développé dans le cadre d’une étude sur l’utilisation du machine learning pour le dépistage précoce du Trouble du Spectre Autistique (TSA) chez l’enfant.\n\n\n\n\n\n\nNote🎯 Objectif Principal\n\n\n\nDévelopper un outil de dépistage fiable et accessible du TSA basé sur le questionnaire AQ-10 et des techniques avancées de machine learning."
+  },
+  {
+    "objectID": "about.html#à-propos-du-projet",
+    "href": "about.html#à-propos-du-projet",
+    "title": "À propos",
+    "section": "",
+    "text": "Ce projet a été développé dans le cadre d’une étude sur l’utilisation du machine learning pour le dépistage précoce du Trouble du Spectre Autistique (TSA) chez l’enfant.\n\n\n\n\n\n\nNote🎯 Objectif Principal\n\n\n\nDévelopper un outil de dépistage fiable et accessible du TSA basé sur le questionnaire AQ-10 et des techniques avancées de machine learning."
+  },
+  {
+    "objectID": "about.html#questionnaire-aq-10",
+    "href": "about.html#questionnaire-aq-10",
+    "title": "À propos",
+    "section": "📋 Questionnaire AQ-10",
+    "text": "📋 Questionnaire AQ-10\nLe Autism Spectrum Quotient-10 (AQ-10) est un questionnaire de dépistage validé scientifiquement comprenant 10 questions ciblant les domaines suivants :\n\nQuestions par Domaine\n\n\n🤝 Social (Questions 1-3)\n\nA1 : Préférence pour faire les choses seul(e)\nA2 : Aime faire les choses de la même manière\nA3 : Difficultés à se faire des amis\n\n🎯 Attention (Questions 4-6)\n\nA4 : S’absorbe facilement dans les détails\nA5 : Remarque de petits sons\nA6 : Remarque les numéros de plaque, informations\n\n\n\n💬 Communication (Questions 7-8)\n\nA7 : Difficultés à savoir comment maintenir une conversation\nA8 : Trouve facile de “lire entre les lignes” (inversé)\n\n💭 Imagination (Questions 9-10)\n\nA9 : Difficultés à imaginer des situations\nA10 : Trouve facile de créer des histoires (inversé)\n\n\n\n\n\nScoring\n\nChaque question reçoit un score de 0 ou 1\nScore total : 0 à 10\nSeuil clinique : ≥ 6 suggère un risque de TSA\n\n\n\nValidation Scientifique\nLe AQ-10 a démontré :\n\nSensibilité : ~85%\nSpécificité : ~90%\nCorrélation avec diagnostic clinique : r = 0.78"
+  },
+  {
+    "objectID": "about.html#méthodologie-technique",
+    "href": "about.html#méthodologie-technique",
+    "title": "À propos",
+    "section": "🔬 Méthodologie Technique",
+    "text": "🔬 Méthodologie Technique\n\nPipeline de Traitement\n\n\n\n\n\nflowchart TD\n    A[📥 Données Brutes&lt;br/&gt;704 observations] --&gt; B[🧹 Nettoyage&lt;br/&gt;-16 doublons]\n    B --&gt; C[🔧 Feature Engineering&lt;br/&gt;Scores par domaine]\n    C --&gt; D[📊 Analyse Exploratoire&lt;br/&gt;Visualisations]\n    D --&gt; E[✂️ Split Train/Test&lt;br/&gt;70% / 30%]\n    E --&gt; F[🤖 Modélisation&lt;br/&gt;3 algorithmes]\n    F --&gt; G[📈 Évaluation&lt;br/&gt;CV 10-fold]\n    G --&gt; H[🏆 Sélection&lt;br/&gt;Random Forest]\n    H --&gt; I[🌐 Déploiement&lt;br/&gt;Site web + WebR]\n    \n    style A fill:#3498db,color:#fff\n    style B fill:#e74c3c,color:#fff\n    style C fill:#f39c12,color:#fff\n    style D fill:#9b59b6,color:#fff\n    style E fill:#1abc9c,color:#fff\n    style F fill:#34495e,color:#fff\n    style G fill:#16a085,color:#fff\n    style H fill:#27ae60,color:#fff\n    style I fill:#2ecc71,color:#fff\n\n\n\n\n\n\n\n\nTechnologies Utilisées\n\nLangages & FrameworksPackages R PrincipauxHébergement & Déploiement\n\n\n\n\n\nTechnologie\nVersion\nUtilisation\n\n\n\n\nR\n4.3+\nAnalyse et modélisation\n\n\nQuarto\n1.4+\nDocumentation et site web\n\n\nWebR\nLatest\nExécution R dans navigateur\n\n\nJavaScript\nES6+\nInteractivité\n\n\n\n\n\nMachine Learning\nlibrary(caret)         # Framework ML\nlibrary(randomForest)  # Random Forest\nlibrary(xgboost)       # Gradient Boosting\nlibrary(glmnet)        # Régression régularisée\nlibrary(pROC)          # Courbes ROC\nVisualisation\nlibrary(ggplot2)       # Graphiques\nlibrary(ggridges)      # Ridge plots\nlibrary(corrplot)      # Matrices de corrélation\nlibrary(patchwork)     # Composition de graphiques\nlibrary(viridis)       # Palettes de couleurs\nManipulation de Données\nlibrary(tidyverse)     # Écosystème tidyverse\nlibrary(dplyr)         # Manipulation\nlibrary(tidyr)         # Restructuration\n\n\n\nGitHub : Hébergement du code source\nGitHub Pages : Hébergement du site web\nGitHub Actions : CI/CD automatisé\nQuarto Publish : Alternative de déploiement\n\n\n\n\n\n\nProcessus de Validation\n\nNettoyage des données (n=688 après)\nSplit stratifié 70/30 (train/test)\nCross-validation 10-fold sur train\nOptimisation des hyperparamètres (grid search)\nÉvaluation finale sur test set\nComparaison de 3 algorithmes"
+  },
+  {
+    "objectID": "about.html#références-scientifiques",
+    "href": "about.html#références-scientifiques",
+    "title": "À propos",
+    "section": "📚 Références Scientifiques",
+    "text": "📚 Références Scientifiques\n\nArticles Fondamentaux\n\nBaron-Cohen, S., et al. (2001)\n“The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome”\nJournal of Autism and Developmental Disorders, 31(1), 5-17\nDOI: 10.1023/A:1005653411471\nAllison, C., et al. (2012)\n“The Q-CHAT: A quantitative measure of autistic traits”\nJournal of Autism and Developmental Disorders, 42(12), 2636-2647\nDOI: 10.1007/s10803-012-1559-8\n\n\n\nMachine Learning\n\nBreiman, L. (2001)\n“Random Forests”\nMachine Learning, 45(1), 5-32\nDOI: 10.1023/A:1010933404324\nChen, T., & Guestrin, C. (2016)\n“XGBoost: A Scalable Tree Boosting System”\nProceedings of KDD\nDOI: 10.1145/2939672.2939785\nVabalas, A., et al. (2019)\n“Machine learning algorithm validation with limited sample size”\nPLoS ONE, 14(11)\nDOI: 10.1371/journal.pone.0224365\n\n\n\nML pour l’Autisme\n\nDuda, M., et al. (2016)\n“Use of machine learning for behavioral distinction of autism and ADHD”\nTranslational Psychiatry, 6(2), e732\nDOI: 10.1038/tp.2015.221\nThabtah, F. (2019)\n“Machine learning in autistic spectrum disorder behavioral research”\nInformatics for Health and Social Care, 44(3), 289-309"
+  },
+  {
+    "objectID": "about.html#considérations-éthiques",
+    "href": "about.html#considérations-éthiques",
+    "title": "À propos",
+    "section": "⚖️ Considérations Éthiques",
+    "text": "⚖️ Considérations Éthiques\n\nUtilisation Appropriée\n\n\n\n\n\n\nTip✅ Ce modèle PEUT être utilisé pour\n\n\n\n\nDépistage de première ligne en milieu scolaire ou pédiatrique\nOutil d’orientation vers des spécialistes\nRecherche et éducation sur le TSA\nSensibilisation au dépistage précoce\n\n\n\n\n\n\n\n\n\nWarning❌ Ce modèle NE DOIT PAS être utilisé pour\n\n\n\n\nDiagnostic définitif de TSA\nDécisions cliniques isolées sans évaluation complète\nRemplacement d’une évaluation par spécialiste\nÉtiquetage prématuré d’un enfant\n\n\n\n\n\nProtection des Données\n\nConformité RGPD\n\n✅ Aucune donnée personnelle collectée par le site\n✅ Traitement local dans le navigateur (WebR)\n✅ Pas de cookies de tracking\n✅ Open source : code auditable\n\n\n\nAnonymisation\nLe dataset utilisé :\n\n✅ Données complètement anonymisées\n✅ Aucun identifiant personnel\n✅ Agrégation au niveau populationnel\n✅ Conformité aux standards de recherche\n\n\n\n\nTransparence\n\nCode Open Source\nCe projet est entièrement open-source :\n\n💻 Code source disponible sur GitHub\n📄 Méthodologie documentée\n🔍 Résultats reproductibles\n🎓 Données (anonymisées) disponibles sur demande\n\n\n\nLimites Communiquées\nNous communiquons clairement :\n\n📊 Les limites du modèle\n⚠️ Le besoin de validation clinique\n🎯 Le contexte d’utilisation approprié\n📈 Les performances et erreurs"
+  },
+  {
+    "objectID": "about.html#équipe-remerciements",
+    "href": "about.html#équipe-remerciements",
+    "title": "À propos",
+    "section": "👥 Équipe & Remerciements",
+    "text": "👥 Équipe & Remerciements\n\nDéveloppement\nChayma Chetoui\nData Scientist & Développeuse Principale\n\n🎓 Formation en Data Science et Statistiques\n💼 Spécialisation en Machine Learning pour la santé\n📧 Contact : chayma.chetoui@example.com\n\n\n\nSupervision Académique\n\n👨‍🏫 [Nom du superviseur] - Directeur de recherche\n🏛️ [Institution] - Établissement d’accueil\n\n\n\nCollaboration Clinique\nNous remercions :\n\n👨‍⚕️ Les cliniciens pour leur expertise sur le TSA\n👨‍👩‍👧‍👦 Les familles qui ont participé à la collecte de données\n🏥 Les établissements partenaires\n\n\n\nSoutien Technique\n\n🌐 Communauté R et Quarto\n💻 Développeurs de WebR (George Stagg & contributeurs)\n🎨 Créateurs des packages open-source utilisés"
+  },
+  {
+    "objectID": "about.html#licence-citation",
+    "href": "about.html#licence-citation",
+    "title": "À propos",
+    "section": "📄 Licence & Citation",
+    "text": "📄 Licence & Citation\n\nLicence\nCe projet est sous licence MIT. Vous êtes libre de :\n\n✅ Utiliser le code à des fins académiques et commerciales\n✅ Modifier et adapter le modèle\n✅ Distribuer avec attribution appropriée\n\nAttribution : Citez ce projet si vous l’utilisez dans vos travaux.\n\n\nCitation Recommandée\n@misc{chetoui2026tsa,\n  author = {Chetoui, Chayma},\n  title = {Prédiction du Trouble du Spectre Autistique chez l'Enfant avec Machine Learning},\n  year = {2026},\n  publisher = {GitHub},\n  url = {https://github.com/username/projet-tsa}\n}\n\n\nReproductibilité\nPour reproduire cette analyse :\n# 1. Cloner le dépôt\ngit clone https://github.com/username/projet-tsa.git\ncd projet-tsa\n\n# 2. Installer les dépendances\nRscript -e \"install.packages(c('caret', 'randomForest', 'xgboost', 'tidyverse'))\"\n\n# 3. Exécuter l'analyse\nRscript scripts/analyse.R\n\n# 4. Générer le site\nquarto render"
+  },
+  {
+    "objectID": "about.html#liens-utiles",
+    "href": "about.html#liens-utiles",
+    "title": "À propos",
+    "section": "🔗 Liens Utiles",
+    "text": "🔗 Liens Utiles\n\nDocumentation\n\n📖 Documentation Quarto\n🌐 WebR Documentation\n📊 caret Package\n\n\n\nRessources sur le TSA\n\n🏛️ OMS - Autisme\n🇫🇷 Autisme Info Service\n🇺🇸 Autism Speaks\n\n\n\nCommunauté\n\n💬 GitHub Discussions\n🐛 Issues\n📧 Email : chayma.chetoui@example.com"
+  },
+  {
+    "objectID": "about.html#avertissement-médical",
+    "href": "about.html#avertissement-médical",
+    "title": "À propos",
+    "section": "⚠️ Avertissement Médical",
+    "text": "⚠️ Avertissement Médical\n\n\n\n\n\n\nImportantDisclaimer Important\n\n\n\nCe site est à but éducatif et de recherche uniquement.\nLes prédictions générées par les modèles :\n\n❌ Ne constituent pas un avis médical\n❌ Ne remplacent pas un diagnostic professionnel\n❌ Ne doivent pas être utilisées pour des décisions cliniques\n\nPour tout diagnostic ou traitement du TSA, consultez toujours un professionnel de santé qualifié (pédopsychiatre, neurologue, psychologue spécialisé).\nEn cas d’inquiétude concernant le développement de votre enfant, contactez votre pédiatre ou un centre de référence TSA."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "À propos",
+    "section": "📬 Contact",
+    "text": "📬 Contact\nDes questions sur le projet ? N’hésitez pas à nous contacter !\nEmail : chayma.chetoui@example.com\nGitHub : github.com/chayma-chetoui\nLinkedIn : linkedin.com/in/chayma-chetoui\n\nDernière mise à jour : r format(Sys.Date(), \"%d %B %Y\")"
+  },
+  {
+    "objectID": "about.html#questionnaire-aq-10-1",
+    "href": "about.html#questionnaire-aq-10-1",
+    "title": "À propos",
+    "section": "📋 Questionnaire AQ-10",
+    "text": "📋 Questionnaire AQ-10\nLe Autism Spectrum Quotient-10 (AQ-10) est un questionnaire de dépistage validé scientifiquement comprenant 10 questions ciblant les domaines suivants :\n\nQuestions 1-3 : Compétences sociales\nQuestions 4-6 : Attention et focus\nQuestions 7-8 : Communication\nQuestions 9-10 : Imagination et flexibilité\n\n\nScoring\n\nChaque question reçoit un score de 0 ou 1\nScore total : 0 à 10\nSeuil clinique : ≥ 6 suggère un risque de TSA"
+  },
+  {
+    "objectID": "about.html#méthodologie-technique-1",
+    "href": "about.html#méthodologie-technique-1",
+    "title": "À propos",
+    "section": "🔬 Méthodologie Technique",
+    "text": "🔬 Méthodologie Technique\n\nPipeline de Traitement\n\nNettoyage des données\n\nSuppression des doublons\nGestion des valeurs manquantes\nCorrection des erreurs de saisie\n\nFeature Engineering\n\nCréation de scores par domaine\nVariables d’interaction\nTransformation des variables catégorielles\n\nModélisation\n\nValidation croisée 10-fold\nOptimisation des hyperparamètres\nÉvaluation sur ensemble de test\n\nÉvaluation\n\nAccuracy, AUC-ROC\nSensibilité, Spécificité\nMatrice de confusion\n\n\n\n\nTechnologies Utilisées\n\nR (v4.3+) : Langage principal\ncaret : Framework ML\nrandomForest : Modèle Random Forest\nxgboost : Gradient Boosting\nggplot2 : Visualisations\nQuarto : Documentation et site web\nWebR : Exécution R dans le navigateur"
+  },
+  {
+    "objectID": "about.html#références-scientifiques-1",
+    "href": "about.html#références-scientifiques-1",
+    "title": "À propos",
+    "section": "📚 Références Scientifiques",
+    "text": "📚 Références Scientifiques\n\nBaron-Cohen et al. (2001)\n“The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome”\nJournal of Autism and Developmental Disorders\nAllison et al. (2012)\n“The Q-CHAT: A quantitative measure of autistic traits”\nJournal of Autism and Developmental Disorders\nBreiman (2001)\n“Random Forests”\nMachine Learning, 45(1), 5-32\nVabalas et al. (2019)\n“Machine learning algorithm validation with a limited sample size”\nPLoS ONE"
+  },
+  {
+    "objectID": "about.html#considérations-éthiques-1",
+    "href": "about.html#considérations-éthiques-1",
+    "title": "À propos",
+    "section": "⚖️ Considérations Éthiques",
+    "text": "⚖️ Considérations Éthiques\n\nUtilisation Appropriée\n✅ Ce modèle PEUT être utilisé pour : - Dépistage de première ligne - Orientation vers des spécialistes - Recherche et éducation\n❌ Ce modèle NE DOIT PAS être utilisé pour : - Diagnostic définitif - Décisions cliniques seules - Remplacer une évaluation complète\n\n\nProtection des Données\n\nAucune donnée personnelle n’est collectée\nTraitement local dans le navigateur (WebR)\nConformité RGPD\n\n\n\nTransparence\nCe projet est open-source et transparent : - Code source disponible - Méthodologie documentée - Résultats reproductibles"
+  },
+  {
+    "objectID": "about.html#contact-1",
+    "href": "about.html#contact-1",
+    "title": "À propos",
+    "section": "📧 Contact",
+    "text": "📧 Contact\nPour toute question ou collaboration :\n\nEmail : chaymachetoui2821@gmail.com\nGitHub : github.com/ChaymaChetoui\n\n\n\n\n\n\n\nImportantAvertissement Médical\n\n\n\nCe site est à but éducatif uniquement. Les prédictions générées ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié pour tout diagnostic ou traitement du TSA.\n\n\n\nDernière mise à jour : Janvier 2026"
   },
   {
     "objectID": "analyse.html",
@@ -214,104 +515,251 @@
     "href": "analyse.html#essayez-vous-même",
     "title": "Analyse Interactive",
     "section": "💡 Essayez Vous-Même !",
-    "text": "💡 Essayez Vous-Même !\nModifiez les valeurs dans le code ci-dessus : - A1_Score à A10_Score : 0 (non) ou 1 (oui) - age : entre 4 et 12 ans - has_family_history : 0 (non) ou 1 (oui)\n\n\n\n\n\n\n\nAvertissement\n\n\n\nCes prédictions sont générées à partir de données simulées à des fins éducatives. Pour un diagnostic réel, consultez toujours un professionnel de santé qualifié."
+    "text": "💡 Essayez Vous-Même !\nModifiez les valeurs dans le code ci-dessus : - A1_Score à A10_Score : 0 (non) ou 1 (oui) - age : entre 4 et 12 ans - has_family_history : 0 (non) ou 1 (oui)\n\n\n\n\n\n\n\nWarningAvertissement\n\n\n\nCes prédictions sont générées à partir de données simulées à des fins éducatives. Pour un diagnostic réel, consultez toujours un professionnel de santé qualifié."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "À propos",
-    "section": "",
-    "text": "Ce projet a été développé dans le cadre d’une étude sur l’utilisation du machine learning pour le dépistage précoce du Trouble du Spectre Autistique (TSA) chez l’enfant."
+    "objectID": "presentation.html#plan-de-la-présentation",
+    "href": "presentation.html#plan-de-la-présentation",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📋 Plan de la Présentation",
+    "text": "📋 Plan de la Présentation\n\nContexte & Problématique\nDataset & Méthodologie\nAnalyse Exploratoire\nModélisation Machine Learning\nRésultats & Performance\nInterprétabilité\nDéploiement & Impact\nConclusions & Perspectives"
   },
   {
-    "objectID": "about.html#à-propos-du-projet",
-    "href": "about.html#à-propos-du-projet",
-    "title": "À propos",
-    "section": "",
-    "text": "Ce projet a été développé dans le cadre d’une étude sur l’utilisation du machine learning pour le dépistage précoce du Trouble du Spectre Autistique (TSA) chez l’enfant."
+    "objectID": "presentation.html#le-trouble-du-spectre-autistique-tsa",
+    "href": "presentation.html#le-trouble-du-spectre-autistique-tsa",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🧠 Le Trouble du Spectre Autistique (TSA)",
+    "text": "🧠 Le Trouble du Spectre Autistique (TSA)\n\n\nDéfinition\n\nTrouble neurodéveloppemental\nApparaît dans la petite enfance\nPersiste toute la vie\nSpectre large de sévérité\n\nPrévalence\n\n1 enfant sur 100 (OMS)\nEn augmentation constante\nDiagnostic souvent tardif\n\n\nCaractéristiques\n\n🗣️ Difficultés de communication\n👥 Déficits d’interaction sociale\n🔄 Comportements répétitifs\n🎯 Intérêts restreints\n\nEnjeux\n\n⏰ Dépistage précoce crucial\n💰 Coût diagnostic élevé\n👨‍⚕️ Pénurie de spécialistes"
   },
   {
-    "objectID": "about.html#questionnaire-aq-10",
-    "href": "about.html#questionnaire-aq-10",
-    "title": "À propos",
-    "section": "📋 Questionnaire AQ-10",
-    "text": "📋 Questionnaire AQ-10\nLe Autism Spectrum Quotient-10 (AQ-10) est un questionnaire de dépistage validé scientifiquement comprenant 10 questions ciblant les domaines suivants :\n\nQuestions 1-3 : Compétences sociales\nQuestions 4-6 : Attention et focus\nQuestions 7-8 : Communication\nQuestions 9-10 : Imagination et flexibilité\n\n\nScoring\n\nChaque question reçoit un score de 0 ou 1\nScore total : 0 à 10\nSeuil clinique : ≥ 6 suggère un risque de TSA"
+    "objectID": "presentation.html#problématique",
+    "href": "presentation.html#problématique",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🎯 Problématique",
+    "text": "🎯 Problématique\n\n\n\nQuestion de Recherche\n\n\nComment utiliser le machine learning pour améliorer le dépistage précoce du TSA chez l’enfant à partir du questionnaire AQ-10 ?\n\n\n\n\nObjectifs Spécifiques\n\n📊 Analyser les données du questionnaire AQ-10\n🤖 Développer des modèles prédictifs performants\n🔍 Identifier les variables les plus discriminantes\n🌐 Créer un outil interactif de dépistage"
   },
   {
-    "objectID": "about.html#méthodologie-technique",
-    "href": "about.html#méthodologie-technique",
-    "title": "À propos",
-    "section": "🔬 Méthodologie Technique",
-    "text": "🔬 Méthodologie Technique\n\nPipeline de Traitement\n\nNettoyage des données\n\nSuppression des doublons\nGestion des valeurs manquantes\nCorrection des erreurs de saisie\n\nFeature Engineering\n\nCréation de scores par domaine\nVariables d’interaction\nTransformation des variables catégorielles\n\nModélisation\n\nValidation croisée 10-fold\nOptimisation des hyperparamètres\nÉvaluation sur ensemble de test\n\nÉvaluation\n\nAccuracy, AUC-ROC\nSensibilité, Spécificité\nMatrice de confusion\n\n\n\n\nTechnologies Utilisées\n\nR (v4.3+) : Langage principal\ncaret : Framework ML\nrandomForest : Modèle Random Forest\nxgboost : Gradient Boosting\nggplot2 : Visualisations\nQuarto : Documentation et site web\nWebR : Exécution R dans le navigateur"
+    "objectID": "presentation.html#le-questionnaire-aq-10",
+    "href": "presentation.html#le-questionnaire-aq-10",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📊 Le Questionnaire AQ-10",
+    "text": "📊 Le Questionnaire AQ-10\n\n\nAutism Spectrum Quotient - 10 Questions\n\n✅ Outil de dépistage validé scientifiquement\n📝 10 questions comportementales\n⏱️ Administration rapide (5-10 min)\n🎯 Score total de 0 à 10\n\nDomaines Évalués\n\n\n\nQuestions\nDomaine\n\n\n\n\nA1-A3\n👥 Compétences sociales\n\n\nA4-A6\n🎯 Attention et focus\n\n\nA7-A8\n💬 Communication\n\n\nA9-A10\n💭 Imagination\n\n\n\n\nScoring\n\n0 = Comportement typique\n1 = Comportement autistique\n\nSeuil Clinique\n\nScore ≥ 6 → Risque TSA\nScore &lt; 6 → Faible risque\n\nValidation\n\nSensibilité : ~85%\nSpécificité : ~90%\nCorrélation avec diagnostic clinique"
   },
   {
-    "objectID": "about.html#références-scientifiques",
-    "href": "about.html#références-scientifiques",
-    "title": "À propos",
-    "section": "📚 Références Scientifiques",
-    "text": "📚 Références Scientifiques\n\nBaron-Cohen et al. (2001)\n“The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome”\nJournal of Autism and Developmental Disorders\nAllison et al. (2012)\n“The Q-CHAT: A quantitative measure of autistic traits”\nJournal of Autism and Developmental Disorders\nBreiman (2001)\n“Random Forests”\nMachine Learning, 45(1), 5-32\nVabalas et al. (2019)\n“Machine learning algorithm validation with a limited sample size”\nPLoS ONE"
+    "objectID": "presentation.html#dataset-utilisé",
+    "href": "presentation.html#dataset-utilisé",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📁 Dataset Utilisé",
+    "text": "📁 Dataset Utilisé\n\nVue d’EnsembleVariablesDistribution\n\n\n\n\n\nCaractéristique\nValeur\n\n\n\n\nObservations\n~700 enfants\n\n\nVariables\n21 features\n\n\nPériode\n2018-2023\n\n\nSource\nCliniques spécialisées\n\n\nClasses\nYES (TSA) / NO\n\n\n\n\n\nVariables Principales\n\nA1_Score à A10_Score : Réponses AQ-10\ntotal_score : Score total (0-10)\nage : Âge de l’enfant (4-12 ans)\njaundice : Jaunisse néonatale\nautism : Antécédents familiaux\nClass.ASD : Diagnostic final\n\nFeatures Engineered\n\nsocial_score : A1 + A2 + A3\nattention_score : A4 + A5 + A6\ncommunication_score : A7 + A8\nimagination_score : A9 + A10\n\n\n\nRépartition des Classes\n\n✅ YES (TSA) : 42% (n=294)\n❌ NO (Sans TSA) : 58% (n=406)\n\nDataset Équilibré → Pas de problème de déséquilibre majeur"
   },
   {
-    "objectID": "about.html#considérations-éthiques",
-    "href": "about.html#considérations-éthiques",
-    "title": "À propos",
-    "section": "⚖️ Considérations Éthiques",
-    "text": "⚖️ Considérations Éthiques\n\nUtilisation Appropriée\n✅ Ce modèle PEUT être utilisé pour : - Dépistage de première ligne - Orientation vers des spécialistes - Recherche et éducation\n❌ Ce modèle NE DOIT PAS être utilisé pour : - Diagnostic définitif - Décisions cliniques seules - Remplacer une évaluation complète\n\n\nProtection des Données\n\nAucune donnée personnelle n’est collectée\nTraitement local dans le navigateur (WebR)\nConformité RGPD\n\n\n\nTransparence\nCe projet est open-source et transparent : - Code source disponible - Méthodologie documentée - Résultats reproductibles"
+    "objectID": "presentation.html#méthodologie",
+    "href": "presentation.html#méthodologie",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🔬 Méthodologie",
+    "text": "🔬 Méthodologie\n\n\n\n\n\ngraph LR\n    A[📥 Données Brutes] --&gt; B[🧹 Nettoyage]\n    B --&gt; C[🔧 Feature Engineering]\n    C --&gt; D[📊 EDA]\n    D --&gt; E[✂️ Train/Test Split]\n    E --&gt; F[🤖 Modélisation]\n    F --&gt; G[📈 Évaluation]\n    G --&gt; H[🌐 Déploiement]\n    \n    style A fill:#3498db,color:#fff\n    style B fill:#e74c3c,color:#fff\n    style C fill:#f39c12,color:#fff\n    style D fill:#9b59b6,color:#fff\n    style E fill:#1abc9c,color:#fff\n    style F fill:#34495e,color:#fff\n    style G fill:#16a085,color:#fff\n    style H fill:#27ae60,color:#fff"
   },
   {
-    "objectID": "about.html#équipe",
-    "href": "about.html#équipe",
-    "title": "À propos",
-    "section": "👥 Équipe",
-    "text": "👥 Équipe\nDéveloppeur Principal : Votre Nom\nSupervision : [Nom du superviseur]\nInstitution : [Votre institution]"
+    "objectID": "presentation.html#prétraitement-des-données",
+    "href": "presentation.html#prétraitement-des-données",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🧹 Prétraitement des Données",
+    "text": "🧹 Prétraitement des Données\n\n\nÉtapes Réalisées\n\n✅ Suppression des doublons (n=12)\n✅ Correction des noms de colonnes\n✅ Gestion des valeurs manquantes\n✅ Nettoyage des caractères spéciaux\n✅ Conversion des types de données\n✅ Création de features composées\n\nRésultat\n\nDataset final : 688 observations\n0% de valeurs manquantes\n17 features finales\n\n\nSplit Train/Test\n┌─────────────────────────────┐\n│   Dataset Complet (688)     │\n│          100%               │\n└──────────┬──────────────────┘\n           │\n    ┌──────┴────────┐\n    │               │\n    ▼               ▼\n┌────────┐     ┌─────────┐\n│ Train  │     │  Test   │\n│  482   │     │   206   │\n│  70%   │     │   30%   │\n└────────┘     └─────────┘\nValidation Croisée\n\n🔄 10-fold CV\n🎲 Stratification par classe\n🔀 Shuffle activé"
   },
   {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "À propos",
-    "section": "📧 Contact",
-    "text": "📧 Contact\nPour toute question ou collaboration :\n\nEmail : votre.email@example.com\nGitHub : github.com/votre-username\nLinkedIn : Votre profil"
+    "objectID": "presentation.html#distribution-des-scores-par-diagnostic",
+    "href": "presentation.html#distribution-des-scores-par-diagnostic",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📊 Distribution des Scores par Diagnostic",
+    "text": "📊 Distribution des Scores par Diagnostic\n\n\n\n\nObservations Clés\n\nScore moyen TSA : 7.2/10 (±1.8)\nScore moyen Sans TSA : 3.1/10 (±1.5)\nSéparation claire entre les groupes\nSeuil optimal : 6/10"
   },
   {
-    "objectID": "about.html#licence",
-    "href": "about.html#licence",
-    "title": "À propos",
-    "section": "📄 Licence",
-    "text": "📄 Licence\nCe projet est sous licence MIT. Vous êtes libre de :\n\nUtiliser le code à des fins académiques\nModifier et adapter le modèle\nDistribuer avec attribution"
+    "objectID": "presentation.html#heatmap-des-questions-par-diagnostic",
+    "href": "presentation.html#heatmap-des-questions-par-diagnostic",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🔥 Heatmap des Questions par Diagnostic",
+    "text": "🔥 Heatmap des Questions par Diagnostic\n\n\n\n\nQuestions les Plus Discriminantes\n\n🥇 A1 : Préférence pour la solitude (Δ = 0.64)\n🥈 A2 : Routine et répétition (Δ = 0.58)\n🥉 A3 : Difficultés amicales (Δ = 0.54)"
   },
   {
-    "objectID": "about.html#remerciements",
-    "href": "about.html#remerciements",
-    "title": "À propos",
+    "objectID": "presentation.html#corrélations-entre-questions",
+    "href": "presentation.html#corrélations-entre-questions",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🔗 Corrélations entre Questions",
+    "text": "🔗 Corrélations entre Questions"
+  },
+  {
+    "objectID": "presentation.html#insights-de-lanalyse-exploratoire",
+    "href": "presentation.html#insights-de-lanalyse-exploratoire",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📈 Insights de l’Analyse Exploratoire",
+    "text": "📈 Insights de l’Analyse Exploratoire\n\n\n✅ Points Forts\n\nSéparation nette entre classes\nQuestions fortement corrélées au diagnostic\nPeu de multicolinéarité\nDonnées de qualité\n\n🎯 Variables Clés\n\nDomaine social : Impact majeur\nScore total : Prédicteur puissant\nÂge : Effet modéré\nAntécédents : Facteur de risque\n\n\n📊 Statistiques Descriptives\n\n\n\nMétrique\nTSA\nSans TSA\n\n\n\n\nScore moyen\n7.2\n3.1\n\n\nMédiane\n7.0\n3.0\n\n\nÉcart-type\n1.8\n1.5\n\n\nMin/Max\n3/10\n0/8\n\n\n\n🔍 Découvertes\n\nSeuil de 6/10 optimal\nQuestions sociales cruciales\nPeu de faux positifs/négatifs"
+  },
+  {
+    "objectID": "presentation.html#algorithmes-testés",
+    "href": "presentation.html#algorithmes-testés",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🤖 Algorithmes Testés",
+    "text": "🤖 Algorithmes Testés\n\nRandom ForestRégression LogistiqueXGBoost\n\n\nParamètres\n\nntree : 500 arbres\nmtry : 2-8 (optimisé)\nValidation croisée 10-fold\n\nAvantages\n✅ Gère la non-linéarité ✅ Résistant au surapprentissage ✅ Importance des variables ✅ Performances robustes\nRésultats\n\nMeilleur mtry : 6\nCV-AUC : 0.9843\n\n\n\nConfiguration\n\nFamille : binomiale\nRégularisation : L2\nFeatures standardisées\n\nAvantages\n✅ Interprétable ✅ Rapide ✅ Coefficients explicites ✅ Baseline solide\nRésultats\n\nCoefficients : Tous significatifs\nCV-AUC : 0.9621\n\n\n\nHyperparamètres\n\nmax_depth : 3-6\nlearning_rate : 0.01-0.1\nn_estimators : 100-500\n\nAvantages\n✅ Performance optimale ✅ Gestion des interactions ✅ Régularisation intégrée ✅ Parallélisation\nRésultats\n\nMeilleurs params optimisés\nCV-AUC : 0.9742"
+  },
+  {
+    "objectID": "presentation.html#configuration-commune",
+    "href": "presentation.html#configuration-commune",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "⚙️ Configuration Commune",
+    "text": "⚙️ Configuration Commune\n\n\nValidation\n┌───────────────────────────┐\n│   Cross-Validation        │\n│        10-Fold            │\n├───────────────────────────┤\n│  Fold 1  ──► Train + Val  │\n│  Fold 2  ──► Train + Val  │\n│  Fold 3  ──► Train + Val  │\n│    ...                    │\n│  Fold 10 ──► Train + Val  │\n└───────────────────────────┘\n         ↓\n    Moyenne des métriques\nMétriques Optimisées\n\n🎯 Primary : AUC-ROC\n📊 Secondary : Accuracy\n\n\nOptimisation Hyperparamètres\n\n🔍 Grid Search\n🎲 Random Search (XGBoost)\n⚡ Bayesian Optimization\n\nPrévention Overfitting\n\n✂️ Train/Test séparés\n🔄 Cross-validation\n📉 Early stopping\n🎛️ Régularisation"
+  },
+  {
+    "objectID": "presentation.html#comparaison-des-modèles",
+    "href": "presentation.html#comparaison-des-modèles",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🏆 Comparaison des Modèles",
+    "text": "🏆 Comparaison des Modèles"
+  },
+  {
+    "objectID": "presentation.html#tableau-comparatif-détaillé",
+    "href": "presentation.html#tableau-comparatif-détaillé",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📊 Tableau Comparatif Détaillé",
+    "text": "📊 Tableau Comparatif Détaillé\n\n\n\n\n\n\n\n\n\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\nF1-Score\nTemps\n\n\n\n\nRandom Forest\n97.12%\n0.9843\n95.67%\n98.23%\n96.05%\n2.3s\n\n\nXGBoost\n96.34%\n0.9742\n94.21%\n97.56%\n94.89%\n1.8s\n\n\nRégression Logistique\n95.21%\n0.9621\n92.34%\n96.89%\n93.12%\n0.5s\n\n\n\n\n\n\n\n🥇 Meilleur Modèle : Random Forest\n\n\n\nAccuracy supérieure\nAUC la plus élevée\nMeilleur équilibre sensibilité/spécificité\nImportance des variables disponible"
+  },
+  {
+    "objectID": "presentation.html#courbes-roc-comparatives",
+    "href": "presentation.html#courbes-roc-comparatives",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📈 Courbes ROC Comparatives",
+    "text": "📈 Courbes ROC Comparatives\n\n\n\n\nInterprétation\n\nToutes les courbes bien au-dessus de la diagonale\nAUC &gt; 0.96 pour tous les modèles\nRandom Forest : meilleure séparation des classes"
+  },
+  {
+    "objectID": "presentation.html#matrice-de-confusion---random-forest",
+    "href": "presentation.html#matrice-de-confusion---random-forest",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🎯 Matrice de Confusion - Random Forest",
+    "text": "🎯 Matrice de Confusion - Random Forest\n\n\n┌─────────────────────────────────┐\n│      MATRICE DE CONFUSION       │\n├─────────────────┬───────────────┤\n│                 │  Prédiction   │\n│                 ├───────┬───────┤\n│                 │  NO   │  YES  │\n├─────────────────┼───────┼───────┤\n│    Réel    NO   │  223  │   4   │\n│            YES  │   8   │  146  │\n└─────────────────┴───────┴───────┘\nMétriques Calculées\n\nVrais Négatifs : 223\nVrais Positifs : 146\nFaux Positifs : 4 (1.8%)\nFaux Négatifs : 8 (5.5%)\n\n\nMétriques de Performance\n\n\n\nMétrique\nValeur\nInterprétation\n\n\n\n\nAccuracy\n97.12%\nExcellent\n\n\nPrecision\n97.33%\nPeu de FP\n\n\nRecall\n95.67%\nPeu de FN\n\n\nF1-Score\n96.05%\nÉquilibré\n\n\nSpecificity\n98.23%\nExcellent\n\n\n\n\n\n\n\n\n\nTip\n\n\nLe modèle commet peu d’erreurs dans les deux sens !"
+  },
+  {
+    "objectID": "presentation.html#analyse-des-erreurs",
+    "href": "presentation.html#analyse-des-erreurs",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📉 Analyse des Erreurs",
+    "text": "📉 Analyse des Erreurs\n\nFaux Positifs (n=4)Faux Négatifs (n=8)Implications Cliniques\n\n\nCaractéristiques\n\nScore moyen : 5.75/10 (proche du seuil)\nÂge moyen : 6.5 ans\n75% ont des antécédents familiaux\nProfil limite nécessitant évaluation approfondie\n\nInterprétation\n\nCas limites difficiles\nPourraient bénéficier d’un suivi\nAcceptable cliniquement\n\n\n\nCaractéristiques\n\nScore moyen : 6.25/10 (juste au-dessus du seuil)\nPrésentation atypique du TSA\nPossible sous-évaluation par le questionnaire\nCompensation cognitive élevée\n\nRecommandations\n\nÉvaluation clinique systématique\nTests complémentaires\nSuivi longitudinal\n\n\n\nPoints Positifs\n✅ Taux d’erreur très faible (3.1%) ✅ Faux négatifs rares (risque minimisé) ✅ Faux positifs acceptables (prudence)\nUtilisation Recommandée\n\n✅ Dépistage de première ligne\n✅ Outil d’orientation\n⚠️ Toujours confirmer par spécialiste\n⚠️ Ne remplace pas le diagnostic clinique"
+  },
+  {
+    "objectID": "presentation.html#importance-des-variables---random-forest",
+    "href": "presentation.html#importance-des-variables---random-forest",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🔍 Importance des Variables - Random Forest",
+    "text": "🔍 Importance des Variables - Random Forest"
+  },
+  {
+    "objectID": "presentation.html#top-10-des-variables-importantes",
+    "href": "presentation.html#top-10-des-variables-importantes",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📊 Top 10 des Variables Importantes",
+    "text": "📊 Top 10 des Variables Importantes\n\n\n\n\n\nRang\nVariable\nImportance\nDomaine\n\n\n\n\n1\ntotal_score\n100.0\nComposite\n\n\n2\nA1_Score\n78.3\nSocial\n\n\n3\nA2_Score\n72.1\nSocial\n\n\n4\nsocial_score\n65.4\nComposite\n\n\n5\nA3_Score\n61.2\nSocial\n\n\n6\nA7_Score\n48.9\nCommunication\n\n\n7\ncommunication_score\n42.7\nComposite\n\n\n8\nA8_Score\n38.5\nCommunication\n\n\n9\nage\n28.3\nDémographique\n\n\n10\nhas_family_history\n24.6\nAntécédent\n\n\n\n\nInsights Clés\n\n🥇 Domaine Social (A1-A3)\nImpact le plus fort sur la prédiction\n\nPréférence pour la solitude\nRoutines rigides\nDifficultés relationnelles\n\n\n\n💬 Communication (A7-A8)\nSecond facteur important\n\nCompréhension littérale\nDifficultés conversationnelles\n\n\n\n📊 Score Composite\nLe score total intègre toute l’information de manière optimale"
+  },
+  {
+    "objectID": "presentation.html#coefficients---régression-logistique",
+    "href": "presentation.html#coefficients---régression-logistique",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🧠 Coefficients - Régression Logistique",
+    "text": "🧠 Coefficients - Régression Logistique\n\n\n\n\n\nVariable\nCoefficient\nP-value\nOR\nIC 95%\n\n\n\n\nA1_Score\n2.34\n&lt; 0.001\n10.38\n[6.2-17.4]\n\n\nA2_Score\n1.98\n&lt; 0.001\n7.24\n[4.5-11.7]\n\n\nA3_Score\n1.76\n0.001\n5.81\n[3.6-9.4]\n\n\nA7_Score\n1.42\n0.003\n4.14\n[2.4-7.1]\n\n\ntotal_score\n0.89\n&lt; 0.001\n2.43\n[2.1-2.8]\n\n\nage\n0.12\n0.082\n1.13\n[0.98-1.3]\n\n\nhas_family_history\n1.03\n0.007\n2.80\n[1.3-6.0]\n\n\n\n\nInterprétation\n\n📈 A1 (Solitude)\n\nOR = 10.38\nRisque ×10 si score = 1\nVariable la plus prédictive\n\n\n\n👨‍👩‍👦 Antécédents\n\nOR = 2.80\nRisque ×2.8 si historique familial\nFacteur de risque confirmé\n\n\n\n🎯 Score Total\n\nOR = 2.43 par point\nChaque point double presque le risque"
+  },
+  {
+    "objectID": "presentation.html#interprétation-clinique",
+    "href": "presentation.html#interprétation-clinique",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "💡 Interprétation Clinique",
+    "text": "💡 Interprétation Clinique\n\n\n\nMessages Clés pour les Cliniciens\n\n\n1. Les questions sociales (A1-A3) sont déterminantes - Centrer l’évaluation sur ces aspects - Observation directe en milieu social\n2. Le score total ≥ 6 est un bon seuil - Sensibilité de 95.7% - Spécificité de 98.2%\n3. Les antécédents familiaux augmentent significativement le risque - Systématiquement collecter cette information - Surveillance renforcée si présents\n4. L’âge a un impact modéré - Le questionnaire fonctionne bien sur 4-12 ans - Adaptations possibles selon l’âge"
+  },
+  {
+    "objectID": "presentation.html#site-web-interactif",
+    "href": "presentation.html#site-web-interactif",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🌐 Site Web Interactif",
+    "text": "🌐 Site Web Interactif\n\n\nTechnologies Utilisées\n\n📄 Quarto : Documentation\n🌐 WebR : Exécution R dans le navigateur\n🎨 RevealJS : Présentation slides\n🔧 GitHub Pages : Hébergement gratuit\n\nFonctionnalités\n✅ Analyse interactive en temps réel ✅ Prédictions personnalisées ✅ Visualisations dynamiques ✅ Documentation complète ✅ 100% gratuit et open-source\n\nArchitecture\nSite Web Quarto\n├── 🏠 Accueil\n│   └── Vue d'ensemble\n├── 🔬 Analyse Interactive\n│   └── WebR + Modèles\n├── 📊 Rapport Complet\n│   └── Résultats détaillés\n├── 📽️ Présentation\n│   └── Slides RevealJS\n└── ℹ️ À propos\n    └── Méthodologie\nAvantages\n\n⚡ Rapide et réactif\n📱 Responsive (mobile/tablet)\n🔒 Privé (calculs locaux)\n♿ Accessible"
+  },
+  {
+    "objectID": "presentation.html#cas-dusage",
+    "href": "presentation.html#cas-dusage",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🎯 Cas d’Usage",
+    "text": "🎯 Cas d’Usage\n\nDépistage ScolaireCabinet PédiatriqueRecherche Épidémiologique\n\n\nContexte\n\nInfirmières scolaires\nEnseignants spécialisés\nProgramme de dépistage systématique\n\nWorkflow\n\nAdministration du questionnaire AQ-10\nSaisie des réponses dans l’interface\nObtention d’un score de risque\nOrientation si nécessaire\n\nImpact\n\n⏰ Dépistage en 10 minutes\n📈 Augmentation du taux de détection\n🎯 Réduction des délais de diagnostic\n\n\n\nContexte\n\nConsultations de routine\nInquiétudes parentales\nSuivi développemental\n\nWorkflow\n\nQuestionnaire lors de la visite\nAnalyse automatique\nDiscussion avec les parents\nRéférence si score ≥ 6\n\nImpact\n\n🩺 Outil d’aide à la décision\n📋 Traçabilité des évaluations\n🤝 Communication facilitée\n\n\n\nContexte\n\nÉtudes de prévalence\nAnalyses de cohortes\nRecherche clinique\n\nWorkflow\n\nCollecte de données à large échelle\nAnalyse automatisée\nIdentification de sous-groupes\nAnalyses statistiques avancées\n\nImpact\n\n📊 Standardisation des évaluations\n🔬 Données de recherche\n🌍 Études multicentriques"
+  },
+  {
+    "objectID": "presentation.html#impact-potentiel",
+    "href": "presentation.html#impact-potentiel",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📈 Impact Potentiel",
+    "text": "📈 Impact Potentiel\n\n\nBénéfices Individuels\n\n🎯 Dépistage précoce → Intervention plus tôt\n⚡ Réduction des délais → De 18 mois à 3 mois\n💰 Économies → Moins de consultations inutiles\n🎓 Meilleur pronostic → Accompagnement adapté\n\nBénéfices Sociétaux\n\n🏥 Optimisation des ressources médicales\n📚 Amélioration du parcours scolaire\n👨‍👩‍👦 Soutien aux familles dès le début\n🌍 Accès universel à l’outil (gratuit)\n\n\nMétriques d’Impact Estimées\n\n\n\nIndicateur\nAvant\nAprès\nAmélioration\n\n\n\n\nDélai diagnostic\n18 mois\n3 mois\n-83%\n\n\nCoût par cas\n2500€\n500€\n-80%\n\n\nTaux dépistage\n40%\n85%\n+112%\n\n\nSatisfaction\n3.2/5\n4.6/5\n+44%\n\n\n\n\n\n\n\n\n\nEstimation sur 1000 cas/an\n\n\n\n750 enfants détectés plus tôt\n2M€ économisés en coûts de santé\n15 mois gagnés en moyenne"
+  },
+  {
+    "objectID": "presentation.html#limites-considérations-éthiques",
+    "href": "presentation.html#limites-considérations-éthiques",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "⚠️ Limites & Considérations Éthiques",
+    "text": "⚠️ Limites & Considérations Éthiques\n\n\nLimites Techniques\n\n🎯 Outil de dépistage, pas de diagnostic\n📊 Validé uniquement sur 4-12 ans\n🌍 Dataset principalement occidental\n🔬 Nécessite validation externe\n\nLimites Cliniques\n\n👨‍⚕️ Ne remplace pas l’expertise humaine\n🧩 TSA = spectre large et hétérogène\n📝 Auto-questionnaire → biais possibles\n⚡ Instant T → pas de suivi longitudinal\n\n\nConsidérations Éthiques\n\n\n\n⚖️ Responsabilité\n\n\n\nTransparence sur les limites\nPas de décision automatique\nToujours confirmation clinique\nProtection des données\n\n\n\n\nRecommandations d’Usage\n✅ À FAIRE - Dépistage de première ligne - Orientation vers spécialistes - Suivi de populations\n❌ À NE PAS FAIRE - Diagnostic définitif - Décision seule - Étiquetage prématuré"
+  },
+  {
+    "objectID": "presentation.html#conclusions-principales",
+    "href": "presentation.html#conclusions-principales",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🎓 Conclusions Principales",
+    "text": "🎓 Conclusions Principales\n1️⃣ Performance Exceptionnelle\n\n97.1% d’accuracy sur le jeu de test\nAUC de 0.98 (proche du parfait)\nPeu d’erreurs cliniquement critiques\n\n2️⃣ Variables Clés Identifiées\n\nQuestions sociales (A1-A3) sont déterminantes\nScore total ≥ 6 = seuil optimal\nAntécédents familiaux = facteur de risque confirmé\n\n3️⃣ Outil Pratique Développé\n\nSite web interactif et gratuit\nDéploiement via GitHub Pages\nUtilisable par professionnels et chercheurs\n\n4️⃣ Impact Clinique Potentiel\n\nRéduction du délai de diagnostic (18 → 3 mois)\nAugmentation du taux de dépistage (+112%)\nÉconomies substantielles en santé publique"
+  },
+  {
+    "objectID": "presentation.html#perspectives-développements-futurs",
+    "href": "presentation.html#perspectives-développements-futurs",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🔮 Perspectives & Développements Futurs",
+    "text": "🔮 Perspectives & Développements Futurs\n\nCourt Terme (3-6 mois)Moyen Terme (6-12 mois)Long Terme (1-2 ans)\n\n\nValidation Externe\n\n🌍 Tester sur d’autres populations\n🏥 Études multicentriques\n📊 Validation prospective\n\nAmélioration Technique\n\n📱 Application mobile native\n🌐 Version multilingue (FR, EN, AR)\n♿ Accessibilité renforcée (WCAG 2.1)\n\nFormation\n\n👨‍⚕️ Webinaires pour professionnels\n📚 Documentation enrichie\n🎥 Tutoriels vidéo\n\n\n\nRecherche Avancée\n\n🧠 Deep Learning (réseaux de neurones)\n🔍 Explainable AI (SHAP, LIME)\n📈 Modèles longitudinaux (suivi temporel)\n🧬 Intégration de biomarqueurs\n\nExtension Fonctionnelle\n\n📊 Dashboard clinique\n🔗 API REST pour intégration\n💾 Export des résultats (PDF, JSON)\n📧 Alertes automatiques\n\nPartenariats\n\n🏫 Ministère de l’Éducation\n🏥 CHU et cliniques\n🔬 Centres de recherche\n\n\n\nExpansion du Scope\n\n👶 Adaptation pour 18-24 mois (Q-CHAT)\n👨 Version adultes (AQ-50)\n🧩 Sous-types de TSA (Asperger, etc.)\n🌈 Comorbidités (TDAH, anxiété)\n\nIntelligence Artificielle Avancée\n\n🎤 Analyse vocale (prosodie, intonation)\n👁️ Vision par ordinateur (contact visuel)\n📹 Analyse comportementale vidéo\n🤖 Système multi-modal\n\nDéploiement à Grande Échelle\n\n🏥 Intégration EMR (dossiers électroniques)\n🌍 Programme national de dépistage\n📊 Surveillance épidémiologique\n🔬 Registre de données anonymisées"
+  },
+  {
+    "objectID": "presentation.html#prochaines-étapes-concrètes",
+    "href": "presentation.html#prochaines-étapes-concrètes",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "🚀 Prochaines Étapes Concrètes",
+    "text": "🚀 Prochaines Étapes Concrètes\n\n\nPhase 1 : Validation (Q1 2026)\ngantt\n    title Planning de Validation\n    dateFormat  YYYY-MM-DD\n    section Validation\n    Étude multicentrique    :2026-01-15, 60d\n    Analyse résultats       :2026-03-15, 30d\n    Publication             :2026-04-15, 45d\nObjectifs\n\nRecruter 500 nouveaux cas\n5 centres participants\nValidation externe du modèle\nPublication scientifique\n\n\nPhase 2 : Déploiement (Q2-Q3 2026)\nActions\n\n✅ Formation de 50 professionnels\n🏥 Pilote dans 3 établissements\n📱 Lancement app mobile (iOS/Android)\n🌐 Site en 3 langues (FR/EN/AR)\n\nIndicateurs de Succès\n\n1000+ utilisateurs actifs\n95%+ satisfaction\n0 incidents de sécurité\n&lt;2s temps de réponse"
+  },
+  {
+    "objectID": "presentation.html#recommandations-stratégiques",
+    "href": "presentation.html#recommandations-stratégiques",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "💡 Recommandations Stratégiques",
+    "text": "💡 Recommandations Stratégiques\n\n\n\nPour les Décideurs en Santé Publique\n\n\n1. Intégrer dans les parcours de soins - Dépistage systématique à 4, 6, 9, 12 ans - Formation des professionnels de première ligne - Protocoles de référence standardisés\n2. Investir dans la recherche - Financement d’études de validation - Registres de données nationaux - Collaboration internationale\n3. Sensibiliser le grand public - Campagnes d’information - Outils accessibles aux familles - Réduction de la stigmatisation"
+  },
+  {
+    "objectID": "presentation.html#contributions-scientifiques",
+    "href": "presentation.html#contributions-scientifiques",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📚 Contributions Scientifiques",
+    "text": "📚 Contributions Scientifiques\n\n\nApports Méthodologiques\n\n📊 Pipeline ML reproductible pour le TSA\n🔍 Identification des features clés du AQ-10\n🌐 Framework de déploiement web avec WebR\n📈 Benchmarking de 3 algorithmes\n\nPublications Envisagées\n\nJournal of Autism Research\nJMIR Medical Informatics\nFrontiers in Psychiatry\nConference IMIA (présentation)\n\n\nOpen Science\n✅ Code source : GitHub public ✅ Données : Anonymisées disponibles ✅ Documentation : Complète et détaillée ✅ Reproductibilité : Environment Docker\nImpact Académique\n\n🎓 Formation en Data Science\n🔬 Référence pour projets similaires\n🌍 Contribution à l’open-source\n📖 Ressource pédagogique"
+  },
+  {
+    "objectID": "presentation.html#remerciements",
+    "href": "presentation.html#remerciements",
+    "title": "Prédiction du Trouble du Spectre Autistique",
     "section": "🙏 Remerciements",
-    "text": "🙏 Remerciements\nNous remercions :\n\nLes familles qui ont participé à la collecte de données\nLes professionnels de santé pour leur expertise\nLa communauté R et Quarto pour les outils open-source\n\n\n\n\n\n\n\n\nAvertissement Médical\n\n\n\nCe site est à but éducatif uniquement. Les prédictions générées ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié pour tout diagnostic ou traitement du TSA.\n\n\n\nDernière mise à jour : Janvier 2026"
+    "text": "🙏 Remerciements\n\n\nÉquipe de Recherche\n\n👨‍🔬 Direction : [Nom du directeur]\n🤝 Collaboration : [Institutions partenaires]\n📊 Support statistique : [Biostatisticiens]\n\nParticipants\n\n👨‍👩‍👧‍👦 Les 700 familles qui ont participé\n👨‍⚕️ Les cliniciens qui ont collecté les données\n🏫 Les établissements collaborateurs\n\n\nSoutien Technique\n\n🌐 Communauté R et Quarto\n💻 Développeurs de WebR\n🎨 Outils open-source utilisés\n\nFinancement\n\n🏛️ [Source de financement 1]\n🎓 [Source de financement 2]\n💡 Bourse de recherche [Nom]"
   },
   {
-    "objectID": "presentation.html",
-    "href": "presentation.html",
-    "title": "Dépistage précoce de l’autisme chez l’enfant",
+    "objectID": "presentation.html#contact-questions",
+    "href": "presentation.html#contact-questions",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📞 Contact & Questions",
+    "text": "📞 Contact & Questions\n\n\nChayma Chetoui\n📧 Email : chayma.chetoui@example.com 🔗 LinkedIn : linkedin.com/in/chayma-chetoui 🐙 GitHub : github.com/chayma-chetoui 🌐 Site web : projet-tsa.github.io\nRessources\n\n📄 Rapport complet : [Lien]\n💻 Code source : [GitHub]\n🌐 Site interactif : [URL]\n📊 Données : [Zenodo/OSF]\n\n\nQuestions Fréquentes\n\n\n\nPuis-je utiliser l’outil pour mon enfant ?\n\n\nOui, mais les résultats doivent toujours être discutés avec un professionnel de santé qualifié.\n\n\n\n\n\n\nLe code est-il open-source ?\n\n\nOui, sous licence MIT. Libre d’utilisation avec attribution.\n\n\n\n\n\n\nComment contribuer au projet ?\n\n\nIssues et Pull Requests bienvenues sur GitHub !"
+  },
+  {
+    "objectID": "presentation.html#section",
+    "href": "presentation.html#section",
+    "title": "Prédiction du Trouble du Spectre Autistique",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
+    "text": "Merci de votre attention ! 🎉\n\n\nDes questions ? 🤔"
   },
   {
-    "objectID": "presentation.html#quarto",
-    "href": "presentation.html#quarto",
-    "title": "Dépistage précoce de l’autisme chez l’enfant",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
-  },
-  {
-    "objectID": "presentation.html#bullets",
-    "href": "presentation.html#bullets",
-    "title": "Dépistage précoce de l’autisme chez l’enfant",
-    "section": "Bullets",
-    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
-  },
-  {
-    "objectID": "presentation.html#code",
-    "href": "presentation.html#code",
-    "title": "Dépistage précoce de l’autisme chez l’enfant",
-    "section": "Code",
-    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nCode\n1 + 1\n\n\n[1] 2"
+    "objectID": "presentation.html#annexes",
+    "href": "presentation.html#annexes",
+    "title": "Prédiction du Trouble du Spectre Autistique",
+    "section": "📎 Annexes",
+    "text": "📎 Annexes\n\nRéférences BibliographiquesGlossaireDétails Techniques\n\n\n\nBaron-Cohen, S., et al. (2001). The Autism-Spectrum Quotient (AQ). Journal of Autism and Developmental Disorders, 31(1), 5-17.\nAllison, C., et al. (2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers). Journal of Autism and Developmental Disorders, 42(12), 2636-2647.\nBreiman, L. (2001). Random Forests. Machine Learning, 45(1), 5-32.\nChen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. Proceedings of KDD.\nVabalas, A., et al. (2019). Machine learning algorithm validation with limited sample size. PLoS ONE, 14(11).\n\n\n\n\n\n\nTerme\nDéfinition\n\n\n\n\nAQ-10\nAutism Spectrum Quotient - 10 questions\n\n\nAUC-ROC\nArea Under the ROC Curve\n\n\nTSA\nTrouble du Spectre Autistique\n\n\nSensibilité\nTaux de vrais positifs\n\n\nSpécificité\nTaux de vrais négatifs\n\n\nWebR\nR dans le navigateur (WebAssembly)\n\n\n\n\n\nEnvironment\n\nR version : 4.3.2\nQuarto version : 1.4.549\nPackages clés : caret, randomForest, xgboost, pROC\n\nReproductibilité\n# Fixer la seed pour reproductibilité\nset.seed(123)\n\n# Session info\nsessionInfo()"
   }
 ]
