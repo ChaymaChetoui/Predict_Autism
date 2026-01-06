@@ -6,7 +6,7 @@
 
 > Analyse prédictive du TSA basée sur le questionnaire AQ-10 avec machine learning
 
-**🌐 Site web :** [https://votre-username.github.io/projet-tsa](https://votre-username.github.io/projet-tsa)
+**🌐 Site web :** [[https://votre-username.github.io/projet-tsa]](https://chaymachetoui.github.io/Predict_Autism/)
 
 ---
 
@@ -276,11 +276,7 @@ Pour toute question concernant le TSA, consultez un professionnel de santé qual
 
 ---
 
-## 📄 Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
 
 ## 👥 Contribution
 
