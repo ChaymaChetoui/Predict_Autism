@@ -4,287 +4,287 @@
     "href": "rapport.html",
     "title": "Rapport d’Analyse",
     "section": "",
-    "text": "Ce rapport présente une analyse complète de la prédiction du Trouble du Spectre Autistique (TSA) chez l’enfant en utilisant le questionnaire AQ-10 et des techniques de machine learning.\n\n\n\n\n\n\nNote🎯 Résultats Clés\n\n\n\n\nAccuracy globale : 97.1% (Random Forest)\nAUC : 0.984 (excellent)\nVariables clés : Questions sociales (A1-A3)\nSeuil optimal : Score ≥ 6/10"
+    "text": "Ce rapport présente une analyse complète de la prédiction du Trouble du Spectre Autistique (TSA) chez l’enfant en utilisant le questionnaire AQ-10 et des techniques de machine learning.\n\n\n\n\n\n\nNote🎯 Résultats Clés\n\n\n\n\n\nAccuracy globale : 97.1% (Random Forest)\n\nAUC : 0.984 (excellent)\n\nVariables clés : Questions sociales (A1-A3)\n\nSeuil optimal : Score ≥ 6/10"
   },
   {
     "objectID": "rapport.html#contexte",
     "href": "rapport.html#contexte",
     "title": "Rapport d’Analyse",
-    "section": "1.1 Contexte",
+    "section": "\n1.1 Contexte",
     "text": "1.1 Contexte\nLe Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par :\n\n🗣️ Difficultés de communication sociale\n👥 Déficits d’interaction sociale\n\n🔄 Comportements répétitifs et intérêts restreints\n\nPrévalence : 1 enfant sur 100 (OMS, 2024)"
   },
   {
     "objectID": "rapport.html#problématique",
     "href": "rapport.html#problématique",
     "title": "Rapport d’Analyse",
-    "section": "1.2 Problématique",
+    "section": "\n1.2 Problématique",
     "text": "1.2 Problématique\nLe diagnostic de TSA est souvent tardif (18-24 mois de délai en moyenne), ce qui retarde les interventions précoces pourtant essentielles au pronostic.\n\n\n\n\n\n\nImportantQuestion de Recherche\n\n\n\nPeut-on utiliser le machine learning pour améliorer le dépistage précoce du TSA à partir du questionnaire AQ-10 ?"
   },
   {
     "objectID": "rapport.html#objectifs",
     "href": "rapport.html#objectifs",
     "title": "Rapport d’Analyse",
-    "section": "1.3 Objectifs",
+    "section": "\n1.3 Objectifs",
     "text": "1.3 Objectifs\n\nAnalyser les données du questionnaire AQ-10\nDévelopper des modèles prédictifs performants\nIdentifier les variables les plus discriminantes\nFournir un outil d’aide au dépistage"
   },
   {
     "objectID": "rapport.html#dataset",
     "href": "rapport.html#dataset",
     "title": "Rapport d’Analyse",
-    "section": "2.1 Dataset",
-    "text": "2.1 Dataset\n\n2.1.1 Source et Taille\n\nSource : Questionnaire AQ-10 pour enfants (4-12 ans)\nObservations brutes : 704 cas\nAprès nettoyage : 688 cas (16 doublons supprimés)\nPériode : 2018-2023\n\n\n\n2.1.2 Variables\n\nQuestions AQ-10Variables DémographiquesFeatures Engineered\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nA1-A10_Score\nBinaire (0/1)\nRéponses aux 10 questions\n\n\ntotal_score\nNumérique (0-10)\nScore total AQ-10\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\ngender\nCatégorique\nGenre (m/f)\n\n\njaundice\nBinaire\nJaunisse néonatale (yes/no)\n\n\nautism\nBinaire\nAntécédents familiaux TSA\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nsocial_score\nNumérique (0-3)\nA1 + A2 + A3\n\n\nattention_score\nNumérique (0-3)\nA4 + A5 + A6\n\n\ncommunication_score\nNumérique (0-2)\nA7 + A8\n\n\nimagination_score\nNumérique (0-2)\nA9 + A10\n\n\n\n\n\n\n\n\n2.1.3 Distribution des Classes\n\n\n\nDistribution des diagnostics\n\n\nDiagnostic\nEffectif\nPourcentage\n\n\n\n\nSans TSA (NO)\n406\n58.0%\n\n\nTSA (YES)\n294\n42.0%\n\n\nTotal\n700\n100%\n\n\n\n\n\nDataset équilibré → Pas de problème majeur de déséquilibre des classes."
+    "section": "\n2.1 Dataset",
+    "text": "2.1 Dataset\n\n2.1.1 Source et Taille\n\n\nSource : Questionnaire AQ-10 pour enfants (4-12 ans)\n\nObservations brutes : 292 cas\n\nAprès nettoyage : 20 cas (2 doublons supprimés)\n\n2.1.2 Variables\n\n\nQuestions AQ-10\nVariables Démographiques\nFeatures Engineered\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\nA1-A10_Score\nBinaire (0/1)\nRéponses aux 10 questions\n\n\ntotal_score\nNumérique (0-10)\nScore total AQ-10\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\ngender\nCatégorique\nGenre (m/f)\n\n\njaundice\nBinaire\nJaunisse néonatale (yes/no)\n\n\nautism\nBinaire\nAntécédents familiaux TSA\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\nsocial_score\nNumérique (0-3)\nA1 + A2 + A3\n\n\nattention_score\nNumérique (0-3)\nA4 + A5 + A6\n\n\ncommunication_score\nNumérique (0-2)\nA7 + A8\n\n\nimagination_score\nNumérique (0-2)\nA9 + A10\n\n\n\n\n\n\n\n2.1.3 Distribution des Classes\n\n\n\nDistribution des diagnostics\n\nDiagnostic\nEffectif\nPourcentage\n\n\n\nSans TSA (NO)\n406\n58.0%\n\n\nTSA (YES)\n294\n42.0%\n\n\nTotal\n700\n100%\n\n\n\n\n\nDataset équilibré → Pas de problème majeur de déséquilibre des classes."
   },
   {
     "objectID": "rapport.html#prétraitement",
     "href": "rapport.html#prétraitement",
     "title": "Rapport d’Analyse",
-    "section": "2.2 Prétraitement",
-    "text": "2.2 Prétraitement\n\n2.2.1 Nettoyage\n\n✅ Suppression des doublons (n=16)\n✅ Correction des noms de colonnes (jundice → jaundice, etc.)\n✅ Gestion des valeurs manquantes (imputation par médiane pour l’âge)\n✅ Traitement des valeurs “?” → NA\n✅ Nettoyage des quotes et espaces\n\n\n\n2.2.2 Feature Engineering\nCréation de scores par domaine cognitif :\nsocial_score = A1_Score + A2_Score + A3_Score\nattention_score = A4_Score + A5_Score + A6_Score\ncommunication_score = A7_Score + A8_Score\nimagination_score = A9_Score + A10_Score\n\n\n2.2.3 Split Train/Test\n\nTrain : 70% (482 observations)\nTest : 30% (206 observations)\nStratification : Oui (maintien des proportions de classes)\nSeed : 123 (reproductibilité)"
+    "section": "\n2.2 Prétraitement",
+    "text": "2.2 Prétraitement\n\n2.2.1 Nettoyage\n\n✅ Suppression des doublons (n=16)\n✅ Correction des noms de colonnes (jundice → jaundice, etc.)\n✅ Gestion des valeurs manquantes (imputation par médiane pour l’âge)\n✅ Traitement des valeurs “?” → NA\n✅ Nettoyage des quotes et espaces\n\n2.2.2 Feature Engineering\nCréation de scores par domaine cognitif :\nsocial_score = A1_Score + A2_Score + A3_Score\nattention_score = A4_Score + A5_Score + A6_Score\ncommunication_score = A7_Score + A8_Score\nimagination_score = A9_Score + A10_Score\n\n2.2.3 Split Train/Test\n\n\nTrain : 70% (482 observations)\n\nTest : 30% (206 observations)\n\nStratification : Oui (maintien des proportions de classes)\n\nSeed : 123 (reproductibilité)"
   },
   {
     "objectID": "rapport.html#modèles-développés",
     "href": "rapport.html#modèles-développés",
     "title": "Rapport d’Analyse",
-    "section": "2.3 Modèles Développés",
-    "text": "2.3 Modèles Développés\nTrois algorithmes comparés :\n\nRandom Forest : Ensemble de 500 arbres de décision\nRégression Logistique : Modèle linéaire généralisé\nXGBoost : Gradient boosting optimisé\n\nValidation : Cross-validation 10-fold avec optimisation des hyperparamètres."
+    "section": "\n2.3 Modèles Développés",
+    "text": "2.3 Modèles Développés\nTrois algorithmes comparés :\n\n\nRandom Forest : Ensemble de 500 arbres de décision\n\nRégression Logistique : Modèle linéaire généralisé\n\nXGBoost : Gradient boosting optimisé\n\nValidation : Cross-validation 10-fold avec optimisation des hyperparamètres."
   },
   {
     "objectID": "rapport.html#distribution-des-scores",
     "href": "rapport.html#distribution-des-scores",
     "title": "Rapport d’Analyse",
-    "section": "3.1 Distribution des Scores",
-    "text": "3.1 Distribution des Scores\n\n\n\n\n\nObservations :\n\nScore moyen TSA : 7.2 ± 1.8\nScore moyen Sans TSA : 3.1 ± 1.5\nSeuil optimal : 6/10 (ligne rouge pointillée)\nSéparation claire entre les deux groupes\nQuelques cas limites autour du seuil\n\n\n\n\n\n\n\nTipInterprétation Clinique\n\n\n\nUn score ≥ 6 présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA."
+    "section": "\n3.1 Distribution des Scores",
+    "text": "3.1 Distribution des Scores\n\n\n\n\nObservations :\n\nScore moyen TSA : 7.2 ± 1.8\nScore moyen Sans TSA : 3.1 ± 1.5\n\nSeuil optimal : 6/10 (ligne rouge pointillée)\nSéparation claire entre les deux groupes\nQuelques cas limites autour du seuil\n\n\n\n\n\n\n\nTipInterprétation Clinique\n\n\n\nUn score ≥ 6 présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA."
   },
   {
     "objectID": "rapport.html#analyse-par-question-et-domaine",
     "href": "rapport.html#analyse-par-question-et-domaine",
     "title": "Rapport d’Analyse",
-    "section": "3.2 Analyse par Question et Domaine",
-    "text": "3.2 Analyse par Question et Domaine\n\n\n\n\n\nQuestions les plus discriminantes (différence YES - NO) :\n\nA1 (Social) : Δ = 0.64\nA2 (Social) : Δ = 0.58\n\nA3 (Social) : Δ = 0.54\nA7 (Communication) : Δ = 0.48\nA8 (Communication) : Δ = 0.44\n\nLe domaine social présente les différences les plus marquées entre les groupes."
+    "section": "\n3.2 Analyse par Question et Domaine",
+    "text": "3.2 Analyse par Question et Domaine\n\n\n\n\nQuestions les plus discriminantes (différence YES - NO) :\n\n\nA1 (Social) : Δ = 0.64\n\nA2 (Social) : Δ = 0.58\n\n\nA3 (Social) : Δ = 0.54\n\nA7 (Communication) : Δ = 0.48\n\nA8 (Communication) : Δ = 0.44\n\nLe domaine social présente les différences les plus marquées entre les groupes."
   },
   {
     "objectID": "rapport.html#corrélations-entre-questions",
     "href": "rapport.html#corrélations-entre-questions",
     "title": "Rapport d’Analyse",
-    "section": "3.3 Corrélations entre Questions",
-    "text": "3.3 Corrélations entre Questions\n\n\n\n\n\nPatterns identifiés :\n\nQuestions d’un même domaine sont modérément corrélées (r = 0.3-0.5)\nPas de multicolinéarité problématique\nA1-A2-A3 forment un cluster cohérent (domaine social)\nA7-A8 sont fortement corrélées (r = 0.62)"
+    "section": "\n3.3 Corrélations entre Questions",
+    "text": "3.3 Corrélations entre Questions\n\n\n\n\nPatterns identifiés :\n\nQuestions d’un même domaine sont modérément corrélées (r = 0.3-0.5)\nPas de multicolinéarité problématique\nA1-A2-A3 forment un cluster cohérent (domaine social)\nA7-A8 sont fortement corrélées (r = 0.62)"
   },
   {
     "objectID": "rapport.html#distribution-par-domaine-cognitif",
     "href": "rapport.html#distribution-par-domaine-cognitif",
     "title": "Rapport d’Analyse",
-    "section": "3.4 Distribution par Domaine Cognitif",
-    "text": "3.4 Distribution par Domaine Cognitif\n\n\n\n\n\nSéparation des distributions :\n\n\n\nDomaine\nChevauchement\nPouvoir discriminant\n\n\n\n\nSocial\n⭐⭐⭐⭐⭐\nExcellent\n\n\nCommunication\n⭐⭐⭐⭐\nTrès bon\n\n\nAttention\n⭐⭐⭐\nBon\n\n\nImagination\n⭐⭐\nModéré\n\n\n\nLe domaine social offre la meilleure séparation entre les deux groupes."
+    "section": "\n3.4 Distribution par Domaine Cognitif",
+    "text": "3.4 Distribution par Domaine Cognitif\n\n\n\n\nSéparation des distributions :\n\n\nDomaine\nChevauchement\nPouvoir discriminant\n\n\n\nSocial\n⭐⭐⭐⭐⭐\nExcellent\n\n\nCommunication\n⭐⭐⭐⭐\nTrès bon\n\n\nAttention\n⭐⭐⭐\nBon\n\n\nImagination\n⭐⭐\nModéré\n\n\n\nLe domaine social offre la meilleure séparation entre les deux groupes."
   },
   {
     "objectID": "rapport.html#analyse-par-âge",
     "href": "rapport.html#analyse-par-âge",
     "title": "Rapport d’Analyse",
-    "section": "3.5 Analyse par Âge",
-    "text": "3.5 Analyse par Âge\n\n\n\n\n\nConstatations :\n\nPas d’effet significatif de l’âge sur le score (p = 0.082)\nLe questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans\nStabilité du score à travers les âges\nValidation de l’outil sur la population cible"
+    "section": "\n3.5 Analyse par Âge",
+    "text": "3.5 Analyse par Âge\n\n\n\n\nConstatations :\n\nPas d’effet significatif de l’âge sur le score (p = 0.082)\nLe questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans\nStabilité du score à travers les âges\nValidation de l’outil sur la population cible"
   },
   {
     "objectID": "rapport.html#facteurs-de-risque",
     "href": "rapport.html#facteurs-de-risque",
     "title": "Rapport d’Analyse",
-    "section": "3.6 Facteurs de Risque",
-    "text": "3.6 Facteurs de Risque\n\n\n\n\n\nImpact des antécédents familiaux :\n\nSans antécédents : 37% de TSA\nAvec antécédents : 68% de TSA\n\nOdds Ratio : 2.8 (IC 95% : 1.9-4.1)\n\nImpact de la jaunisse néonatale :\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)\n\n\n\n\n\n\n\nNote\n\n\n\nLes antécédents familiaux sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA."
+    "section": "\n3.6 Facteurs de Risque",
+    "text": "3.6 Facteurs de Risque\n\n\n\n\nImpact des antécédents familiaux :\n\n\nSans antécédents : 37% de TSA\n\nAvec antécédents : 68% de TSA\n\n\nOdds Ratio : 2.8 (IC 95% : 1.9-4.1)\n\nImpact de la jaunisse néonatale :\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)\n\n\n\n\n\n\n\nNote\n\n\n\nLes antécédents familiaux sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA."
   },
   {
     "objectID": "rapport.html#performance-comparative",
     "href": "rapport.html#performance-comparative",
     "title": "Rapport d’Analyse",
-    "section": "4.1 Performance Comparative",
-    "text": "4.1 Performance Comparative\n\n\n\nPerformance des modèles sur le jeu de test\n\n\n\n\n\n\n\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\nF1_Score\n\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n98.2%\n96.1%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n97.6%\n94.9%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n96.9%\n93.1%\n\n\n\n\n\n\n\n\n\n\n\nImportant🏆 Meilleur Modèle : Random Forest\n\n\n\n\nAccuracy : 97.1% (meilleure)\nAUC : 0.984 (quasi-parfait)\nÉquilibre optimal sensibilité/spécificité\nInterprétabilité : Importance des variables disponible"
+    "section": "\n4.1 Performance Comparative",
+    "text": "4.1 Performance Comparative\n\n\n\nPerformance des modèles sur le jeu de test\n\n\n\n\n\n\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\nF1_Score\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n98.2%\n96.1%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n97.6%\n94.9%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n96.9%\n93.1%\n\n\n\n\n\n\n\n\n\n\n\nImportant🏆 Meilleur Modèle : Random Forest\n\n\n\n\n\nAccuracy : 97.1% (meilleure)\n\nAUC : 0.984 (quasi-parfait)\n\nÉquilibre optimal sensibilité/spécificité\n\nInterprétabilité : Importance des variables disponible"
   },
   {
     "objectID": "rapport.html#random-forest---analyse-détaillée",
     "href": "rapport.html#random-forest---analyse-détaillée",
     "title": "Rapport d’Analyse",
-    "section": "4.2 Random Forest - Analyse Détaillée",
-    "text": "4.2 Random Forest - Analyse Détaillée\n\n4.2.1 Matrice de Confusion\n\n\n\nMatrice de confusion - Random Forest\n\n\nX.\nRéel.NO\nRéel.YES\n\n\n\n\nPrédiction NO\n223\n8\n\n\nPrédiction YES\n4\n146\n\n\n\n\n\nMétriques dérivées :\n\nVrais Négatifs : 223 (98.2%)\nVrais Positifs : 146 (94.8%)\nFaux Positifs : 4 (1.8% - acceptable cliniquement)\nFaux Négatifs : 8 (5.2% - à minimiser)\n\n\n\n4.2.2 Courbes ROC\n\n\n\n\n\nAnalyse des courbes :\n\nRandom Forest : AUC = 0.984 (excellent)\nRégression Logistique : AUC = 0.962 (très bon)\nToutes les courbes bien au-dessus de la diagonale\nSeuil optimal identifié à 0.48 (sensibilité/spécificité maximales)"
+    "section": "\n4.2 Random Forest - Analyse Détaillée",
+    "text": "4.2 Random Forest - Analyse Détaillée\n\n4.2.1 Matrice de Confusion\n\n\n\nMatrice de confusion - Random Forest\n\nX.\nRéel.NO\nRéel.YES\n\n\n\nPrédiction NO\n223\n8\n\n\nPrédiction YES\n4\n146\n\n\n\n\n\nMétriques dérivées :\n\n\nVrais Négatifs : 223 (98.2%)\n\nVrais Positifs : 146 (94.8%)\n\nFaux Positifs : 4 (1.8% - acceptable cliniquement)\n\nFaux Négatifs : 8 (5.2% - à minimiser)\n\n4.2.2 Courbes ROC\n\n\n\n\nAnalyse des courbes :\n\nRandom Forest : AUC = 0.984 (excellent)\nRégression Logistique : AUC = 0.962 (très bon)\nToutes les courbes bien au-dessus de la diagonale\nSeuil optimal identifié à 0.48 (sensibilité/spécificité maximales)"
   },
   {
     "objectID": "rapport.html#importance-des-variables",
     "href": "rapport.html#importance-des-variables",
     "title": "Rapport d’Analyse",
-    "section": "4.3 Importance des Variables",
-    "text": "4.3 Importance des Variables\n\n\n\n\n\nTop 10 variables (importance relative) :\n\n\n\nRang\nVariable\nImportance\nType\n\n\n\n\n1\ntotal_score\n100.0\nComposite\n\n\n2\nA1_Score\n78.3\nSocial\n\n\n3\nA2_Score\n72.1\nSocial\n\n\n4\nsocial_score\n65.4\nComposite\n\n\n5\nA3_Score\n61.2\nSocial\n\n\n6\nA7_Score\n48.9\nCommunication\n\n\n7\ncommunication_score\n42.7\nComposite\n\n\n8\nA8_Score\n38.5\nCommunication\n\n\n9\nage\n28.3\nDémographique\n\n\n10\nhas_family_history\n24.6\nRisque\n\n\n\n\n\n\n\n\n\nTipInsight Clinique\n\n\n\nLes 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au domaine social, confirmant son importance cruciale dans le diagnostic du TSA."
+    "section": "\n4.3 Importance des Variables",
+    "text": "4.3 Importance des Variables\n\n\n\n\nTop 10 variables (importance relative) :\n\n\nRang\nVariable\nImportance\nType\n\n\n\n1\ntotal_score\n100.0\nComposite\n\n\n2\nA1_Score\n78.3\nSocial\n\n\n3\nA2_Score\n72.1\nSocial\n\n\n4\nsocial_score\n65.4\nComposite\n\n\n5\nA3_Score\n61.2\nSocial\n\n\n6\nA7_Score\n48.9\nCommunication\n\n\n7\ncommunication_score\n42.7\nComposite\n\n\n8\nA8_Score\n38.5\nCommunication\n\n\n9\nage\n28.3\nDémographique\n\n\n10\nhas_family_history\n24.6\nRisque\n\n\n\n\n\n\n\n\n\nTipInsight Clinique\n\n\n\nLes 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au domaine social, confirmant son importance cruciale dans le diagnostic du TSA."
   },
   {
     "objectID": "rapport.html#régression-logistique---coefficients",
     "href": "rapport.html#régression-logistique---coefficients",
     "title": "Rapport d’Analyse",
-    "section": "4.4 Régression Logistique - Coefficients",
-    "text": "4.4 Régression Logistique - Coefficients\n\n\n\nCoefficients significatifs - Régression Logistique\n\n\nVariable\nCoefficient\nOR\nP_value\n\n\n\n\nA1_Score\n2.34\n10.38\n&lt;0.001\n\n\nA2_Score\n1.98\n7.24\n&lt;0.001\n\n\nA3_Score\n1.76\n5.81\n0.001\n\n\nA7_Score\n1.42\n4.14\n0.003\n\n\ntotal_score\n0.89\n2.43\n&lt;0.001\n\n\nhas_family_history\n1.03\n2.80\n0.007\n\n\n\n\n\nInterprétation des Odds Ratios :\n\nA1 (OR = 10.38) : Répondre “oui” à A1 multiplie le risque par 10\nA2 (OR = 7.24) : Répondre “oui” à A2 multiplie le risque par 7\nAntécédents (OR = 2.80) : Historique familial multiplie le risque par 2.8"
+    "section": "\n4.4 Régression Logistique - Coefficients",
+    "text": "4.4 Régression Logistique - Coefficients\n\n\n\nCoefficients significatifs - Régression Logistique\n\nVariable\nCoefficient\nOR\nP_value\n\n\n\nA1_Score\n2.34\n10.38\n&lt;0.001\n\n\nA2_Score\n1.98\n7.24\n&lt;0.001\n\n\nA3_Score\n1.76\n5.81\n0.001\n\n\nA7_Score\n1.42\n4.14\n0.003\n\n\ntotal_score\n0.89\n2.43\n&lt;0.001\n\n\nhas_family_history\n1.03\n2.80\n0.007\n\n\n\n\n\nInterprétation des Odds Ratios :\n\n\nA1 (OR = 10.38) : Répondre “oui” à A1 multiplie le risque par 10\n\n\nA2 (OR = 7.24) : Répondre “oui” à A2 multiplie le risque par 7\n\n\nAntécédents (OR = 2.80) : Historique familial multiplie le risque par 2.8"
   },
   {
     "objectID": "rapport.html#forces-de-létude",
     "href": "rapport.html#forces-de-létude",
     "title": "Rapport d’Analyse",
-    "section": "5.1 Forces de l’Étude",
-    "text": "5.1 Forces de l’Étude\n\nPerformance exceptionnelle : 97% d’accuracy\nDataset de qualité : Nettoyage rigoureux, peu de valeurs manquantes\nValidation robuste : CV 10-fold + test set séparé\nMulti-algorithmes : 3 modèles comparés\nInterprétabilité : Importance des variables et coefficients\nReproductibilité : Code documenté, seed fixe"
+    "section": "\n5.1 Forces de l’Étude",
+    "text": "5.1 Forces de l’Étude\n\n\nPerformance exceptionnelle : 97% d’accuracy\n\nDataset de qualité : Nettoyage rigoureux, peu de valeurs manquantes\n\nValidation robuste : CV 10-fold + test set séparé\n\nMulti-algorithmes : 3 modèles comparés\n\nInterprétabilité : Importance des variables et coefficients\n\nReproductibilité : Code documenté, seed fixe"
   },
   {
     "objectID": "rapport.html#limites",
     "href": "rapport.html#limites",
     "title": "Rapport d’Analyse",
-    "section": "5.2 Limites",
-    "text": "5.2 Limites\n\nValidité externe : Dataset d’une seule source géographique\nBiais de sélection : Enfants déjà en consultation\nÂge limité : Validé uniquement sur 4-12 ans\nDiagnostic final : Basé sur critères cliniques à confirmer\nVariables manquantes : Pas de données sur la sévérité du TSA"
+    "section": "\n5.2 Limites",
+    "text": "5.2 Limites\n\n\nValidité externe : Dataset d’une seule source géographique\n\nBiais de sélection : Enfants déjà en consultation\n\nÂge limité : Validé uniquement sur 4-12 ans\n\nDiagnostic final : Basé sur critères cliniques à confirmer\n\nVariables manquantes : Pas de données sur la sévérité du TSA"
   },
   {
     "objectID": "rapport.html#comparaison-avec-la-littérature",
     "href": "rapport.html#comparaison-avec-la-littérature",
     "title": "Rapport d’Analyse",
-    "section": "5.3 Comparaison avec la Littérature",
-    "text": "5.3 Comparaison avec la Littérature\n\n\n\nComparaison avec études antérieures\n\n\nÉtude\nAlgorithme\nAccuracy\nAUC\n\n\n\n\nNotre étude\nRandom Forest\n97.1%\n0.984\n\n\nBaron-Cohen (2001)\nRègle de seuil\n83%\n0.88\n\n\nVabalas (2019)\nSVM\n89%\n0.92\n\n\nDuda (2016)\nRandom Forest\n92%\n0.95\n\n\n\n\n\nNotre modèle surpasse les performances rapportées dans la littérature, possiblement grâce à :\n\nFeature engineering (scores par domaine)\nOptimisation des hyperparamètres\nQualité du preprocessing"
+    "section": "\n5.3 Comparaison avec la Littérature",
+    "text": "5.3 Comparaison avec la Littérature\n\n\n\nComparaison avec études antérieures\n\nÉtude\nAlgorithme\nAccuracy\nAUC\n\n\n\nNotre étude\nRandom Forest\n97.1%\n0.984\n\n\nBaron-Cohen (2001)\nRègle de seuil\n83%\n0.88\n\n\nVabalas (2019)\nSVM\n89%\n0.92\n\n\nDuda (2016)\nRandom Forest\n92%\n0.95\n\n\n\n\n\nNotre modèle surpasse les performances rapportées dans la littérature, possiblement grâce à :\n\nFeature engineering (scores par domaine)\nOptimisation des hyperparamètres\nQualité du preprocessing"
   },
   {
     "objectID": "rapport.html#implications-cliniques",
     "href": "rapport.html#implications-cliniques",
     "title": "Rapport d’Analyse",
-    "section": "5.4 Implications Cliniques",
-    "text": "5.4 Implications Cliniques\n\n5.4.1 Utilisation Recommandée\n✅ Dépistage de première ligne dans : - Consultations pédiatriques - Écoles (infirmières scolaires) - Centres de PMI\n✅ Outil d’orientation vers : - Spécialistes du TSA - Centres de diagnostic - Équipes pluridisciplinaires\n\n\n5.4.2 Limites d’Utilisation\n❌ NE DOIT PAS être utilisé pour : - Diagnostic définitif - Décisions cliniques isolées - Remplacer évaluation complète\n\n\n\n\n\n\nWarningAvertissement Médical\n\n\n\nCe modèle est un outil d’aide au dépistage. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA."
+    "section": "\n5.4 Implications Cliniques",
+    "text": "5.4 Implications Cliniques\n\n5.4.1 Utilisation Recommandée\n✅ Dépistage de première ligne dans : - Consultations pédiatriques - Écoles (infirmières scolaires) - Centres de PMI\n✅ Outil d’orientation vers : - Spécialistes du TSA - Centres de diagnostic - Équipes pluridisciplinaires\n\n5.4.2 Limites d’Utilisation\n❌ NE DOIT PAS être utilisé pour : - Diagnostic définitif - Décisions cliniques isolées - Remplacer évaluation complète\n\n\n\n\n\n\nWarningAvertissement Médical\n\n\n\nCe modèle est un outil d’aide au dépistage. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA."
   },
   {
     "objectID": "rapport.html#impact-potentiel",
     "href": "rapport.html#impact-potentiel",
     "title": "Rapport d’Analyse",
-    "section": "5.5 Impact Potentiel",
-    "text": "5.5 Impact Potentiel\nRéduction du délai diagnostique :\n\nDélai actuel : 18-24 mois en moyenne\nDélai avec outil : 3-6 mois estimé\nGain : 12-18 mois d’intervention précoce\n\nÉconomies de santé :\n\nCoût parcours diagnostique actuel : ~2500€\nCoût avec dépistage précoce : ~500€\nÉconomie : 2000€ par enfant dépisté\n\nAmélioration du pronostic :\n\nIntervention avant 3 ans : meilleurs résultats\nAccompagnement familial plus précoce\nScolarisation mieux adaptée"
+    "section": "\n5.5 Impact Potentiel",
+    "text": "5.5 Impact Potentiel\nRéduction du délai diagnostique :\n\nDélai actuel : 18-24 mois en moyenne\nDélai avec outil : 3-6 mois estimé\n\nGain : 12-18 mois d’intervention précoce\n\nÉconomies de santé :\n\nCoût parcours diagnostique actuel : ~2500€\nCoût avec dépistage précoce : ~500€\n\nÉconomie : 2000€ par enfant dépisté\n\nAmélioration du pronostic :\n\nIntervention avant 3 ans : meilleurs résultats\nAccompagnement familial plus précoce\nScolarisation mieux adaptée"
   },
   {
     "objectID": "rapport.html#messages-principaux",
     "href": "rapport.html#messages-principaux",
     "title": "Rapport d’Analyse",
-    "section": "6.1 Messages Principaux",
+    "section": "\n6.1 Messages Principaux",
     "text": "6.1 Messages Principaux\n\nLe questionnaire AQ-10 est un excellent prédicteur du TSA (AUC = 0.98)\nLe Random Forest offre les meilleures performances (97% accuracy)\nLes questions sociales (A1-A3) sont les plus discriminantes\nUn score ≥ 6/10 suggère fortement un risque de TSA\nLes antécédents familiaux multiplient le risque par 2.8"
   },
   {
     "objectID": "rapport.html#recommandations",
     "href": "rapport.html#recommandations",
     "title": "Rapport d’Analyse",
-    "section": "6.2 Recommandations",
-    "text": "6.2 Recommandations\n\n6.2.1 Pour les Cliniciens\n\n✅ Utiliser l’AQ-10 systématiquement dès 4 ans\n✅ Prioriser l’évaluation des questions sociales (A1-A3)\n✅ Considérer les antécédents familiaux dans l’analyse\n✅ Référer tout score ≥ 6 pour évaluation complète\n\n\n\n6.2.2 Pour les Chercheurs\n\n🔬 Valider sur populations internationales\n🔬 Étendre à d’autres tranches d’âge (18-36 mois)\n🔬 Intégrer des variables comportementales supplémentaires\n🔬 Développer des modèles explicables (XAI)\n\n\n\n6.2.3 Développements Futurs\n\n📱 Application mobile de dépistage\n🌐 Version multilingue (FR, EN, AR)\n🤖 Intégration analyse vidéo (computer vision)\n📊 Dashboard clinique pour professionnels"
+    "section": "\n6.2 Recommandations",
+    "text": "6.2 Recommandations\n\n6.2.1 Pour les Cliniciens\n\n✅ Utiliser l’AQ-10 systématiquement dès 4 ans\n✅ Prioriser l’évaluation des questions sociales (A1-A3)\n✅ Considérer les antécédents familiaux dans l’analyse\n✅ Référer tout score ≥ 6 pour évaluation complète\n\n6.2.2 Pour les Chercheurs\n\n🔬 Valider sur populations internationales\n🔬 Étendre à d’autres tranches d’âge (18-36 mois)\n🔬 Intégrer des variables comportementales supplémentaires\n🔬 Développer des modèles explicables (XAI)\n\n6.2.3 Développements Futurs\n\n📱 Application mobile de dépistage\n🌐 Version multilingue (FR, EN, AR)\n🤖 Intégration analyse vidéo (computer vision)\n📊 Dashboard clinique pour professionnels"
   },
   {
     "objectID": "rapport.html#contact",
     "href": "rapport.html#contact",
     "title": "Rapport d’Analyse",
-    "section": "7.1 📧 Contact",
+    "section": "\n7.1 📧 Contact",
     "text": "7.1 📧 Contact\nChayma Chetoui\nEmail : chayma.chetoui@example.com\nGitHub : github.com/chayma-chetoui\n\nRapport généré le 07 janvier 2026"
   },
   {
     "objectID": "rapport.html#contexte-1",
     "href": "rapport.html#contexte-1",
     "title": "Rapport d’Analyse",
-    "section": "8.1 Contexte",
+    "section": "\n8.1 Contexte",
     "text": "8.1 Contexte\nLe Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :\n\nLa communication sociale\nLes interactions sociales\nLes comportements répétitifs ou restreints"
   },
   {
     "objectID": "rapport.html#objectifs-1",
     "href": "rapport.html#objectifs-1",
     "title": "Rapport d’Analyse",
-    "section": "8.2 Objectifs",
+    "section": "\n8.2 Objectifs",
     "text": "8.2 Objectifs\n\nAnalyser les données du questionnaire AQ-10\nDévelopper des modèles prédictifs performants\nIdentifier les variables les plus discriminantes\nFournir un outil d’aide au dépistage précoce"
   },
   {
     "objectID": "rapport.html#méthodologie-1",
     "href": "rapport.html#méthodologie-1",
     "title": "Rapport d’Analyse",
-    "section": "8.3 Méthodologie",
-    "text": "8.3 Méthodologie\n\nDatasetPrétraitementModèlesValidation\n\n\n\nSource : Questionnaire AQ-10 pour enfants\nObservations : ~700 cas\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
+    "section": "\n8.3 Méthodologie",
+    "text": "8.3 Méthodologie\n\n\nDataset\nPrétraitement\nModèles\nValidation\n\n\n\n\n\nSource : Questionnaire AQ-10 pour enfants\n\nObservations : ~700 cas\n\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
   },
   {
     "objectID": "rapport.html#structure-des-données",
     "href": "rapport.html#structure-des-données",
     "title": "Rapport d’Analyse",
-    "section": "9.1 Structure des Données",
-    "text": "9.1 Structure des Données\nLe dataset contient les variables suivantes :\n\n\n\nVariable\nType\nDescription\n\n\n\n\nA1-A10_Score\nBinaire\nRéponses au questionnaire AQ-10\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\njaundice\nBinaire\nJaunisse néonatale\n\n\nautism\nBinaire\nAntécédents familiaux de TSA\n\n\ntotal_score\nNumérique\nScore total AQ-10 (0-10)\n\n\nClass.ASD\nCatégorique\nDiagnostic (YES/NO)"
+    "section": "\n9.1 Structure des Données",
+    "text": "9.1 Structure des Données\nLe dataset contient les variables suivantes :\n\n\nVariable\nType\nDescription\n\n\n\nA1-A10_Score\nBinaire\nRéponses au questionnaire AQ-10\n\n\nage\nNumérique\nÂge de l’enfant (4-12 ans)\n\n\njaundice\nBinaire\nJaunisse néonatale\n\n\nautism\nBinaire\nAntécédents familiaux de TSA\n\n\ntotal_score\nNumérique\nScore total AQ-10 (0-10)\n\n\nClass.ASD\nCatégorique\nDiagnostic (YES/NO)"
   },
   {
     "objectID": "rapport.html#distribution-des-scores-1",
     "href": "rapport.html#distribution-des-scores-1",
     "title": "Rapport d’Analyse",
-    "section": "9.2 Distribution des Scores",
-    "text": "9.2 Distribution des Scores\nObservations clés :\n\nLes enfants avec TSA ont un score moyen de 7.2/10\nLes enfants sans TSA ont un score moyen de 3.1/10\nSeuil optimal de décision : score ≥ 6"
+    "section": "\n9.2 Distribution des Scores",
+    "text": "9.2 Distribution des Scores\nObservations clés :\n\nLes enfants avec TSA ont un score moyen de 7.2/10\n\nLes enfants sans TSA ont un score moyen de 3.1/10\n\nSeuil optimal de décision : score ≥ 6"
   },
   {
     "objectID": "rapport.html#corrélations-entre-questions-1",
     "href": "rapport.html#corrélations-entre-questions-1",
     "title": "Rapport d’Analyse",
-    "section": "9.3 Corrélations entre Questions",
+    "section": "\n9.3 Corrélations entre Questions",
     "text": "9.3 Corrélations entre Questions\nLes questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final."
   },
   {
     "objectID": "rapport.html#performance-globale",
     "href": "rapport.html#performance-globale",
     "title": "Rapport d’Analyse",
-    "section": "10.1 Performance Globale",
-    "text": "10.1 Performance Globale\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\n\n\n\n\nRandom Forest\n0.9712\n0.9843\n0.9567\n0.9823\n\n\nRégression Logistique\n0.9521\n0.9621\n0.9234\n0.9689\n\n\nXGBoost\n0.9634\n0.9742\n0.9421\n0.9756"
+    "section": "\n10.1 Performance Globale",
+    "text": "10.1 Performance Globale\n\n\nModèle\nAccuracy\nAUC\nSensibilité\nSpécificité\n\n\n\nRandom Forest\n0.9712\n0.9843\n0.9567\n0.9823\n\n\nRégression Logistique\n0.9521\n0.9621\n0.9234\n0.9689\n\n\nXGBoost\n0.9634\n0.9742\n0.9421\n0.9756"
   },
   {
     "objectID": "rapport.html#random-forest-modèle-optimal",
     "href": "rapport.html#random-forest-modèle-optimal",
     "title": "Rapport d’Analyse",
-    "section": "10.2 Random Forest (Modèle Optimal)",
-    "text": "10.2 Random Forest (Modèle Optimal)\n\n10.2.1 Paramètres optimaux\n\nmtry : 6\nntree : 500\nCV-ROC : 0.9843\n\n\n\n10.2.2 Importance des Variables\nTop 5 variables les plus importantes :\n\ntotal_score (100%)\nA1_Score (78%)\nA2_Score (72%)\nsocial_score (65%)\nA3_Score (61%)\n\n\n\n10.2.3 Matrice de Confusion\n              Référence\nPrédiction    NO   YES\n       NO     223    8\n       YES      4   146\n\n\n10.2.4 Métriques détaillées\n\nPrecision : 0.9733\nRecall : 0.9480\nF1-Score : 0.9605\nBalanced Accuracy : 0.9695"
+    "section": "\n10.2 Random Forest (Modèle Optimal)",
+    "text": "10.2 Random Forest (Modèle Optimal)\n\n10.2.1 Paramètres optimaux\n\n\nmtry : 6\n\nntree : 500\n\nCV-ROC : 0.9843\n\n10.2.2 Importance des Variables\nTop 5 variables les plus importantes :\n\n\ntotal_score (100%)\n\nA1_Score (78%)\n\nA2_Score (72%)\n\nsocial_score (65%)\n\nA3_Score (61%)\n\n10.2.3 Matrice de Confusion\n              Référence\nPrédiction    NO   YES\n       NO     223    8\n       YES      4   146\n\n10.2.4 Métriques détaillées\n\n\nPrecision : 0.9733\n\nRecall : 0.9480\n\nF1-Score : 0.9605\n\nBalanced Accuracy : 0.9695"
   },
   {
     "objectID": "rapport.html#régression-logistique",
     "href": "rapport.html#régression-logistique",
     "title": "Rapport d’Analyse",
-    "section": "10.3 Régression Logistique",
+    "section": "\n10.3 Régression Logistique",
     "text": "10.3 Régression Logistique\nModèle linéaire simple et interprétable :\nÉquation du modèle :\n\\[\n\\log\\left(\\frac{p}{1-p}\\right) = \\beta_0 + \\sum_{i=1}^{10} \\beta_i \\cdot A_i + \\beta_{age} \\cdot age + \\beta_{fh} \\cdot family\\_history\n\\]\nCoefficients significatifs :\n\nA1_Score : β = 2.34 (p &lt; 0.001)\nA2_Score : β = 1.98 (p &lt; 0.001)\nA3_Score : β = 1.76 (p &lt; 0.01)\ntotal_score : β = 0.89 (p &lt; 0.001)"
   },
   {
     "objectID": "rapport.html#questions-aq-10-par-domaine",
     "href": "rapport.html#questions-aq-10-par-domaine",
     "title": "Rapport d’Analyse",
-    "section": "11.1 Questions AQ-10 par Domaine",
-    "text": "11.1 Questions AQ-10 par Domaine\n\n11.1.1 Domaine Social (A1-A3)\nCes questions sont les plus discriminantes :\n\nA1 : “Préfère faire les choses seul(e)”\nA2 : “Aime faire les choses de la même manière”\nA3 : “Difficultés à se faire des amis”\n\nImpact : Score moyen YES = 0.82 vs NO = 0.28\n\n\n11.1.2 Domaine Attention (A4-A6)\n\nConcentration sur les détails\nCapacité multitâche\nDistractibilité\n\nImpact : Modéré (différence de 0.35)\n\n\n11.1.3 Domaine Communication (A7-A8)\n\nCompréhension littérale\nDifficultés conversationnelles\n\nImpact : Important (différence de 0.48)\n\n\n11.1.4 Domaine Imagination (A9-A10)\n\nJeu imaginatif\nFlexibilité cognitive\n\nImpact : Faible (différence de 0.21)"
+    "section": "\n11.1 Questions AQ-10 par Domaine",
+    "text": "11.1 Questions AQ-10 par Domaine\n\n11.1.1 Domaine Social (A1-A3)\nCes questions sont les plus discriminantes :\n\n\nA1 : “Préfère faire les choses seul(e)”\n\nA2 : “Aime faire les choses de la même manière”\n\nA3 : “Difficultés à se faire des amis”\n\nImpact : Score moyen YES = 0.82 vs NO = 0.28\n\n11.1.2 Domaine Attention (A4-A6)\n\nConcentration sur les détails\nCapacité multitâche\nDistractibilité\n\nImpact : Modéré (différence de 0.35)\n\n11.1.3 Domaine Communication (A7-A8)\n\nCompréhension littérale\nDifficultés conversationnelles\n\nImpact : Important (différence de 0.48)\n\n11.1.4 Domaine Imagination (A9-A10)\n\nJeu imaginatif\nFlexibilité cognitive\n\nImpact : Faible (différence de 0.21)"
   },
   {
     "objectID": "rapport.html#facteurs-démographiques",
     "href": "rapport.html#facteurs-démographiques",
     "title": "Rapport d’Analyse",
-    "section": "11.2 Facteurs Démographiques",
-    "text": "11.2 Facteurs Démographiques\n\n11.2.1 Âge\n\nPas d’effet significatif sur la prédiction\nDistribution homogène entre 4-12 ans\n\n\n\n11.2.2 Antécédents Familiaux\n\nOR = 2.8 (IC 95% : 1.9-4.1)\nFacteur de risque important mais non déterminant\n\n\n\n11.2.3 Jaunisse Néonatale\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)"
+    "section": "\n11.2 Facteurs Démographiques",
+    "text": "11.2 Facteurs Démographiques\n\n11.2.1 Âge\n\nPas d’effet significatif sur la prédiction\nDistribution homogène entre 4-12 ans\n\n11.2.2 Antécédents Familiaux\n\n\nOR = 2.8 (IC 95% : 1.9-4.1)\nFacteur de risque important mais non déterminant\n\n11.2.3 Jaunisse Néonatale\n\nEffet non significatif (p = 0.234)\nOR = 1.2 (IC 95% : 0.8-1.7)"
   },
   {
     "objectID": "rapport.html#points-forts",
     "href": "rapport.html#points-forts",
     "title": "Rapport d’Analyse",
-    "section": "12.1 Points Forts",
-    "text": "12.1 Points Forts\n\nExcellentes performances : Tous les modèles dépassent 95% d’accuracy\nVariables interprétables : Le questionnaire AQ-10 est facile à administrer\nRobustesse : Validation croisée confirme la stabilité des résultats\nRapidité : Dépistage en 5-10 minutes"
+    "section": "\n12.1 Points Forts",
+    "text": "12.1 Points Forts\n\n\nExcellentes performances : Tous les modèles dépassent 95% d’accuracy\n\nVariables interprétables : Le questionnaire AQ-10 est facile à administrer\n\nRobustesse : Validation croisée confirme la stabilité des résultats\n\nRapidité : Dépistage en 5-10 minutes"
   },
   {
     "objectID": "rapport.html#limitations",
     "href": "rapport.html#limitations",
     "title": "Rapport d’Analyse",
-    "section": "12.2 Limitations",
-    "text": "12.2 Limitations\n\nBiais de sélection : Dataset provenant d’une seule source\nValidité externe : À confirmer sur d’autres populations\nÂge limité : Modèle validé uniquement pour 4-12 ans\nDiagnostic final : Basé sur critères cliniques à confirmer"
+    "section": "\n12.2 Limitations",
+    "text": "12.2 Limitations\n\n\nBiais de sélection : Dataset provenant d’une seule source\n\nValidité externe : À confirmer sur d’autres populations\n\nÂge limité : Modèle validé uniquement pour 4-12 ans\n\nDiagnostic final : Basé sur critères cliniques à confirmer"
   },
   {
     "objectID": "rapport.html#applications-cliniques",
     "href": "rapport.html#applications-cliniques",
     "title": "Rapport d’Analyse",
-    "section": "12.3 Applications Cliniques",
-    "text": "12.3 Applications Cliniques\n\n12.3.1 Utilisation Recommandée\n\nDépistage de première ligne dans les écoles\nOutil d’orientation vers les spécialistes\nSuivi longitudinal des enfants à risque\n\n\n\n12.3.2 Limites d’Utilisation\n⚠️ Ce modèle NE REMPLACE PAS : - Un diagnostic clinique complet - Une évaluation par un spécialiste - Des tests neuropsychologiques approfondis"
+    "section": "\n12.3 Applications Cliniques",
+    "text": "12.3 Applications Cliniques\n\n12.3.1 Utilisation Recommandée\n\n\nDépistage de première ligne dans les écoles\n\nOutil d’orientation vers les spécialistes\n\nSuivi longitudinal des enfants à risque\n\n12.3.2 Limites d’Utilisation\n⚠️ Ce modèle NE REMPLACE PAS : - Un diagnostic clinique complet - Une évaluation par un spécialiste - Des tests neuropsychologiques approfondis"
   },
   {
     "objectID": "rapport.html#conclusions-principales",
     "href": "rapport.html#conclusions-principales",
     "title": "Rapport d’Analyse",
-    "section": "13.1 Conclusions Principales",
+    "section": "\n13.1 Conclusions Principales",
     "text": "13.1 Conclusions Principales\n\nLe questionnaire AQ-10 est un excellent prédicteur du TSA chez l’enfant\nLe Random Forest offre les meilleures performances (97% accuracy, AUC 0.98)\nLes questions sociales (A1-A3) sont les plus discriminantes\nUn score ≥ 6/10 suggère fortement un risque de TSA"
   },
   {
     "objectID": "rapport.html#recommandations-1",
     "href": "rapport.html#recommandations-1",
     "title": "Rapport d’Analyse",
-    "section": "13.2 Recommandations",
-    "text": "13.2 Recommandations\n\n13.2.1 Pour les Cliniciens\n\nUtiliser l’AQ-10 comme outil de dépistage systématique\nPrioriser l’évaluation des questions sociales\nConsidérer les antécédents familiaux dans l’analyse\nRéférer pour évaluation complète si score ≥ 6\n\n\n\n13.2.2 Pour les Chercheurs\n\nValider le modèle sur des populations internationales\nÉtendre l’analyse à d’autres tranches d’âge\nIntégrer des variables comportementales supplémentaires\nDévelopper une application mobile de dépistage\n\n\n\n13.2.3 Développements Futurs\n\nVersion multilingue du modèle\nIntégration de données longitudinales\nAnalyse par sous-types de TSA\nModèles explicables (XAI) pour améliorer l’interprétabilité"
+    "section": "\n13.2 Recommandations",
+    "text": "13.2 Recommandations\n\n13.2.1 Pour les Cliniciens\n\nUtiliser l’AQ-10 comme outil de dépistage systématique\nPrioriser l’évaluation des questions sociales\nConsidérer les antécédents familiaux dans l’analyse\nRéférer pour évaluation complète si score ≥ 6\n\n13.2.2 Pour les Chercheurs\n\nValider le modèle sur des populations internationales\nÉtendre l’analyse à d’autres tranches d’âge\nIntégrer des variables comportementales supplémentaires\nDévelopper une application mobile de dépistage\n\n13.2.3 Développements Futurs\n\n\nVersion multilingue du modèle\nIntégration de données longitudinales\nAnalyse par sous-types de TSA\n\nModèles explicables (XAI) pour améliorer l’interprétabilité"
   },
   {
     "objectID": "index.html",
@@ -305,35 +305,35 @@
     "href": "index.html#dataset-résultats",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "📊 Dataset & Résultats",
-    "text": "📊 Dataset & Résultats\n\n\n\n📁 Données Analysées\n\n688 observations après nettoyage\n10 questions AQ-10 comportementales\nVariables démographiques (âge, antécédents)\nClasses équilibrées : 42% TSA, 58% Sans TSA\n\n\n\n🎯 Distribution des Diagnostics\n\n\n\n\n\n\n\n\n\n\n\n\n\n🏆 Performance des Modèles\n\n\n\nModèle\nAccuracy\nAUC\nSensibilité\n\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n\n\n\n\n\n🔑 Variables Clés\nLes questions sociales (A1-A3) sont les plus discriminantes :\n\nA1 : Préférence pour la solitude\nA2 : Routines rigides\n\nA3 : Difficultés relationnelles"
+    "text": "📊 Dataset & Résultats\n\n\n📁 Données Analysées\n\n\n688 observations après nettoyage\n\n10 questions AQ-10 comportementales\n\nVariables démographiques (âge, antécédents)\n\nClasses équilibrées : 42% TSA, 58% Sans TSA\n🎯 Distribution des Diagnostics\n\n\n\n\n\n\n\n\n\n\n\n🏆 Performance des Modèles\n\n\nModèle\nAccuracy\nAUC\nSensibilité\n\n\n\nRandom Forest\n97.1%\n0.984\n95.7%\n\n\nXGBoost\n96.3%\n0.974\n94.2%\n\n\nRégression Logistique\n95.2%\n0.962\n92.3%\n\n\n🔑 Variables Clés\nLes questions sociales (A1-A3) sont les plus discriminantes :\n\n\nA1 : Préférence pour la solitude\n\nA2 : Routines rigides\n\n\nA3 : Difficultés relationnelles"
   },
   {
     "objectID": "index.html#visualisations-principales",
     "href": "index.html#visualisations-principales",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "📈 Visualisations Principales",
-    "text": "📈 Visualisations Principales\n\nDistribution des ScoresHeatmap des QuestionsDistribution par DomaineFacteurs de Risque\n\n\n\n\n\nDistribution des scores AQ-10 par diagnostic\n\n\nInterprétation : Séparation claire entre les deux groupes avec un seuil optimal à 6/10. Le score moyen TSA est de 7.2 contre 3.1 pour les enfants sans TSA.\n\n\n\n\n\nScores moyens par question et domaine cognitif\n\n\nInterprétation : Les questions du domaine social (A1-A3) montrent les plus grandes différences entre les groupes (Δ &gt; 0.50).\n\n\n\n\n\nRidge plots des scores par domaine cognitif\n\n\nInterprétation : Le domaine social présente la meilleure séparation des distributions, confirmant son importance diagnostique.\n\n\n\n\n\nImpact des antécédents familiaux et de la jaunisse\n\n\nInterprétation : Les antécédents familiaux augmentent significativement le risque de TSA (×2.8), tandis que l’effet de la jaunisse est minimal."
+    "text": "📈 Visualisations Principales\n\n\nDistribution des Scores\nHeatmap des Questions\nDistribution par Domaine\nFacteurs de Risque\n\n\n\n\n\nDistribution des scores AQ-10 par diagnostic\n\nInterprétation : Séparation claire entre les deux groupes avec un seuil optimal à 6/10. Le score moyen TSA est de 7.2 contre 3.1 pour les enfants sans TSA.\n\n\n\n\nScores moyens par question et domaine cognitif\n\nInterprétation : Les questions du domaine social (A1-A3) montrent les plus grandes différences entre les groupes (Δ &gt; 0.50).\n\n\n\n\nRidge plots des scores par domaine cognitif\n\nInterprétation : Le domaine social présente la meilleure séparation des distributions, confirmant son importance diagnostique.\n\n\n\n\nImpact des antécédents familiaux et de la jaunisse\n\nInterprétation : Les antécédents familiaux augmentent significativement le risque de TSA (×2.8), tandis que l’effet de la jaunisse est minimal."
   },
   {
     "objectID": "index.html#modèles-de-machine-learning",
     "href": "index.html#modèles-de-machine-learning",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "🤖 Modèles de Machine Learning",
-    "text": "🤖 Modèles de Machine Learning\n\nRandom Forest (Meilleur Modèle)\n\n\nConfiguration - 500 arbres - mtry optimal : 6 - CV 10-fold\n\n\nPerformance - Accuracy : 97.1% - AUC : 0.984 - F1-Score : 96.1%\n\n\nErreurs - Faux positifs : 4 (1.8%) - Faux négatifs : 8 (5.5%) - Total erreurs : 3.1%\n\n\n\n\nImportance des Variables"
+    "text": "🤖 Modèles de Machine Learning\nRandom Forest (Meilleur Modèle)\n\n\nConfiguration - 500 arbres - mtry optimal : 6 - CV 10-fold\n\n\nPerformance - Accuracy : 97.1% - AUC : 0.984 - F1-Score : 96.1%\n\n\nErreurs - Faux positifs : 4 (1.8%) - Faux négatifs : 8 (5.5%) - Total erreurs : 3.1%\n\n\nImportance des Variables"
   },
   {
     "objectID": "index.html#navigation-du-site",
     "href": "index.html#navigation-du-site",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "🌐 Navigation du Site",
-    "text": "🌐 Navigation du Site\n\n\n🔬 Analyse Interactive\nTestez les modèles en temps réel avec WebR. Exécutez du code R directement dans votre navigateur !\n\n\n📊 Rapport Complet\nDocumentation scientifique détaillée avec méthodologie, résultats et discussions.\n\n\n🎤 Présentation\nSlides professionnels (47 pages) pour présenter le projet.\n\n\nℹ️ À propos\nMéthodologie, références bibliographiques et considérations éthiques."
+    "text": "🌐 Navigation du Site\n\n🔬 Analyse Interactive\nTestez les modèles en temps réel avec WebR. Exécutez du code R directement dans votre navigateur !\n📊 Rapport Complet\nDocumentation scientifique détaillée avec méthodologie, résultats et discussions.\n🎤 Présentation\nSlides professionnels (47 pages) pour présenter le projet.\nℹ️ À propos\nMéthodologie, références bibliographiques et considérations éthiques."
   },
   {
     "objectID": "index.html#points-clés-à-retenir",
     "href": "index.html#points-clés-à-retenir",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "💡 Points Clés à Retenir",
-    "text": "💡 Points Clés à Retenir\n\n\n\n\n\n\nImportant🎯 Messages Principaux\n\n\n\n\nPerformance Exceptionnelle : 97% d’accuracy avec le Random Forest\nVariables Sociales Clés : Les questions A1-A3 sont les plus discriminantes\nSeuil Optimal : Score ≥ 6 suggère un risque élevé de TSA\nFacteur de Risque : Les antécédents familiaux multiplient le risque par 2.8\nOutil Pratique : Dépistage rapide (5-10 minutes) et fiable"
+    "text": "💡 Points Clés à Retenir\n\n\n\n\n\n\nImportant🎯 Messages Principaux\n\n\n\n\n\nPerformance Exceptionnelle : 97% d’accuracy avec le Random Forest\n\nVariables Sociales Clés : Les questions A1-A3 sont les plus discriminantes\n\nSeuil Optimal : Score ≥ 6 suggère un risque élevé de TSA\n\nFacteur de Risque : Les antécédents familiaux multiplient le risque par 2.8\n\nOutil Pratique : Dépistage rapide (5-10 minutes) et fiable"
   },
   {
     "objectID": "index.html#avertissement-médical",
@@ -347,7 +347,7 @@
     "href": "index.html#ressources",
     "title": "Prédiction du Trouble du Spectre Autistique (TSA)",
     "section": "📚 Ressources",
-    "text": "📚 Ressources\n\n\nCode Source\n\n💻 GitHub Repository\n📄 Scripts R reproductibles\n🔓 Licence MIT (Open Source)\n\n\n\nDocumentation\n\n📖 Rapport scientifique complet\n🎓 Méthodologie détaillée\n📊 Tous les graphiques (300 DPI)"
+    "text": "📚 Ressources\n\n\nCode Source\n\n💻 GitHub Repository\n\n📄 Scripts R reproductibles\n🔓 Licence MIT (Open Source)\n\n\n\nDocumentation\n\n📖 Rapport scientifique complet\n🎓 Méthodologie détaillée\n📊 Tous les graphiques (300 DPI)"
   },
   {
     "objectID": "index.html#commencez-lexploration",

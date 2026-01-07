@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.26">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Chayma Chetoui">
 <meta name="dcterms.date" content="2026-01-07">
-
 <title>Rapport d’Analyse – Prédiction du Trouble du Spectre Autistique chez l'Enfant</title>
 <style>
 code{white-space: pre-wrap;}
@@ -59,7 +56,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -77,8 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-358b7ecbab57d24a9a1c8b64ec0a3e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-358b7ecbab57d24a9a1c8b64ec0a3e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -104,13 +99,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -136,15 +126,11 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 </head>
-
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Prédiction du Trouble du Spectre Autistique chez l’Enfant</span>
@@ -156,7 +142,7 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
@@ -178,166 +164,204 @@ window.Quarto = {
 <span class="menu-text">À propos</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/ChaymaChetoui/Predict_Autism"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#résumé-exécutif" id="toc-résumé-exécutif" class="nav-link active" data-scroll-target="#résumé-exécutif">Résumé Exécutif</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+<li><a href="#r%C3%A9sum%C3%A9-ex%C3%A9cutif" id="toc-résumé-exécutif" class="nav-link active" data-scroll-target="#r%C3%A9sum%C3%A9-ex%C3%A9cutif">Résumé Exécutif</a></li>
+  <li>
+<a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte"><span class="header-section-number">1.1</span> Contexte</a></li>
-  <li><a href="#problématique" id="toc-problématique" class="nav-link" data-scroll-target="#problématique"><span class="header-section-number">1.2</span> Problématique</a></li>
+<li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte"><span class="header-section-number">1.1</span> Contexte</a></li>
+  <li><a href="#probl%C3%A9matique" id="toc-problématique" class="nav-link" data-scroll-target="#probl%C3%A9matique"><span class="header-section-number">1.2</span> Problématique</a></li>
   <li><a href="#objectifs" id="toc-objectifs" class="nav-link" data-scroll-target="#objectifs"><span class="header-section-number">1.3</span> Objectifs</a></li>
-  </ul></li>
-  <li><a href="#méthodologie" id="toc-méthodologie" class="nav-link" data-scroll-target="#méthodologie"><span class="header-section-number">2</span> Méthodologie</a>
+  </ul>
+</li>
+  <li>
+<a href="#m%C3%A9thodologie" id="toc-méthodologie" class="nav-link" data-scroll-target="#m%C3%A9thodologie"><span class="header-section-number">2</span> Méthodologie</a>
   <ul class="collapse">
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">2.1</span> Dataset</a>
+<li>
+<a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">2.1</span> Dataset</a>
   <ul class="collapse">
-  <li><a href="#source-et-taille" id="toc-source-et-taille" class="nav-link" data-scroll-target="#source-et-taille"><span class="header-section-number">2.1.1</span> Source et Taille</a></li>
+<li><a href="#source-et-taille" id="toc-source-et-taille" class="nav-link" data-scroll-target="#source-et-taille"><span class="header-section-number">2.1.1</span> Source et Taille</a></li>
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">2.1.2</span> Variables</a></li>
   <li><a href="#distribution-des-classes" id="toc-distribution-des-classes" class="nav-link" data-scroll-target="#distribution-des-classes"><span class="header-section-number">2.1.3</span> Distribution des Classes</a></li>
-  </ul></li>
-  <li><a href="#prétraitement" id="toc-prétraitement" class="nav-link" data-scroll-target="#prétraitement"><span class="header-section-number">2.2</span> Prétraitement</a>
+  </ul>
+</li>
+  <li>
+<a href="#pr%C3%A9traitement" id="toc-prétraitement" class="nav-link" data-scroll-target="#pr%C3%A9traitement"><span class="header-section-number">2.2</span> Prétraitement</a>
   <ul class="collapse">
-  <li><a href="#nettoyage" id="toc-nettoyage" class="nav-link" data-scroll-target="#nettoyage"><span class="header-section-number">2.2.1</span> Nettoyage</a></li>
+<li><a href="#nettoyage" id="toc-nettoyage" class="nav-link" data-scroll-target="#nettoyage"><span class="header-section-number">2.2.1</span> Nettoyage</a></li>
   <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering"><span class="header-section-number">2.2.2</span> Feature Engineering</a></li>
   <li><a href="#split-traintest" id="toc-split-traintest" class="nav-link" data-scroll-target="#split-traintest"><span class="header-section-number">2.2.3</span> Split Train/Test</a></li>
-  </ul></li>
-  <li><a href="#modèles-développés" id="toc-modèles-développés" class="nav-link" data-scroll-target="#modèles-développés"><span class="header-section-number">2.3</span> Modèles Développés</a></li>
-  </ul></li>
-  <li><a href="#analyse-exploratoire" id="toc-analyse-exploratoire" class="nav-link" data-scroll-target="#analyse-exploratoire"><span class="header-section-number">3</span> Analyse Exploratoire</a>
+  </ul>
+</li>
+  <li><a href="#mod%C3%A8les-d%C3%A9velopp%C3%A9s" id="toc-modèles-développés" class="nav-link" data-scroll-target="#mod%C3%A8les-d%C3%A9velopp%C3%A9s"><span class="header-section-number">2.3</span> Modèles Développés</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#analyse-exploratoire" id="toc-analyse-exploratoire" class="nav-link" data-scroll-target="#analyse-exploratoire"><span class="header-section-number">3</span> Analyse Exploratoire</a>
   <ul class="collapse">
-  <li><a href="#distribution-des-scores" id="toc-distribution-des-scores" class="nav-link" data-scroll-target="#distribution-des-scores"><span class="header-section-number">3.1</span> Distribution des Scores</a></li>
+<li><a href="#distribution-des-scores" id="toc-distribution-des-scores" class="nav-link" data-scroll-target="#distribution-des-scores"><span class="header-section-number">3.1</span> Distribution des Scores</a></li>
   <li><a href="#analyse-par-question-et-domaine" id="toc-analyse-par-question-et-domaine" class="nav-link" data-scroll-target="#analyse-par-question-et-domaine"><span class="header-section-number">3.2</span> Analyse par Question et Domaine</a></li>
-  <li><a href="#corrélations-entre-questions" id="toc-corrélations-entre-questions" class="nav-link" data-scroll-target="#corrélations-entre-questions"><span class="header-section-number">3.3</span> Corrélations entre Questions</a></li>
+  <li><a href="#corr%C3%A9lations-entre-questions" id="toc-corrélations-entre-questions" class="nav-link" data-scroll-target="#corr%C3%A9lations-entre-questions"><span class="header-section-number">3.3</span> Corrélations entre Questions</a></li>
   <li><a href="#distribution-par-domaine-cognitif" id="toc-distribution-par-domaine-cognitif" class="nav-link" data-scroll-target="#distribution-par-domaine-cognitif"><span class="header-section-number">3.4</span> Distribution par Domaine Cognitif</a></li>
-  <li><a href="#analyse-par-âge" id="toc-analyse-par-âge" class="nav-link" data-scroll-target="#analyse-par-âge"><span class="header-section-number">3.5</span> Analyse par Âge</a></li>
+  <li><a href="#analyse-par-%C3%A2ge" id="toc-analyse-par-âge" class="nav-link" data-scroll-target="#analyse-par-%C3%A2ge"><span class="header-section-number">3.5</span> Analyse par Âge</a></li>
   <li><a href="#facteurs-de-risque" id="toc-facteurs-de-risque" class="nav-link" data-scroll-target="#facteurs-de-risque"><span class="header-section-number">3.6</span> Facteurs de Risque</a></li>
-  </ul></li>
-  <li><a href="#résultats-des-modèles" id="toc-résultats-des-modèles" class="nav-link" data-scroll-target="#résultats-des-modèles"><span class="header-section-number">4</span> Résultats des Modèles</a>
+  </ul>
+</li>
+  <li>
+<a href="#r%C3%A9sultats-des-mod%C3%A8les" id="toc-résultats-des-modèles" class="nav-link" data-scroll-target="#r%C3%A9sultats-des-mod%C3%A8les"><span class="header-section-number">4</span> Résultats des Modèles</a>
   <ul class="collapse">
-  <li><a href="#performance-comparative" id="toc-performance-comparative" class="nav-link" data-scroll-target="#performance-comparative"><span class="header-section-number">4.1</span> Performance Comparative</a></li>
-  <li><a href="#random-forest---analyse-détaillée" id="toc-random-forest---analyse-détaillée" class="nav-link" data-scroll-target="#random-forest---analyse-détaillée"><span class="header-section-number">4.2</span> Random Forest - Analyse Détaillée</a>
+<li><a href="#performance-comparative" id="toc-performance-comparative" class="nav-link" data-scroll-target="#performance-comparative"><span class="header-section-number">4.1</span> Performance Comparative</a></li>
+  <li>
+<a href="#random-forest---analyse-d%C3%A9taill%C3%A9e" id="toc-random-forest---analyse-détaillée" class="nav-link" data-scroll-target="#random-forest---analyse-d%C3%A9taill%C3%A9e"><span class="header-section-number">4.2</span> Random Forest - Analyse Détaillée</a>
   <ul class="collapse">
-  <li><a href="#matrice-de-confusion" id="toc-matrice-de-confusion" class="nav-link" data-scroll-target="#matrice-de-confusion"><span class="header-section-number">4.2.1</span> Matrice de Confusion</a></li>
+<li><a href="#matrice-de-confusion" id="toc-matrice-de-confusion" class="nav-link" data-scroll-target="#matrice-de-confusion"><span class="header-section-number">4.2.1</span> Matrice de Confusion</a></li>
   <li><a href="#courbes-roc" id="toc-courbes-roc" class="nav-link" data-scroll-target="#courbes-roc"><span class="header-section-number">4.2.2</span> Courbes ROC</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#importance-des-variables" id="toc-importance-des-variables" class="nav-link" data-scroll-target="#importance-des-variables"><span class="header-section-number">4.3</span> Importance des Variables</a></li>
-  <li><a href="#régression-logistique---coefficients" id="toc-régression-logistique---coefficients" class="nav-link" data-scroll-target="#régression-logistique---coefficients"><span class="header-section-number">4.4</span> Régression Logistique - Coefficients</a></li>
-  </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a>
+  <li><a href="#r%C3%A9gression-logistique---coefficients" id="toc-régression-logistique---coefficients" class="nav-link" data-scroll-target="#r%C3%A9gression-logistique---coefficients"><span class="header-section-number">4.4</span> Régression Logistique - Coefficients</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a>
   <ul class="collapse">
-  <li><a href="#forces-de-létude" id="toc-forces-de-létude" class="nav-link" data-scroll-target="#forces-de-létude"><span class="header-section-number">5.1</span> Forces de l’Étude</a></li>
+<li><a href="#forces-de-l%C3%A9tude" id="toc-forces-de-létude" class="nav-link" data-scroll-target="#forces-de-l%C3%A9tude"><span class="header-section-number">5.1</span> Forces de l’Étude</a></li>
   <li><a href="#limites" id="toc-limites" class="nav-link" data-scroll-target="#limites"><span class="header-section-number">5.2</span> Limites</a></li>
-  <li><a href="#comparaison-avec-la-littérature" id="toc-comparaison-avec-la-littérature" class="nav-link" data-scroll-target="#comparaison-avec-la-littérature"><span class="header-section-number">5.3</span> Comparaison avec la Littérature</a></li>
-  <li><a href="#implications-cliniques" id="toc-implications-cliniques" class="nav-link" data-scroll-target="#implications-cliniques"><span class="header-section-number">5.4</span> Implications Cliniques</a>
+  <li><a href="#comparaison-avec-la-litt%C3%A9rature" id="toc-comparaison-avec-la-littérature" class="nav-link" data-scroll-target="#comparaison-avec-la-litt%C3%A9rature"><span class="header-section-number">5.3</span> Comparaison avec la Littérature</a></li>
+  <li>
+<a href="#implications-cliniques" id="toc-implications-cliniques" class="nav-link" data-scroll-target="#implications-cliniques"><span class="header-section-number">5.4</span> Implications Cliniques</a>
   <ul class="collapse">
-  <li><a href="#utilisation-recommandée" id="toc-utilisation-recommandée" class="nav-link" data-scroll-target="#utilisation-recommandée"><span class="header-section-number">5.4.1</span> Utilisation Recommandée</a></li>
+<li><a href="#utilisation-recommand%C3%A9e" id="toc-utilisation-recommandée" class="nav-link" data-scroll-target="#utilisation-recommand%C3%A9e"><span class="header-section-number">5.4.1</span> Utilisation Recommandée</a></li>
   <li><a href="#limites-dutilisation" id="toc-limites-dutilisation" class="nav-link" data-scroll-target="#limites-dutilisation"><span class="header-section-number">5.4.2</span> Limites d’Utilisation</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#impact-potentiel" id="toc-impact-potentiel" class="nav-link" data-scroll-target="#impact-potentiel"><span class="header-section-number">5.5</span> Impact Potentiel</a></li>
-  </ul></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">6</span> Conclusions</a>
+  </ul>
+</li>
+  <li>
+<a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">6</span> Conclusions</a>
   <ul class="collapse">
-  <li><a href="#messages-principaux" id="toc-messages-principaux" class="nav-link" data-scroll-target="#messages-principaux"><span class="header-section-number">6.1</span> Messages Principaux</a></li>
-  <li><a href="#recommandations" id="toc-recommandations" class="nav-link" data-scroll-target="#recommandations"><span class="header-section-number">6.2</span> Recommandations</a>
+<li><a href="#messages-principaux" id="toc-messages-principaux" class="nav-link" data-scroll-target="#messages-principaux"><span class="header-section-number">6.1</span> Messages Principaux</a></li>
+  <li>
+<a href="#recommandations" id="toc-recommandations" class="nav-link" data-scroll-target="#recommandations"><span class="header-section-number">6.2</span> Recommandations</a>
   <ul class="collapse">
-  <li><a href="#pour-les-cliniciens" id="toc-pour-les-cliniciens" class="nav-link" data-scroll-target="#pour-les-cliniciens"><span class="header-section-number">6.2.1</span> Pour les Cliniciens</a></li>
+<li><a href="#pour-les-cliniciens" id="toc-pour-les-cliniciens" class="nav-link" data-scroll-target="#pour-les-cliniciens"><span class="header-section-number">6.2.1</span> Pour les Cliniciens</a></li>
   <li><a href="#pour-les-chercheurs" id="toc-pour-les-chercheurs" class="nav-link" data-scroll-target="#pour-les-chercheurs"><span class="header-section-number">6.2.2</span> Pour les Chercheurs</a></li>
-  <li><a href="#développements-futurs" id="toc-développements-futurs" class="nav-link" data-scroll-target="#développements-futurs"><span class="header-section-number">6.2.3</span> Développements Futurs</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références"><span class="header-section-number">7</span> Références</a>
+  <li><a href="#d%C3%A9veloppements-futurs" id="toc-développements-futurs" class="nav-link" data-scroll-target="#d%C3%A9veloppements-futurs"><span class="header-section-number">6.2.3</span> Développements Futurs</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#r%C3%A9f%C3%A9rences" id="toc-références" class="nav-link" data-scroll-target="#r%C3%A9f%C3%A9rences"><span class="header-section-number">7</span> Références</a>
   <ul class="collapse">
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact"><span class="header-section-number">7.1</span> 📧 Contact</a></li>
-  </ul></li>
-  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">8</span> Introduction</a>
+<li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact"><span class="header-section-number">7.1</span> 📧 Contact</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">8</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#contexte-1" id="toc-contexte-1" class="nav-link" data-scroll-target="#contexte-1"><span class="header-section-number">8.1</span> Contexte</a></li>
+<li><a href="#contexte-1" id="toc-contexte-1" class="nav-link" data-scroll-target="#contexte-1"><span class="header-section-number">8.1</span> Contexte</a></li>
   <li><a href="#objectifs-1" id="toc-objectifs-1" class="nav-link" data-scroll-target="#objectifs-1"><span class="header-section-number">8.2</span> Objectifs</a></li>
-  <li><a href="#méthodologie-1" id="toc-méthodologie-1" class="nav-link" data-scroll-target="#méthodologie-1"><span class="header-section-number">8.3</span> Méthodologie</a></li>
-  </ul></li>
-  <li><a href="#analyse-exploratoire-1" id="toc-analyse-exploratoire-1" class="nav-link" data-scroll-target="#analyse-exploratoire-1"><span class="header-section-number">9</span> Analyse Exploratoire</a>
+  <li><a href="#m%C3%A9thodologie-1" id="toc-méthodologie-1" class="nav-link" data-scroll-target="#m%C3%A9thodologie-1"><span class="header-section-number">8.3</span> Méthodologie</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#analyse-exploratoire-1" id="toc-analyse-exploratoire-1" class="nav-link" data-scroll-target="#analyse-exploratoire-1"><span class="header-section-number">9</span> Analyse Exploratoire</a>
   <ul class="collapse">
-  <li><a href="#structure-des-données" id="toc-structure-des-données" class="nav-link" data-scroll-target="#structure-des-données"><span class="header-section-number">9.1</span> Structure des Données</a></li>
+<li><a href="#structure-des-donn%C3%A9es" id="toc-structure-des-données" class="nav-link" data-scroll-target="#structure-des-donn%C3%A9es"><span class="header-section-number">9.1</span> Structure des Données</a></li>
   <li><a href="#distribution-des-scores-1" id="toc-distribution-des-scores-1" class="nav-link" data-scroll-target="#distribution-des-scores-1"><span class="header-section-number">9.2</span> Distribution des Scores</a></li>
-  <li><a href="#corrélations-entre-questions-1" id="toc-corrélations-entre-questions-1" class="nav-link" data-scroll-target="#corrélations-entre-questions-1"><span class="header-section-number">9.3</span> Corrélations entre Questions</a></li>
-  </ul></li>
-  <li><a href="#résultats-des-modèles-1" id="toc-résultats-des-modèles-1" class="nav-link" data-scroll-target="#résultats-des-modèles-1"><span class="header-section-number">10</span> Résultats des Modèles</a>
+  <li><a href="#corr%C3%A9lations-entre-questions-1" id="toc-corrélations-entre-questions-1" class="nav-link" data-scroll-target="#corr%C3%A9lations-entre-questions-1"><span class="header-section-number">9.3</span> Corrélations entre Questions</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#r%C3%A9sultats-des-mod%C3%A8les-1" id="toc-résultats-des-modèles-1" class="nav-link" data-scroll-target="#r%C3%A9sultats-des-mod%C3%A8les-1"><span class="header-section-number">10</span> Résultats des Modèles</a>
   <ul class="collapse">
-  <li><a href="#performance-globale" id="toc-performance-globale" class="nav-link" data-scroll-target="#performance-globale"><span class="header-section-number">10.1</span> Performance Globale</a></li>
-  <li><a href="#random-forest-modèle-optimal" id="toc-random-forest-modèle-optimal" class="nav-link" data-scroll-target="#random-forest-modèle-optimal"><span class="header-section-number">10.2</span> Random Forest (Modèle Optimal)</a>
+<li><a href="#performance-globale" id="toc-performance-globale" class="nav-link" data-scroll-target="#performance-globale"><span class="header-section-number">10.1</span> Performance Globale</a></li>
+  <li>
+<a href="#random-forest-mod%C3%A8le-optimal" id="toc-random-forest-modèle-optimal" class="nav-link" data-scroll-target="#random-forest-mod%C3%A8le-optimal"><span class="header-section-number">10.2</span> Random Forest (Modèle Optimal)</a>
   <ul class="collapse">
-  <li><a href="#paramètres-optimaux" id="toc-paramètres-optimaux" class="nav-link" data-scroll-target="#paramètres-optimaux"><span class="header-section-number">10.2.1</span> Paramètres optimaux</a></li>
+<li><a href="#param%C3%A8tres-optimaux" id="toc-paramètres-optimaux" class="nav-link" data-scroll-target="#param%C3%A8tres-optimaux"><span class="header-section-number">10.2.1</span> Paramètres optimaux</a></li>
   <li><a href="#importance-des-variables-1" id="toc-importance-des-variables-1" class="nav-link" data-scroll-target="#importance-des-variables-1"><span class="header-section-number">10.2.2</span> Importance des Variables</a></li>
   <li><a href="#matrice-de-confusion-1" id="toc-matrice-de-confusion-1" class="nav-link" data-scroll-target="#matrice-de-confusion-1"><span class="header-section-number">10.2.3</span> Matrice de Confusion</a></li>
-  <li><a href="#métriques-détaillées" id="toc-métriques-détaillées" class="nav-link" data-scroll-target="#métriques-détaillées"><span class="header-section-number">10.2.4</span> Métriques détaillées</a></li>
-  </ul></li>
-  <li><a href="#régression-logistique" id="toc-régression-logistique" class="nav-link" data-scroll-target="#régression-logistique"><span class="header-section-number">10.3</span> Régression Logistique</a></li>
-  </ul></li>
-  <li><a href="#analyse-des-variables-clés" id="toc-analyse-des-variables-clés" class="nav-link" data-scroll-target="#analyse-des-variables-clés"><span class="header-section-number">11</span> Analyse des Variables Clés</a>
+  <li><a href="#m%C3%A9triques-d%C3%A9taill%C3%A9es" id="toc-métriques-détaillées" class="nav-link" data-scroll-target="#m%C3%A9triques-d%C3%A9taill%C3%A9es"><span class="header-section-number">10.2.4</span> Métriques détaillées</a></li>
+  </ul>
+</li>
+  <li><a href="#r%C3%A9gression-logistique" id="toc-régression-logistique" class="nav-link" data-scroll-target="#r%C3%A9gression-logistique"><span class="header-section-number">10.3</span> Régression Logistique</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#analyse-des-variables-cl%C3%A9s" id="toc-analyse-des-variables-clés" class="nav-link" data-scroll-target="#analyse-des-variables-cl%C3%A9s"><span class="header-section-number">11</span> Analyse des Variables Clés</a>
   <ul class="collapse">
-  <li><a href="#questions-aq-10-par-domaine" id="toc-questions-aq-10-par-domaine" class="nav-link" data-scroll-target="#questions-aq-10-par-domaine"><span class="header-section-number">11.1</span> Questions AQ-10 par Domaine</a>
+<li>
+<a href="#questions-aq-10-par-domaine" id="toc-questions-aq-10-par-domaine" class="nav-link" data-scroll-target="#questions-aq-10-par-domaine"><span class="header-section-number">11.1</span> Questions AQ-10 par Domaine</a>
   <ul class="collapse">
-  <li><a href="#domaine-social-a1-a3" id="toc-domaine-social-a1-a3" class="nav-link" data-scroll-target="#domaine-social-a1-a3"><span class="header-section-number">11.1.1</span> Domaine Social (A1-A3)</a></li>
+<li><a href="#domaine-social-a1-a3" id="toc-domaine-social-a1-a3" class="nav-link" data-scroll-target="#domaine-social-a1-a3"><span class="header-section-number">11.1.1</span> Domaine Social (A1-A3)</a></li>
   <li><a href="#domaine-attention-a4-a6" id="toc-domaine-attention-a4-a6" class="nav-link" data-scroll-target="#domaine-attention-a4-a6"><span class="header-section-number">11.1.2</span> Domaine Attention (A4-A6)</a></li>
   <li><a href="#domaine-communication-a7-a8" id="toc-domaine-communication-a7-a8" class="nav-link" data-scroll-target="#domaine-communication-a7-a8"><span class="header-section-number">11.1.3</span> Domaine Communication (A7-A8)</a></li>
   <li><a href="#domaine-imagination-a9-a10" id="toc-domaine-imagination-a9-a10" class="nav-link" data-scroll-target="#domaine-imagination-a9-a10"><span class="header-section-number">11.1.4</span> Domaine Imagination (A9-A10)</a></li>
-  </ul></li>
-  <li><a href="#facteurs-démographiques" id="toc-facteurs-démographiques" class="nav-link" data-scroll-target="#facteurs-démographiques"><span class="header-section-number">11.2</span> Facteurs Démographiques</a>
-  <ul class="collapse">
-  <li><a href="#âge" id="toc-âge" class="nav-link" data-scroll-target="#âge"><span class="header-section-number">11.2.1</span> Âge</a></li>
-  <li><a href="#antécédents-familiaux" id="toc-antécédents-familiaux" class="nav-link" data-scroll-target="#antécédents-familiaux"><span class="header-section-number">11.2.2</span> Antécédents Familiaux</a></li>
-  <li><a href="#jaunisse-néonatale" id="toc-jaunisse-néonatale" class="nav-link" data-scroll-target="#jaunisse-néonatale"><span class="header-section-number">11.2.3</span> Jaunisse Néonatale</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#discussion-1" id="toc-discussion-1" class="nav-link" data-scroll-target="#discussion-1"><span class="header-section-number">12</span> Discussion</a>
-  <ul class="collapse">
-  <li><a href="#points-forts" id="toc-points-forts" class="nav-link" data-scroll-target="#points-forts"><span class="header-section-number">12.1</span> Points Forts</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">12.2</span> Limitations</a></li>
-  <li><a href="#applications-cliniques" id="toc-applications-cliniques" class="nav-link" data-scroll-target="#applications-cliniques"><span class="header-section-number">12.3</span> Applications Cliniques</a>
-  <ul class="collapse">
-  <li><a href="#utilisation-recommandée-1" id="toc-utilisation-recommandée-1" class="nav-link" data-scroll-target="#utilisation-recommandée-1"><span class="header-section-number">12.3.1</span> Utilisation Recommandée</a></li>
-  <li><a href="#limites-dutilisation-1" id="toc-limites-dutilisation-1" class="nav-link" data-scroll-target="#limites-dutilisation-1"><span class="header-section-number">12.3.2</span> Limites d’Utilisation</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#conclusions-et-recommandations" id="toc-conclusions-et-recommandations" class="nav-link" data-scroll-target="#conclusions-et-recommandations"><span class="header-section-number">13</span> Conclusions et Recommandations</a>
-  <ul class="collapse">
-  <li><a href="#conclusions-principales" id="toc-conclusions-principales" class="nav-link" data-scroll-target="#conclusions-principales"><span class="header-section-number">13.1</span> Conclusions Principales</a></li>
-  <li><a href="#recommandations-1" id="toc-recommandations-1" class="nav-link" data-scroll-target="#recommandations-1"><span class="header-section-number">13.2</span> Recommandations</a>
-  <ul class="collapse">
-  <li><a href="#pour-les-cliniciens-1" id="toc-pour-les-cliniciens-1" class="nav-link" data-scroll-target="#pour-les-cliniciens-1"><span class="header-section-number">13.2.1</span> Pour les Cliniciens</a></li>
-  <li><a href="#pour-les-chercheurs-1" id="toc-pour-les-chercheurs-1" class="nav-link" data-scroll-target="#pour-les-chercheurs-1"><span class="header-section-number">13.2.2</span> Pour les Chercheurs</a></li>
-  <li><a href="#développements-futurs-1" id="toc-développements-futurs-1" class="nav-link" data-scroll-target="#développements-futurs-1"><span class="header-section-number">13.2.3</span> Développements Futurs</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#références-1" id="toc-références-1" class="nav-link" data-scroll-target="#références-1"><span class="header-section-number">14</span> Références</a></li>
   </ul>
-</nav>
+</li>
+  <li>
+<a href="#facteurs-d%C3%A9mographiques" id="toc-facteurs-démographiques" class="nav-link" data-scroll-target="#facteurs-d%C3%A9mographiques"><span class="header-section-number">11.2</span> Facteurs Démographiques</a>
+  <ul class="collapse">
+<li><a href="#%C3%A2ge" id="toc-âge" class="nav-link" data-scroll-target="#%C3%A2ge"><span class="header-section-number">11.2.1</span> Âge</a></li>
+  <li><a href="#ant%C3%A9c%C3%A9dents-familiaux" id="toc-antécédents-familiaux" class="nav-link" data-scroll-target="#ant%C3%A9c%C3%A9dents-familiaux"><span class="header-section-number">11.2.2</span> Antécédents Familiaux</a></li>
+  <li><a href="#jaunisse-n%C3%A9onatale" id="toc-jaunisse-néonatale" class="nav-link" data-scroll-target="#jaunisse-n%C3%A9onatale"><span class="header-section-number">11.2.3</span> Jaunisse Néonatale</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#discussion-1" id="toc-discussion-1" class="nav-link" data-scroll-target="#discussion-1"><span class="header-section-number">12</span> Discussion</a>
+  <ul class="collapse">
+<li><a href="#points-forts" id="toc-points-forts" class="nav-link" data-scroll-target="#points-forts"><span class="header-section-number">12.1</span> Points Forts</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">12.2</span> Limitations</a></li>
+  <li>
+<a href="#applications-cliniques" id="toc-applications-cliniques" class="nav-link" data-scroll-target="#applications-cliniques"><span class="header-section-number">12.3</span> Applications Cliniques</a>
+  <ul class="collapse">
+<li><a href="#utilisation-recommand%C3%A9e-1" id="toc-utilisation-recommandée-1" class="nav-link" data-scroll-target="#utilisation-recommand%C3%A9e-1"><span class="header-section-number">12.3.1</span> Utilisation Recommandée</a></li>
+  <li><a href="#limites-dutilisation-1" id="toc-limites-dutilisation-1" class="nav-link" data-scroll-target="#limites-dutilisation-1"><span class="header-section-number">12.3.2</span> Limites d’Utilisation</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#conclusions-et-recommandations" id="toc-conclusions-et-recommandations" class="nav-link" data-scroll-target="#conclusions-et-recommandations"><span class="header-section-number">13</span> Conclusions et Recommandations</a>
+  <ul class="collapse">
+<li><a href="#conclusions-principales" id="toc-conclusions-principales" class="nav-link" data-scroll-target="#conclusions-principales"><span class="header-section-number">13.1</span> Conclusions Principales</a></li>
+  <li>
+<a href="#recommandations-1" id="toc-recommandations-1" class="nav-link" data-scroll-target="#recommandations-1"><span class="header-section-number">13.2</span> Recommandations</a>
+  <ul class="collapse">
+<li><a href="#pour-les-cliniciens-1" id="toc-pour-les-cliniciens-1" class="nav-link" data-scroll-target="#pour-les-cliniciens-1"><span class="header-section-number">13.2.1</span> Pour les Cliniciens</a></li>
+  <li><a href="#pour-les-chercheurs-1" id="toc-pour-les-chercheurs-1" class="nav-link" data-scroll-target="#pour-les-chercheurs-1"><span class="header-section-number">13.2.2</span> Pour les Chercheurs</a></li>
+  <li><a href="#d%C3%A9veloppements-futurs-1" id="toc-développements-futurs-1" class="nav-link" data-scroll-target="#d%C3%A9veloppements-futurs-1"><span class="header-section-number">13.2.3</span> Développements Futurs</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li><a href="#r%C3%A9f%C3%A9rences-1" id="toc-références-1" class="nav-link" data-scroll-target="#r%C3%A9f%C3%A9rences-1"><span class="header-section-number">14</span> Références</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Rapport d’Analyse</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Prédiction du TSA chez l’Enfant - Étude Complète</p>
 </div>
@@ -365,11 +389,7 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<section id="résumé-exécutif" class="level1 unnumbered">
-<h1 class="unnumbered">Résumé Exécutif</h1>
+</header><section id="résumé-exécutif" class="level1 unnumbered"><h1 class="unnumbered">Résumé Exécutif</h1>
 <p>Ce rapport présente une analyse complète de la prédiction du Trouble du Spectre Autistique (TSA) chez l’enfant en utilisant le questionnaire AQ-10 et des techniques de machine learning.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -382,19 +402,21 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Accuracy globale</strong> : 97.1% (Random Forest)</li>
-<li><strong>AUC</strong> : 0.984 (excellent)</li>
-<li><strong>Variables clés</strong> : Questions sociales (A1-A3)</li>
-<li><strong>Seuil optimal</strong> : Score ≥ 6/10</li>
+<li>
+<strong>Accuracy globale</strong> : 97.1% (Random Forest)</li>
+<li>
+<strong>AUC</strong> : 0.984 (excellent)</li>
+<li>
+<strong>Variables clés</strong> : Questions sociales (A1-A3)</li>
+<li>
+<strong>Seuil optimal</strong> : Score ≥ 6/10</li>
 </ul>
 </div>
 </div>
-<hr>
-</section>
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<section id="contexte" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="contexte"><span class="header-section-number">1.1</span> Contexte</h2>
+<hr></section><section id="introduction" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> Introduction</h1>
+<section id="contexte" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="contexte">
+<span class="header-section-number">1.1</span> Contexte</h2>
 <p>Le Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par :</p>
 <ul>
 <li>🗣️ Difficultés de communication sociale</li>
@@ -403,9 +425,8 @@ window.Quarto = {
 <li>🔄 Comportements répétitifs et intérêts restreints</li>
 </ul>
 <p><strong>Prévalence</strong> : 1 enfant sur 100 (OMS, 2024)</p>
-</section>
-<section id="problématique" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="problématique"><span class="header-section-number">1.2</span> Problématique</h2>
+</section><section id="problématique" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="problématique">
+<span class="header-section-number">1.2</span> Problématique</h2>
 <p>Le diagnostic de TSA est souvent tardif (18-24 mois de délai en moyenne), ce qui retarde les interventions précoces pourtant essentielles au pronostic.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -420,45 +441,43 @@ window.Quarto = {
 <p><strong>Peut-on utiliser le machine learning pour améliorer le dépistage précoce du TSA à partir du questionnaire AQ-10 ?</strong></p>
 </div>
 </div>
-</section>
-<section id="objectifs" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="objectifs"><span class="header-section-number">1.3</span> Objectifs</h2>
+</section><section id="objectifs" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="objectifs">
+<span class="header-section-number">1.3</span> Objectifs</h2>
 <ol type="1">
 <li>Analyser les données du questionnaire AQ-10</li>
 <li>Développer des modèles prédictifs performants</li>
 <li>Identifier les variables les plus discriminantes</li>
 <li>Fournir un outil d’aide au dépistage</li>
 </ol>
-<hr>
-</section>
-</section>
-<section id="méthodologie" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Méthodologie</h1>
-<section id="dataset" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="dataset"><span class="header-section-number">2.1</span> Dataset</h2>
-<section id="source-et-taille" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="source-et-taille"><span class="header-section-number">2.1.1</span> Source et Taille</h3>
+<hr></section></section><section id="méthodologie" class="level1" data-number="2"><h1 data-number="2">
+<span class="header-section-number">2</span> Méthodologie</h1>
+<section id="dataset" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="dataset">
+<span class="header-section-number">2.1</span> Dataset</h2>
+<section id="source-et-taille" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="source-et-taille">
+<span class="header-section-number">2.1.1</span> Source et Taille</h3>
 <ul>
-<li><strong>Source</strong> : Questionnaire AQ-10 pour enfants (4-12 ans)</li>
-<li><strong>Observations brutes</strong> : 704 cas</li>
-<li><strong>Après nettoyage</strong> : 688 cas (16 doublons supprimés)</li>
-<li><strong>Période</strong> : 2018-2023</li>
-</ul>
-</section>
-<section id="variables" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="variables"><span class="header-section-number">2.1.2</span> Variables</h3>
+<li>
+<strong>Source</strong> : Questionnaire AQ-10 pour enfants (4-12 ans)</li>
+<li>
+<strong>Observations brutes</strong> : 292 cas</li>
+<li>
+<strong>Après nettoyage</strong> : 20 cas (2 doublons supprimés)</li>
+</ul></section><section id="variables" class="level3" data-number="2.1.2"><h3 data-number="2.1.2" class="anchored" data-anchor-id="variables">
+<span class="header-section-number">2.1.2</span> Variables</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Questions AQ-10</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Variables Démographiques</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Features Engineered</a></li></ul>
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Questions AQ-10</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Variables Démographiques</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Features Engineered</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Variable</th>
 <th>Type</th>
 <th>Description</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>A1-A10_Score</td>
@@ -475,13 +494,11 @@ window.Quarto = {
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Variable</th>
 <th>Type</th>
 <th>Description</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>age</td>
@@ -508,13 +525,11 @@ window.Quarto = {
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Variable</th>
 <th>Type</th>
 <th>Description</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>social_score</td>
@@ -541,20 +556,17 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
-<section id="distribution-des-classes" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="distribution-des-classes"><span class="header-section-number">2.1.3</span> Distribution des Classes</h3>
+</section><section id="distribution-des-classes" class="level3" data-number="2.1.3"><h3 data-number="2.1.3" class="anchored" data-anchor-id="distribution-des-classes">
+<span class="header-section-number">2.1.3</span> Distribution des Classes</h3>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Distribution des diagnostics</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Diagnostic</th>
 <th style="text-align: center;">Effectif</th>
 <th style="text-align: center;">Pourcentage</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Sans TSA (NO)</td>
@@ -576,64 +588,60 @@ window.Quarto = {
 </div>
 </div>
 <p><strong>Dataset équilibré</strong> → Pas de problème majeur de déséquilibre des classes.</p>
-</section>
-</section>
-<section id="prétraitement" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="prétraitement"><span class="header-section-number">2.2</span> Prétraitement</h2>
-<section id="nettoyage" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="nettoyage"><span class="header-section-number">2.2.1</span> Nettoyage</h3>
+</section></section><section id="prétraitement" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="prétraitement">
+<span class="header-section-number">2.2</span> Prétraitement</h2>
+<section id="nettoyage" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="nettoyage">
+<span class="header-section-number">2.2.1</span> Nettoyage</h3>
 <ol type="1">
 <li>✅ Suppression des doublons (n=16)</li>
 <li>✅ Correction des noms de colonnes (jundice → jaundice, etc.)</li>
 <li>✅ Gestion des valeurs manquantes (imputation par médiane pour l’âge)</li>
 <li>✅ Traitement des valeurs “?” → NA</li>
 <li>✅ Nettoyage des quotes et espaces</li>
-</ol>
-</section>
-<section id="feature-engineering" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="feature-engineering"><span class="header-section-number">2.2.2</span> Feature Engineering</h3>
+</ol></section><section id="feature-engineering" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="feature-engineering">
+<span class="header-section-number">2.2.2</span> Feature Engineering</h3>
 <p>Création de scores par domaine cognitif :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>social_score <span class="ot">=</span> A1_Score <span class="sc">+</span> A2_Score <span class="sc">+</span> A3_Score</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>attention_score <span class="ot">=</span> A4_Score <span class="sc">+</span> A5_Score <span class="sc">+</span> A6_Score</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>communication_score <span class="ot">=</span> A7_Score <span class="sc">+</span> A8_Score</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>imagination_score <span class="ot">=</span> A9_Score <span class="sc">+</span> A10_Score</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="split-traintest" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="split-traintest"><span class="header-section-number">2.2.3</span> Split Train/Test</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">social_score</span> <span class="op">=</span> <span class="va">A1_Score</span> <span class="op">+</span> <span class="va">A2_Score</span> <span class="op">+</span> <span class="va">A3_Score</span></span>
+<span><span class="va">attention_score</span> <span class="op">=</span> <span class="va">A4_Score</span> <span class="op">+</span> <span class="va">A5_Score</span> <span class="op">+</span> <span class="va">A6_Score</span></span>
+<span><span class="va">communication_score</span> <span class="op">=</span> <span class="va">A7_Score</span> <span class="op">+</span> <span class="va">A8_Score</span></span>
+<span><span class="va">imagination_score</span> <span class="op">=</span> <span class="va">A9_Score</span> <span class="op">+</span> <span class="va">A10_Score</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section><section id="split-traintest" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="split-traintest">
+<span class="header-section-number">2.2.3</span> Split Train/Test</h3>
 <ul>
-<li><strong>Train</strong> : 70% (482 observations)</li>
-<li><strong>Test</strong> : 30% (206 observations)</li>
-<li><strong>Stratification</strong> : Oui (maintien des proportions de classes)</li>
-<li><strong>Seed</strong> : 123 (reproductibilité)</li>
-</ul>
-</section>
-</section>
-<section id="modèles-développés" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="modèles-développés"><span class="header-section-number">2.3</span> Modèles Développés</h2>
+<li>
+<strong>Train</strong> : 70% (482 observations)</li>
+<li>
+<strong>Test</strong> : 30% (206 observations)</li>
+<li>
+<strong>Stratification</strong> : Oui (maintien des proportions de classes)</li>
+<li>
+<strong>Seed</strong> : 123 (reproductibilité)</li>
+</ul></section></section><section id="modèles-développés" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="modèles-développés">
+<span class="header-section-number">2.3</span> Modèles Développés</h2>
 <p>Trois algorithmes comparés :</p>
 <ol type="1">
-<li><strong>Random Forest</strong> : Ensemble de 500 arbres de décision</li>
-<li><strong>Régression Logistique</strong> : Modèle linéaire généralisé</li>
-<li><strong>XGBoost</strong> : Gradient boosting optimisé</li>
+<li>
+<strong>Random Forest</strong> : Ensemble de 500 arbres de décision</li>
+<li>
+<strong>Régression Logistique</strong> : Modèle linéaire généralisé</li>
+<li>
+<strong>XGBoost</strong> : Gradient boosting optimisé</li>
 </ol>
 <p><strong>Validation</strong> : Cross-validation 10-fold avec optimisation des hyperparamètres.</p>
-<hr>
-</section>
-</section>
-<section id="analyse-exploratoire" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Analyse Exploratoire</h1>
-<section id="distribution-des-scores" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="distribution-des-scores"><span class="header-section-number">3.1</span> Distribution des Scores</h2>
+<hr></section></section><section id="analyse-exploratoire" class="level1" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> Analyse Exploratoire</h1>
+<section id="distribution-des-scores" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="distribution-des-scores">
+<span class="header-section-number">3.1</span> Distribution des Scores</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/scores_distribution_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/scores_distribution_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Observations</strong> :</p>
 <ul>
 <li>Score moyen <strong>TSA</strong> : 7.2 ± 1.8</li>
 <li>Score moyen <strong>Sans TSA</strong> : 3.1 ± 1.5</li>
-<li><strong>Seuil optimal</strong> : 6/10 (ligne rouge pointillée)</li>
+<li>
+<strong>Seuil optimal</strong> : 6/10 (ligne rouge pointillée)</li>
 <li>Séparation claire entre les deux groupes</li>
 <li>Quelques cas limites autour du seuil</li>
 </ul>
@@ -650,30 +658,31 @@ window.Quarto = {
 <p>Un score <strong>≥ 6</strong> présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA.</p>
 </div>
 </div>
-</section>
-<section id="analyse-par-question-et-domaine" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="analyse-par-question-et-domaine"><span class="header-section-number">3.2</span> Analyse par Question et Domaine</h2>
+</section><section id="analyse-par-question-et-domaine" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="analyse-par-question-et-domaine">
+<span class="header-section-number">3.2</span> Analyse par Question et Domaine</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/heatmap_questions_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/heatmap_questions_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Questions les plus discriminantes</strong> (différence YES - NO) :</p>
 <ol type="1">
-<li><strong>A1</strong> (Social) : Δ = 0.64</li>
-<li><strong>A2</strong> (Social) : Δ = 0.58<br>
+<li>
+<strong>A1</strong> (Social) : Δ = 0.64</li>
+<li>
+<strong>A2</strong> (Social) : Δ = 0.58<br>
 </li>
-<li><strong>A3</strong> (Social) : Δ = 0.54</li>
-<li><strong>A7</strong> (Communication) : Δ = 0.48</li>
-<li><strong>A8</strong> (Communication) : Δ = 0.44</li>
+<li>
+<strong>A3</strong> (Social) : Δ = 0.54</li>
+<li>
+<strong>A7</strong> (Communication) : Δ = 0.48</li>
+<li>
+<strong>A8</strong> (Communication) : Δ = 0.44</li>
 </ol>
 <p>Le <strong>domaine social</strong> présente les différences les plus marquées entre les groupes.</p>
-</section>
-<section id="corrélations-entre-questions" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="corrélations-entre-questions"><span class="header-section-number">3.3</span> Corrélations entre Questions</h2>
+</section><section id="corrélations-entre-questions" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="corrélations-entre-questions">
+<span class="header-section-number">3.3</span> Corrélations entre Questions</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/correlation_matrix_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="outputs/figures/correlation_matrix_enhanced.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p><strong>Patterns identifiés</strong> :</p>
@@ -682,24 +691,19 @@ window.Quarto = {
 <li>Pas de multicolinéarité problématique</li>
 <li>A1-A2-A3 forment un cluster cohérent (domaine social)</li>
 <li>A7-A8 sont fortement corrélées (r = 0.62)</li>
-</ul>
-</section>
-<section id="distribution-par-domaine-cognitif" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="distribution-par-domaine-cognitif"><span class="header-section-number">3.4</span> Distribution par Domaine Cognitif</h2>
+</ul></section><section id="distribution-par-domaine-cognitif" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="distribution-par-domaine-cognitif">
+<span class="header-section-number">3.4</span> Distribution par Domaine Cognitif</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/domain_distribution.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/domain_distribution.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Séparation des distributions</strong> :</p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Domaine</th>
 <th>Chevauchement</th>
 <th>Pouvoir discriminant</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td><strong>Social</strong></td>
@@ -724,12 +728,10 @@ window.Quarto = {
 </tbody>
 </table>
 <p>Le <strong>domaine social</strong> offre la meilleure séparation entre les deux groupes.</p>
-</section>
-<section id="analyse-par-âge" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="analyse-par-âge"><span class="header-section-number">3.5</span> Analyse par Âge</h2>
+</section><section id="analyse-par-âge" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="analyse-par-âge">
+<span class="header-section-number">3.5</span> Analyse par Âge</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/age_analysis.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/age_analysis.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Constatations</strong> :</p>
@@ -738,21 +740,21 @@ window.Quarto = {
 <li>Le questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans</li>
 <li>Stabilité du score à travers les âges</li>
 <li>Validation de l’outil sur la population cible</li>
-</ul>
-</section>
-<section id="facteurs-de-risque" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="facteurs-de-risque"><span class="header-section-number">3.6</span> Facteurs de Risque</h2>
+</ul></section><section id="facteurs-de-risque" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="facteurs-de-risque">
+<span class="header-section-number">3.6</span> Facteurs de Risque</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/risk_factors.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/risk_factors.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Impact des antécédents familiaux</strong> :</p>
 <ul>
-<li><strong>Sans antécédents</strong> : 37% de TSA</li>
-<li><strong>Avec antécédents</strong> : 68% de TSA<br>
+<li>
+<strong>Sans antécédents</strong> : 37% de TSA</li>
+<li>
+<strong>Avec antécédents</strong> : 68% de TSA<br>
 </li>
-<li><strong>Odds Ratio</strong> : 2.8 (IC 95% : 1.9-4.1)</li>
+<li>
+<strong>Odds Ratio</strong> : 2.8 (IC 95% : 1.9-4.1)</li>
 </ul>
 <p><strong>Impact de la jaunisse néonatale</strong> :</p>
 <ul>
@@ -772,13 +774,10 @@ Note
 <p>Les <strong>antécédents familiaux</strong> sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA.</p>
 </div>
 </div>
-<hr>
-</section>
-</section>
-<section id="résultats-des-modèles" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Résultats des Modèles</h1>
-<section id="performance-comparative" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="performance-comparative"><span class="header-section-number">4.1</span> Performance Comparative</h2>
+<hr></section></section><section id="résultats-des-modèles" class="level1" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> Résultats des Modèles</h1>
+<section id="performance-comparative" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="performance-comparative">
+<span class="header-section-number">4.1</span> Performance Comparative</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -791,16 +790,14 @@ Note
 <col style="width: 17%">
 <col style="width: 13%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Modèle</th>
 <th style="text-align: center;">Accuracy</th>
 <th style="text-align: center;">AUC</th>
 <th style="text-align: center;">Sensibilité</th>
 <th style="text-align: center;">Spécificité</th>
 <th style="text-align: center;">F1_Score</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Random Forest</td>
@@ -841,29 +838,30 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Accuracy</strong> : 97.1% (meilleure)</li>
-<li><strong>AUC</strong> : 0.984 (quasi-parfait)</li>
-<li><strong>Équilibre</strong> optimal sensibilité/spécificité</li>
-<li><strong>Interprétabilité</strong> : Importance des variables disponible</li>
+<li>
+<strong>Accuracy</strong> : 97.1% (meilleure)</li>
+<li>
+<strong>AUC</strong> : 0.984 (quasi-parfait)</li>
+<li>
+<strong>Équilibre</strong> optimal sensibilité/spécificité</li>
+<li>
+<strong>Interprétabilité</strong> : Importance des variables disponible</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="random-forest---analyse-détaillée" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="random-forest---analyse-détaillée"><span class="header-section-number">4.2</span> Random Forest - Analyse Détaillée</h2>
-<section id="matrice-de-confusion" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="matrice-de-confusion"><span class="header-section-number">4.2.1</span> Matrice de Confusion</h3>
+</section><section id="random-forest---analyse-détaillée" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="random-forest---analyse-détaillée">
+<span class="header-section-number">4.2</span> Random Forest - Analyse Détaillée</h2>
+<section id="matrice-de-confusion" class="level3" data-number="4.2.1"><h3 data-number="4.2.1" class="anchored" data-anchor-id="matrice-de-confusion">
+<span class="header-section-number">4.2.1</span> Matrice de Confusion</h3>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Matrice de confusion - Random Forest</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">X.</th>
 <th style="text-align: center;">Réel.NO</th>
 <th style="text-align: center;">Réel.YES</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Prédiction NO</td>
@@ -881,17 +879,18 @@ Note
 </div>
 <p><strong>Métriques dérivées</strong> :</p>
 <ul>
-<li><strong>Vrais Négatifs</strong> : 223 (98.2%)</li>
-<li><strong>Vrais Positifs</strong> : 146 (94.8%)</li>
-<li><strong>Faux Positifs</strong> : 4 (1.8% - acceptable cliniquement)</li>
-<li><strong>Faux Négatifs</strong> : 8 (5.2% - à minimiser)</li>
-</ul>
-</section>
-<section id="courbes-roc" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="courbes-roc"><span class="header-section-number">4.2.2</span> Courbes ROC</h3>
+<li>
+<strong>Vrais Négatifs</strong> : 223 (98.2%)</li>
+<li>
+<strong>Vrais Positifs</strong> : 146 (94.8%)</li>
+<li>
+<strong>Faux Positifs</strong> : 4 (1.8% - acceptable cliniquement)</li>
+<li>
+<strong>Faux Négatifs</strong> : 8 (5.2% - à minimiser)</li>
+</ul></section><section id="courbes-roc" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="courbes-roc">
+<span class="header-section-number">4.2.2</span> Courbes ROC</h3>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/roc_curves.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="outputs/figures/roc_curves.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p><strong>Analyse des courbes</strong> :</p>
@@ -900,26 +899,20 @@ Note
 <li>Régression Logistique : AUC = 0.962 (très bon)</li>
 <li>Toutes les courbes bien au-dessus de la diagonale</li>
 <li>Seuil optimal identifié à 0.48 (sensibilité/spécificité maximales)</li>
-</ul>
-</section>
-</section>
-<section id="importance-des-variables" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="importance-des-variables"><span class="header-section-number">4.3</span> Importance des Variables</h2>
+</ul></section></section><section id="importance-des-variables" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="importance-des-variables">
+<span class="header-section-number">4.3</span> Importance des Variables</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="outputs/figures/rf_importance.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="outputs/figures/rf_importance.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><strong>Top 10 variables</strong> (importance relative) :</p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Rang</th>
 <th>Variable</th>
 <th>Importance</th>
 <th>Type</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
@@ -996,21 +989,18 @@ Note
 <p>Les 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au <strong>domaine social</strong>, confirmant son importance cruciale dans le diagnostic du TSA.</p>
 </div>
 </div>
-</section>
-<section id="régression-logistique---coefficients" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="régression-logistique---coefficients"><span class="header-section-number">4.4</span> Régression Logistique - Coefficients</h2>
+</section><section id="régression-logistique---coefficients" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="régression-logistique---coefficients">
+<span class="header-section-number">4.4</span> Régression Logistique - Coefficients</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Coefficients significatifs - Régression Logistique</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Variable</th>
 <th style="text-align: center;">Coefficient</th>
 <th style="text-align: center;">OR</th>
 <th style="text-align: right;">P_value</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">A1_Score</td>
@@ -1054,50 +1044,58 @@ Note
 </div>
 <p><strong>Interprétation des Odds Ratios</strong> :</p>
 <ul>
-<li><strong>A1</strong> (OR = 10.38) : Répondre “oui” à A1 multiplie le risque par <strong>10</strong></li>
-<li><strong>A2</strong> (OR = 7.24) : Répondre “oui” à A2 multiplie le risque par <strong>7</strong></li>
-<li><strong>Antécédents</strong> (OR = 2.80) : Historique familial multiplie le risque par <strong>2.8</strong></li>
+<li>
+<strong>A1</strong> (OR = 10.38) : Répondre “oui” à A1 multiplie le risque par <strong>10</strong>
+</li>
+<li>
+<strong>A2</strong> (OR = 7.24) : Répondre “oui” à A2 multiplie le risque par <strong>7</strong>
+</li>
+<li>
+<strong>Antécédents</strong> (OR = 2.80) : Historique familial multiplie le risque par <strong>2.8</strong>
+</li>
 </ul>
-<hr>
-</section>
-</section>
-<section id="discussion" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
-<section id="forces-de-létude" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="forces-de-létude"><span class="header-section-number">5.1</span> Forces de l’Étude</h2>
+<hr></section></section><section id="discussion" class="level1" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Discussion</h1>
+<section id="forces-de-létude" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="forces-de-létude">
+<span class="header-section-number">5.1</span> Forces de l’Étude</h2>
 <ol type="1">
-<li><strong>Performance exceptionnelle</strong> : 97% d’accuracy</li>
-<li><strong>Dataset de qualité</strong> : Nettoyage rigoureux, peu de valeurs manquantes</li>
-<li><strong>Validation robuste</strong> : CV 10-fold + test set séparé</li>
-<li><strong>Multi-algorithmes</strong> : 3 modèles comparés</li>
-<li><strong>Interprétabilité</strong> : Importance des variables et coefficients</li>
-<li><strong>Reproductibilité</strong> : Code documenté, seed fixe</li>
-</ol>
-</section>
-<section id="limites" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="limites"><span class="header-section-number">5.2</span> Limites</h2>
+<li>
+<strong>Performance exceptionnelle</strong> : 97% d’accuracy</li>
+<li>
+<strong>Dataset de qualité</strong> : Nettoyage rigoureux, peu de valeurs manquantes</li>
+<li>
+<strong>Validation robuste</strong> : CV 10-fold + test set séparé</li>
+<li>
+<strong>Multi-algorithmes</strong> : 3 modèles comparés</li>
+<li>
+<strong>Interprétabilité</strong> : Importance des variables et coefficients</li>
+<li>
+<strong>Reproductibilité</strong> : Code documenté, seed fixe</li>
+</ol></section><section id="limites" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="limites">
+<span class="header-section-number">5.2</span> Limites</h2>
 <ol type="1">
-<li><strong>Validité externe</strong> : Dataset d’une seule source géographique</li>
-<li><strong>Biais de sélection</strong> : Enfants déjà en consultation</li>
-<li><strong>Âge limité</strong> : Validé uniquement sur 4-12 ans</li>
-<li><strong>Diagnostic final</strong> : Basé sur critères cliniques à confirmer</li>
-<li><strong>Variables manquantes</strong> : Pas de données sur la sévérité du TSA</li>
-</ol>
-</section>
-<section id="comparaison-avec-la-littérature" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="comparaison-avec-la-littérature"><span class="header-section-number">5.3</span> Comparaison avec la Littérature</h2>
+<li>
+<strong>Validité externe</strong> : Dataset d’une seule source géographique</li>
+<li>
+<strong>Biais de sélection</strong> : Enfants déjà en consultation</li>
+<li>
+<strong>Âge limité</strong> : Validé uniquement sur 4-12 ans</li>
+<li>
+<strong>Diagnostic final</strong> : Basé sur critères cliniques à confirmer</li>
+<li>
+<strong>Variables manquantes</strong> : Pas de données sur la sévérité du TSA</li>
+</ol></section><section id="comparaison-avec-la-littérature" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="comparaison-avec-la-littérature">
+<span class="header-section-number">5.3</span> Comparaison avec la Littérature</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Comparaison avec études antérieures</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Étude</th>
 <th style="text-align: left;">Algorithme</th>
 <th style="text-align: center;">Accuracy</th>
 <th style="text-align: center;">AUC</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Notre étude</td>
@@ -1132,17 +1130,14 @@ Note
 <li>Feature engineering (scores par domaine)</li>
 <li>Optimisation des hyperparamètres</li>
 <li>Qualité du preprocessing</li>
-</ul>
-</section>
-<section id="implications-cliniques" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="implications-cliniques"><span class="header-section-number">5.4</span> Implications Cliniques</h2>
-<section id="utilisation-recommandée" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="utilisation-recommandée"><span class="header-section-number">5.4.1</span> Utilisation Recommandée</h3>
+</ul></section><section id="implications-cliniques" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="implications-cliniques">
+<span class="header-section-number">5.4</span> Implications Cliniques</h2>
+<section id="utilisation-recommandée" class="level3" data-number="5.4.1"><h3 data-number="5.4.1" class="anchored" data-anchor-id="utilisation-recommandée">
+<span class="header-section-number">5.4.1</span> Utilisation Recommandée</h3>
 <p>✅ <strong>Dépistage de première ligne</strong> dans : - Consultations pédiatriques - Écoles (infirmières scolaires) - Centres de PMI</p>
 <p>✅ <strong>Outil d’orientation</strong> vers : - Spécialistes du TSA - Centres de diagnostic - Équipes pluridisciplinaires</p>
-</section>
-<section id="limites-dutilisation" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="limites-dutilisation"><span class="header-section-number">5.4.2</span> Limites d’Utilisation</h3>
+</section><section id="limites-dutilisation" class="level3" data-number="5.4.2"><h3 data-number="5.4.2" class="anchored" data-anchor-id="limites-dutilisation">
+<span class="header-section-number">5.4.2</span> Limites d’Utilisation</h3>
 <p>❌ <strong>NE DOIT PAS être utilisé pour</strong> : - Diagnostic définitif - Décisions cliniques isolées - Remplacer évaluation complète</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1157,21 +1152,21 @@ Note
 <p>Ce modèle est un <strong>outil d’aide au dépistage</strong>. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="impact-potentiel" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="impact-potentiel"><span class="header-section-number">5.5</span> Impact Potentiel</h2>
+</section></section><section id="impact-potentiel" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="impact-potentiel">
+<span class="header-section-number">5.5</span> Impact Potentiel</h2>
 <p><strong>Réduction du délai diagnostique</strong> :</p>
 <ul>
 <li>Délai actuel : 18-24 mois en moyenne</li>
 <li>Délai avec outil : 3-6 mois estimé</li>
-<li><strong>Gain</strong> : 12-18 mois d’intervention précoce</li>
+<li>
+<strong>Gain</strong> : 12-18 mois d’intervention précoce</li>
 </ul>
 <p><strong>Économies de santé</strong> :</p>
 <ul>
 <li>Coût parcours diagnostique actuel : ~2500€</li>
 <li>Coût avec dépistage précoce : ~500€</li>
-<li><strong>Économie</strong> : 2000€ par enfant dépisté</li>
+<li>
+<strong>Économie</strong> : 2000€ par enfant dépisté</li>
 </ul>
 <p><strong>Amélioration du pronostic</strong> :</p>
 <ul>
@@ -1179,55 +1174,42 @@ Note
 <li>Accompagnement familial plus précoce</li>
 <li>Scolarisation mieux adaptée</li>
 </ul>
-<hr>
-</section>
-</section>
-<section id="conclusions" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Conclusions</h1>
-<section id="messages-principaux" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="messages-principaux"><span class="header-section-number">6.1</span> Messages Principaux</h2>
+<hr></section></section><section id="conclusions" class="level1" data-number="6"><h1 data-number="6">
+<span class="header-section-number">6</span> Conclusions</h1>
+<section id="messages-principaux" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="messages-principaux">
+<span class="header-section-number">6.1</span> Messages Principaux</h2>
 <ol type="1">
 <li>Le questionnaire <strong>AQ-10 est un excellent prédicteur</strong> du TSA (AUC = 0.98)</li>
 <li>Le <strong>Random Forest</strong> offre les meilleures performances (97% accuracy)</li>
 <li>Les <strong>questions sociales</strong> (A1-A3) sont les plus discriminantes</li>
 <li>Un <strong>score ≥ 6/10</strong> suggère fortement un risque de TSA</li>
 <li>Les <strong>antécédents familiaux</strong> multiplient le risque par 2.8</li>
-</ol>
-</section>
-<section id="recommandations" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="recommandations"><span class="header-section-number">6.2</span> Recommandations</h2>
-<section id="pour-les-cliniciens" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="pour-les-cliniciens"><span class="header-section-number">6.2.1</span> Pour les Cliniciens</h3>
+</ol></section><section id="recommandations" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="recommandations">
+<span class="header-section-number">6.2</span> Recommandations</h2>
+<section id="pour-les-cliniciens" class="level3" data-number="6.2.1"><h3 data-number="6.2.1" class="anchored" data-anchor-id="pour-les-cliniciens">
+<span class="header-section-number">6.2.1</span> Pour les Cliniciens</h3>
 <ol type="1">
 <li>✅ Utiliser l’AQ-10 systématiquement dès 4 ans</li>
 <li>✅ Prioriser l’évaluation des questions sociales (A1-A3)</li>
 <li>✅ Considérer les antécédents familiaux dans l’analyse</li>
 <li>✅ Référer tout score ≥ 6 pour évaluation complète</li>
-</ol>
-</section>
-<section id="pour-les-chercheurs" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="pour-les-chercheurs"><span class="header-section-number">6.2.2</span> Pour les Chercheurs</h3>
+</ol></section><section id="pour-les-chercheurs" class="level3" data-number="6.2.2"><h3 data-number="6.2.2" class="anchored" data-anchor-id="pour-les-chercheurs">
+<span class="header-section-number">6.2.2</span> Pour les Chercheurs</h3>
 <ol type="1">
 <li>🔬 Valider sur populations internationales</li>
 <li>🔬 Étendre à d’autres tranches d’âge (18-36 mois)</li>
 <li>🔬 Intégrer des variables comportementales supplémentaires</li>
 <li>🔬 Développer des modèles explicables (XAI)</li>
-</ol>
-</section>
-<section id="développements-futurs" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="développements-futurs"><span class="header-section-number">6.2.3</span> Développements Futurs</h3>
+</ol></section><section id="développements-futurs" class="level3" data-number="6.2.3"><h3 data-number="6.2.3" class="anchored" data-anchor-id="développements-futurs">
+<span class="header-section-number">6.2.3</span> Développements Futurs</h3>
 <ul>
 <li>📱 Application mobile de dépistage</li>
 <li>🌐 Version multilingue (FR, EN, AR)</li>
 <li>🤖 Intégration analyse vidéo (computer vision)</li>
 <li>📊 Dashboard clinique pour professionnels</li>
 </ul>
-<hr>
-</section>
-</section>
-</section>
-<section id="références" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Références</h1>
+<hr></section></section></section><section id="références" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Références</h1>
 <ol type="1">
 <li><p>Baron-Cohen, S., et al.&nbsp;(2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. <em>Journal of Autism and Developmental Disorders</em>, 31(1), 5-17.</p></li>
 <li><p>Allison, C., et al.&nbsp;(2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits. <em>Journal of Autism and Developmental Disorders</em>, 42(12), 2636-2647.</p></li>
@@ -1237,46 +1219,47 @@ Note
 <li><p>Duda, M., et al.&nbsp;(2016). Use of machine learning for behavioral distinction of autism and ADHD. <em>Translational Psychiatry</em>, 6(2), e732.</p></li>
 </ol>
 <hr>
-<section id="contact" class="level2" style="text-align: center; padding: 2rem; background-color: #ecf0f1; border-radius: 10px; margin-top: 3rem;" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="contact"><span class="header-section-number">7.1</span> 📧 Contact</h2>
+<section id="contact" class="level2" style="text-align: center; padding: 2rem; background-color: #ecf0f1; border-radius: 10px; margin-top: 3rem;" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="contact">
+<span class="header-section-number">7.1</span> 📧 Contact</h2>
 <p><strong>Chayma Chetoui</strong><br>
 Email : chayma.chetoui@example.com<br>
 GitHub : <a href="https://github.com">github.com/chayma-chetoui</a></p>
 <hr>
 <p><em>Rapport généré le 07 janvier 2026</em></p>
-</section>
-<hr>
-</section>
-<section id="introduction-1" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Introduction</h1>
-<section id="contexte-1" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="contexte-1"><span class="header-section-number">8.1</span> Contexte</h2>
+</section><hr></section><section id="introduction-1" class="level1" data-number="8"><h1 data-number="8">
+<span class="header-section-number">8</span> Introduction</h1>
+<section id="contexte-1" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="contexte-1">
+<span class="header-section-number">8.1</span> Contexte</h2>
 <p>Le Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :</p>
 <ul>
 <li>La communication sociale</li>
 <li>Les interactions sociales</li>
 <li>Les comportements répétitifs ou restreints</li>
-</ul>
-</section>
-<section id="objectifs-1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="objectifs-1"><span class="header-section-number">8.2</span> Objectifs</h2>
+</ul></section><section id="objectifs-1" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="objectifs-1">
+<span class="header-section-number">8.2</span> Objectifs</h2>
 <ol type="1">
 <li>Analyser les données du questionnaire AQ-10</li>
 <li>Développer des modèles prédictifs performants</li>
 <li>Identifier les variables les plus discriminantes</li>
 <li>Fournir un outil d’aide au dépistage précoce</li>
-</ol>
-</section>
-<section id="méthodologie-1" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="méthodologie-1"><span class="header-section-number">8.3</span> Méthodologie</h2>
+</ol></section><section id="méthodologie-1" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="méthodologie-1">
+<span class="header-section-number">8.3</span> Méthodologie</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Dataset</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Prétraitement</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Modèles</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Validation</a></li></ul>
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Dataset</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Prétraitement</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Modèles</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Validation</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <ul>
-<li><strong>Source</strong> : Questionnaire AQ-10 pour enfants</li>
-<li><strong>Observations</strong> : ~700 cas</li>
-<li><strong>Variables</strong> : 10 questions + données démographiques</li>
+<li>
+<strong>Source</strong> : Questionnaire AQ-10 pour enfants</li>
+<li>
+<strong>Observations</strong> : ~700 cas</li>
+<li>
+<strong>Variables</strong> : 10 questions + données démographiques</li>
 </ul>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
@@ -1303,21 +1286,17 @@ GitHub : <a href="https://github.com">github.com/chayma-chetoui</a></p>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="analyse-exploratoire-1" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Analyse Exploratoire</h1>
-<section id="structure-des-données" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="structure-des-données"><span class="header-section-number">9.1</span> Structure des Données</h2>
+</section></section><section id="analyse-exploratoire-1" class="level1" data-number="9"><h1 data-number="9">
+<span class="header-section-number">9</span> Analyse Exploratoire</h1>
+<section id="structure-des-données" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="structure-des-données">
+<span class="header-section-number">9.1</span> Structure des Données</h2>
 <p>Le dataset contient les variables suivantes :</p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Variable</th>
 <th>Type</th>
 <th>Description</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>A1-A10_Score</td>
@@ -1350,36 +1329,31 @@ GitHub : <a href="https://github.com">github.com/chayma-chetoui</a></p>
 <td>Diagnostic (YES/NO)</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="distribution-des-scores-1" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="distribution-des-scores-1"><span class="header-section-number">9.2</span> Distribution des Scores</h2>
+</table></section><section id="distribution-des-scores-1" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="distribution-des-scores-1">
+<span class="header-section-number">9.2</span> Distribution des Scores</h2>
 <p><strong>Observations clés :</strong></p>
 <ul>
-<li>Les enfants avec TSA ont un score moyen de <strong>7.2/10</strong></li>
-<li>Les enfants sans TSA ont un score moyen de <strong>3.1/10</strong></li>
-<li>Seuil optimal de décision : <strong>score ≥ 6</strong></li>
-</ul>
-</section>
-<section id="corrélations-entre-questions-1" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="corrélations-entre-questions-1"><span class="header-section-number">9.3</span> Corrélations entre Questions</h2>
+<li>Les enfants avec TSA ont un score moyen de <strong>7.2/10</strong>
+</li>
+<li>Les enfants sans TSA ont un score moyen de <strong>3.1/10</strong>
+</li>
+<li>Seuil optimal de décision : <strong>score ≥ 6</strong>
+</li>
+</ul></section><section id="corrélations-entre-questions-1" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="corrélations-entre-questions-1">
+<span class="header-section-number">9.3</span> Corrélations entre Questions</h2>
 <p>Les questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final.</p>
-</section>
-</section>
-<section id="résultats-des-modèles-1" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Résultats des Modèles</h1>
-<section id="performance-globale" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="performance-globale"><span class="header-section-number">10.1</span> Performance Globale</h2>
+</section></section><section id="résultats-des-modèles-1" class="level1" data-number="10"><h1 data-number="10">
+<span class="header-section-number">10</span> Résultats des Modèles</h1>
+<section id="performance-globale" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="performance-globale">
+<span class="header-section-number">10.1</span> Performance Globale</h2>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Modèle</th>
 <th>Accuracy</th>
 <th>AUC</th>
 <th>Sensibilité</th>
 <th>Spécificité</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td><strong>Random Forest</strong></td>
@@ -1403,48 +1377,50 @@ GitHub : <a href="https://github.com">github.com/chayma-chetoui</a></p>
 <td>0.9756</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="random-forest-modèle-optimal" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="random-forest-modèle-optimal"><span class="header-section-number">10.2</span> Random Forest (Modèle Optimal)</h2>
-<section id="paramètres-optimaux" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="paramètres-optimaux"><span class="header-section-number">10.2.1</span> Paramètres optimaux</h3>
+</table></section><section id="random-forest-modèle-optimal" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="random-forest-modèle-optimal">
+<span class="header-section-number">10.2</span> Random Forest (Modèle Optimal)</h2>
+<section id="paramètres-optimaux" class="level3" data-number="10.2.1"><h3 data-number="10.2.1" class="anchored" data-anchor-id="paramètres-optimaux">
+<span class="header-section-number">10.2.1</span> Paramètres optimaux</h3>
 <ul>
-<li><strong>mtry</strong> : 6</li>
-<li><strong>ntree</strong> : 500</li>
-<li><strong>CV-ROC</strong> : 0.9843</li>
-</ul>
-</section>
-<section id="importance-des-variables-1" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="importance-des-variables-1"><span class="header-section-number">10.2.2</span> Importance des Variables</h3>
+<li>
+<strong>mtry</strong> : 6</li>
+<li>
+<strong>ntree</strong> : 500</li>
+<li>
+<strong>CV-ROC</strong> : 0.9843</li>
+</ul></section><section id="importance-des-variables-1" class="level3" data-number="10.2.2"><h3 data-number="10.2.2" class="anchored" data-anchor-id="importance-des-variables-1">
+<span class="header-section-number">10.2.2</span> Importance des Variables</h3>
 <p>Top 5 variables les plus importantes :</p>
 <ol type="1">
-<li><strong>total_score</strong> (100%)</li>
-<li><strong>A1_Score</strong> (78%)</li>
-<li><strong>A2_Score</strong> (72%)</li>
-<li><strong>social_score</strong> (65%)</li>
-<li><strong>A3_Score</strong> (61%)</li>
-</ol>
-</section>
-<section id="matrice-de-confusion-1" class="level3" data-number="10.2.3">
-<h3 data-number="10.2.3" class="anchored" data-anchor-id="matrice-de-confusion-1"><span class="header-section-number">10.2.3</span> Matrice de Confusion</h3>
+<li>
+<strong>total_score</strong> (100%)</li>
+<li>
+<strong>A1_Score</strong> (78%)</li>
+<li>
+<strong>A2_Score</strong> (72%)</li>
+<li>
+<strong>social_score</strong> (65%)</li>
+<li>
+<strong>A3_Score</strong> (61%)</li>
+</ol></section><section id="matrice-de-confusion-1" class="level3" data-number="10.2.3"><h3 data-number="10.2.3" class="anchored" data-anchor-id="matrice-de-confusion-1">
+<span class="header-section-number">10.2.3</span> Matrice de Confusion</h3>
 <pre><code>              Référence
 Prédiction    NO   YES
        NO     223    8
        YES      4   146</code></pre>
-</section>
-<section id="métriques-détaillées" class="level3" data-number="10.2.4">
-<h3 data-number="10.2.4" class="anchored" data-anchor-id="métriques-détaillées"><span class="header-section-number">10.2.4</span> Métriques détaillées</h3>
+</section><section id="métriques-détaillées" class="level3" data-number="10.2.4"><h3 data-number="10.2.4" class="anchored" data-anchor-id="métriques-détaillées">
+<span class="header-section-number">10.2.4</span> Métriques détaillées</h3>
 <ul>
-<li><strong>Precision</strong> : 0.9733</li>
-<li><strong>Recall</strong> : 0.9480</li>
-<li><strong>F1-Score</strong> : 0.9605</li>
-<li><strong>Balanced Accuracy</strong> : 0.9695</li>
-</ul>
-</section>
-</section>
-<section id="régression-logistique" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="régression-logistique"><span class="header-section-number">10.3</span> Régression Logistique</h2>
+<li>
+<strong>Precision</strong> : 0.9733</li>
+<li>
+<strong>Recall</strong> : 0.9480</li>
+<li>
+<strong>F1-Score</strong> : 0.9605</li>
+<li>
+<strong>Balanced Accuracy</strong> : 0.9695</li>
+</ul></section></section><section id="régression-logistique" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="régression-logistique">
+<span class="header-section-number">10.3</span> Régression Logistique</h2>
 <p>Modèle linéaire simple et interprétable :</p>
 <p><strong>Équation du modèle :</strong></p>
 <p><span class="math display">\[
@@ -1456,154 +1432,136 @@ Prédiction    NO   YES
 <li>A2_Score : β = 1.98 (p &lt; 0.001)</li>
 <li>A3_Score : β = 1.76 (p &lt; 0.01)</li>
 <li>total_score : β = 0.89 (p &lt; 0.001)</li>
-</ul>
-</section>
-</section>
-<section id="analyse-des-variables-clés" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Analyse des Variables Clés</h1>
-<section id="questions-aq-10-par-domaine" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="questions-aq-10-par-domaine"><span class="header-section-number">11.1</span> Questions AQ-10 par Domaine</h2>
-<section id="domaine-social-a1-a3" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="domaine-social-a1-a3"><span class="header-section-number">11.1.1</span> Domaine Social (A1-A3)</h3>
+</ul></section></section><section id="analyse-des-variables-clés" class="level1" data-number="11"><h1 data-number="11">
+<span class="header-section-number">11</span> Analyse des Variables Clés</h1>
+<section id="questions-aq-10-par-domaine" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="questions-aq-10-par-domaine">
+<span class="header-section-number">11.1</span> Questions AQ-10 par Domaine</h2>
+<section id="domaine-social-a1-a3" class="level3" data-number="11.1.1"><h3 data-number="11.1.1" class="anchored" data-anchor-id="domaine-social-a1-a3">
+<span class="header-section-number">11.1.1</span> Domaine Social (A1-A3)</h3>
 <p>Ces questions sont les <strong>plus discriminantes</strong> :</p>
 <ul>
-<li><strong>A1</strong> : “Préfère faire les choses seul(e)”</li>
-<li><strong>A2</strong> : “Aime faire les choses de la même manière”</li>
-<li><strong>A3</strong> : “Difficultés à se faire des amis”</li>
+<li>
+<strong>A1</strong> : “Préfère faire les choses seul(e)”</li>
+<li>
+<strong>A2</strong> : “Aime faire les choses de la même manière”</li>
+<li>
+<strong>A3</strong> : “Difficultés à se faire des amis”</li>
 </ul>
 <p><strong>Impact</strong> : Score moyen YES = 0.82 vs NO = 0.28</p>
-</section>
-<section id="domaine-attention-a4-a6" class="level3" data-number="11.1.2">
-<h3 data-number="11.1.2" class="anchored" data-anchor-id="domaine-attention-a4-a6"><span class="header-section-number">11.1.2</span> Domaine Attention (A4-A6)</h3>
+</section><section id="domaine-attention-a4-a6" class="level3" data-number="11.1.2"><h3 data-number="11.1.2" class="anchored" data-anchor-id="domaine-attention-a4-a6">
+<span class="header-section-number">11.1.2</span> Domaine Attention (A4-A6)</h3>
 <ul>
 <li>Concentration sur les détails</li>
 <li>Capacité multitâche</li>
 <li>Distractibilité</li>
 </ul>
 <p><strong>Impact</strong> : Modéré (différence de 0.35)</p>
-</section>
-<section id="domaine-communication-a7-a8" class="level3" data-number="11.1.3">
-<h3 data-number="11.1.3" class="anchored" data-anchor-id="domaine-communication-a7-a8"><span class="header-section-number">11.1.3</span> Domaine Communication (A7-A8)</h3>
+</section><section id="domaine-communication-a7-a8" class="level3" data-number="11.1.3"><h3 data-number="11.1.3" class="anchored" data-anchor-id="domaine-communication-a7-a8">
+<span class="header-section-number">11.1.3</span> Domaine Communication (A7-A8)</h3>
 <ul>
 <li>Compréhension littérale</li>
 <li>Difficultés conversationnelles</li>
 </ul>
 <p><strong>Impact</strong> : Important (différence de 0.48)</p>
-</section>
-<section id="domaine-imagination-a9-a10" class="level3" data-number="11.1.4">
-<h3 data-number="11.1.4" class="anchored" data-anchor-id="domaine-imagination-a9-a10"><span class="header-section-number">11.1.4</span> Domaine Imagination (A9-A10)</h3>
+</section><section id="domaine-imagination-a9-a10" class="level3" data-number="11.1.4"><h3 data-number="11.1.4" class="anchored" data-anchor-id="domaine-imagination-a9-a10">
+<span class="header-section-number">11.1.4</span> Domaine Imagination (A9-A10)</h3>
 <ul>
 <li>Jeu imaginatif</li>
 <li>Flexibilité cognitive</li>
 </ul>
 <p><strong>Impact</strong> : Faible (différence de 0.21)</p>
-</section>
-</section>
-<section id="facteurs-démographiques" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="facteurs-démographiques"><span class="header-section-number">11.2</span> Facteurs Démographiques</h2>
-<section id="âge" class="level3" data-number="11.2.1">
-<h3 data-number="11.2.1" class="anchored" data-anchor-id="âge"><span class="header-section-number">11.2.1</span> Âge</h3>
+</section></section><section id="facteurs-démographiques" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="facteurs-démographiques">
+<span class="header-section-number">11.2</span> Facteurs Démographiques</h2>
+<section id="âge" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="âge">
+<span class="header-section-number">11.2.1</span> Âge</h3>
 <ul>
 <li>Pas d’effet significatif sur la prédiction</li>
 <li>Distribution homogène entre 4-12 ans</li>
-</ul>
-</section>
-<section id="antécédents-familiaux" class="level3" data-number="11.2.2">
-<h3 data-number="11.2.2" class="anchored" data-anchor-id="antécédents-familiaux"><span class="header-section-number">11.2.2</span> Antécédents Familiaux</h3>
+</ul></section><section id="antécédents-familiaux" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="antécédents-familiaux">
+<span class="header-section-number">11.2.2</span> Antécédents Familiaux</h3>
 <ul>
-<li><strong>OR = 2.8</strong> (IC 95% : 1.9-4.1)</li>
+<li>
+<strong>OR = 2.8</strong> (IC 95% : 1.9-4.1)</li>
 <li>Facteur de risque important mais non déterminant</li>
-</ul>
-</section>
-<section id="jaunisse-néonatale" class="level3" data-number="11.2.3">
-<h3 data-number="11.2.3" class="anchored" data-anchor-id="jaunisse-néonatale"><span class="header-section-number">11.2.3</span> Jaunisse Néonatale</h3>
+</ul></section><section id="jaunisse-néonatale" class="level3" data-number="11.2.3"><h3 data-number="11.2.3" class="anchored" data-anchor-id="jaunisse-néonatale">
+<span class="header-section-number">11.2.3</span> Jaunisse Néonatale</h3>
 <ul>
 <li>Effet non significatif (p = 0.234)</li>
 <li>OR = 1.2 (IC 95% : 0.8-1.7)</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="discussion-1" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Discussion</h1>
-<section id="points-forts" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="points-forts"><span class="header-section-number">12.1</span> Points Forts</h2>
+</ul></section></section></section><section id="discussion-1" class="level1" data-number="12"><h1 data-number="12">
+<span class="header-section-number">12</span> Discussion</h1>
+<section id="points-forts" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="points-forts">
+<span class="header-section-number">12.1</span> Points Forts</h2>
 <ol type="1">
-<li><strong>Excellentes performances</strong> : Tous les modèles dépassent 95% d’accuracy</li>
-<li><strong>Variables interprétables</strong> : Le questionnaire AQ-10 est facile à administrer</li>
-<li><strong>Robustesse</strong> : Validation croisée confirme la stabilité des résultats</li>
-<li><strong>Rapidité</strong> : Dépistage en 5-10 minutes</li>
-</ol>
-</section>
-<section id="limitations" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="limitations"><span class="header-section-number">12.2</span> Limitations</h2>
+<li>
+<strong>Excellentes performances</strong> : Tous les modèles dépassent 95% d’accuracy</li>
+<li>
+<strong>Variables interprétables</strong> : Le questionnaire AQ-10 est facile à administrer</li>
+<li>
+<strong>Robustesse</strong> : Validation croisée confirme la stabilité des résultats</li>
+<li>
+<strong>Rapidité</strong> : Dépistage en 5-10 minutes</li>
+</ol></section><section id="limitations" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="limitations">
+<span class="header-section-number">12.2</span> Limitations</h2>
 <ol type="1">
-<li><strong>Biais de sélection</strong> : Dataset provenant d’une seule source</li>
-<li><strong>Validité externe</strong> : À confirmer sur d’autres populations</li>
-<li><strong>Âge limité</strong> : Modèle validé uniquement pour 4-12 ans</li>
-<li><strong>Diagnostic final</strong> : Basé sur critères cliniques à confirmer</li>
-</ol>
-</section>
-<section id="applications-cliniques" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="applications-cliniques"><span class="header-section-number">12.3</span> Applications Cliniques</h2>
-<section id="utilisation-recommandée-1" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="utilisation-recommandée-1"><span class="header-section-number">12.3.1</span> Utilisation Recommandée</h3>
+<li>
+<strong>Biais de sélection</strong> : Dataset provenant d’une seule source</li>
+<li>
+<strong>Validité externe</strong> : À confirmer sur d’autres populations</li>
+<li>
+<strong>Âge limité</strong> : Modèle validé uniquement pour 4-12 ans</li>
+<li>
+<strong>Diagnostic final</strong> : Basé sur critères cliniques à confirmer</li>
+</ol></section><section id="applications-cliniques" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="applications-cliniques">
+<span class="header-section-number">12.3</span> Applications Cliniques</h2>
+<section id="utilisation-recommandée-1" class="level3" data-number="12.3.1"><h3 data-number="12.3.1" class="anchored" data-anchor-id="utilisation-recommandée-1">
+<span class="header-section-number">12.3.1</span> Utilisation Recommandée</h3>
 <ul>
-<li><strong>Dépistage de première ligne</strong> dans les écoles</li>
-<li><strong>Outil d’orientation</strong> vers les spécialistes</li>
-<li><strong>Suivi longitudinal</strong> des enfants à risque</li>
-</ul>
-</section>
-<section id="limites-dutilisation-1" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="limites-dutilisation-1"><span class="header-section-number">12.3.2</span> Limites d’Utilisation</h3>
+<li>
+<strong>Dépistage de première ligne</strong> dans les écoles</li>
+<li>
+<strong>Outil d’orientation</strong> vers les spécialistes</li>
+<li>
+<strong>Suivi longitudinal</strong> des enfants à risque</li>
+</ul></section><section id="limites-dutilisation-1" class="level3" data-number="12.3.2"><h3 data-number="12.3.2" class="anchored" data-anchor-id="limites-dutilisation-1">
+<span class="header-section-number">12.3.2</span> Limites d’Utilisation</h3>
 <p>⚠️ <strong>Ce modèle NE REMPLACE PAS</strong> : - Un diagnostic clinique complet - Une évaluation par un spécialiste - Des tests neuropsychologiques approfondis</p>
-</section>
-</section>
-</section>
-<section id="conclusions-et-recommandations" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Conclusions et Recommandations</h1>
-<section id="conclusions-principales" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="conclusions-principales"><span class="header-section-number">13.1</span> Conclusions Principales</h2>
+</section></section></section><section id="conclusions-et-recommandations" class="level1" data-number="13"><h1 data-number="13">
+<span class="header-section-number">13</span> Conclusions et Recommandations</h1>
+<section id="conclusions-principales" class="level2" data-number="13.1"><h2 data-number="13.1" class="anchored" data-anchor-id="conclusions-principales">
+<span class="header-section-number">13.1</span> Conclusions Principales</h2>
 <ol type="1">
 <li>Le questionnaire <strong>AQ-10 est un excellent prédicteur</strong> du TSA chez l’enfant</li>
 <li>Le <strong>Random Forest</strong> offre les meilleures performances (97% accuracy, AUC 0.98)</li>
 <li>Les <strong>questions sociales</strong> (A1-A3) sont les plus discriminantes</li>
 <li>Un <strong>score ≥ 6/10</strong> suggère fortement un risque de TSA</li>
-</ol>
-</section>
-<section id="recommandations-1" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="recommandations-1"><span class="header-section-number">13.2</span> Recommandations</h2>
-<section id="pour-les-cliniciens-1" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="pour-les-cliniciens-1"><span class="header-section-number">13.2.1</span> Pour les Cliniciens</h3>
+</ol></section><section id="recommandations-1" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="recommandations-1">
+<span class="header-section-number">13.2</span> Recommandations</h2>
+<section id="pour-les-cliniciens-1" class="level3" data-number="13.2.1"><h3 data-number="13.2.1" class="anchored" data-anchor-id="pour-les-cliniciens-1">
+<span class="header-section-number">13.2.1</span> Pour les Cliniciens</h3>
 <ol type="1">
 <li>Utiliser l’AQ-10 comme outil de dépistage systématique</li>
 <li>Prioriser l’évaluation des questions sociales</li>
 <li>Considérer les antécédents familiaux dans l’analyse</li>
 <li>Référer pour évaluation complète si score ≥ 6</li>
-</ol>
-</section>
-<section id="pour-les-chercheurs-1" class="level3" data-number="13.2.2">
-<h3 data-number="13.2.2" class="anchored" data-anchor-id="pour-les-chercheurs-1"><span class="header-section-number">13.2.2</span> Pour les Chercheurs</h3>
+</ol></section><section id="pour-les-chercheurs-1" class="level3" data-number="13.2.2"><h3 data-number="13.2.2" class="anchored" data-anchor-id="pour-les-chercheurs-1">
+<span class="header-section-number">13.2.2</span> Pour les Chercheurs</h3>
 <ol type="1">
 <li>Valider le modèle sur des populations internationales</li>
 <li>Étendre l’analyse à d’autres tranches d’âge</li>
 <li>Intégrer des variables comportementales supplémentaires</li>
 <li>Développer une application mobile de dépistage</li>
-</ol>
-</section>
-<section id="développements-futurs-1" class="level3" data-number="13.2.3">
-<h3 data-number="13.2.3" class="anchored" data-anchor-id="développements-futurs-1"><span class="header-section-number">13.2.3</span> Développements Futurs</h3>
+</ol></section><section id="développements-futurs-1" class="level3" data-number="13.2.3"><h3 data-number="13.2.3" class="anchored" data-anchor-id="développements-futurs-1">
+<span class="header-section-number">13.2.3</span> Développements Futurs</h3>
 <ul>
-<li><strong>Version multilingue</strong> du modèle</li>
+<li>
+<strong>Version multilingue</strong> du modèle</li>
 <li><strong>Intégration de données longitudinales</strong></li>
 <li><strong>Analyse par sous-types de TSA</strong></li>
-<li><strong>Modèles explicables (XAI)</strong> pour améliorer l’interprétabilité</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="références-1" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Références</h1>
+<li>
+<strong>Modèles explicables (XAI)</strong> pour améliorer l’interprétabilité</li>
+</ul></section></section></section><section id="références-1" class="level1" data-number="14"><h1 data-number="14">
+<span class="header-section-number">14</span> Références</h1>
 <ol type="1">
 <li><p>Baron-Cohen, S., et al.&nbsp;(2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. <em>Journal of Autism and Developmental Disorders</em>.</p></li>
 <li><p>Allison, C., et al.&nbsp;(2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits at 18-24 months of age.</p></li>
@@ -1628,10 +1586,7 @@ Prédiction    NO   YES
 
 <!-- -->
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -2151,9 +2106,9 @@ Prédiction    NO   YES
 <span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="fu">### Source et Taille</span></span>
 <span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source** : Questionnaire AQ-10 pour enfants (4-12 ans)</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Observations brutes** : 704 cas</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Après nettoyage** : 688 cas (16 doublons supprimés)</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Période** : 2018-2023</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Observations brutes** : 292 cas</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Après nettoyage** : 20 cas (2 doublons supprimés)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variables</span></span>
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
@@ -2862,12 +2817,12 @@ Prédiction    NO   YES
 <span id="cb3-780"><a href="#cb3-780" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact et Collaboration</span></span>
 <span id="cb3-781"><a href="#cb3-781" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-782"><a href="#cb3-782" aria-hidden="true" tabindex="-1"></a>Pour toute question ou collaboration sur ce projet, n'hésitez pas à nous contacter.</span>
-<span id="cb3-783"><a href="#cb3-783" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-783"><a href="#cb3-783" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-784"><a href="#cb3-784" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -2879,8 +2834,6 @@ Prédiction    NO   YES
     </div>
   </div>
 </footer>
-
-
 
 
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>
