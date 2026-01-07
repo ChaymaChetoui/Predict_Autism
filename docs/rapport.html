@@ -207,7 +207,6 @@ window.Quarto = {
   <ul class="collapse">
 <li><a href="#nettoyage" id="toc-nettoyage" class="nav-link" data-scroll-target="#nettoyage"><span class="header-section-number">2.2.1</span> Nettoyage</a></li>
   <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering"><span class="header-section-number">2.2.2</span> Feature Engineering</a></li>
-  <li><a href="#split-traintest" id="toc-split-traintest" class="nav-link" data-scroll-target="#split-traintest"><span class="header-section-number">2.2.3</span> Split Train/Test</a></li>
   </ul>
 </li>
   <li><a href="#mod%C3%A8les-d%C3%A9velopp%C3%A9s" id="toc-modèles-développés" class="nav-link" data-scroll-target="#mod%C3%A8les-d%C3%A9velopp%C3%A9s"><span class="header-section-number">2.3</span> Modèles Développés</a></li>
@@ -572,17 +571,17 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Sans TSA (NO)</td>
-<td style="text-align: center;">406</td>
-<td style="text-align: center;">58.0%</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">51.7%</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">TSA (YES)</td>
-<td style="text-align: center;">294</td>
-<td style="text-align: center;">42.0%</td>
+<td style="text-align: center;">140</td>
+<td style="text-align: center;">48.3%</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Total</td>
-<td style="text-align: center;">700</td>
+<td style="text-align: center;">290</td>
 <td style="text-align: center;">100%</td>
 </tr>
 </tbody>
@@ -607,18 +606,7 @@ window.Quarto = {
 <span><span class="va">attention_score</span> <span class="op">=</span> <span class="va">A4_Score</span> <span class="op">+</span> <span class="va">A5_Score</span> <span class="op">+</span> <span class="va">A6_Score</span></span>
 <span><span class="va">communication_score</span> <span class="op">=</span> <span class="va">A7_Score</span> <span class="op">+</span> <span class="va">A8_Score</span></span>
 <span><span class="va">imagination_score</span> <span class="op">=</span> <span class="va">A9_Score</span> <span class="op">+</span> <span class="va">A10_Score</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section><section id="split-traintest" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="split-traintest">
-<span class="header-section-number">2.2.3</span> Split Train/Test</h3>
-<ul>
-<li>
-<strong>Train</strong> : 70% (482 observations)</li>
-<li>
-<strong>Test</strong> : 30% (206 observations)</li>
-<li>
-<strong>Stratification</strong> : Oui (maintien des proportions de classes)</li>
-<li>
-<strong>Seed</strong> : 123 (reproductibilité)</li>
-</ul></section></section><section id="modèles-développés" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="modèles-développés">
+</section></section><section id="modèles-développés" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="modèles-développés">
 <span class="header-section-number">2.3</span> Modèles Développés</h2>
 <p>Trois algorithmes comparés :</p>
 <ol type="1">
@@ -2149,8 +2137,8 @@ Prédiction    NO   YES
 <span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>distribution <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>  <span class="at">Diagnostic =</span> <span class="fu">c</span>(<span class="st">"Sans TSA (NO)"</span>, <span class="st">"TSA (YES)"</span>, <span class="st">"Total"</span>),</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>  <span class="at">Effectif =</span> <span class="fu">c</span>(<span class="dv">406</span>, <span class="dv">294</span>, <span class="dv">700</span>),</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>  <span class="at">Pourcentage =</span> <span class="fu">c</span>(<span class="st">"58.0%"</span>, <span class="st">"42.0%"</span>, <span class="st">"100%"</span>)</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>  <span class="at">Effectif =</span> <span class="fu">c</span>(<span class="dv">150</span>, <span class="dv">140</span>, <span class="dv">290</span>),</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>  <span class="at">Pourcentage =</span> <span class="fu">c</span>(<span class="st">"51.7%"</span>, <span class="st">"48.3%"</span>, <span class="st">"100%"</span>)</span>
 <span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(distribution, <span class="at">align =</span> <span class="st">"lcc"</span>, <span class="at">caption =</span> <span class="st">"Distribution des diagnostics"</span>)</span>
 <span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -2178,648 +2166,642 @@ Prédiction    NO   YES
 <span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>imagination_score <span class="ot">=</span> A9_Score <span class="sc">+</span> A10_Score</span>
 <span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### Split Train/Test</span></span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Train** : 70% (482 observations)</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Test** : 30% (206 observations)</span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Stratification** : Oui (maintien des proportions de classes)</span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Seed** : 123 (reproductibilité)</span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modèles Développés</span></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modèles Développés</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>Trois algorithmes comparés :</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Random Forest** : Ensemble de 500 arbres de décision</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Régression Logistique** : Modèle linéaire généralisé</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**XGBoost** : Gradient boosting optimisé</span>
 <span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>Trois algorithmes comparés :</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>**Validation** : Cross-validation 10-fold avec optimisation des hyperparamètres.</span>
 <span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Random Forest** : Ensemble de 500 arbres de décision</span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Régression Logistique** : Modèle linéaire généralisé</span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**XGBoost** : Gradient boosting optimisé</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse Exploratoire</span></span>
 <span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>**Validation** : Cross-validation 10-fold avec optimisation des hyperparamètres.</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution des Scores</span></span>
 <span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/scores_distribution_enhanced.png)</span>{fig-align="center"}</span>
 <span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse Exploratoire</span></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>**Observations** :</span>
 <span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution des Scores</span></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/scores_distribution_enhanced.png)</span>{fig-align="center"}</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>**Observations** :</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score moyen **TSA** : 7.2 ± 1.8</span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score moyen **Sans TSA** : 3.1 ± 1.5</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Seuil optimal** : 6/10 (ligne rouge pointillée)</span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Séparation claire entre les deux groupes</span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quelques cas limites autour du seuil</span>
 <span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score moyen **TSA** : 7.2 ± 1.8</span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score moyen **Sans TSA** : 3.1 ± 1.5</span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Seuil optimal** : 6/10 (ligne rouge pointillée)</span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Séparation claire entre les deux groupes</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quelques cas limites autour du seuil</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interprétation Clinique</span></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>Un score **≥ 6** présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA.</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interprétation Clinique</span></span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>Un score **≥ 6** présente une sensibilité de 95.7% et une spécificité de 98.2% pour le dépistage du TSA.</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## Analyse par Question et Domaine</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/heatmap_questions_enhanced.png)</span>{fig-align="center"}</span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>**Questions les plus discriminantes** (différence YES - NO) :</span>
 <span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## Analyse par Question et Domaine</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/heatmap_questions_enhanced.png)</span>{fig-align="center"}</span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>**Questions les plus discriminantes** (différence YES - NO) :</span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**A1** (Social) : Δ = 0.64</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**A2** (Social) : Δ = 0.58  </span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**A3** (Social) : Δ = 0.54</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**A7** (Communication) : Δ = 0.48</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**A8** (Communication) : Δ = 0.44</span>
 <span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**A1** (Social) : Δ = 0.64</span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**A2** (Social) : Δ = 0.58  </span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**A3** (Social) : Δ = 0.54</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**A7** (Communication) : Δ = 0.48</span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**A8** (Communication) : Δ = 0.44</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>Le **domaine social** présente les différences les plus marquées entre les groupes.</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corrélations entre Questions</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/correlation_matrix_enhanced.png)</span>{fig-align="center" width="80%"}</span>
 <span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>Le **domaine social** présente les différences les plus marquées entre les groupes.</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>**Patterns identifiés** :</span>
 <span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corrélations entre Questions</span></span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/correlation_matrix_enhanced.png)</span>{fig-align="center" width="80%"}</span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>**Patterns identifiés** :</span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Questions d'un même domaine sont **modérément corrélées** (r = 0.3-0.5)</span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas de multicolinéarité problématique</span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A1-A2-A3 forment un cluster cohérent (domaine social)</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A7-A8 sont fortement corrélées (r = 0.62)</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Questions d'un même domaine sont **modérément corrélées** (r = 0.3-0.5)</span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas de multicolinéarité problématique</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A1-A2-A3 forment un cluster cohérent (domaine social)</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A7-A8 sont fortement corrélées (r = 0.62)</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution par Domaine Cognitif</span></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/domain_distribution.png)</span>{fig-align="center"}</span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>**Séparation des distributions** :</span>
 <span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution par Domaine Cognitif</span></span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/domain_distribution.png)</span>{fig-align="center"}</span>
-<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>**Séparation des distributions** :</span>
-<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Domaine <span class="pp">|</span> Chevauchement <span class="pp">|</span> Pouvoir discriminant <span class="pp">|</span></span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------------|---------------------|</span></span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Social** <span class="pp">|</span> ⭐⭐⭐⭐⭐ <span class="pp">|</span> Excellent <span class="pp">|</span></span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Communication** <span class="pp">|</span> ⭐⭐⭐⭐ <span class="pp">|</span> Très bon <span class="pp">|</span></span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Attention** <span class="pp">|</span> ⭐⭐⭐ <span class="pp">|</span> Bon <span class="pp">|</span></span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Imagination** <span class="pp">|</span> ⭐⭐ <span class="pp">|</span> Modéré <span class="pp">|</span></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Domaine <span class="pp">|</span> Chevauchement <span class="pp">|</span> Pouvoir discriminant <span class="pp">|</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------------|---------------------|</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Social** <span class="pp">|</span> ⭐⭐⭐⭐⭐ <span class="pp">|</span> Excellent <span class="pp">|</span></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Communication** <span class="pp">|</span> ⭐⭐⭐⭐ <span class="pp">|</span> Très bon <span class="pp">|</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Attention** <span class="pp">|</span> ⭐⭐⭐ <span class="pp">|</span> Bon <span class="pp">|</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Imagination** <span class="pp">|</span> ⭐⭐ <span class="pp">|</span> Modéré <span class="pp">|</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>Le **domaine social** offre la meilleure séparation entre les deux groupes.</span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## Analyse par Âge</span></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/age_analysis.png)</span>{fig-align="center"}</span>
 <span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>Le **domaine social** offre la meilleure séparation entre les deux groupes.</span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>**Constatations** :</span>
 <span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## Analyse par Âge</span></span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/age_analysis.png)</span>{fig-align="center"}</span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>**Constatations** :</span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas d'effet significatif de l'âge sur le score (p = 0.082)</span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Le questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans</span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stabilité du score à travers les âges</span>
-<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Validation de l'outil sur la population cible</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas d'effet significatif de l'âge sur le score (p = 0.082)</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Le questionnaire AQ-10 fonctionne bien sur toute la tranche 4-12 ans</span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stabilité du score à travers les âges</span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Validation de l'outil sur la population cible</span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## Facteurs de Risque</span></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/risk_factors.png)</span>{fig-align="center"}</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>**Impact des antécédents familiaux** :</span>
 <span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## Facteurs de Risque</span></span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/risk_factors.png)</span>{fig-align="center"}</span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sans antécédents** : 37% de TSA</span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Avec antécédents** : 68% de TSA  </span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Odds Ratio** : 2.8 (IC 95% : 1.9-4.1)</span>
 <span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>**Impact des antécédents familiaux** :</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>**Impact de la jaunisse néonatale** :</span>
 <span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sans antécédents** : 37% de TSA</span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Avec antécédents** : 68% de TSA  </span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Odds Ratio** : 2.8 (IC 95% : 1.9-4.1)</span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>**Impact de la jaunisse néonatale** :</span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effet non significatif (p = 0.234)</span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OR = 1.2 (IC 95% : 0.8-1.7)</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effet non significatif (p = 0.234)</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OR = 1.2 (IC 95% : 0.8-1.7)</span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>Les **antécédents familiaux** sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA.</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a>Les **antécédents familiaux** sont un facteur de risque important, multipliant par 2.8 la probabilité de TSA.</span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a><span class="fu"># Résultats des Modèles</span></span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Comparative</span></span>
 <span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a><span class="fu"># Résultats des Modèles</span></span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Comparative</span></span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>  Modèle <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Random Forest"</span>, <span class="st">"XGBoost"</span>, <span class="st">"Régression Logistique"</span>),</span>
-<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>  <span class="at">Accuracy =</span> <span class="fu">c</span>(<span class="st">"97.1%"</span>, <span class="st">"96.3%"</span>, <span class="st">"95.2%"</span>),</span>
-<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>  <span class="at">AUC =</span> <span class="fu">c</span>(<span class="st">"0.984"</span>, <span class="st">"0.974"</span>, <span class="st">"0.962"</span>),</span>
-<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>  Sensibilité <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"95.7%"</span>, <span class="st">"94.2%"</span>, <span class="st">"92.3%"</span>),</span>
-<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>  Spécificité <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"98.2%"</span>, <span class="st">"97.6%"</span>, <span class="st">"96.9%"</span>),</span>
-<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>  <span class="at">F1_Score =</span> <span class="fu">c</span>(<span class="st">"96.1%"</span>, <span class="st">"94.9%"</span>, <span class="st">"93.1%"</span>)</span>
-<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(results, <span class="at">align =</span> <span class="st">"lccccc"</span>, <span class="at">caption =</span> <span class="st">"Performance des modèles sur le jeu de test"</span>)</span>
-<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-important icon="false"}</span>
-<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🏆 Meilleur Modèle : Random Forest</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>  Modèle <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Random Forest"</span>, <span class="st">"XGBoost"</span>, <span class="st">"Régression Logistique"</span>),</span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>  <span class="at">Accuracy =</span> <span class="fu">c</span>(<span class="st">"97.1%"</span>, <span class="st">"96.3%"</span>, <span class="st">"95.2%"</span>),</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>  <span class="at">AUC =</span> <span class="fu">c</span>(<span class="st">"0.984"</span>, <span class="st">"0.974"</span>, <span class="st">"0.962"</span>),</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>  Sensibilité <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"95.7%"</span>, <span class="st">"94.2%"</span>, <span class="st">"92.3%"</span>),</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>  Spécificité <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"98.2%"</span>, <span class="st">"97.6%"</span>, <span class="st">"96.9%"</span>),</span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>  <span class="at">F1_Score =</span> <span class="fu">c</span>(<span class="st">"96.1%"</span>, <span class="st">"94.9%"</span>, <span class="st">"93.1%"</span>)</span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(results, <span class="at">align =</span> <span class="st">"lccccc"</span>, <span class="at">caption =</span> <span class="st">"Performance des modèles sur le jeu de test"</span>)</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>::: {.callout-important icon="false"}</span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🏆 Meilleur Modèle : Random Forest</span></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Accuracy** : 97.1% (meilleure)</span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AUC** : 0.984 (quasi-parfait)</span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Équilibre** optimal sensibilité/spécificité</span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Interprétabilité** : Importance des variables disponible</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Accuracy** : 97.1% (meilleure)</span>
-<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AUC** : 0.984 (quasi-parfait)</span>
-<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Équilibre** optimal sensibilité/spécificité</span>
-<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Interprétabilité** : Importance des variables disponible</span>
-<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random Forest - Analyse Détaillée</span></span>
-<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### Matrice de Confusion</span></span>
-<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
-<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>confusion <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at"> </span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Prédiction NO"</span>, <span class="st">"Prédiction YES"</span>),</span>
-<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Réel NO</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"223"</span>, <span class="st">"4"</span>),</span>
-<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Réel YES</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"8"</span>, <span class="st">"146"</span>)</span>
-<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(confusion, <span class="at">align =</span> <span class="st">"lcc"</span>, <span class="at">caption =</span> <span class="st">"Matrice de confusion - Random Forest"</span>)</span>
-<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a>**Métriques dérivées** :</span>
-<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Vrais Négatifs** : 223 (98.2%)</span>
-<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Vrais Positifs** : 146 (94.8%)</span>
-<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faux Positifs** : 4 (1.8% - acceptable cliniquement)</span>
-<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faux Négatifs** : 8 (5.2% - à minimiser)</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random Forest - Analyse Détaillée</span></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### Matrice de Confusion</span></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a>confusion <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at"> </span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Prédiction NO"</span>, <span class="st">"Prédiction YES"</span>),</span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Réel NO</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"223"</span>, <span class="st">"4"</span>),</span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Réel YES</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"8"</span>, <span class="st">"146"</span>)</span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(confusion, <span class="at">align =</span> <span class="st">"lcc"</span>, <span class="at">caption =</span> <span class="st">"Matrice de confusion - Random Forest"</span>)</span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>**Métriques dérivées** :</span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Vrais Négatifs** : 223 (98.2%)</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Vrais Positifs** : 146 (94.8%)</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faux Positifs** : 4 (1.8% - acceptable cliniquement)</span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Faux Négatifs** : 8 (5.2% - à minimiser)</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a><span class="fu">### Courbes ROC</span></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/roc_curves.png)</span>{fig-align="center" width="80%"}</span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>**Analyse des courbes** :</span>
 <span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### Courbes ROC</span></span>
-<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/roc_curves.png)</span>{fig-align="center" width="80%"}</span>
-<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>**Analyse des courbes** :</span>
-<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Random Forest : **AUC = 0.984** (excellent)</span>
-<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Régression Logistique : AUC = 0.962 (très bon)</span>
-<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Toutes les courbes bien au-dessus de la diagonale</span>
-<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Seuil optimal identifié à 0.48 (sensibilité/spécificité maximales)</span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Random Forest : **AUC = 0.984** (excellent)</span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Régression Logistique : AUC = 0.962 (très bon)</span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Toutes les courbes bien au-dessus de la diagonale</span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Seuil optimal identifié à 0.48 (sensibilité/spécificité maximales)</span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importance des Variables</span></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/rf_importance.png)</span>{fig-align="center"}</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>**Top 10 variables** (importance relative) :</span>
 <span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importance des Variables</span></span>
-<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="al">![](outputs/figures/rf_importance.png)</span>{fig-align="center"}</span>
-<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>**Top 10 variables** (importance relative) :</span>
-<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Rang <span class="pp">|</span> Variable <span class="pp">|</span> Importance <span class="pp">|</span> Type <span class="pp">|</span></span>
-<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|------------|------|</span></span>
-<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 <span class="pp">|</span> total_score <span class="pp">|</span> 100.0 <span class="pp">|</span> Composite <span class="pp">|</span></span>
-<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> A1_Score <span class="pp">|</span> 78.3 <span class="pp">|</span> Social <span class="pp">|</span></span>
-<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3 <span class="pp">|</span> A2_Score <span class="pp">|</span> 72.1 <span class="pp">|</span> Social <span class="pp">|</span></span>
-<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 <span class="pp">|</span> social_score <span class="pp">|</span> 65.4 <span class="pp">|</span> Composite <span class="pp">|</span></span>
-<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 5 <span class="pp">|</span> A3_Score <span class="pp">|</span> 61.2 <span class="pp">|</span> Social <span class="pp">|</span></span>
-<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 6 <span class="pp">|</span> A7_Score <span class="pp">|</span> 48.9 <span class="pp">|</span> Communication <span class="pp">|</span></span>
-<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7 <span class="pp">|</span> communication_score <span class="pp">|</span> 42.7 <span class="pp">|</span> Composite <span class="pp">|</span></span>
-<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 8 <span class="pp">|</span> A8_Score <span class="pp">|</span> 38.5 <span class="pp">|</span> Communication <span class="pp">|</span></span>
-<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 9 <span class="pp">|</span> age <span class="pp">|</span> 28.3 <span class="pp">|</span> Démographique <span class="pp">|</span></span>
-<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10 <span class="pp">|</span> has_family_history <span class="pp">|</span> 24.6 <span class="pp">|</span> Risque <span class="pp">|</span></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Rang <span class="pp">|</span> Variable <span class="pp">|</span> Importance <span class="pp">|</span> Type <span class="pp">|</span></span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|------------|------|</span></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 <span class="pp">|</span> total_score <span class="pp">|</span> 100.0 <span class="pp">|</span> Composite <span class="pp">|</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> A1_Score <span class="pp">|</span> 78.3 <span class="pp">|</span> Social <span class="pp">|</span></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3 <span class="pp">|</span> A2_Score <span class="pp">|</span> 72.1 <span class="pp">|</span> Social <span class="pp">|</span></span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 <span class="pp">|</span> social_score <span class="pp">|</span> 65.4 <span class="pp">|</span> Composite <span class="pp">|</span></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 5 <span class="pp">|</span> A3_Score <span class="pp">|</span> 61.2 <span class="pp">|</span> Social <span class="pp">|</span></span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 6 <span class="pp">|</span> A7_Score <span class="pp">|</span> 48.9 <span class="pp">|</span> Communication <span class="pp">|</span></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7 <span class="pp">|</span> communication_score <span class="pp">|</span> 42.7 <span class="pp">|</span> Composite <span class="pp">|</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 8 <span class="pp">|</span> A8_Score <span class="pp">|</span> 38.5 <span class="pp">|</span> Communication <span class="pp">|</span></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 9 <span class="pp">|</span> age <span class="pp">|</span> 28.3 <span class="pp">|</span> Démographique <span class="pp">|</span></span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 10 <span class="pp">|</span> has_family_history <span class="pp">|</span> 24.6 <span class="pp">|</span> Risque <span class="pp">|</span></span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## Insight Clinique</span></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>Les 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au **domaine social**, confirmant son importance cruciale dans le diagnostic du TSA.</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="fu">## Insight Clinique</span></span>
-<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>Les 3 premières variables individuelles (A1, A2, A3) appartiennent toutes au **domaine social**, confirmant son importance cruciale dans le diagnostic du TSA.</span>
-<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a><span class="fu">## Régression Logistique - Coefficients</span></span>
-<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
-<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> <span class="fu">c</span>(<span class="st">"A1_Score"</span>, <span class="st">"A2_Score"</span>, <span class="st">"A3_Score"</span>, <span class="st">"A7_Score"</span>, <span class="st">"total_score"</span>, <span class="st">"has_family_history"</span>),</span>
-<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>  <span class="at">Coefficient =</span> <span class="fu">c</span>(<span class="fl">2.34</span>, <span class="fl">1.98</span>, <span class="fl">1.76</span>, <span class="fl">1.42</span>, <span class="fl">0.89</span>, <span class="fl">1.03</span>),</span>
-<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a>  <span class="at">OR =</span> <span class="fu">c</span>(<span class="fl">10.38</span>, <span class="fl">7.24</span>, <span class="fl">5.81</span>, <span class="fl">4.14</span>, <span class="fl">2.43</span>, <span class="fl">2.80</span>),</span>
-<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>  <span class="at">P_value =</span> <span class="fu">c</span>(<span class="st">"&lt;0.001"</span>, <span class="st">"&lt;0.001"</span>, <span class="st">"0.001"</span>, <span class="st">"0.003"</span>, <span class="st">"&lt;0.001"</span>, <span class="st">"0.007"</span>)</span>
-<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(coef_table, <span class="at">align =</span> <span class="st">"lccr"</span>, <span class="at">caption =</span> <span class="st">"Coefficients significatifs - Régression Logistique"</span>)</span>
-<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## Régression Logistique - Coefficients</span></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> <span class="fu">c</span>(<span class="st">"A1_Score"</span>, <span class="st">"A2_Score"</span>, <span class="st">"A3_Score"</span>, <span class="st">"A7_Score"</span>, <span class="st">"total_score"</span>, <span class="st">"has_family_history"</span>),</span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>  <span class="at">Coefficient =</span> <span class="fu">c</span>(<span class="fl">2.34</span>, <span class="fl">1.98</span>, <span class="fl">1.76</span>, <span class="fl">1.42</span>, <span class="fl">0.89</span>, <span class="fl">1.03</span>),</span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a>  <span class="at">OR =</span> <span class="fu">c</span>(<span class="fl">10.38</span>, <span class="fl">7.24</span>, <span class="fl">5.81</span>, <span class="fl">4.14</span>, <span class="fl">2.43</span>, <span class="fl">2.80</span>),</span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>  <span class="at">P_value =</span> <span class="fu">c</span>(<span class="st">"&lt;0.001"</span>, <span class="st">"&lt;0.001"</span>, <span class="st">"0.001"</span>, <span class="st">"0.003"</span>, <span class="st">"&lt;0.001"</span>, <span class="st">"0.007"</span>)</span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(coef_table, <span class="at">align =</span> <span class="st">"lccr"</span>, <span class="at">caption =</span> <span class="st">"Coefficients significatifs - Régression Logistique"</span>)</span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a>**Interprétation des Odds Ratios** :</span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A1** (OR = 10.38) : Répondre "oui" à A1 multiplie le risque par **10**</span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A2** (OR = 7.24) : Répondre "oui" à A2 multiplie le risque par **7**</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Antécédents** (OR = 2.80) : Historique familial multiplie le risque par **2.8**</span>
 <span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a>**Interprétation des Odds Ratios** :</span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A1** (OR = 10.38) : Répondre "oui" à A1 multiplie le risque par **10**</span>
-<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A2** (OR = 7.24) : Répondre "oui" à A2 multiplie le risque par **7**</span>
-<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Antécédents** (OR = 2.80) : Historique familial multiplie le risque par **2.8**</span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion</span></span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a><span class="fu">## Forces de l'Étude</span></span>
 <span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion</span></span>
-<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a><span class="fu">## Forces de l'Étude</span></span>
-<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Performance exceptionnelle** : 97% d'accuracy</span>
-<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Dataset de qualité** : Nettoyage rigoureux, peu de valeurs manquantes</span>
-<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Validation robuste** : CV 10-fold + test set séparé</span>
-<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Multi-algorithmes** : 3 modèles comparés</span>
-<span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Interprétabilité** : Importance des variables et coefficients</span>
-<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Reproductibilité** : Code documenté, seed fixe</span>
-<span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limites</span></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Performance exceptionnelle** : 97% d'accuracy</span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Dataset de qualité** : Nettoyage rigoureux, peu de valeurs manquantes</span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Validation robuste** : CV 10-fold + test set séparé</span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Multi-algorithmes** : 3 modèles comparés</span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Interprétabilité** : Importance des variables et coefficients</span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Reproductibilité** : Code documenté, seed fixe</span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limites</span></span>
+<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Validité externe** : Dataset d'une seule source géographique</span>
+<span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Biais de sélection** : Enfants déjà en consultation</span>
+<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Âge limité** : Validé uniquement sur 4-12 ans</span>
+<span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Diagnostic final** : Basé sur critères cliniques à confirmer</span>
+<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Variables manquantes** : Pas de données sur la sévérité du TSA</span>
 <span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Validité externe** : Dataset d'une seule source géographique</span>
-<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Biais de sélection** : Enfants déjà en consultation</span>
-<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Âge limité** : Validé uniquement sur 4-12 ans</span>
-<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Diagnostic final** : Basé sur critères cliniques à confirmer</span>
-<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Variables manquantes** : Pas de données sur la sévérité du TSA</span>
-<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparaison avec la Littérature</span></span>
-<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
-<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>lit_comp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a>  É<span class="at">tude =</span> <span class="fu">c</span>(<span class="st">"Notre étude"</span>, <span class="st">"Baron-Cohen (2001)"</span>, <span class="st">"Vabalas (2019)"</span>, <span class="st">"Duda (2016)"</span>),</span>
-<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>  <span class="at">Algorithme =</span> <span class="fu">c</span>(<span class="st">"Random Forest"</span>, <span class="st">"Règle de seuil"</span>, <span class="st">"SVM"</span>, <span class="st">"Random Forest"</span>),</span>
-<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>  <span class="at">Accuracy =</span> <span class="fu">c</span>(<span class="st">"97.1%"</span>, <span class="st">"83%"</span>, <span class="st">"89%"</span>, <span class="st">"92%"</span>),</span>
-<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>  <span class="at">AUC =</span> <span class="fu">c</span>(<span class="st">"0.984"</span>, <span class="st">"0.88"</span>, <span class="st">"0.92"</span>, <span class="st">"0.95"</span>)</span>
-<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(lit_comp, <span class="at">align =</span> <span class="st">"llcc"</span>, <span class="at">caption =</span> <span class="st">"Comparaison avec études antérieures"</span>)</span>
-<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparaison avec la Littérature</span></span>
+<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE}</span></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a>lit_comp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a>  É<span class="at">tude =</span> <span class="fu">c</span>(<span class="st">"Notre étude"</span>, <span class="st">"Baron-Cohen (2001)"</span>, <span class="st">"Vabalas (2019)"</span>, <span class="st">"Duda (2016)"</span>),</span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a>  <span class="at">Algorithme =</span> <span class="fu">c</span>(<span class="st">"Random Forest"</span>, <span class="st">"Règle de seuil"</span>, <span class="st">"SVM"</span>, <span class="st">"Random Forest"</span>),</span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a>  <span class="at">Accuracy =</span> <span class="fu">c</span>(<span class="st">"97.1%"</span>, <span class="st">"83%"</span>, <span class="st">"89%"</span>, <span class="st">"92%"</span>),</span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a>  <span class="at">AUC =</span> <span class="fu">c</span>(<span class="st">"0.984"</span>, <span class="st">"0.88"</span>, <span class="st">"0.92"</span>, <span class="st">"0.95"</span>)</span>
+<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(lit_comp, <span class="at">align =</span> <span class="st">"llcc"</span>, <span class="at">caption =</span> <span class="st">"Comparaison avec études antérieures"</span>)</span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>Notre modèle **surpasse** les performances rapportées dans la littérature, possiblement grâce à :</span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature engineering (scores par domaine)</span>
+<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Optimisation des hyperparamètres</span>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qualité du preprocessing</span>
 <span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>Notre modèle **surpasse** les performances rapportées dans la littérature, possiblement grâce à :</span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implications Cliniques</span></span>
 <span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature engineering (scores par domaine)</span>
-<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Optimisation des hyperparamètres</span>
-<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qualité du preprocessing</span>
-<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implications Cliniques</span></span>
-<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a><span class="fu">### Utilisation Recommandée</span></span>
-<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a>✅ **Dépistage de première ligne** dans :</span>
-<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consultations pédiatriques</span>
-<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Écoles (infirmières scolaires)</span>
-<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Centres de PMI</span>
-<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>✅ **Outil d'orientation** vers :</span>
-<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spécialistes du TSA</span>
-<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Centres de diagnostic</span>
-<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Équipes pluridisciplinaires</span>
-<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limites d'Utilisation</span></span>
-<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a>❌ **NE DOIT PAS être utilisé pour** :</span>
-<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Diagnostic définitif</span>
-<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Décisions cliniques isolées</span>
-<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Remplacer évaluation complète</span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a><span class="fu">### Utilisation Recommandée</span></span>
+<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>✅ **Dépistage de première ligne** dans :</span>
+<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consultations pédiatriques</span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Écoles (infirmières scolaires)</span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Centres de PMI</span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a>✅ **Outil d'orientation** vers :</span>
+<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spécialistes du TSA</span>
+<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Centres de diagnostic</span>
+<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Équipes pluridisciplinaires</span>
+<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limites d'Utilisation</span></span>
+<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a>❌ **NE DOIT PAS être utilisé pour** :</span>
+<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Diagnostic définitif</span>
+<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Décisions cliniques isolées</span>
+<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Remplacer évaluation complète</span>
+<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## Avertissement Médical</span></span>
+<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>Ce modèle est un **outil d'aide au dépistage**. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA.</span>
+<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a><span class="fu">## Avertissement Médical</span></span>
-<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>Ce modèle est un **outil d'aide au dépistage**. Tout score ≥ 6 nécessite une évaluation clinique complète par un spécialiste du TSA.</span>
-<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a><span class="fu">## Impact Potentiel</span></span>
+<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a><span class="fu">## Impact Potentiel</span></span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a>**Réduction du délai diagnostique** :</span>
+<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Délai actuel : 18-24 mois en moyenne</span>
+<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Délai avec outil : 3-6 mois estimé</span>
+<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gain** : 12-18 mois d'intervention précoce</span>
 <span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a>**Réduction du délai diagnostique** :</span>
+<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a>**Économies de santé** :</span>
 <span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Délai actuel : 18-24 mois en moyenne</span>
-<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Délai avec outil : 3-6 mois estimé</span>
-<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gain** : 12-18 mois d'intervention précoce</span>
+<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coût parcours diagnostique actuel : ~2500€</span>
+<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coût avec dépistage précoce : ~500€</span>
+<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Économie** : 2000€ par enfant dépisté</span>
 <span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a>**Économies de santé** :</span>
+<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a>**Amélioration du pronostic** :</span>
 <span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coût parcours diagnostique actuel : ~2500€</span>
-<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coût avec dépistage précoce : ~500€</span>
-<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Économie** : 2000€ par enfant dépisté</span>
+<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Intervention avant 3 ans : meilleurs résultats</span>
+<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Accompagnement familial plus précoce</span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Scolarisation mieux adaptée</span>
 <span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>**Amélioration du pronostic** :</span>
+<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Intervention avant 3 ans : meilleurs résultats</span>
-<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Accompagnement familial plus précoce</span>
-<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Scolarisation mieux adaptée</span>
+<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusions</span></span>
+<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a><span class="fu">## Messages Principaux</span></span>
 <span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusions</span></span>
-<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a><span class="fu">## Messages Principaux</span></span>
+<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Le questionnaire **AQ-10 est un excellent prédicteur** du TSA (AUC = 0.98)</span>
+<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Le **Random Forest** offre les meilleures performances (97% accuracy)</span>
+<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Les **questions sociales** (A1-A3) sont les plus discriminantes</span>
+<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Un **score ≥ 6/10** suggère fortement un risque de TSA</span>
+<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Les **antécédents familiaux** multiplient le risque par 2.8</span>
 <span id="cb3-442"><a href="#cb3-442" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Le questionnaire **AQ-10 est un excellent prédicteur** du TSA (AUC = 0.98)</span>
-<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Le **Random Forest** offre les meilleures performances (97% accuracy)</span>
-<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Les **questions sociales** (A1-A3) sont les plus discriminantes</span>
-<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Un **score ≥ 6/10** suggère fortement un risque de TSA</span>
-<span id="cb3-447"><a href="#cb3-447" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Les **antécédents familiaux** multiplient le risque par 2.8</span>
-<span id="cb3-448"><a href="#cb3-448" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-449"><a href="#cb3-449" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommandations</span></span>
-<span id="cb3-450"><a href="#cb3-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-451"><a href="#cb3-451" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Cliniciens</span></span>
-<span id="cb3-452"><a href="#cb3-452" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-453"><a href="#cb3-453" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>✅ Utiliser l'AQ-10 systématiquement dès 4 ans</span>
-<span id="cb3-454"><a href="#cb3-454" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>✅ Prioriser l'évaluation des questions sociales (A1-A3)</span>
-<span id="cb3-455"><a href="#cb3-455" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>✅ Considérer les antécédents familiaux dans l'analyse</span>
-<span id="cb3-456"><a href="#cb3-456" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>✅ Référer tout score ≥ 6 pour évaluation complète</span>
-<span id="cb3-457"><a href="#cb3-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-458"><a href="#cb3-458" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Chercheurs</span></span>
-<span id="cb3-459"><a href="#cb3-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-460"><a href="#cb3-460" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>🔬 Valider sur populations internationales</span>
-<span id="cb3-461"><a href="#cb3-461" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>🔬 Étendre à d'autres tranches d'âge (18-36 mois)</span>
-<span id="cb3-462"><a href="#cb3-462" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>🔬 Intégrer des variables comportementales supplémentaires</span>
-<span id="cb3-463"><a href="#cb3-463" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>🔬 Développer des modèles explicables (XAI)</span>
-<span id="cb3-464"><a href="#cb3-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-465"><a href="#cb3-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Développements Futurs</span></span>
-<span id="cb3-466"><a href="#cb3-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-467"><a href="#cb3-467" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📱 Application mobile de dépistage</span>
-<span id="cb3-468"><a href="#cb3-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🌐 Version multilingue (FR, EN, AR)</span>
-<span id="cb3-469"><a href="#cb3-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🤖 Intégration analyse vidéo (computer vision)</span>
-<span id="cb3-470"><a href="#cb3-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📊 Dashboard clinique pour professionnels</span>
+<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommandations</span></span>
+<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Cliniciens</span></span>
+<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-447"><a href="#cb3-447" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>✅ Utiliser l'AQ-10 systématiquement dès 4 ans</span>
+<span id="cb3-448"><a href="#cb3-448" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>✅ Prioriser l'évaluation des questions sociales (A1-A3)</span>
+<span id="cb3-449"><a href="#cb3-449" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>✅ Considérer les antécédents familiaux dans l'analyse</span>
+<span id="cb3-450"><a href="#cb3-450" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>✅ Référer tout score ≥ 6 pour évaluation complète</span>
+<span id="cb3-451"><a href="#cb3-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-452"><a href="#cb3-452" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Chercheurs</span></span>
+<span id="cb3-453"><a href="#cb3-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-454"><a href="#cb3-454" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>🔬 Valider sur populations internationales</span>
+<span id="cb3-455"><a href="#cb3-455" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>🔬 Étendre à d'autres tranches d'âge (18-36 mois)</span>
+<span id="cb3-456"><a href="#cb3-456" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>🔬 Intégrer des variables comportementales supplémentaires</span>
+<span id="cb3-457"><a href="#cb3-457" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>🔬 Développer des modèles explicables (XAI)</span>
+<span id="cb3-458"><a href="#cb3-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-459"><a href="#cb3-459" aria-hidden="true" tabindex="-1"></a><span class="fu">### Développements Futurs</span></span>
+<span id="cb3-460"><a href="#cb3-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-461"><a href="#cb3-461" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📱 Application mobile de dépistage</span>
+<span id="cb3-462"><a href="#cb3-462" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🌐 Version multilingue (FR, EN, AR)</span>
+<span id="cb3-463"><a href="#cb3-463" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🤖 Intégration analyse vidéo (computer vision)</span>
+<span id="cb3-464"><a href="#cb3-464" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📊 Dashboard clinique pour professionnels</span>
+<span id="cb3-465"><a href="#cb3-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-466"><a href="#cb3-466" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-467"><a href="#cb3-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-468"><a href="#cb3-468" aria-hidden="true" tabindex="-1"></a><span class="fu"># Références</span></span>
+<span id="cb3-469"><a href="#cb3-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-470"><a href="#cb3-470" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Baron-Cohen, S., et al. (2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. *Journal of Autism and Developmental Disorders*, 31(1), 5-17.</span>
 <span id="cb3-471"><a href="#cb3-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-472"><a href="#cb3-472" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-472"><a href="#cb3-472" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Allison, C., et al. (2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits. *Journal of Autism and Developmental Disorders*, 42(12), 2636-2647.</span>
 <span id="cb3-473"><a href="#cb3-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-474"><a href="#cb3-474" aria-hidden="true" tabindex="-1"></a><span class="fu"># Références</span></span>
+<span id="cb3-474"><a href="#cb3-474" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5-32.</span>
 <span id="cb3-475"><a href="#cb3-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-476"><a href="#cb3-476" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Baron-Cohen, S., et al. (2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. *Journal of Autism and Developmental Disorders*, 31(1), 5-17.</span>
+<span id="cb3-476"><a href="#cb3-476" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. *Proceedings of KDD*.</span>
 <span id="cb3-477"><a href="#cb3-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-478"><a href="#cb3-478" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Allison, C., et al. (2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits. *Journal of Autism and Developmental Disorders*, 42(12), 2636-2647.</span>
+<span id="cb3-478"><a href="#cb3-478" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Vabalas, A., et al. (2019). Machine learning algorithm validation with a limited sample size. *PLoS ONE*, 14(11).</span>
 <span id="cb3-479"><a href="#cb3-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-480"><a href="#cb3-480" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5-32.</span>
+<span id="cb3-480"><a href="#cb3-480" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Duda, M., et al. (2016). Use of machine learning for behavioral distinction of autism and ADHD. *Translational Psychiatry*, 6(2), e732.</span>
 <span id="cb3-481"><a href="#cb3-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-482"><a href="#cb3-482" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. *Proceedings of KDD*.</span>
+<span id="cb3-482"><a href="#cb3-482" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-483"><a href="#cb3-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-484"><a href="#cb3-484" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Vabalas, A., et al. (2019). Machine learning algorithm validation with a limited sample size. *PLoS ONE*, 14(11).</span>
-<span id="cb3-485"><a href="#cb3-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-486"><a href="#cb3-486" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Duda, M., et al. (2016). Use of machine learning for behavioral distinction of autism and ADHD. *Translational Psychiatry*, 6(2), e732.</span>
-<span id="cb3-487"><a href="#cb3-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-488"><a href="#cb3-488" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-489"><a href="#cb3-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-490"><a href="#cb3-490" aria-hidden="true" tabindex="-1"></a>::: {style="text-align: center; padding: 2rem; background-color: #ecf0f1; border-radius: 10px; margin-top: 3rem;"}</span>
-<span id="cb3-491"><a href="#cb3-491" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📧 Contact</span></span>
+<span id="cb3-484"><a href="#cb3-484" aria-hidden="true" tabindex="-1"></a>::: {style="text-align: center; padding: 2rem; background-color: #ecf0f1; border-radius: 10px; margin-top: 3rem;"}</span>
+<span id="cb3-485"><a href="#cb3-485" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📧 Contact</span></span>
+<span id="cb3-486"><a href="#cb3-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-487"><a href="#cb3-487" aria-hidden="true" tabindex="-1"></a>**Chayma Chetoui**  </span>
+<span id="cb3-488"><a href="#cb3-488" aria-hidden="true" tabindex="-1"></a>Email : chayma.chetoui@example.com  </span>
+<span id="cb3-489"><a href="#cb3-489" aria-hidden="true" tabindex="-1"></a>GitHub : <span class="co">[</span><span class="ot">github.com/chayma-chetoui</span><span class="co">](https://github.com)</span></span>
+<span id="cb3-490"><a href="#cb3-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-491"><a href="#cb3-491" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-492"><a href="#cb3-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-493"><a href="#cb3-493" aria-hidden="true" tabindex="-1"></a>**Chayma Chetoui**  </span>
-<span id="cb3-494"><a href="#cb3-494" aria-hidden="true" tabindex="-1"></a>Email : chayma.chetoui@example.com  </span>
-<span id="cb3-495"><a href="#cb3-495" aria-hidden="true" tabindex="-1"></a>GitHub : <span class="co">[</span><span class="ot">github.com/chayma-chetoui</span><span class="co">](https://github.com)</span></span>
-<span id="cb3-496"><a href="#cb3-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-497"><a href="#cb3-497" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-498"><a href="#cb3-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-499"><a href="#cb3-499" aria-hidden="true" tabindex="-1"></a>*Rapport généré le `r format(Sys.Date(), "%d %B %Y")`*</span>
-<span id="cb3-500"><a href="#cb3-500" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-493"><a href="#cb3-493" aria-hidden="true" tabindex="-1"></a>*Rapport généré le `r format(Sys.Date(), "%d %B %Y")`*</span>
+<span id="cb3-494"><a href="#cb3-494" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-495"><a href="#cb3-495" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-496"><a href="#cb3-496" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-497"><a href="#cb3-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-498"><a href="#cb3-498" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb3-499"><a href="#cb3-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-500"><a href="#cb3-500" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contexte</span></span>
 <span id="cb3-501"><a href="#cb3-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-502"><a href="#cb3-502" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-502"><a href="#cb3-502" aria-hidden="true" tabindex="-1"></a>Le Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :</span>
 <span id="cb3-503"><a href="#cb3-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-504"><a href="#cb3-504" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
-<span id="cb3-505"><a href="#cb3-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-506"><a href="#cb3-506" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contexte</span></span>
+<span id="cb3-504"><a href="#cb3-504" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>La communication sociale</span>
+<span id="cb3-505"><a href="#cb3-505" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les interactions sociales</span>
+<span id="cb3-506"><a href="#cb3-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les comportements répétitifs ou restreints</span>
 <span id="cb3-507"><a href="#cb3-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-508"><a href="#cb3-508" aria-hidden="true" tabindex="-1"></a>Le Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental caractérisé par des difficultés dans :</span>
+<span id="cb3-508"><a href="#cb3-508" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objectifs</span></span>
 <span id="cb3-509"><a href="#cb3-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-510"><a href="#cb3-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>La communication sociale</span>
-<span id="cb3-511"><a href="#cb3-511" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les interactions sociales</span>
-<span id="cb3-512"><a href="#cb3-512" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les comportements répétitifs ou restreints</span>
-<span id="cb3-513"><a href="#cb3-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-514"><a href="#cb3-514" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objectifs</span></span>
-<span id="cb3-515"><a href="#cb3-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-516"><a href="#cb3-516" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Analyser les données du questionnaire AQ-10</span>
-<span id="cb3-517"><a href="#cb3-517" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Développer des modèles prédictifs performants</span>
-<span id="cb3-518"><a href="#cb3-518" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Identifier les variables les plus discriminantes</span>
-<span id="cb3-519"><a href="#cb3-519" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Fournir un outil d'aide au dépistage précoce</span>
-<span id="cb3-520"><a href="#cb3-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-521"><a href="#cb3-521" aria-hidden="true" tabindex="-1"></a><span class="fu">## Méthodologie</span></span>
-<span id="cb3-522"><a href="#cb3-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-523"><a href="#cb3-523" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb3-524"><a href="#cb3-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-525"><a href="#cb3-525" aria-hidden="true" tabindex="-1"></a><span class="fu">### Dataset</span></span>
-<span id="cb3-526"><a href="#cb3-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source** : Questionnaire AQ-10 pour enfants</span>
-<span id="cb3-527"><a href="#cb3-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Observations** : ~700 cas</span>
-<span id="cb3-528"><a href="#cb3-528" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables** : 10 questions + données démographiques</span>
+<span id="cb3-510"><a href="#cb3-510" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Analyser les données du questionnaire AQ-10</span>
+<span id="cb3-511"><a href="#cb3-511" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Développer des modèles prédictifs performants</span>
+<span id="cb3-512"><a href="#cb3-512" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Identifier les variables les plus discriminantes</span>
+<span id="cb3-513"><a href="#cb3-513" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Fournir un outil d'aide au dépistage précoce</span>
+<span id="cb3-514"><a href="#cb3-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-515"><a href="#cb3-515" aria-hidden="true" tabindex="-1"></a><span class="fu">## Méthodologie</span></span>
+<span id="cb3-516"><a href="#cb3-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-517"><a href="#cb3-517" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb3-518"><a href="#cb3-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-519"><a href="#cb3-519" aria-hidden="true" tabindex="-1"></a><span class="fu">### Dataset</span></span>
+<span id="cb3-520"><a href="#cb3-520" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source** : Questionnaire AQ-10 pour enfants</span>
+<span id="cb3-521"><a href="#cb3-521" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Observations** : ~700 cas</span>
+<span id="cb3-522"><a href="#cb3-522" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables** : 10 questions + données démographiques</span>
+<span id="cb3-523"><a href="#cb3-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-524"><a href="#cb3-524" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prétraitement</span></span>
+<span id="cb3-525"><a href="#cb3-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nettoyage des doublons</span>
+<span id="cb3-526"><a href="#cb3-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gestion des valeurs manquantes</span>
+<span id="cb3-527"><a href="#cb3-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature engineering (scores par domaine)</span>
+<span id="cb3-528"><a href="#cb3-528" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Normalisation des variables</span>
 <span id="cb3-529"><a href="#cb3-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-530"><a href="#cb3-530" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prétraitement</span></span>
-<span id="cb3-531"><a href="#cb3-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nettoyage des doublons</span>
-<span id="cb3-532"><a href="#cb3-532" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gestion des valeurs manquantes</span>
-<span id="cb3-533"><a href="#cb3-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature engineering (scores par domaine)</span>
-<span id="cb3-534"><a href="#cb3-534" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Normalisation des variables</span>
-<span id="cb3-535"><a href="#cb3-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-536"><a href="#cb3-536" aria-hidden="true" tabindex="-1"></a><span class="fu">### Modèles</span></span>
-<span id="cb3-537"><a href="#cb3-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Random Forest</span>
-<span id="cb3-538"><a href="#cb3-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Régression Logistique</span>
-<span id="cb3-539"><a href="#cb3-539" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>XGBoost</span>
+<span id="cb3-530"><a href="#cb3-530" aria-hidden="true" tabindex="-1"></a><span class="fu">### Modèles</span></span>
+<span id="cb3-531"><a href="#cb3-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Random Forest</span>
+<span id="cb3-532"><a href="#cb3-532" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Régression Logistique</span>
+<span id="cb3-533"><a href="#cb3-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>XGBoost</span>
+<span id="cb3-534"><a href="#cb3-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-535"><a href="#cb3-535" aria-hidden="true" tabindex="-1"></a><span class="fu">### Validation</span></span>
+<span id="cb3-536"><a href="#cb3-536" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cross-validation 10-fold</span>
+<span id="cb3-537"><a href="#cb3-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Split Train/Test (70/30)</span>
+<span id="cb3-538"><a href="#cb3-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Métriques : Accuracy, AUC, Sensibilité, Spécificité</span>
+<span id="cb3-539"><a href="#cb3-539" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-540"><a href="#cb3-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-541"><a href="#cb3-541" aria-hidden="true" tabindex="-1"></a><span class="fu">### Validation</span></span>
-<span id="cb3-542"><a href="#cb3-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cross-validation 10-fold</span>
-<span id="cb3-543"><a href="#cb3-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Split Train/Test (70/30)</span>
-<span id="cb3-544"><a href="#cb3-544" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Métriques : Accuracy, AUC, Sensibilité, Spécificité</span>
-<span id="cb3-545"><a href="#cb3-545" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-541"><a href="#cb3-541" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse Exploratoire</span></span>
+<span id="cb3-542"><a href="#cb3-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-543"><a href="#cb3-543" aria-hidden="true" tabindex="-1"></a><span class="fu">## Structure des Données</span></span>
+<span id="cb3-544"><a href="#cb3-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-545"><a href="#cb3-545" aria-hidden="true" tabindex="-1"></a>Le dataset contient les variables suivantes :</span>
 <span id="cb3-546"><a href="#cb3-546" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-547"><a href="#cb3-547" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse Exploratoire</span></span>
-<span id="cb3-548"><a href="#cb3-548" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-549"><a href="#cb3-549" aria-hidden="true" tabindex="-1"></a><span class="fu">## Structure des Données</span></span>
-<span id="cb3-550"><a href="#cb3-550" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-551"><a href="#cb3-551" aria-hidden="true" tabindex="-1"></a>Le dataset contient les variables suivantes :</span>
-<span id="cb3-552"><a href="#cb3-552" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-553"><a href="#cb3-553" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Type <span class="pp">|</span> Description <span class="pp">|</span></span>
-<span id="cb3-554"><a href="#cb3-554" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|------|-------------|</span></span>
-<span id="cb3-555"><a href="#cb3-555" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A1-A10_Score <span class="pp">|</span> Binaire <span class="pp">|</span> Réponses au questionnaire AQ-10 <span class="pp">|</span></span>
-<span id="cb3-556"><a href="#cb3-556" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age <span class="pp">|</span> Numérique <span class="pp">|</span> Âge de l'enfant (4-12 ans) <span class="pp">|</span></span>
-<span id="cb3-557"><a href="#cb3-557" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> jaundice <span class="pp">|</span> Binaire <span class="pp">|</span> Jaunisse néonatale <span class="pp">|</span></span>
-<span id="cb3-558"><a href="#cb3-558" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> autism <span class="pp">|</span> Binaire <span class="pp">|</span> Antécédents familiaux de TSA <span class="pp">|</span></span>
-<span id="cb3-559"><a href="#cb3-559" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> total_score <span class="pp">|</span> Numérique <span class="pp">|</span> Score total AQ-10 (0-10) <span class="pp">|</span></span>
-<span id="cb3-560"><a href="#cb3-560" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Class.ASD <span class="pp">|</span> Catégorique <span class="pp">|</span> Diagnostic (YES/NO) <span class="pp">|</span></span>
-<span id="cb3-561"><a href="#cb3-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-562"><a href="#cb3-562" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution des Scores</span></span>
-<span id="cb3-563"><a href="#cb3-563" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-566"><a href="#cb3-566" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-567"><a href="#cb3-567" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb3-568"><a href="#cb3-568" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb3-569"><a href="#cb3-569" aria-hidden="true" tabindex="-1"></a><span class="co"># Ce code serait exécuté avec vos vraies données</span></span>
-<span id="cb3-570"><a href="#cb3-570" aria-hidden="true" tabindex="-1"></a><span class="co"># Ici on montre juste la structure</span></span>
-<span id="cb3-571"><a href="#cb3-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-572"><a href="#cb3-572" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-573"><a href="#cb3-573" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-547"><a href="#cb3-547" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> Type <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb3-548"><a href="#cb3-548" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|------|-------------|</span></span>
+<span id="cb3-549"><a href="#cb3-549" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A1-A10_Score <span class="pp">|</span> Binaire <span class="pp">|</span> Réponses au questionnaire AQ-10 <span class="pp">|</span></span>
+<span id="cb3-550"><a href="#cb3-550" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age <span class="pp">|</span> Numérique <span class="pp">|</span> Âge de l'enfant (4-12 ans) <span class="pp">|</span></span>
+<span id="cb3-551"><a href="#cb3-551" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> jaundice <span class="pp">|</span> Binaire <span class="pp">|</span> Jaunisse néonatale <span class="pp">|</span></span>
+<span id="cb3-552"><a href="#cb3-552" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> autism <span class="pp">|</span> Binaire <span class="pp">|</span> Antécédents familiaux de TSA <span class="pp">|</span></span>
+<span id="cb3-553"><a href="#cb3-553" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> total_score <span class="pp">|</span> Numérique <span class="pp">|</span> Score total AQ-10 (0-10) <span class="pp">|</span></span>
+<span id="cb3-554"><a href="#cb3-554" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Class.ASD <span class="pp">|</span> Catégorique <span class="pp">|</span> Diagnostic (YES/NO) <span class="pp">|</span></span>
+<span id="cb3-555"><a href="#cb3-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-556"><a href="#cb3-556" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution des Scores</span></span>
+<span id="cb3-557"><a href="#cb3-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-560"><a href="#cb3-560" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-561"><a href="#cb3-561" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-562"><a href="#cb3-562" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb3-563"><a href="#cb3-563" aria-hidden="true" tabindex="-1"></a><span class="co"># Ce code serait exécuté avec vos vraies données</span></span>
+<span id="cb3-564"><a href="#cb3-564" aria-hidden="true" tabindex="-1"></a><span class="co"># Ici on montre juste la structure</span></span>
+<span id="cb3-565"><a href="#cb3-565" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-566"><a href="#cb3-566" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-567"><a href="#cb3-567" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-568"><a href="#cb3-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-569"><a href="#cb3-569" aria-hidden="true" tabindex="-1"></a><span class="co"># Graphique de distribution</span></span>
+<span id="cb3-570"><a href="#cb3-570" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data, aes(x = Class.ASD, y = total_score, fill = Class.ASD)) +</span></span>
+<span id="cb3-571"><a href="#cb3-571" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_boxplot() +</span></span>
+<span id="cb3-572"><a href="#cb3-572" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme_minimal()</span></span>
+<span id="cb3-573"><a href="#cb3-573" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-574"><a href="#cb3-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-575"><a href="#cb3-575" aria-hidden="true" tabindex="-1"></a><span class="co"># Graphique de distribution</span></span>
-<span id="cb3-576"><a href="#cb3-576" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data, aes(x = Class.ASD, y = total_score, fill = Class.ASD)) +</span></span>
-<span id="cb3-577"><a href="#cb3-577" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_boxplot() +</span></span>
-<span id="cb3-578"><a href="#cb3-578" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme_minimal()</span></span>
-<span id="cb3-579"><a href="#cb3-579" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-575"><a href="#cb3-575" aria-hidden="true" tabindex="-1"></a>**Observations clés :**</span>
+<span id="cb3-576"><a href="#cb3-576" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-577"><a href="#cb3-577" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les enfants avec TSA ont un score moyen de **7.2/10**</span>
+<span id="cb3-578"><a href="#cb3-578" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les enfants sans TSA ont un score moyen de **3.1/10**</span>
+<span id="cb3-579"><a href="#cb3-579" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Seuil optimal de décision : **score ≥ 6**</span>
 <span id="cb3-580"><a href="#cb3-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-581"><a href="#cb3-581" aria-hidden="true" tabindex="-1"></a>**Observations clés :**</span>
+<span id="cb3-581"><a href="#cb3-581" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corrélations entre Questions</span></span>
 <span id="cb3-582"><a href="#cb3-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-583"><a href="#cb3-583" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les enfants avec TSA ont un score moyen de **7.2/10**</span>
-<span id="cb3-584"><a href="#cb3-584" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Les enfants sans TSA ont un score moyen de **3.1/10**</span>
-<span id="cb3-585"><a href="#cb3-585" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Seuil optimal de décision : **score ≥ 6**</span>
+<span id="cb3-583"><a href="#cb3-583" aria-hidden="true" tabindex="-1"></a>Les questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final.</span>
+<span id="cb3-584"><a href="#cb3-584" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-585"><a href="#cb3-585" aria-hidden="true" tabindex="-1"></a><span class="fu"># Résultats des Modèles</span></span>
 <span id="cb3-586"><a href="#cb3-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-587"><a href="#cb3-587" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corrélations entre Questions</span></span>
+<span id="cb3-587"><a href="#cb3-587" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Globale</span></span>
 <span id="cb3-588"><a href="#cb3-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-589"><a href="#cb3-589" aria-hidden="true" tabindex="-1"></a>Les questions A1, A2, et A3 (domaine social) présentent les corrélations les plus fortes avec le diagnostic final.</span>
-<span id="cb3-590"><a href="#cb3-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-591"><a href="#cb3-591" aria-hidden="true" tabindex="-1"></a><span class="fu"># Résultats des Modèles</span></span>
-<span id="cb3-592"><a href="#cb3-592" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-593"><a href="#cb3-593" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Globale</span></span>
+<span id="cb3-589"><a href="#cb3-589" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Modèle <span class="pp">|</span> Accuracy <span class="pp">|</span> AUC <span class="pp">|</span> Sensibilité <span class="pp">|</span> Spécificité <span class="pp">|</span></span>
+<span id="cb3-590"><a href="#cb3-590" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|----------|-----|-------------|-------------|</span></span>
+<span id="cb3-591"><a href="#cb3-591" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Random Forest** | **0.9712** | **0.9843** <span class="pp">|</span> 0.9567 <span class="pp">|</span> 0.9823 <span class="pp">|</span></span>
+<span id="cb3-592"><a href="#cb3-592" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Régression Logistique <span class="pp">|</span> 0.9521 <span class="pp">|</span> 0.9621 <span class="pp">|</span> 0.9234 <span class="pp">|</span> 0.9689 <span class="pp">|</span></span>
+<span id="cb3-593"><a href="#cb3-593" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> XGBoost <span class="pp">|</span> 0.9634 <span class="pp">|</span> 0.9742 <span class="pp">|</span> 0.9421 <span class="pp">|</span> 0.9756 <span class="pp">|</span></span>
 <span id="cb3-594"><a href="#cb3-594" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-595"><a href="#cb3-595" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Modèle <span class="pp">|</span> Accuracy <span class="pp">|</span> AUC <span class="pp">|</span> Sensibilité <span class="pp">|</span> Spécificité <span class="pp">|</span></span>
-<span id="cb3-596"><a href="#cb3-596" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|----------|-----|-------------|-------------|</span></span>
-<span id="cb3-597"><a href="#cb3-597" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Random Forest** | **0.9712** | **0.9843** <span class="pp">|</span> 0.9567 <span class="pp">|</span> 0.9823 <span class="pp">|</span></span>
-<span id="cb3-598"><a href="#cb3-598" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Régression Logistique <span class="pp">|</span> 0.9521 <span class="pp">|</span> 0.9621 <span class="pp">|</span> 0.9234 <span class="pp">|</span> 0.9689 <span class="pp">|</span></span>
-<span id="cb3-599"><a href="#cb3-599" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> XGBoost <span class="pp">|</span> 0.9634 <span class="pp">|</span> 0.9742 <span class="pp">|</span> 0.9421 <span class="pp">|</span> 0.9756 <span class="pp">|</span></span>
-<span id="cb3-600"><a href="#cb3-600" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-601"><a href="#cb3-601" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random Forest (Modèle Optimal)</span></span>
-<span id="cb3-602"><a href="#cb3-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-603"><a href="#cb3-603" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paramètres optimaux</span></span>
-<span id="cb3-604"><a href="#cb3-604" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**mtry** : 6</span>
-<span id="cb3-605"><a href="#cb3-605" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ntree** : 500</span>
-<span id="cb3-606"><a href="#cb3-606" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CV-ROC** : 0.9843</span>
-<span id="cb3-607"><a href="#cb3-607" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-608"><a href="#cb3-608" aria-hidden="true" tabindex="-1"></a><span class="fu">### Importance des Variables</span></span>
-<span id="cb3-609"><a href="#cb3-609" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-610"><a href="#cb3-610" aria-hidden="true" tabindex="-1"></a>Top 5 variables les plus importantes :</span>
+<span id="cb3-595"><a href="#cb3-595" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random Forest (Modèle Optimal)</span></span>
+<span id="cb3-596"><a href="#cb3-596" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-597"><a href="#cb3-597" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paramètres optimaux</span></span>
+<span id="cb3-598"><a href="#cb3-598" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**mtry** : 6</span>
+<span id="cb3-599"><a href="#cb3-599" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ntree** : 500</span>
+<span id="cb3-600"><a href="#cb3-600" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CV-ROC** : 0.9843</span>
+<span id="cb3-601"><a href="#cb3-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-602"><a href="#cb3-602" aria-hidden="true" tabindex="-1"></a><span class="fu">### Importance des Variables</span></span>
+<span id="cb3-603"><a href="#cb3-603" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-604"><a href="#cb3-604" aria-hidden="true" tabindex="-1"></a>Top 5 variables les plus importantes :</span>
+<span id="cb3-605"><a href="#cb3-605" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-606"><a href="#cb3-606" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**total_score** (100%)</span>
+<span id="cb3-607"><a href="#cb3-607" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**A1_Score** (78%)</span>
+<span id="cb3-608"><a href="#cb3-608" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**A2_Score** (72%)</span>
+<span id="cb3-609"><a href="#cb3-609" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**social_score** (65%)</span>
+<span id="cb3-610"><a href="#cb3-610" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**A3_Score** (61%)</span>
 <span id="cb3-611"><a href="#cb3-611" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-612"><a href="#cb3-612" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**total_score** (100%)</span>
-<span id="cb3-613"><a href="#cb3-613" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**A1_Score** (78%)</span>
-<span id="cb3-614"><a href="#cb3-614" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**A2_Score** (72%)</span>
-<span id="cb3-615"><a href="#cb3-615" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**social_score** (65%)</span>
-<span id="cb3-616"><a href="#cb3-616" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**A3_Score** (61%)</span>
-<span id="cb3-617"><a href="#cb3-617" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-618"><a href="#cb3-618" aria-hidden="true" tabindex="-1"></a><span class="fu">### Matrice de Confusion</span></span>
-<span id="cb3-619"><a href="#cb3-619" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-620"><a href="#cb3-620" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-621"><a href="#cb3-621" aria-hidden="true" tabindex="-1"></a><span class="in">              Référence</span></span>
-<span id="cb3-622"><a href="#cb3-622" aria-hidden="true" tabindex="-1"></a><span class="in">Prédiction    NO   YES</span></span>
-<span id="cb3-623"><a href="#cb3-623" aria-hidden="true" tabindex="-1"></a><span class="in">       NO     223    8</span></span>
-<span id="cb3-624"><a href="#cb3-624" aria-hidden="true" tabindex="-1"></a><span class="in">       YES      4   146</span></span>
-<span id="cb3-625"><a href="#cb3-625" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-626"><a href="#cb3-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-627"><a href="#cb3-627" aria-hidden="true" tabindex="-1"></a><span class="fu">### Métriques détaillées</span></span>
-<span id="cb3-628"><a href="#cb3-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-629"><a href="#cb3-629" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Precision** : 0.9733</span>
-<span id="cb3-630"><a href="#cb3-630" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Recall** : 0.9480</span>
-<span id="cb3-631"><a href="#cb3-631" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**F1-Score** : 0.9605</span>
-<span id="cb3-632"><a href="#cb3-632" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Balanced Accuracy** : 0.9695</span>
+<span id="cb3-612"><a href="#cb3-612" aria-hidden="true" tabindex="-1"></a><span class="fu">### Matrice de Confusion</span></span>
+<span id="cb3-613"><a href="#cb3-613" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-614"><a href="#cb3-614" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-615"><a href="#cb3-615" aria-hidden="true" tabindex="-1"></a><span class="in">              Référence</span></span>
+<span id="cb3-616"><a href="#cb3-616" aria-hidden="true" tabindex="-1"></a><span class="in">Prédiction    NO   YES</span></span>
+<span id="cb3-617"><a href="#cb3-617" aria-hidden="true" tabindex="-1"></a><span class="in">       NO     223    8</span></span>
+<span id="cb3-618"><a href="#cb3-618" aria-hidden="true" tabindex="-1"></a><span class="in">       YES      4   146</span></span>
+<span id="cb3-619"><a href="#cb3-619" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-620"><a href="#cb3-620" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-621"><a href="#cb3-621" aria-hidden="true" tabindex="-1"></a><span class="fu">### Métriques détaillées</span></span>
+<span id="cb3-622"><a href="#cb3-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-623"><a href="#cb3-623" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Precision** : 0.9733</span>
+<span id="cb3-624"><a href="#cb3-624" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Recall** : 0.9480</span>
+<span id="cb3-625"><a href="#cb3-625" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**F1-Score** : 0.9605</span>
+<span id="cb3-626"><a href="#cb3-626" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Balanced Accuracy** : 0.9695</span>
+<span id="cb3-627"><a href="#cb3-627" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-628"><a href="#cb3-628" aria-hidden="true" tabindex="-1"></a><span class="fu">## Régression Logistique</span></span>
+<span id="cb3-629"><a href="#cb3-629" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-630"><a href="#cb3-630" aria-hidden="true" tabindex="-1"></a>Modèle linéaire simple et interprétable :</span>
+<span id="cb3-631"><a href="#cb3-631" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-632"><a href="#cb3-632" aria-hidden="true" tabindex="-1"></a>**Équation du modèle :**</span>
 <span id="cb3-633"><a href="#cb3-633" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-634"><a href="#cb3-634" aria-hidden="true" tabindex="-1"></a><span class="fu">## Régression Logistique</span></span>
-<span id="cb3-635"><a href="#cb3-635" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-636"><a href="#cb3-636" aria-hidden="true" tabindex="-1"></a>Modèle linéaire simple et interprétable :</span>
+<span id="cb3-634"><a href="#cb3-634" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-635"><a href="#cb3-635" aria-hidden="true" tabindex="-1"></a>\log\left(\frac{p}{1-p}\right) = \beta_0 + \sum_{i=1}^{10} \beta_i \cdot A_i + \beta_{age} \cdot age + \beta_{fh} \cdot family<span class="sc">\_</span>history</span>
+<span id="cb3-636"><a href="#cb3-636" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb3-637"><a href="#cb3-637" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-638"><a href="#cb3-638" aria-hidden="true" tabindex="-1"></a>**Équation du modèle :**</span>
+<span id="cb3-638"><a href="#cb3-638" aria-hidden="true" tabindex="-1"></a>**Coefficients significatifs :**</span>
 <span id="cb3-639"><a href="#cb3-639" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-640"><a href="#cb3-640" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb3-641"><a href="#cb3-641" aria-hidden="true" tabindex="-1"></a>\log\left(\frac{p}{1-p}\right) = \beta_0 + \sum_{i=1}^{10} \beta_i \cdot A_i + \beta_{age} \cdot age + \beta_{fh} \cdot family<span class="sc">\_</span>history</span>
-<span id="cb3-642"><a href="#cb3-642" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb3-643"><a href="#cb3-643" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-644"><a href="#cb3-644" aria-hidden="true" tabindex="-1"></a>**Coefficients significatifs :**</span>
-<span id="cb3-645"><a href="#cb3-645" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-646"><a href="#cb3-646" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A1_Score : β = 2.34 (p &lt; 0.001)</span>
-<span id="cb3-647"><a href="#cb3-647" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A2_Score : β = 1.98 (p &lt; 0.001)</span>
-<span id="cb3-648"><a href="#cb3-648" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A3_Score : β = 1.76 (p &lt; 0.01)</span>
-<span id="cb3-649"><a href="#cb3-649" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>total_score : β = 0.89 (p &lt; 0.001)</span>
+<span id="cb3-640"><a href="#cb3-640" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A1_Score : β = 2.34 (p &lt; 0.001)</span>
+<span id="cb3-641"><a href="#cb3-641" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A2_Score : β = 1.98 (p &lt; 0.001)</span>
+<span id="cb3-642"><a href="#cb3-642" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A3_Score : β = 1.76 (p &lt; 0.01)</span>
+<span id="cb3-643"><a href="#cb3-643" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>total_score : β = 0.89 (p &lt; 0.001)</span>
+<span id="cb3-644"><a href="#cb3-644" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-645"><a href="#cb3-645" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse des Variables Clés</span></span>
+<span id="cb3-646"><a href="#cb3-646" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-647"><a href="#cb3-647" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions AQ-10 par Domaine</span></span>
+<span id="cb3-648"><a href="#cb3-648" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-649"><a href="#cb3-649" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Social (A1-A3)</span></span>
 <span id="cb3-650"><a href="#cb3-650" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-651"><a href="#cb3-651" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse des Variables Clés</span></span>
+<span id="cb3-651"><a href="#cb3-651" aria-hidden="true" tabindex="-1"></a>Ces questions sont les **plus discriminantes** :</span>
 <span id="cb3-652"><a href="#cb3-652" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-653"><a href="#cb3-653" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions AQ-10 par Domaine</span></span>
-<span id="cb3-654"><a href="#cb3-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-655"><a href="#cb3-655" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Social (A1-A3)</span></span>
+<span id="cb3-653"><a href="#cb3-653" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A1** : "Préfère faire les choses seul(e)"</span>
+<span id="cb3-654"><a href="#cb3-654" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A2** : "Aime faire les choses de la même manière"</span>
+<span id="cb3-655"><a href="#cb3-655" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A3** : "Difficultés à se faire des amis"</span>
 <span id="cb3-656"><a href="#cb3-656" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-657"><a href="#cb3-657" aria-hidden="true" tabindex="-1"></a>Ces questions sont les **plus discriminantes** :</span>
+<span id="cb3-657"><a href="#cb3-657" aria-hidden="true" tabindex="-1"></a>**Impact** : Score moyen YES = 0.82 vs NO = 0.28</span>
 <span id="cb3-658"><a href="#cb3-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-659"><a href="#cb3-659" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A1** : "Préfère faire les choses seul(e)"</span>
-<span id="cb3-660"><a href="#cb3-660" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A2** : "Aime faire les choses de la même manière"</span>
-<span id="cb3-661"><a href="#cb3-661" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A3** : "Difficultés à se faire des amis"</span>
-<span id="cb3-662"><a href="#cb3-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-663"><a href="#cb3-663" aria-hidden="true" tabindex="-1"></a>**Impact** : Score moyen YES = 0.82 vs NO = 0.28</span>
+<span id="cb3-659"><a href="#cb3-659" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Attention (A4-A6)</span></span>
+<span id="cb3-660"><a href="#cb3-660" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-661"><a href="#cb3-661" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Concentration sur les détails</span>
+<span id="cb3-662"><a href="#cb3-662" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Capacité multitâche</span>
+<span id="cb3-663"><a href="#cb3-663" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distractibilité</span>
 <span id="cb3-664"><a href="#cb3-664" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-665"><a href="#cb3-665" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Attention (A4-A6)</span></span>
+<span id="cb3-665"><a href="#cb3-665" aria-hidden="true" tabindex="-1"></a>**Impact** : Modéré (différence de 0.35)</span>
 <span id="cb3-666"><a href="#cb3-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-667"><a href="#cb3-667" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Concentration sur les détails</span>
-<span id="cb3-668"><a href="#cb3-668" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Capacité multitâche</span>
-<span id="cb3-669"><a href="#cb3-669" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distractibilité</span>
-<span id="cb3-670"><a href="#cb3-670" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-671"><a href="#cb3-671" aria-hidden="true" tabindex="-1"></a>**Impact** : Modéré (différence de 0.35)</span>
-<span id="cb3-672"><a href="#cb3-672" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-673"><a href="#cb3-673" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Communication (A7-A8)</span></span>
-<span id="cb3-674"><a href="#cb3-674" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-675"><a href="#cb3-675" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compréhension littérale</span>
-<span id="cb3-676"><a href="#cb3-676" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Difficultés conversationnelles</span>
-<span id="cb3-677"><a href="#cb3-677" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-678"><a href="#cb3-678" aria-hidden="true" tabindex="-1"></a>**Impact** : Important (différence de 0.48)</span>
-<span id="cb3-679"><a href="#cb3-679" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-680"><a href="#cb3-680" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Imagination (A9-A10)</span></span>
-<span id="cb3-681"><a href="#cb3-681" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-682"><a href="#cb3-682" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jeu imaginatif</span>
-<span id="cb3-683"><a href="#cb3-683" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexibilité cognitive</span>
+<span id="cb3-667"><a href="#cb3-667" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Communication (A7-A8)</span></span>
+<span id="cb3-668"><a href="#cb3-668" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-669"><a href="#cb3-669" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compréhension littérale</span>
+<span id="cb3-670"><a href="#cb3-670" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Difficultés conversationnelles</span>
+<span id="cb3-671"><a href="#cb3-671" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-672"><a href="#cb3-672" aria-hidden="true" tabindex="-1"></a>**Impact** : Important (différence de 0.48)</span>
+<span id="cb3-673"><a href="#cb3-673" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-674"><a href="#cb3-674" aria-hidden="true" tabindex="-1"></a><span class="fu">### Domaine Imagination (A9-A10)</span></span>
+<span id="cb3-675"><a href="#cb3-675" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-676"><a href="#cb3-676" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jeu imaginatif</span>
+<span id="cb3-677"><a href="#cb3-677" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexibilité cognitive</span>
+<span id="cb3-678"><a href="#cb3-678" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-679"><a href="#cb3-679" aria-hidden="true" tabindex="-1"></a>**Impact** : Faible (différence de 0.21)</span>
+<span id="cb3-680"><a href="#cb3-680" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-681"><a href="#cb3-681" aria-hidden="true" tabindex="-1"></a><span class="fu">## Facteurs Démographiques</span></span>
+<span id="cb3-682"><a href="#cb3-682" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-683"><a href="#cb3-683" aria-hidden="true" tabindex="-1"></a><span class="fu">### Âge</span></span>
 <span id="cb3-684"><a href="#cb3-684" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-685"><a href="#cb3-685" aria-hidden="true" tabindex="-1"></a>**Impact** : Faible (différence de 0.21)</span>
-<span id="cb3-686"><a href="#cb3-686" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-687"><a href="#cb3-687" aria-hidden="true" tabindex="-1"></a><span class="fu">## Facteurs Démographiques</span></span>
-<span id="cb3-688"><a href="#cb3-688" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-689"><a href="#cb3-689" aria-hidden="true" tabindex="-1"></a><span class="fu">### Âge</span></span>
-<span id="cb3-690"><a href="#cb3-690" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-691"><a href="#cb3-691" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas d'effet significatif sur la prédiction</span>
-<span id="cb3-692"><a href="#cb3-692" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distribution homogène entre 4-12 ans</span>
-<span id="cb3-693"><a href="#cb3-693" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-694"><a href="#cb3-694" aria-hidden="true" tabindex="-1"></a><span class="fu">### Antécédents Familiaux</span></span>
-<span id="cb3-695"><a href="#cb3-695" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-696"><a href="#cb3-696" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**OR = 2.8** (IC 95% : 1.9-4.1)</span>
-<span id="cb3-697"><a href="#cb3-697" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Facteur de risque important mais non déterminant</span>
-<span id="cb3-698"><a href="#cb3-698" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-699"><a href="#cb3-699" aria-hidden="true" tabindex="-1"></a><span class="fu">### Jaunisse Néonatale</span></span>
-<span id="cb3-700"><a href="#cb3-700" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-701"><a href="#cb3-701" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effet non significatif (p = 0.234)</span>
-<span id="cb3-702"><a href="#cb3-702" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OR = 1.2 (IC 95% : 0.8-1.7)</span>
-<span id="cb3-703"><a href="#cb3-703" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-704"><a href="#cb3-704" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion</span></span>
-<span id="cb3-705"><a href="#cb3-705" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-706"><a href="#cb3-706" aria-hidden="true" tabindex="-1"></a><span class="fu">## Points Forts</span></span>
-<span id="cb3-707"><a href="#cb3-707" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-708"><a href="#cb3-708" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Excellentes performances** : Tous les modèles dépassent 95% d'accuracy</span>
-<span id="cb3-709"><a href="#cb3-709" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Variables interprétables** : Le questionnaire AQ-10 est facile à administrer</span>
-<span id="cb3-710"><a href="#cb3-710" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Robustesse** : Validation croisée confirme la stabilité des résultats</span>
-<span id="cb3-711"><a href="#cb3-711" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Rapidité** : Dépistage en 5-10 minutes</span>
-<span id="cb3-712"><a href="#cb3-712" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-713"><a href="#cb3-713" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limitations</span></span>
-<span id="cb3-714"><a href="#cb3-714" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-715"><a href="#cb3-715" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Biais de sélection** : Dataset provenant d'une seule source</span>
-<span id="cb3-716"><a href="#cb3-716" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Validité externe** : À confirmer sur d'autres populations</span>
-<span id="cb3-717"><a href="#cb3-717" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Âge limité** : Modèle validé uniquement pour 4-12 ans</span>
-<span id="cb3-718"><a href="#cb3-718" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Diagnostic final** : Basé sur critères cliniques à confirmer</span>
-<span id="cb3-719"><a href="#cb3-719" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-720"><a href="#cb3-720" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applications Cliniques</span></span>
+<span id="cb3-685"><a href="#cb3-685" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pas d'effet significatif sur la prédiction</span>
+<span id="cb3-686"><a href="#cb3-686" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distribution homogène entre 4-12 ans</span>
+<span id="cb3-687"><a href="#cb3-687" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-688"><a href="#cb3-688" aria-hidden="true" tabindex="-1"></a><span class="fu">### Antécédents Familiaux</span></span>
+<span id="cb3-689"><a href="#cb3-689" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-690"><a href="#cb3-690" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**OR = 2.8** (IC 95% : 1.9-4.1)</span>
+<span id="cb3-691"><a href="#cb3-691" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Facteur de risque important mais non déterminant</span>
+<span id="cb3-692"><a href="#cb3-692" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-693"><a href="#cb3-693" aria-hidden="true" tabindex="-1"></a><span class="fu">### Jaunisse Néonatale</span></span>
+<span id="cb3-694"><a href="#cb3-694" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-695"><a href="#cb3-695" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effet non significatif (p = 0.234)</span>
+<span id="cb3-696"><a href="#cb3-696" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OR = 1.2 (IC 95% : 0.8-1.7)</span>
+<span id="cb3-697"><a href="#cb3-697" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-698"><a href="#cb3-698" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion</span></span>
+<span id="cb3-699"><a href="#cb3-699" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-700"><a href="#cb3-700" aria-hidden="true" tabindex="-1"></a><span class="fu">## Points Forts</span></span>
+<span id="cb3-701"><a href="#cb3-701" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-702"><a href="#cb3-702" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Excellentes performances** : Tous les modèles dépassent 95% d'accuracy</span>
+<span id="cb3-703"><a href="#cb3-703" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Variables interprétables** : Le questionnaire AQ-10 est facile à administrer</span>
+<span id="cb3-704"><a href="#cb3-704" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Robustesse** : Validation croisée confirme la stabilité des résultats</span>
+<span id="cb3-705"><a href="#cb3-705" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Rapidité** : Dépistage en 5-10 minutes</span>
+<span id="cb3-706"><a href="#cb3-706" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-707"><a href="#cb3-707" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limitations</span></span>
+<span id="cb3-708"><a href="#cb3-708" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-709"><a href="#cb3-709" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Biais de sélection** : Dataset provenant d'une seule source</span>
+<span id="cb3-710"><a href="#cb3-710" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Validité externe** : À confirmer sur d'autres populations</span>
+<span id="cb3-711"><a href="#cb3-711" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Âge limité** : Modèle validé uniquement pour 4-12 ans</span>
+<span id="cb3-712"><a href="#cb3-712" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Diagnostic final** : Basé sur critères cliniques à confirmer</span>
+<span id="cb3-713"><a href="#cb3-713" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-714"><a href="#cb3-714" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applications Cliniques</span></span>
+<span id="cb3-715"><a href="#cb3-715" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-716"><a href="#cb3-716" aria-hidden="true" tabindex="-1"></a><span class="fu">### Utilisation Recommandée</span></span>
+<span id="cb3-717"><a href="#cb3-717" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-718"><a href="#cb3-718" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dépistage de première ligne** dans les écoles</span>
+<span id="cb3-719"><a href="#cb3-719" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Outil d'orientation** vers les spécialistes</span>
+<span id="cb3-720"><a href="#cb3-720" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Suivi longitudinal** des enfants à risque</span>
 <span id="cb3-721"><a href="#cb3-721" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-722"><a href="#cb3-722" aria-hidden="true" tabindex="-1"></a><span class="fu">### Utilisation Recommandée</span></span>
+<span id="cb3-722"><a href="#cb3-722" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limites d'Utilisation</span></span>
 <span id="cb3-723"><a href="#cb3-723" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-724"><a href="#cb3-724" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dépistage de première ligne** dans les écoles</span>
-<span id="cb3-725"><a href="#cb3-725" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Outil d'orientation** vers les spécialistes</span>
-<span id="cb3-726"><a href="#cb3-726" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Suivi longitudinal** des enfants à risque</span>
-<span id="cb3-727"><a href="#cb3-727" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-728"><a href="#cb3-728" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limites d'Utilisation</span></span>
-<span id="cb3-729"><a href="#cb3-729" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-730"><a href="#cb3-730" aria-hidden="true" tabindex="-1"></a>⚠️ **Ce modèle NE REMPLACE PAS** :</span>
-<span id="cb3-731"><a href="#cb3-731" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un diagnostic clinique complet</span>
-<span id="cb3-732"><a href="#cb3-732" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Une évaluation par un spécialiste</span>
-<span id="cb3-733"><a href="#cb3-733" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Des tests neuropsychologiques approfondis</span>
-<span id="cb3-734"><a href="#cb3-734" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-735"><a href="#cb3-735" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusions et Recommandations</span></span>
-<span id="cb3-736"><a href="#cb3-736" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-737"><a href="#cb3-737" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusions Principales</span></span>
-<span id="cb3-738"><a href="#cb3-738" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-739"><a href="#cb3-739" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Le questionnaire **AQ-10 est un excellent prédicteur** du TSA chez l'enfant</span>
-<span id="cb3-740"><a href="#cb3-740" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Le **Random Forest** offre les meilleures performances (97% accuracy, AUC 0.98)</span>
-<span id="cb3-741"><a href="#cb3-741" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Les **questions sociales** (A1-A3) sont les plus discriminantes</span>
-<span id="cb3-742"><a href="#cb3-742" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Un **score ≥ 6/10** suggère fortement un risque de TSA</span>
-<span id="cb3-743"><a href="#cb3-743" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-744"><a href="#cb3-744" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommandations</span></span>
-<span id="cb3-745"><a href="#cb3-745" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-746"><a href="#cb3-746" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Cliniciens</span></span>
-<span id="cb3-747"><a href="#cb3-747" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-748"><a href="#cb3-748" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Utiliser l'AQ-10 comme outil de dépistage systématique</span>
-<span id="cb3-749"><a href="#cb3-749" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Prioriser l'évaluation des questions sociales</span>
-<span id="cb3-750"><a href="#cb3-750" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Considérer les antécédents familiaux dans l'analyse</span>
-<span id="cb3-751"><a href="#cb3-751" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Référer pour évaluation complète si score ≥ 6</span>
-<span id="cb3-752"><a href="#cb3-752" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-753"><a href="#cb3-753" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Chercheurs</span></span>
-<span id="cb3-754"><a href="#cb3-754" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-755"><a href="#cb3-755" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Valider le modèle sur des populations internationales</span>
-<span id="cb3-756"><a href="#cb3-756" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Étendre l'analyse à d'autres tranches d'âge</span>
-<span id="cb3-757"><a href="#cb3-757" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Intégrer des variables comportementales supplémentaires</span>
-<span id="cb3-758"><a href="#cb3-758" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Développer une application mobile de dépistage</span>
-<span id="cb3-759"><a href="#cb3-759" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-760"><a href="#cb3-760" aria-hidden="true" tabindex="-1"></a><span class="fu">### Développements Futurs</span></span>
-<span id="cb3-761"><a href="#cb3-761" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-762"><a href="#cb3-762" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Version multilingue** du modèle</span>
-<span id="cb3-763"><a href="#cb3-763" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Intégration de données longitudinales**</span>
-<span id="cb3-764"><a href="#cb3-764" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analyse par sous-types de TSA**</span>
-<span id="cb3-765"><a href="#cb3-765" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Modèles explicables (XAI)** pour améliorer l'interprétabilité</span>
+<span id="cb3-724"><a href="#cb3-724" aria-hidden="true" tabindex="-1"></a>⚠️ **Ce modèle NE REMPLACE PAS** :</span>
+<span id="cb3-725"><a href="#cb3-725" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un diagnostic clinique complet</span>
+<span id="cb3-726"><a href="#cb3-726" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Une évaluation par un spécialiste</span>
+<span id="cb3-727"><a href="#cb3-727" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Des tests neuropsychologiques approfondis</span>
+<span id="cb3-728"><a href="#cb3-728" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-729"><a href="#cb3-729" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusions et Recommandations</span></span>
+<span id="cb3-730"><a href="#cb3-730" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-731"><a href="#cb3-731" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusions Principales</span></span>
+<span id="cb3-732"><a href="#cb3-732" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-733"><a href="#cb3-733" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Le questionnaire **AQ-10 est un excellent prédicteur** du TSA chez l'enfant</span>
+<span id="cb3-734"><a href="#cb3-734" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Le **Random Forest** offre les meilleures performances (97% accuracy, AUC 0.98)</span>
+<span id="cb3-735"><a href="#cb3-735" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Les **questions sociales** (A1-A3) sont les plus discriminantes</span>
+<span id="cb3-736"><a href="#cb3-736" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Un **score ≥ 6/10** suggère fortement un risque de TSA</span>
+<span id="cb3-737"><a href="#cb3-737" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-738"><a href="#cb3-738" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommandations</span></span>
+<span id="cb3-739"><a href="#cb3-739" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-740"><a href="#cb3-740" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Cliniciens</span></span>
+<span id="cb3-741"><a href="#cb3-741" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-742"><a href="#cb3-742" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Utiliser l'AQ-10 comme outil de dépistage systématique</span>
+<span id="cb3-743"><a href="#cb3-743" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Prioriser l'évaluation des questions sociales</span>
+<span id="cb3-744"><a href="#cb3-744" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Considérer les antécédents familiaux dans l'analyse</span>
+<span id="cb3-745"><a href="#cb3-745" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Référer pour évaluation complète si score ≥ 6</span>
+<span id="cb3-746"><a href="#cb3-746" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-747"><a href="#cb3-747" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pour les Chercheurs</span></span>
+<span id="cb3-748"><a href="#cb3-748" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-749"><a href="#cb3-749" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Valider le modèle sur des populations internationales</span>
+<span id="cb3-750"><a href="#cb3-750" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Étendre l'analyse à d'autres tranches d'âge</span>
+<span id="cb3-751"><a href="#cb3-751" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Intégrer des variables comportementales supplémentaires</span>
+<span id="cb3-752"><a href="#cb3-752" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Développer une application mobile de dépistage</span>
+<span id="cb3-753"><a href="#cb3-753" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-754"><a href="#cb3-754" aria-hidden="true" tabindex="-1"></a><span class="fu">### Développements Futurs</span></span>
+<span id="cb3-755"><a href="#cb3-755" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-756"><a href="#cb3-756" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Version multilingue** du modèle</span>
+<span id="cb3-757"><a href="#cb3-757" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Intégration de données longitudinales**</span>
+<span id="cb3-758"><a href="#cb3-758" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analyse par sous-types de TSA**</span>
+<span id="cb3-759"><a href="#cb3-759" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Modèles explicables (XAI)** pour améliorer l'interprétabilité</span>
+<span id="cb3-760"><a href="#cb3-760" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-761"><a href="#cb3-761" aria-hidden="true" tabindex="-1"></a><span class="fu"># Références</span></span>
+<span id="cb3-762"><a href="#cb3-762" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-763"><a href="#cb3-763" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Baron-Cohen, S., et al. (2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. *Journal of Autism and Developmental Disorders*.</span>
+<span id="cb3-764"><a href="#cb3-764" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-765"><a href="#cb3-765" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Allison, C., et al. (2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits at 18-24 months of age.</span>
 <span id="cb3-766"><a href="#cb3-766" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-767"><a href="#cb3-767" aria-hidden="true" tabindex="-1"></a><span class="fu"># Références</span></span>
+<span id="cb3-767"><a href="#cb3-767" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Breiman, L. (2001). Random Forests. *Machine Learning*.</span>
 <span id="cb3-768"><a href="#cb3-768" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-769"><a href="#cb3-769" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Baron-Cohen, S., et al. (2001). The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Functioning Autism. *Journal of Autism and Developmental Disorders*.</span>
+<span id="cb3-769"><a href="#cb3-769" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. *KDD*.</span>
 <span id="cb3-770"><a href="#cb3-770" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-771"><a href="#cb3-771" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Allison, C., et al. (2012). The Q-CHAT (Quantitative CHecklist for Autism in Toddlers): A normally distributed quantitative measure of autistic traits at 18-24 months of age.</span>
+<span id="cb3-771"><a href="#cb3-771" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb3-772"><a href="#cb3-772" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-773"><a href="#cb3-773" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Breiman, L. (2001). Random Forests. *Machine Learning*.</span>
-<span id="cb3-774"><a href="#cb3-774" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-775"><a href="#cb3-775" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. *KDD*.</span>
-<span id="cb3-776"><a href="#cb3-776" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-777"><a href="#cb3-777" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-778"><a href="#cb3-778" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-779"><a href="#cb3-779" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb3-780"><a href="#cb3-780" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact et Collaboration</span></span>
-<span id="cb3-781"><a href="#cb3-781" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-782"><a href="#cb3-782" aria-hidden="true" tabindex="-1"></a>Pour toute question ou collaboration sur ce projet, n'hésitez pas à nous contacter.</span>
-<span id="cb3-783"><a href="#cb3-783" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-773"><a href="#cb3-773" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb3-774"><a href="#cb3-774" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact et Collaboration</span></span>
+<span id="cb3-775"><a href="#cb3-775" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-776"><a href="#cb3-776" aria-hidden="true" tabindex="-1"></a>Pour toute question ou collaboration sur ce projet, n'hésitez pas à nous contacter.</span>
+<span id="cb3-777"><a href="#cb3-777" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -108,8 +108,8 @@ Le diagnostic de TSA est souvent tardif (18-24 mois de délai en moyenne), ce qu
 library(knitr)
 distribution <- data.frame(
   Diagnostic = c("Sans TSA (NO)", "TSA (YES)", "Total"),
-  Effectif = c(406, 294, 700),
-  Pourcentage = c("58.0%", "42.0%", "100%")
+  Effectif = c(150, 140, 290),
+  Pourcentage = c("51.7%", "48.3%", "100%")
 )
 kable(distribution, align = "lcc", caption = "Distribution des diagnostics")
 ```
@@ -137,12 +137,6 @@ communication_score = A7_Score + A8_Score
 imagination_score = A9_Score + A10_Score
 ```
 
-### Split Train/Test
-
-- **Train** : 70% (482 observations)
-- **Test** : 30% (206 observations)
-- **Stratification** : Oui (maintien des proportions de classes)
-- **Seed** : 123 (reproductibilité)
 
 ## Modèles Développés
 
