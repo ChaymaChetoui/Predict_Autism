@@ -195,7 +195,7 @@ Documentation scientifique détaillée avec méthodologie, résultats et discuss
 ::: {.g-col-12 .g-col-md-3}
 ### [🎤 Présentation](presentation.qmd)
 
-Slides professionnels (47 pages) pour présenter le projet.
+Slides professionnels (12 pages) pour présenter le projet.
 :::
 
 ::: {.g-col-12 .g-col-md-3}

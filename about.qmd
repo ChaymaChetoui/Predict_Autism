@@ -74,7 +74,7 @@ Le AQ-10 a démontré :
 ```{mermaid}
 %%| fig-width: 12
 flowchart TD
-    A[📥 Données Brutes<br/>704 observations] --> B[🧹 Nettoyage<br/>-16 doublons]
+    A[📥 Données Brutes<br/>292 observations] --> B[🧹 Nettoyage<br/>-16 doublons]
     B --> C[🔧 Feature Engineering<br/>Scores par domaine]
     C --> D[📊 Analyse Exploratoire<br/>Visualisations]
     D --> E[✂️ Split Train/Test<br/>70% / 30%]
@@ -146,7 +146,7 @@ library(tidyr)         # Restructuration
 
 ### Processus de Validation
 
-1.  **Nettoyage des données** (n=688 après)
+1.  **Nettoyage des données** (n=290 après)
 2.  **Split stratifié** 70/30 (train/test)
 3.  **Cross-validation** 10-fold sur train
 4.  **Optimisation** des hyperparamètres (grid search)

@@ -349,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[📥 Données Brutes&lt;br/&gt;704 observations] --&gt; B[🧹 Nettoyage&lt;br/&gt;-16 doublons]
+    A[📥 Données Brutes&lt;br/&gt;292 observations] --&gt; B[🧹 Nettoyage&lt;br/&gt;-16 doublons]
     B --&gt; C[🔧 Feature Engineering&lt;br/&gt;Scores par domaine]
     C --&gt; D[📊 Analyse Exploratoire&lt;br/&gt;Visualisations]
     D --&gt; E[✂️ Split Train/Test&lt;br/&gt;70% / 30%]
@@ -444,7 +444,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="processus-de-validation" class="level3">
 <h3 class="anchored" data-anchor-id="processus-de-validation">Processus de Validation</h3>
 <ol type="1">
-<li><strong>Nettoyage des données</strong> (n=688 après)</li>
+<li><strong>Nettoyage des données</strong> (n=290 après)</li>
 <li><strong>Split stratifié</strong> 70/30 (train/test)</li>
 <li><strong>Cross-validation</strong> 10-fold sur train</li>
 <li><strong>Optimisation</strong> des hyperparamètres (grid search)</li>
@@ -1340,7 +1340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>%%| fig-width: <span class="dv">12</span></span>
 <span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>flowchart TD</span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    A[📥 Données Brutes&lt;br/&gt;<span class="dv">704</span> observations] --&gt; B[🧹 Nettoyage&lt;br/&gt;-<span class="dv">16</span> doublons]</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    A[📥 Données Brutes&lt;br/&gt;<span class="dv">292</span> observations] --&gt; B[🧹 Nettoyage&lt;br/&gt;-<span class="dv">16</span> doublons]</span>
 <span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[🔧 Feature Engineering&lt;br/&gt;Scores par domaine]</span>
 <span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[📊 Analyse Exploratoire&lt;br/&gt;Visualisations]</span>
 <span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>    D --&gt; E[✂️ Split Train/Test&lt;br/&gt;<span class="dv">70</span>% <span class="ot">/ 30%]</span></span>
@@ -1412,7 +1412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a><span class="co">### Processus de Validation</span></span>
 <span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>.  *<span class="dt">*Nettoyage</span> des données*<span class="ot">*</span> (n=<span class="dv">688</span> après)</span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>.  *<span class="dt">*Nettoyage</span> des données*<span class="ot">*</span> (n=<span class="dv">290</span> après)</span>
 <span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>.  *<span class="dt">*Split</span> stratifié*<span class="ot">*</span> <span class="dv">70</span>/<span class="dv">30</span> (train/test)</span>
 <span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>.  *<span class="dt">*Cross</span>-validation*<span class="ot">*</span> <span class="dv">10</span>-fold sur train</span>
 <span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>.  *<span class="dt">*Optimisation</span>*<span class="ot">*</span> des hyperparamètres (grid search)</span>
