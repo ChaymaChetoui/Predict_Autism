@@ -68,8 +68,8 @@ Le diagnostic de TSA est souvent tardif (18-24 mois de délai en moyenne), ce qu
 
 - **Source** : Questionnaire AQ-10 pour enfants (4-12 ans)
 - **Observations brutes** : 292 cas
-- **Après nettoyage** : 20 cas (2 doublons supprimés)
-
+- **Après nettoyage** : 290 cas (2 doublons supprimés)
+- **Période** : 2018-2023
 
 ### Variables
 
@@ -778,5 +778,4 @@ Ces questions sont les **plus discriminantes** :
 ## Contact et Collaboration
 
 Pour toute question ou collaboration sur ce projet, n'hésitez pas à nous contacter.
-
 :::
