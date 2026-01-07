@@ -550,3 +550,4 @@ cat("\n📁 Tous les graphiques sont sauvegardés dans: outputs/figures/\n")
 cat("📐 Résolution: 300 DPI (publication-ready)\n")
 cat("🎨 Thème: Personnalisé et professionnel\n")
 cat(strrep("=", 70), "\n", sep = "")
+

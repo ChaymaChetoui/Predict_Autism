@@ -29,7 +29,7 @@ Analyse rigoureuse de **290 enfants** (4-12 ans) avec comparaison de **3 algorit
 ::: {.g-col-12 .g-col-md-6}
 ### 📁 Données Analysées
 
-- **688 observations** après nettoyage
+- **292 observations** après nettoyage
 - **10 questions** AQ-10 comportementales
 - **Variables démographiques** (âge, antécédents)
 - **Classes équilibrées** : 42% TSA, 58% Sans TSA
@@ -43,8 +43,8 @@ library(dplyr)
 # Données de démonstration
 demo_data <- data.frame(
   Diagnostic = c("Sans TSA", "TSA"),
-  Nombre = c(406, 294),
-  Pourcentage = c(58, 42)
+  Nombre = c(150, 140),
+  Pourcentage = c(51, 49)
 )
 
 ggplot(demo_data, aes(x = "", y = Nombre, fill = Diagnostic)) +
