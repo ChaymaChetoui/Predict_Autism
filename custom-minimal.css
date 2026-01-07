@@ -1,0 +1,251 @@
+/* ============================================================================
+   PRÉSENTATION MINIMALISTE PROFESSIONNELLE
+   ============================================================================ */
+
+/* Typographie épurée */
+.reveal {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  color: #2c3e50;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #2c3e50;
+}
+
+.reveal h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.reveal h3 {
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+/* Texte et paragraphes */
+.reveal p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+.reveal strong {
+  font-weight: 600;
+  color: #3498db;
+}
+
+/* Listes épurées */
+.reveal ul,
+.reveal ol {
+  list-style: none;
+  padding: 0;
+}
+
+.reveal ul li {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.reveal ul li:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Tableaux minimalistes */
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em auto;
+  font-size: 1.1em;
+}
+
+.reveal table th {
+  font-weight: 500;
+  text-align: left;
+  padding: 0.8em;
+  border-bottom: 2px solid #2c3e50;
+  color: #2c3e50;
+}
+
+.reveal table td {
+  padding: 0.8em;
+  border-bottom: 1px solid #ecf0f1;
+  text-align: left;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alignement droite pour les nombres */
+.reveal table td:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Colonnes */
+.reveal .columns {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+}
+
+.reveal .column {
+  flex: 1;
+}
+
+/* Code et monospace */
+.reveal code {
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  background: #f8f9fa;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e74c3c;
+}
+
+/* Images */
+.reveal img {
+  border: none;
+  box-shadow: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Espacement et marges */
+.reveal .slide-content {
+  padding: 2em;
+}
+
+/* Numéros de slide discrets */
+.reveal .slide-number {
+  font-size: 0.8em;
+  color: #95a5a6;
+  font-weight: 300;
+}
+
+/* Footer discret */
+.reveal .footer {
+  font-size: 0.7em;
+  color: #95a5a6;
+  font-weight: 300;
+}
+
+/* Liens subtils */
+.reveal a {
+  color: #3498db;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.reveal a:hover {
+  border-bottom-color: #3498db;
+}
+
+/* Backgrounds personnalisés */
+.reveal .slide-background {
+  background-color: #ffffff;
+}
+
+/* Transitions douces */
+.reveal .slides section {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Blockquotes */
+.reveal blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 1.5em;
+  margin: 2em 0;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Grilles pour cards */
+.reveal .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.reveal .card {
+  padding: 2em;
+  border-radius: 8px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+/* Emphase */
+.reveal .highlight {
+  background: linear-gradient(180deg, transparent 60%, #fff9c4 60%);
+  padding: 0 0.2em;
+}
+
+/* Icônes et émojis */
+.reveal .emoji {
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .reveal {
+    font-size: 28px;
+  }
+  
+  .reveal h1 {
+    font-size: 2.5em;
+  }
+  
+  .reveal h2 {
+    font-size: 2em;
+  }
+}
+
+/* Améliorations pour la lisibilité */
+.reveal section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Slide de titre */
+.reveal .title-slide h1 {
+  font-size: 3.5em;
+  font-weight: 200;
+  margin-bottom: 0.3em;
+}
+
+.reveal .title-slide h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #7f8c8d;
+}
+
+/* Animation subtile pour les fragments */
+.reveal .fragment {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+}
