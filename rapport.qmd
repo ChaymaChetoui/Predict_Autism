@@ -482,11 +482,7 @@ Ce modèle est un **outil d'aide au dépistage**. Tout score ≥ 6 nécessite un
 ---
 
 ::: {style="text-align: center; padding: 2rem; background-color: #ecf0f1; border-radius: 10px; margin-top: 3rem;"}
-## 📧 Contact
 
-**Chayma Chetoui**  
-Email : chayma.chetoui@example.com  
-GitHub : [github.com/chayma-chetoui](https://github.com)
 
 ---
 
@@ -518,7 +514,7 @@ Le Trouble du Spectre Autistique (TSA) est un trouble neurodéveloppemental cara
 
 ### Dataset
 - **Source** : Questionnaire AQ-10 pour enfants
-- **Observations** : ~700 cas
+- **Observations** : ~300 cas
 - **Variables** : 10 questions + données démographiques
 
 ### Prétraitement

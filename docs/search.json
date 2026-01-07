@@ -168,13 +168,6 @@
     "text": "6.2 Recommandations\n\n6.2.1 Pour les Cliniciens\n\n✅ Utiliser l’AQ-10 systématiquement dès 4 ans\n✅ Prioriser l’évaluation des questions sociales (A1-A3)\n✅ Considérer les antécédents familiaux dans l’analyse\n✅ Référer tout score ≥ 6 pour évaluation complète\n\n6.2.2 Pour les Chercheurs\n\n🔬 Valider sur populations internationales\n🔬 Étendre à d’autres tranches d’âge (18-36 mois)\n🔬 Intégrer des variables comportementales supplémentaires\n🔬 Développer des modèles explicables (XAI)\n\n6.2.3 Développements Futurs\n\n📱 Application mobile de dépistage\n🌐 Version multilingue (FR, EN, AR)\n🤖 Intégration analyse vidéo (computer vision)\n📊 Dashboard clinique pour professionnels"
   },
   {
-    "objectID": "rapport.html#contact",
-    "href": "rapport.html#contact",
-    "title": "Rapport d’Analyse",
-    "section": "\n7.1 📧 Contact",
-    "text": "7.1 📧 Contact\nChayma Chetoui\nEmail : chayma.chetoui@example.com\nGitHub : github.com/chayma-chetoui\n\nRapport généré le 07 janvier 2026"
-  },
-  {
     "objectID": "rapport.html#contexte-1",
     "href": "rapport.html#contexte-1",
     "title": "Rapport d’Analyse",
@@ -193,7 +186,7 @@
     "href": "rapport.html#méthodologie-1",
     "title": "Rapport d’Analyse",
     "section": "\n8.3 Méthodologie",
-    "text": "8.3 Méthodologie\n\n\nDataset\nPrétraitement\nModèles\nValidation\n\n\n\n\n\nSource : Questionnaire AQ-10 pour enfants\n\nObservations : ~700 cas\n\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
+    "text": "8.3 Méthodologie\n\n\nDataset\nPrétraitement\nModèles\nValidation\n\n\n\n\n\nSource : Questionnaire AQ-10 pour enfants\n\nObservations : ~300 cas\n\nVariables : 10 questions + données démographiques\n\n\n\n\nNettoyage des doublons\nGestion des valeurs manquantes\nFeature engineering (scores par domaine)\nNormalisation des variables\n\n\n\n\nRandom Forest\nRégression Logistique\nXGBoost\n\n\n\n\nCross-validation 10-fold\nSplit Train/Test (70/30)\nMétriques : Accuracy, AUC, Sensibilité, Spécificité"
   },
   {
     "objectID": "rapport.html#structure-des-données",
